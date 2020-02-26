@@ -1,0 +1,2326 @@
+<apex:page standardController="Opportunity" sideBar="false" extensions="FC_OpportunityProductsFormController">
+    <apex:outputText rendered="false" value="{!Opportunity.Id}"/>
+    <c:FC_JQuery loadJQuery="true" renameJQuery="true"/>
+    <apex:remoteObjects >
+        <apex:remoteObjectModel name="RecordType" fields="Id,SobjectType,Name,DeveloperName"/>
+        <apex:remoteObjectModel name="Opportunity"
+                                fields="Id,ContractId,FC_Contract_Effective_Date__c,FC_Last_Sent_To_Zuora__c,MS_Segments__c,Name,Pricebook2Id,RecordTypeId,Scheduled_Delivery_Date__c,StageName"/>
+        <apex:remoteObjectModel name="OpportunityLineItem"
+                                fields="Id,Billing_Frequency__c,FC_Bill_Case__c,FC_Billing_Instruction_Set__c,FC_Effective_Date__c,FC_Geography__c,FC_Geography_Type__c,FC_Metrostudy_Product__c,FC_Original_Sale_Price__c,FC_Product_Geography_Seg3__c,FC_Sale_Price__c,FC_Seg3__c,FC_UUID__c,FC_Zuora_Action__c,MS_Segment__c,OpportunityId,PricebookEntryId,Product2Id,UnitPrice"/>
+        <apex:remoteObjectModel name="FC_Billing_Instruction_Step__c"
+                                fields="Id,Bill_Cycle_Day__c,Bill_Cycle_Type__c,Billing_Instruction_Description__c,Billing_Instruction_Set__c,Billing_Period__c,Billing_Period_Alignment__c,Contract_Effective_Date__c,Description__c,End_Date__c,End_Date_Condition__c,Execute_Immediately__c,Metadata_Is_Last__c,Metadata_Number_of_Periods__c,Metrostudy_Product_Geography_Seg3__c,Price__c,Product_Rate_Plan__c,Quantity__c,RecordTypeId,Specific_Billing_Period__c,Specific_End_Date__c,Status__c,T_C_Term_Start_Date__c,Trigger_Date__c,Trigger_Event__c,Up_To_Periods__c,Up_To_Periods_Type__c,Weekly_Bill_Cycle_Day__c"/>
+        <apex:remoteObjectModel name="FC_Billing_Instruction_Template__c"
+                                fields="Id,Name,Custom_Javascript_Visualforce_Page__c"/>
+        <apex:remoteObjectModel name="MetroclientGeographyType__c" fields="Id,Name"/>
+        <apex:remoteObjectModel name="FC_Metroclient_Product_Geography_Seg3__c"
+                                fields="Id,Accounting_Code__c,Annual_List_Price__c,Charge_Type__c,Dependent_Seg3__c,Exclude_From_Product_Selector__c,Execute_Immediately__c,Geography__c,Geography_Type__c,Metrostudy_Product__c,Monthly_List_Price__c,One_Time_List_Price__c,Product__c,Product_Geography__c,Product_Rate_Plan__c,Product_Rate_Plan_Name__c,Quarterly_List_Price__c,Seg3__c,Semi_Annual_List_Price__c"/>
+        <apex:remoteObjectModel name="FC_Metroclient_Product_Geography_Seg3__Tag" fields="Id,ItemId,Name,Type"/>
+        <apex:remoteObjectModel name="PricebookEntry"
+                                fields="Id,IsActive,Name,Pricebook2Id,Product2Id,ProductCode,UnitPrice,UseStandardPrice"/>
+        <apex:remoteObjectModel name="FC_Billing_Instruction_Set__c"
+                                fields="Id,Charge__c,Charge_Effective_Start_Date__c,Charge_Number__c,Instruction_Parameters__c,Opportunity__c,Opportunity_Line_Item_ID__c,Opportunity_Line_Item_UUID__c,Subscription_Start_Date__c,Template__c"/>
+
+    </apex:remoteObjects>
+
+    <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"/>
+    <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"/>
+    <apex:stylesheet value="{!URLFOR($Resource.FC_WebixJS, 'codebase/skins/web.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.FC_WebixJS, 'codebase/webix.js')}"/>
+
+
+    <style type="text/css">
+        #appLayout {
+            min-height: 200px;
+        }
+
+        .loadingOverlay {
+            background-color: #ffffff;
+            opacity: 0.8;
+            color: #000000;
+            margin: -10px;
+            padding: 10px;
+            height: 100%;
+        }
+
+        .loadingOverlayText {
+            font-size: 14px;
+        }
+
+        .revertOpportunityProduct,
+        .markOpportunityProductForRemoval,
+        .deleteOpportunityProduct,
+        .editBillingInstructionSetParameters,
+        .deleteBillingInstructionStep,
+        .stepUpDatatable .deleteStepUpRow,
+        .deleteRampUpRow {
+            font-size: 20px;
+            margin-top: 3px;
+        }
+
+        /* Fix padding on filter fields */
+        .webix_dtable .webix_ss_header .webix_ss_filter {
+            padding-top: 5px;
+        }
+
+        .webix_column.editableCell,
+        .webix_column.editableCell > div:nth-child(2n) {
+            background-color: #ffffe6 !important;
+        }
+
+        .zuoraActionAdd {
+            color: #339933 !important;
+        }
+
+        .zuoraActionUpdate {
+            color: #db9d02 !important;
+        }
+
+        .zuoraActionRemove {
+            color: #c43004 !important;
+        }
+    </style>
+
+    <script type="text/javascript" charset="utf-8">
+        // <![CDATA[
+
+        window.FC_OpportunityProductsForm = {
+
+            // This will be populated asynchronously on UI init
+            billCycleDayOptions: [],
+
+            // This will be populated asynchronously on UI init
+            billCycleTypeOptions: [],
+
+            billingInstructionParametersDefaults: {},
+
+            // This will be populated asynchronously on UI init
+            billingInstructionStepRecordTypeOptions: [],
+
+            // This will be populated asynchronously on UI init
+            billingInstructionStepRecordTypeDeveloperNameMap: {},
+
+            // This will be populated asynchronously on UI init
+            billingInstructionTemplateNameToIdMap: {},
+
+            // This will be populated asynchronously on UI init
+            billingInstructionTemplateOptions: [],
+
+            // This will be populated asynchronously on UI init
+            billingInstructionTemplateOptionsMap: {},
+
+            // This will be populated on page ready
+            billingInstructionTemplates: {},
+
+            // This will be populated asynchronously on UI init
+            billingPeriodAlignmentOptions: [],
+
+            // This will be populated asynchronously on UI init
+            billingPeriodOptions: [],
+
+            billingPeriodToBillingFrequencyMap: {
+                'Annual': 'Annually',
+                'Month': 'Monthly',
+                'Quarter': 'Quarterly',
+                'Semi_Annual': 'Semi-Annually'
+            },
+
+            buildBillingInstructionParametersWindow: function (selectedBillingInstructionTemplateName) {
+                var billingInstructionParametersWindow = webix.ui({
+                    view: 'window',
+                    modal: true,
+                    width: 600,
+                    height: 400,
+                    position: 'top',
+                    head: {
+                        view: 'toolbar',
+                        cols: [
+                            {
+                                view: 'label',
+                                label: 'Add ' + selectedBillingInstructionTemplateName + ' Product'
+                            }
+                        ]
+                    },
+                    body: {
+                        type: 'space',
+                        rows: [
+                            {
+                                id: 'billingInstructionParametersForm',
+                                view: 'form',
+                                elements: []
+                            },
+                            {
+                                view: 'toolbar',
+                                cols: [
+                                    {},
+                                    {
+                                        id: 'billingInstructionParametersOkButton',
+                                        view: 'button',
+                                        label: 'OK',
+                                        width: 100
+                                    },
+                                    {
+                                        view: 'button',
+                                        label: 'Cancel',
+                                        width: 100,
+                                        on: {
+                                            onItemClick: function (id, event) {
+                                                $$(this).getTopParentView().close();
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                });
+                webix.extend($$(billingInstructionParametersWindow).getBody(), webix.OverlayBox);
+                return billingInstructionParametersWindow;
+            },
+
+            // This will be populated asynchronously on UI init
+            chargeTypeOptions: [],
+
+            // This will be populated asynchronously on UI init
+            endDateConditionOptions: [],
+
+            // Data functions
+            data: {
+
+                loadOpportunityLineItems: function (view, callback, params, functionArguments) {
+                    console.log('LOAD OPPORTUNITY LINE ITEMS INVOKED', arguments);
+
+                    var promises = [];
+
+                    /*
+                    var opportunityLineItemModel = new SObjectModel.OpportunityLineItem();
+                    var opportunityLineItemPromise = webix.promise.defer();
+                    promises.push(opportunityLineItemPromise);
+                    opportunityLineItemModel.retrieve({
+                            where: { OpportunityId: { eq: '{!Opportunity.Id}' } },
+                            limit: 100
+                        },
+                        function (opportunityLineItemError, opportunityLineItemResults, opportunityLineItemEvent) {
+                            if (!opportunityLineItemError) {
+                                opportunityLineItemPromise.resolve(arguments);
+                            } else {
+                                console.error('ERROR RETRIEVING OPPORTUNITY LINE ITEMS', opportunityLineItemError);
+                                opportunityLineItemPromise.reject(arguments);
+                            }
+                        });
+                    */
+
+                    var opportunityLineItemPromise = webix.promise.defer();
+                    promises.push(opportunityLineItemPromise);
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.FC_OpportunityProductsFormController.getOpportunityLineItemsJson}',
+                        '{!Opportunity.Id}',
+                        function (result, event) {
+                            console.log('LOAD OPPORTUNITY LINE ITEMS RECORDS COMPLETED', result, event);
+                            if (event.status) {
+                                opportunityLineItemPromise.resolve(JSON.parse(result));
+                            } else if (event.type === 'exception') {
+                                console.error('ERROR RETRIEVING OPPORTUNITY LINE ITEM RECORDS', event.message);
+                                opportunityLineItemPromise.reject(event);
+                            } else {
+                                console.error('ERROR RETRIEVING OPPORTUNITY LINE ITEM RECORDS', event.message);
+                                opportunityLineItemPromise.reject(event);
+                            }
+                        }, { escape: false });
+
+
+                    var billingInstructionSetModel = new SObjectModel.FC_Billing_Instruction_Set__c();
+                    var billingInstructionSetPromise = webix.promise.defer();
+                    promises.push(billingInstructionSetPromise);
+                    billingInstructionSetModel.retrieve({
+                            where: { Opportunity__c: { eq: '{!Opportunity.Id}' } },
+                            limit: 100
+                        },
+                        function (billingInstructionSetError, billingInstructionSetResults, billingInstructionSetEvent) {
+                            if (!billingInstructionSetError) {
+                                billingInstructionSetPromise.resolve(arguments);
+                            } else {
+                                console.error('ERROR RETRIEVING BILLING INSTRUCTION SETS', billingInstructionSetError);
+                                billingInstructionSetPromise.reject(arguments);
+                            }
+                        });
+
+                    webix.promise.all(promises).then(function (results) {
+                        console.log('LOAD OPPORTUNITY LINE ITEMS ALL PROMISE RESULTS', results);
+                        //var opportunityLineItemResults = results[0][1];
+                        var opportunityLineItemResults = results[0];
+                        var opportunityLineItemResultsMap = {};
+                        for (record of opportunityLineItemResults) {
+                            //opportunityLineItemResultsMap[record.get('Id')] = record._props;
+                            //opportunityLineItemResultsMap[record.get('Id')].id = record.get('Id');
+                            opportunityLineItemResultsMap[record.Id] = record;
+                            opportunityLineItemResultsMap[record.Id].id = record.Id;
+                        }
+                        console.log('OPPORTUNITY LINE ITEM RESULTS MAP', opportunityLineItemResultsMap);
+
+                        var billingInstructionSetResults = results[1][1];
+                        var billingInstructionSetIds = [];
+                        var billingInstructionSetIdsToOpportunityLineItemIds = {};
+                        for (record of billingInstructionSetResults) {
+                            opportunityLineItemResultsMap[record.get('Opportunity_Line_Item_ID__c')].BillingInstructionSet = record._props;
+                            opportunityLineItemResultsMap[record.get('Opportunity_Line_Item_ID__c')].BillingInstructionSet.id = record.get('Id');
+                            opportunityLineItemResultsMap[record.get('Opportunity_Line_Item_ID__c')].BillingInstructionSet.BillingInstructionSteps = [];
+                            if (billingInstructionSetIds.indexOf(record.get('Id')) === -1) {
+                                billingInstructionSetIds.push(record.get('Id'));
+                                billingInstructionSetIdsToOpportunityLineItemIds[record.get('Id')] = record.get('Opportunity_Line_Item_ID__c');
+                            }
+                        }
+
+                        if (billingInstructionSetIds && billingInstructionSetIds.length > 0) {
+
+                            var billingInstructionStepModel = new SObjectModel.FC_Billing_Instruction_Step__c();
+                            var billingInstructionStepPromise = webix.promise.defer();
+                            billingInstructionStepModel.retrieve({
+                                    where: { Billing_Instruction_Set__c: { in: billingInstructionSetIds } }, limit: 100
+                                },
+                                function (billingInstructionStepError, billingInstructionStepResults, billingInstructionStepEvent) {
+                                    if (!billingInstructionStepError) {
+                                        billingInstructionStepPromise.resolve(arguments);
+                                    } else {
+                                        console.error('ERROR RETRIEVING BILLING INSTRUCTION STEPS', billingInstructionStepError);
+                                        billingInstructionStepPromise.reject(arguments);
+                                    }
+                                });
+
+                            webix.promise.all([billingInstructionStepPromise]).then(function (results) {
+
+                                var billingInstructionStepResults = results[0][1];
+                                for (record of billingInstructionStepResults) {
+                                    var opportunityLineItemId = billingInstructionSetIdsToOpportunityLineItemIds[record.get('Billing_Instruction_Set__c')];
+                                    var billingInstructionStepRecord = record._props;
+                                    billingInstructionStepRecord.id = record.get('Id');
+
+                                    var billingInstructionSetInfo = $j.extend(true, {}, opportunityLineItemResultsMap[opportunityLineItemId].BillingInstructionSet);
+                                    delete billingInstructionSetInfo.BillingInstructionSteps;
+                                    billingInstructionStepRecord.BillingInstructionSet = billingInstructionSetInfo;
+
+                                    opportunityLineItemResultsMap[opportunityLineItemId].BillingInstructionSet.BillingInstructionSteps.push(billingInstructionStepRecord);
+                                }
+
+                                var completeResults = [];
+                                for (record of opportunityLineItemResults) {
+                                    //completeResults.push(opportunityLineItemResultsMap[record.get('Id')]);
+                                    completeResults.push(opportunityLineItemResultsMap[record.Id]);
+                                }
+
+                                webix.ajax.$callback(view, callback, JSON.stringify(completeResults), completeResults);
+                            }).fail(function (error) {
+                                console.error('ERROR RETRIEVING BILLING INSTRUCTION STEPS', error);
+                                webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                            });
+
+                        } else {
+                            webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                        }
+                    }).fail(function (error) {
+                        console.error('ERROR RETRIEVING OPPORTUNITY LINE ITEMS', error);
+                        webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                    });
+
+                },
+
+                loadVisibleProductGeographySeg3s: function (view, callback, params, functionArguments) {
+                    console.log('LOAD VISIBLE SEG3 RECORDS INVOKED', arguments);
+                    var seg3Ids = [];
+                    $$('opportunityLineItemsDatatable').eachRow(function (row) {
+                        if (row.BillingInstructionSet && row.BillingInstructionSet.BillingInstructionSteps) {
+                            for (billingInstructionStep of row.BillingInstructionSet.BillingInstructionSteps) {
+                                if (billingInstructionStep.Metrostudy_Product_Geography_Seg3__c) {
+                                    seg3Ids.push(billingInstructionStep.Metrostudy_Product_Geography_Seg3__c);
+                                }
+                            }
+                        }
+                    });
+
+                    if (seg3Ids) {
+                        Visualforce.remoting.Manager.invokeAction(
+                            '{!$RemoteAction.FC_OpportunityProductsFormController.getFcMetroclientProductGeographySeg3sByIdsAndOpportunityId}',
+                            seg3Ids,
+                            FC_OpportunityProductsForm.opportunityRecord.Id,
+                            function (result, event) {
+                                console.log('LOAD OPPORTUNITY SEG3 RECORDS COMPLETED', result, event);
+                                if (event.status) {
+                                    webix.ajax.$callback(view, callback, JSON.stringify(result), result);
+                                } else if (event.type === 'exception') {
+                                    console.error('ERROR RETRIEVING OPPORTUNITY SEG3 RECORDS', event.message);
+                                    webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                                } else {
+                                    console.error('ERROR RETRIEVING OPPORTUNITY SEG3 RECORDS', event.message);
+                                    webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                                }
+                            });
+                    }
+                },
+
+                loadAllProductGeographySeg3s: function (view, callback, params, functionArguments) {
+                    console.log('LOAD ALL SEG3 RECORDS INVOKED', arguments);
+                    console.log('LOAD ALL SEG3 PARAMS', params);
+                    console.log('LOAD ALL SEG3 PRICEBOOK ID', FC_OpportunityProductsForm.opportunityRecord.Pricebook2Id);
+
+                    // Remove continue key from params since it's a reserved Apex keyword
+                    if (params && params.continue) {
+                        delete params.continue;
+                    }
+
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.FC_OpportunityProductsFormController.queryFcMetroclientProductGeographySeg3}',
+                        params,
+                        true,
+                        FC_OpportunityProductsForm.opportunityRecord.Pricebook2Id,
+                        function (result, event) {
+                            console.log('LOAD SEG3 EVENT', event);
+                            if (event.status) {
+                                for (row of result.data) {
+                                    row.id = row.Id;
+                                }
+                                webix.ajax.$callback(view, callback, JSON.stringify(result), result);
+                            } else if (event.type === 'exception') {
+                                console.error('ERROR RETRIEVING SEG3 RECORDS', event.message);
+                                webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                            } else {
+                                console.error('ERROR RETRIEVING SEG3 RECORDS', event.message);
+                                webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                            }
+                        },
+                        { escape: true });
+                },
+
+                loadProductGeographySeg3s: function (view, callback, params, functionArguments) {
+                    console.log('LOAD SEG3 RECORDS INVOKED', arguments);
+                    console.log('LOAD SEG3 PARAMS', params);
+
+                    // Remove continue key from params since it's a reserved Apex keyword
+                    if (params && params.continue) {
+                        delete params.continue;
+                    }
+
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.FC_OpportunityProductsFormController.queryFcMetroclientProductGeographySeg3}',
+                        params,
+                        false,
+                        FC_OpportunityProductsForm.opportunityRecord.Pricebook2Id,
+                        function (result, event) {
+                            console.log('LOAD SEG3 EVENT', event);
+                            if (event.status) {
+                                for (row of result.data) {
+                                    row.id = row.Id;
+                                }
+                                webix.ajax.$callback(view, callback, JSON.stringify(result), result);
+                            } else if (event.type === 'exception') {
+                                console.error('ERROR RETRIEVING SEG3 RECORDS', event.message);
+                                webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                            } else {
+                                console.error('ERROR RETRIEVING SEG3 RECORDS', event.message);
+                                webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                            }
+                        },
+                        { escape: true });
+                },
+
+                loadProductRatePlans: function (view, callback, params, functionArguments) {
+                    console.log('LOAD PRODUCT RATE PLAN RECORDS INVOKED', arguments);
+                    console.log('LOAD PRODUCT RATE PLAN PARAMS', params);
+                    console.log('LOAD PRODUCT RATE PLAN FUNCTION ARGUMENTS', functionArguments);
+
+                    // Remove continue key from params since it's a reserved Apex keyword
+                    if (params && params.continue) {
+                        delete params.continue;
+                    }
+
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.FC_OpportunityProductsFormController.queryProductRatePlans}',
+                        params,
+                        function (result, event) {
+                            console.log('LOAD PRODUCT RATE PLAN RESULT', result);
+                            console.log('LOAD PRODUCT RATE PLAN EVENT', event);
+                            if (event.status) {
+                                for (row of result.data) {
+                                    row.id = row.Id;
+                                }
+                                webix.ajax.$callback(view, callback, JSON.stringify(result), result);
+                            } else if (event.type === 'exception') {
+                                console.error('ERROR RETRIEVING PRODUCT RATE PLAN RECORDS', event.message);
+                                webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                            } else {
+                                console.error('ERROR RETRIEVING PRODUCT RATE PLAN RECORDS', event.message);
+                                webix.ajax.$callback(view, callback, JSON.stringify([]), []);
+                            }
+                        },
+                        { escape: true });
+                },
+
+                saveOpportunityLineItems: function (view, update, dp, callback, functionArguments) {
+                    console.log('SAVE OPPORTUNITY LINE ITEMS INVOKED', arguments);
+                    $$('appLayout').showOverlay(window.FC_OpportunityProductsForm.loadingOverlay('Please wait...'));
+
+                    var opportunityLineItemsToSave = [];
+                    var opportunityLineItemsFieldsToNull = [];
+                    var opportunityLineItemRowIds = [];
+                    var billingInstructionSetsToSave = [];
+                    var billingInstructionStepsToSave = [];
+                    var billingInstructionStepsFieldsToNull = [];
+                    var opportunityLineItemsToDelete = [];
+                    for (updateRequest of update) {
+                        if (updateRequest.operation === 'insert' || updateRequest.operation === 'update') {
+                            var opportunityLineItemRecord = updateRequest.data;
+                            var opportunityLineItemToSave = {
+                                Billing_Frequency__c: opportunityLineItemRecord.Billing_Frequency__c,
+                                FC_Billing_Instruction_Set__c: opportunityLineItemRecord.FC_Billing_Instruction_Set__c,
+                                FC_Effective_Date__c: opportunityLineItemRecord.FC_Effective_Date__c ? moment(opportunityLineItemRecord.FC_Effective_Date__c).valueOf() : null,
+                                FC_End_Date__c: opportunityLineItemRecord.FC_End_Date__c ? moment(opportunityLineItemRecord.FC_End_Date__c).valueOf() : null,
+                                FC_Product_Geography_Seg3__c: opportunityLineItemRecord.FC_Product_Geography_Seg3__c,
+                                FC_UUID__c: opportunityLineItemRecord.FC_UUID__c,
+                                FC_Zuora_Action__c: opportunityLineItemRecord.FC_Zuora_Action__c,
+                                MS_Segment__c: opportunityLineItemRecord.MS_Segment__c,
+                                OpportunityId: '{!Opportunity.Id}',
+                                FC_Sale_Price__c: opportunityLineItemRecord.FC_Sale_Price__c,
+                                UnitPrice: opportunityLineItemRecord.FC_Sale_Price__c
+                            };
+
+                            var opportunityLineItemFieldsToNull = [];
+
+                            // Prepare Opportunity Line Item Date Fields
+                            var opportunityLineItemDateFields = ['FC_Effective_Date__c', 'FC_End_Date__c'];
+                            for (dateField of opportunityLineItemDateFields) {
+                                opportunityLineItemToSave[dateField] = opportunityLineItemToSave[dateField] ?
+                                    moment(opportunityLineItemToSave[dateField]).valueOf() : null;
+                                if (opportunityLineItemToSave[dateField] === null) {
+                                    delete opportunityLineItemToSave[dateField];
+                                    opportunityLineItemFieldsToNull.push(dateField);
+                                }
+                            }
+
+                            opportunityLineItemsFieldsToNull.push(opportunityLineItemFieldsToNull);
+
+                            // Only include pricebook entry Id for new records
+                            if (!opportunityLineItemRecord.Id) {
+                                opportunityLineItemToSave.PricebookEntryId = opportunityLineItemRecord.PricebookEntryId;
+                            }
+
+                            opportunityLineItemsToSave.push(opportunityLineItemToSave);
+                            opportunityLineItemRowIds.push(opportunityLineItemRecord.id);
+
+                            var billingInstructionSetToSave = {
+                                Opportunity_Line_Item_UUID__c: opportunityLineItemRecord.FC_UUID__c,
+                                Template__c: opportunityLineItemRecord.BillingInstructionSet.Template__c,
+                                Instruction_Parameters__c: opportunityLineItemRecord.BillingInstructionSet.Instruction_Parameters__c
+                            };
+                            billingInstructionSetsToSave.push(billingInstructionSetToSave);
+
+                            for (billingInstructionStep of opportunityLineItemRecord.BillingInstructionSet.BillingInstructionSteps) {
+
+                                var billingInstructionStepFieldsToNull = [];
+
+                                if (billingInstructionStep.Status__c !== 'New') {
+                                    continue;
+                                }
+
+                                var billingInstructionStepToSave = $j.extend({}, billingInstructionStep);
+                                billingInstructionStepToSave.Billing_Instruction_Set__r = {};
+                                billingInstructionStepToSave.Billing_Instruction_Set__r.Opportunity_Line_Item_UUID__c = opportunityLineItemRecord.FC_UUID__c;
+
+                                // Prepare Billing Instruction Step Date Fields
+                                var billingInstructionStepDateFields = ['Contract_Effective_Date__c', 'Trigger_Date__c', 'Specific_End_Date__c', 'T_C_Term_Start_Date__c', 'End_Date__c'];
+                                for (dateField of billingInstructionStepDateFields) {
+                                    billingInstructionStepToSave[dateField] = billingInstructionStepToSave[dateField] ?
+                                        moment(billingInstructionStepToSave[dateField]).valueOf() : null;
+                                    if (billingInstructionStepToSave[dateField] === null) {
+                                        delete billingInstructionStepToSave[dateField];
+                                        billingInstructionStepFieldsToNull.push(dateField);
+                                    }
+                                }
+
+                                delete billingInstructionStepToSave.BillingInstructionSet;
+                                delete billingInstructionStepToSave.Billing_Instruction_Set__c;
+                                delete billingInstructionStepToSave.Id;
+                                delete billingInstructionStepToSave.id;
+
+                                billingInstructionStepsToSave.push(billingInstructionStepToSave);
+                                billingInstructionStepsFieldsToNull.push(billingInstructionStepFieldsToNull);
+                            }
+                        } else if (updateRequest.operation === 'delete') {
+
+                            if (updateRequest.data.Id) {
+                                opportunityLineItemsToDelete.push({ Id: updateRequest.data.Id });
+                            }
+
+                        }
+                    }
+
+                    console.log('RECORDS TO SAVE', opportunityLineItemsToSave, opportunityLineItemsFieldsToNull, opportunityLineItemRowIds, billingInstructionSetsToSave, billingInstructionStepsToSave, billingInstructionStepsFieldsToNull, opportunityLineItemsToDelete);
+
+                    Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.FC_OpportunityProductsFormController.saveOpportunityLineItems}',
+                        opportunityLineItemsToSave,
+                        opportunityLineItemsFieldsToNull,
+                        opportunityLineItemRowIds,
+                        billingInstructionSetsToSave,
+                        billingInstructionStepsToSave,
+                        billingInstructionStepsFieldsToNull,
+                        opportunityLineItemsToDelete,
+                        '{!Opportunity.Id}',
+                        function (result, event) {
+                            console.log('SAVE OPPORTUNITY LINE ITEMS EVENT', event);
+                            var isError = false;
+                            var text = "";
+                            if (event.status) {
+                                console.log('SAVE OPPORTUNITY LINE ITEMS RESULT', result);
+                                text = JSON.stringify(result);
+                            } else if (event.type === 'exception') {
+                                isError = true;
+                                console.error('ERROR SAVING OPPORTUNITY LINE ITEM RECORDS', event.message);
+                                text = event.message;
+                            } else {
+                                isError = true;
+                                console.error('ERROR SAVING OPPORTUNITY LINE ITEM RECORDS', event.message);
+                                text = event.message;
+                            }
+                            var xhr = -1;
+                            if (isError) {
+                                xhr = { status: event.statusCode, statusText: event.message };
+                                result = update;
+                            }
+                            callback = {
+                                success: function (text, data, loader) {
+                                    console.log('CALLBACK SUCCESS', arguments);
+                                    for (var i = 0; i < data.length; i++) {
+                                        dp.processResult(data[i], data[i]);
+                                    }
+                                    if (dp.config.closeAfterSave) {
+                                        window.location = '/{!Opportunity.Id}';
+                                    } else {
+                                        webix.message({
+                                            text: 'Save successful.'
+                                        });
+                                        $$('appLayout').showOverlay(window.FC_OpportunityProductsForm.loadingOverlay('Please wait...'));
+                                        view.clearAll();
+                                        view.load(view.config.url, function (text, data, http_request) {
+                                            window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.load(window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.config.url,
+                                                function (text, data, http_request) {
+                                                    $$('appLayout').hideOverlay();
+                                                });
+                                        });
+                                    }
+                                },
+                                error: function (text, data, loader) {
+                                    console.log('CALLBACK ERROR', arguments);
+                                    webix.message({ text: text, type: 'error' });
+                                    if (data) {
+                                        for (updateItem of data) {
+                                            dp.processResult({ id: updateItem.id, status: 'error' });
+                                        }
+                                    }
+                                    $$('appLayout').hideOverlay();
+                                }
+                            }
+                            webix.ajax.$callback(view, callback, text, result, xhr, isError);
+                        },
+                        { escape: true });
+
+                }
+            },
+
+            decode: function (input) {
+                var textarea = document.createElement('textarea');
+                textarea.innerHTML = input;
+                return textarea.value;
+            },
+
+            // This will be populated asynchronously on UI init
+            geographyTypeOptions: [],
+
+
+            initUi: function () {
+                webix.ready(function () {
+
+                    webix.proxy.javascript = {
+
+                        $proxy: true,
+
+                        load: function (view, callback, params) {
+                            console.log('PROXY LOAD', arguments);
+                            var sourceParts = this.source.split('?');
+                            var functionName = sourceParts[0];
+                            var functionArguments = [];
+                            console.log('PROXY SORUCE PARTS', sourceParts);
+
+                            if (sourceParts[1]) {
+                                functionArguments = sourceParts[1].split(',');
+                            }
+                            window.FC_OpportunityProductsForm.data[functionName](view, callback, params, functionArguments);
+                        },
+
+                        saveAll: function (view, update, dp, callback) {
+
+                            var sourceParts = this.source.split('?');
+                            var functionName = sourceParts[0];
+                            var functionArguments = [];
+
+                            if (sourceParts[1]) {
+                                functionArguments = sourceParts[1].split(',');
+                            }
+                            window.FC_OpportunityProductsForm.data[functionName](view, update, dp, callback, functionArguments);
+                        },
+
+                        result: function (state, view, dp, text, data, loader) {
+                            console.log('PROXY RESULT STATE', state);
+                            console.log('PROXY RESULT VIEW', view);
+                            console.log('PROXY RESULT DP', dp);
+                            console.log('PROXY RESULT TEXT', text);
+                            console.log('PROXY RESULT DATA', data);
+                            console.log('PROXY RESULT LOADER', loader);
+                            if (data) {
+                                for (var i = 0; i < data.length; i++) {
+                                    dp.processResult(data[i], data[i]);
+                                }
+                                if (dp.config.closeAfterSave) {
+                                    window.location = '/{!Opportunity.Id}';
+                                } else {
+                                    webix.message({
+                                        text: 'Save successful.'
+                                    });
+                                    $$('appLayout').showOverlay(window.FC_OpportunityProductsForm.loadingOverlay('Please wait...'));
+                                    view.clearAll();
+                                    view.load(view.config.url, function (text, data, http_request) {
+                                        $$('appLayout').hideOverlay();
+                                    });
+                                }
+                            }
+                        }
+
+                    };
+
+                    window.FC_OpportunityProductsForm.opportunityLineItemDataCollection = new webix.DataCollection({
+                        url: 'javascript->loadOpportunityLineItems',
+                        scheme: {
+                            $init: function (item) {
+                                console.log("DATACOLLECTION SCHEME INIT", arguments);
+                                if (item.FC_Effective_Date__c) {
+                                    item.FC_Effective_Date__c = moment(item.FC_Effective_Date__c).toDate();
+                                }
+                                if (item.FC_Zuora_Action__c === 'Add') {
+                                    item.$css = 'zuoraActionAdd';
+                                } else if (item.FC_Zuora_Action__c === 'Update') {
+                                    item.$css = 'zuoraActionUpdate';
+                                } else if (item.FC_Zuora_Action__c === 'Remove') {
+                                    item.$css = 'zuoraActionRemove';
+                                } else {
+                                    item.$css = '';
+                                }
+                            },
+                            $change: function (item) {
+                                console.log("DATACOLLECTION SCHEME CHANGE", arguments);
+                                if (item.FC_Zuora_Action__c === 'Add') {
+                                    item.$css = 'zuoraActionAdd';
+                                } else if (item.FC_Zuora_Action__c === 'Update') {
+                                    item.$css = 'zuoraActionUpdate';
+                                } else if (item.FC_Zuora_Action__c === 'Remove') {
+                                    item.$css = 'zuoraActionRemove';
+                                } else {
+                                    item.$css = '';
+                                }
+                            }
+                        }
+                    });
+
+                    window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor = new webix.DataProcessor({
+                        master: window.FC_OpportunityProductsForm.opportunityLineItemDataCollection,
+                        url: 'javascript->saveOpportunityLineItems',
+                        autoupdate: false
+                    });
+
+                    var promises = [];
+
+                    // Populate opportunity record
+                    var opportunityPromise = webix.promise.defer();
+                    promises.push(opportunityPromise);
+                    var opportunityModel = new SObjectModel.Opportunity();
+                    opportunityModel.retrieve({ where: { Id: { eq: '{!Opportunity.Id}' } } },
+                        function (opportunityError, opportunityResults, opportunityEvent) {
+                            if (!opportunityError) {
+                                window.FC_OpportunityProductsForm.opportunityRecord = opportunityResults[0]._props;
+                                opportunityPromise.resolve(arguments);
+                            } else {
+                                console.error('ERROR RETRIEVING OPPORTUNITY', opportunityError);
+                                opportunityPromise.reject(arguments);
+                            }
+                        });
+
+                    // Populate picklists based on opportunity
+                    var opportunityDescribePromise = webix.promise.defer();
+                    promises.push(opportunityDescribePromise);
+                    opportunityModel.describe(function (opportunityError, opportunityResults, opportunityEvent) {
+                        if (!opportunityError) {
+                            window.FC_OpportunityProductsForm.msSegmentOptions = [];
+                            for (field of opportunityResults.fields) {
+                                if (field.name === 'MS_Segments__c') {
+                                    for (picklistValue of field.picklistValues) {
+                                        window.FC_OpportunityProductsForm.msSegmentOptions.push({
+                                            id: picklistValue.value,
+                                            value: picklistValue.label
+                                        });
+                                    }
+                                }
+                            }
+                            opportunityDescribePromise.resolve(arguments);
+                        } else {
+                            console.error('ERROR DESCRIBING OPPORTUNITY', opportunityError);
+                            opportunityDescribePromise.reject(arguments);
+                        }
+                    });
+
+                    // Get record type info
+                    var recordTypePromise = webix.promise.defer();
+                    promises.push(recordTypePromise);
+                    var recordTypeModel = new SObjectModel.RecordType();
+                    recordTypeModel.retrieve({
+                            where: { SobjectType: { in: ['Opportunity', 'FC_Billing_Instruction_Step__c'] } },
+                            orderby: [{ Name: 'ASC' }]
+                        },
+                        function (recordTypeError, recordTypeResults, recordTypeEvent) {
+                            if (!recordTypeError) {
+                                window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap = {};
+                                window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeOptions = [];
+                                window.FC_OpportunityProductsForm.opportunityRecordTypeDeveloperNameMap = {};
+                                for (recordTypeRecord of recordTypeResults) {
+                                    console.log('RECORD TYPE RECORD', recordTypeRecord);
+                                    if (recordTypeRecord.get('SobjectType') === 'FC_Billing_Instruction_Step__c') {
+                                        var row = {
+                                            id: recordTypeRecord.get('Id'),
+                                            value: recordTypeRecord.get('Name')
+                                        };
+                                        window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap[recordTypeRecord.get('DeveloperName')] = recordTypeRecord.get('Id');
+                                        window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeOptions.push(row);
+                                    } else if (recordTypeRecord.get('SobjectType') === 'Opportunity') {
+                                        window.FC_OpportunityProductsForm.opportunityRecordTypeDeveloperNameMap[recordTypeRecord.get('DeveloperName')] = recordTypeRecord.get('Id');
+                                    }
+                                }
+                                recordTypePromise.resolve(arguments);
+                            } else {
+                                console.error('ERROR RETRIEVING RECORD TYPES', recordTypeError);
+                                recordTypePromise.reject(arguments);
+                            }
+                        });
+
+                    // Populate geography type options
+                    var geographyTypePromise = webix.promise.defer();
+                    promises.push(geographyTypePromise);
+                    var geographyTypeModel = new SObjectModel.MetroclientGeographyType__c();
+                    geographyTypeModel.retrieve({ orderby: [{ Name: 'ASC' }] },
+                        function (geographyTypeError, geographyTypeResults, geographyTypeEvent) {
+                            if (!geographyTypeError) {
+                                var results = [];
+                                for (geographyTypeRecord of geographyTypeResults) {
+                                    var row = {
+                                        id: geographyTypeRecord.get('Name'),
+                                        value: geographyTypeRecord.get('Name')
+                                    };
+                                    results.push(row);
+                                }
+                                window.FC_OpportunityProductsForm.geographyTypeOptions = results;
+                                geographyTypePromise.resolve(arguments);
+                            } else {
+                                console.error('ERROR RETRIEVING GEOGRAPHY TYPES', geographyTypeError);
+                                geographyTypePromise.reject(arguments);
+                            }
+                        });
+
+                    // Populate Seg3 options
+                    var seg3Promise = webix.promise.defer();
+                    promises.push(seg3Promise);
+                    var seg3Model = new SObjectModel.FC_Metroclient_Product_Geography_Seg3__c();
+                    seg3Model.describe(function (seg3Error, seg3Results, seg3Event) {
+                        if (!seg3Error) {
+                            window.FC_OpportunityProductsForm.chargeTypeOptions = [];
+                            window.FC_OpportunityProductsForm.seg3Options = [];
+                            for (field of seg3Results.fields) {
+                                if (field.name === 'Seg3__c') {
+                                    for (picklistValue of field.picklistValues) {
+                                        var row = {
+                                            id: picklistValue.value,
+                                            value: picklistValue.label
+                                        };
+                                        window.FC_OpportunityProductsForm.seg3Options.push(row);
+                                    }
+                                } else if (field.name === 'Charge_Type__c') {
+                                    for (picklistValue of field.picklistValues) {
+                                        var row = {
+                                            id: picklistValue.value,
+                                            value: picklistValue.label
+                                        };
+                                        window.FC_OpportunityProductsForm.chargeTypeOptions.push(row);
+                                    }
+                                }
+                            }
+                            seg3Promise.resolve(arguments);
+                        } else {
+                            console.error('ERROR DESCRIBING SEG3', seg3Error);
+                            seg3Promise.reject(arguments);
+                        }
+                    });
+
+                    // Populate billing instruction template options
+                    var billingInstructionTemplatePromise = webix.promise.defer();
+                    promises.push(billingInstructionTemplatePromise);
+                    var billingInstructionTemplateModel = new SObjectModel.FC_Billing_Instruction_Template__c();
+                    billingInstructionTemplateModel.retrieve({
+                            where: { 'Custom_Javascript_Visualforce_Page__c': { ne: '' } },
+                            orderby: [{ Name: 'ASC' }]
+                        },
+                        function (billingInstructionTemplateError, billingInstructionTemplateResults, billingInstructionTemplateEvent) {
+                            if (!billingInstructionTemplateError) {
+                                var results = [];
+                                window.FC_OpportunityProductsForm.billingInstructionTemplateOptionsMap = {};
+                                window.FC_OpportunityProductsForm.billingInstructionTemplateNameToIdMap = {};
+                                for (billingInstructionTemplateRecord of billingInstructionTemplateResults) {
+                                    var row = {
+                                        id: billingInstructionTemplateRecord.get('Id'),
+                                        value: billingInstructionTemplateRecord.get('Name'),
+                                        jsKey: billingInstructionTemplateRecord.get('Name')
+                                    };
+                                    results.push(row);
+                                    window.FC_OpportunityProductsForm.billingInstructionTemplateOptionsMap[billingInstructionTemplateRecord.get('Id')] = billingInstructionTemplateRecord.get('Name');
+                                    window.FC_OpportunityProductsForm.billingInstructionTemplateNameToIdMap[billingInstructionTemplateRecord.get('Name')] = billingInstructionTemplateRecord.get('Id');
+                                }
+                                window.FC_OpportunityProductsForm.billingInstructionTemplateOptions = results;
+                                billingInstructionTemplatePromise.resolve(arguments);
+                            } else {
+                                console.error('ERROR RETRIEVING BILLING INSTRUCTION TEMPLATES', billingInstructionTemplateError);
+                                billingInstructionTemplatePromise.reject(arguments);
+                            }
+                        });
+
+                    // Populate billing instruction step picklist options
+                    var billingInstructionStepPromise = webix.promise.defer();
+                    promises.push(billingInstructionStepPromise);
+                    var billingInstructionStepModel = new SObjectModel.FC_Billing_Instruction_Step__c();
+                    billingInstructionStepModel.describe(
+                        function (billingInstructionStepError, billingInstructionStepResults, billingInstructionStepEvent) {
+                            if (!billingInstructionStepError) {
+                                window.FC_OpportunityProductsForm.billCycleDayOptions = [{ id: '', value: '' }];
+                                window.FC_OpportunityProductsForm.billCycleTypeOptions = [{
+                                    id: '',
+                                    value: ''
+                                }];
+                                window.FC_OpportunityProductsForm.billingPeriodAlignmentOptions = [{
+                                    id: '',
+                                    value: ''
+                                }];
+                                window.FC_OpportunityProductsForm.endDateCondition = [{ id: '', value: '' }];
+                                window.FC_OpportunityProductsForm.billingPeriodOptions = [{
+                                    id: '',
+                                    value: ''
+                                }];
+                                window.FC_OpportunityProductsForm.triggerEventOptions = [{ id: '', value: '' }];
+                                window.FC_OpportunityProductsForm.upToPeriodsTypeOptions = [{
+                                    id: '',
+                                    value: ''
+                                }];
+                                for (field of billingInstructionStepResults.fields) {
+                                    if (field.name === 'Bill_Cycle_Day__c') {
+                                        for (picklistValue of field.picklistValues) {
+                                            var row = {
+                                                id: picklistValue.value,
+                                                value: picklistValue.label
+                                            };
+                                            window.FC_OpportunityProductsForm.billCycleDayOptions.push(row);
+                                        }
+                                    } else if (field.name === 'Bill_Cycle_Type__c') {
+                                        for (picklistValue of field.picklistValues) {
+                                            var row = {
+                                                id: picklistValue.value,
+                                                value: picklistValue.label
+                                            };
+                                            window.FC_OpportunityProductsForm.billCycleTypeOptions.push(row);
+                                        }
+                                    } else if (field.name === 'Billing_Period__c') {
+                                        for (picklistValue of field.picklistValues) {
+                                            var row = {
+                                                id: picklistValue.value,
+                                                value: picklistValue.label
+                                            };
+                                            window.FC_OpportunityProductsForm.billingPeriodOptions.push(row);
+                                        }
+                                    } else if (field.name === 'Billing_Period_Alignment__c') {
+                                        for (picklistValue of field.picklistValues) {
+                                            var row = {
+                                                id: picklistValue.value,
+                                                value: picklistValue.label
+                                            };
+                                            window.FC_OpportunityProductsForm.billingPeriodAlignmentOptions.push(row);
+                                        }
+                                    } else if (field.name === 'End_Date_Condition__c') {
+                                        for (picklistValue of field.picklistValues) {
+                                            var row = {
+                                                id: picklistValue.value,
+                                                value: picklistValue.label
+                                            };
+                                            window.FC_OpportunityProductsForm.endDateConditionOptions.push(row);
+                                        }
+                                    } else if (field.name === 'Trigger_Event__c') {
+                                        for (picklistValue of field.picklistValues) {
+                                            var row = {
+                                                id: picklistValue.value,
+                                                value: picklistValue.label
+                                            };
+                                            window.FC_OpportunityProductsForm.triggerEventOptions.push(row);
+                                        }
+                                    } else if (field.name === 'Up_To_Periods_Type__c') {
+                                        for (picklistValue of field.picklistValues) {
+                                            var row = {
+                                                id: picklistValue.value,
+                                                value: picklistValue.label
+                                            };
+                                            window.FC_OpportunityProductsForm.upToPeriodsTypeOptions.push(row);
+                                        }
+                                    }
+                                }
+                                billingInstructionStepPromise.resolve(arguments);
+                            }
+                            else {
+                                console.error('ERROR DESCRIBING BILLING INSTRUCTION STEP', billingInstructionStepError);
+                                billingInstructionStepPromise.reject(arguments);
+                            }
+                        });
+
+                    webix.promise.all(promises).then(function (results) {
+
+                        webix.editors.$popup.productGeographySeg3Selector = {
+                            view: 'popup',
+                            width: 800,
+                            height: 300,
+                            body: {
+                                rows: [
+                                    {
+                                        view: 'datatable',
+                                        columnWidth: 100,
+                                        resizeColumn: true,
+                                        url: 'javascript->loadAllProductGeographySeg3s',
+                                        datafetch: 50,
+                                        loadahead: 50,
+                                        datathrottle: 250,
+                                        select: 'row',
+                                        on: {
+                                            onBeforeLoad: function () {
+                                                this.showOverlay(window.FC_OpportunityProductsForm.loadingOverlay('Loading...'));
+                                            },
+                                            onAfterLoad: function () {
+                                                this.hideOverlay();
+                                            },
+                                            onAfterFilter: function () {
+                                                var state = this.getState();
+                                                if (state.filter.Metrostudy_Product__c.length == 18 && this.count() == 1) {
+                                                    if (this.getItem(state.filter.Metrostudy_Product__c)) {
+                                                        this.select(state.filter.Metrostudy_Product__c);
+                                                        this.showItem(state.filter.Metrostudy_Product__c);
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        columns: [
+                                            {
+                                                id: 'Metrostudy_Product__c',
+                                                header: [
+                                                    '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Metrostudy_Product__c.Label}',
+                                                    { content: 'serverFilter' }
+                                                ],
+                                                fillspace: 2
+                                            },
+                                            {
+                                                id: 'Product_Rate_Plan_Name__c',
+                                                header: [
+                                                    '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Product_Rate_Plan__c.Label}',
+                                                    { content: 'serverFilter' }
+                                                ],
+                                                fillspace: 2
+                                            },
+                                            {
+                                                id: 'Geography_Type__c',
+                                                header: [
+                                                    '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Geography_Type__c.Label}',
+                                                    {
+                                                        content: 'serverMultiComboFilter',
+                                                        options: window.FC_OpportunityProductsForm.geographyTypeOptions
+                                                    }
+                                                ],
+                                                fillspace: 1
+                                            },
+                                            {
+                                                id: 'Geography__c',
+                                                header: [
+                                                    '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Geography__c.Label}',
+                                                    { content: 'serverFilter' }
+                                                ],
+                                                fillspace: 1
+                                            },
+                                            {
+                                                id: 'Seg3__c',
+                                                header: [
+                                                    '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Seg3__c.Label}',
+                                                    {
+                                                        content: 'serverMultiComboFilter',
+                                                        options: window.FC_OpportunityProductsForm.seg3Options
+                                                    }
+                                                ],
+                                                fillspace: 1
+                                            },
+                                            {
+                                                id: 'Charge_Type__c',
+                                                header: [
+                                                    '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Charge_Type__c.Label}',
+                                                    {
+                                                        content: 'serverMultiComboFilter',
+                                                        options: window.FC_OpportunityProductsForm.chargeTypeOptions
+                                                    }
+                                                ],
+                                                fillspace: 1
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        view: 'toolbar',
+                                        cols: [
+                                            {},
+                                            {
+                                                view: 'button',
+                                                label: 'Clear',
+                                                width: 75,
+                                                on: {
+                                                    onItemClick: function (id, event) {
+                                                        var datatable = this.getTopParentView().queryView({ view: 'datatable' });
+                                                        datatable.clearSelection();
+                                                        webix.callEvent('onEditEnd', ['']);
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+
+                        };
+
+                        webix.editors.productGeographySeg3SelectorPopup = webix.extend({
+                            popupType: 'productGeographySeg3Selector',
+                            focus: function () {
+                            },
+                            getValue: function () {
+                                if (this.getInputNode() && this.getInputNode().getSelectedItem()) {
+                                    return this.getInputNode().getSelectedItem().id || '';
+                                }
+                                return '';
+                            },
+                            setValue: function (value) {
+                                this.getPopup().show(this.node);
+                                if (this.getInputNode()) {
+                                    var datatable = this.getInputNode();
+                                    if (value) {
+
+                                        // Set Metrostudy Product filter to value
+                                        var datatableState = datatable.getState();
+                                        datatableState.filter.Metrostudy_Product__c = value;
+                                        datatable.setState(datatableState);
+
+                                    } else {
+                                        this.getInputNode().clearSelection();
+                                    }
+                                }
+                            },
+                            getInputNode: function () {
+                                return this.getPopup().getBody().queryView({ view: 'datatable' });
+                            },
+                            popupInit: function (popup) {
+                                popup.getBody().queryView({ view: 'datatable' }).attachEvent('onItemClick', function () {
+                                    if (this.getSelectedItem()) {
+                                        webix.callEvent('onEditEnd', [this.getSelectedItem().id]);
+                                    }
+                                });
+                            }
+                        }, webix.editors.popup);
+
+                        webix.editors.$popup.productRatePlanSelector = {
+                            view: 'popup',
+                            width: 500,
+                            height: 300,
+                            body: {
+                                rows: [
+                                    {
+                                        view: 'datatable',
+                                        columnWidth: 100,
+                                        resizeColumn: true,
+                                        url: 'javascript->loadProductRatePlans',
+                                        datafetch: 50,
+                                        loadahead: 50,
+                                        datathrottle: 250,
+                                        select: 'row',
+                                        on: {
+                                            onBeforeLoad: function () {
+                                                this.showOverlay(window.FC_OpportunityProductsForm.loadingOverlay('Loading...'));
+                                            },
+                                            onAfterLoad: function () {
+                                                this.hideOverlay();
+                                            },
+                                            onAfterFilter: function () {
+                                                var state = this.getState();
+                                                if (state.filter.Name.length == 18 && this.count() == 1) {
+                                                    if (this.getItem(state.filter.Name)) {
+                                                        this.select(state.filter.Name);
+                                                        this.showItem(state.filter.Name);
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        columns: [
+                                            {
+                                                id: 'Name',
+                                                header: [
+                                                    '{!$ObjectType.zqu__ProductRatePlan__C.Fields.Name.Label}',
+                                                    { content: 'serverFilter' }
+                                                ],
+                                                fillspace: 2
+                                            },
+                                            {
+                                                id: 'Product_Name__c',
+                                                header: [
+                                                    '{!$ObjectType.zqu__ProductRatePlan__C.Fields.zqu__Product__c.Label}',
+                                                    { content: 'serverFilter' }
+                                                ],
+                                                fillspace: 2
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        view: 'toolbar',
+                                        cols: [
+                                            {},
+                                            {
+                                                view: 'button',
+                                                label: 'Clear',
+                                                width: 75,
+                                                on: {
+                                                    onItemClick: function (id, event) {
+                                                        var datatable = this.getTopParentView().queryView({ view: 'datatable' });
+                                                        datatable.clearSelection();
+                                                        webix.callEvent('onEditEnd', ['']);
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+
+                        };
+
+                        webix.editors.productRatePlanSelectorPopup = webix.extend({
+                            popupType: 'productRatePlanSelector',
+                            focus: function () {
+                            },
+                            getValue: function () {
+                                if (this.getInputNode() && this.getInputNode().getSelectedItem()) {
+                                    return this.getInputNode().getSelectedItem().id || '';
+                                }
+                                return '';
+                            },
+                            setValue: function (value) {
+                                this.getPopup().show(this.node);
+                                if (this.getInputNode()) {
+                                    var datatable = this.getInputNode();
+                                    if (value) {
+
+                                        // Set Name filter to value
+                                        var datatableState = datatable.getState();
+                                        datatableState.filter.Name = value;
+                                        datatable.setState(datatableState);
+
+                                    } else {
+                                        datatable.clearSelection();
+                                    }
+                                }
+                            },
+                            getInputNode: function () {
+                                return this.getPopup().getBody().queryView({ view: 'datatable' });
+                            },
+                            popupInit: function (popup) {
+                                popup.getBody().queryView({ view: 'datatable' }).attachEvent('onItemClick', function () {
+                                    if (this.getSelectedItem()) {
+                                        webix.callEvent('onEditEnd', [this.getSelectedItem().id]);
+                                    }
+                                });
+                            }
+                        }, webix.editors.popup);
+
+                        // Enable CustomScroll
+                        if (!webix.env.touch && webix.ui.scrollSize) {
+                            webix.CustomScroll.init();
+                        }
+
+                        if ($$('appLayout')) {
+                            $$('appLayout').destructor();
+                        }
+                        webix.ui({
+                            id: 'appLayout',
+                            container: 'appContainer',
+                            borderless: true,
+                            type: 'space',
+                            rows: [
+                                {
+                                    view: 'toolbar',
+                                    cols: [
+                                        {
+                                            view: 'button',
+                                            label: 'Add Products',
+                                            width: 120,
+                                            on: {
+                                                onItemClick: function (id, event) {
+                                                    window.FC_OpportunityProductsForm.openAddProductsWindow();
+                                                }
+                                            }
+                                        },
+                                        {},
+                                        {
+                                            view: 'button',
+                                            label: 'Save',
+                                            width: 75,
+                                            on: {
+                                                onItemClick: function (id, event) {
+                                                    console.log('SAVE CLICKED');
+                                                    //$$('opportunityLineItemsDatatable').editStop();
+                                                    window.FC_OpportunityProductsForm.stopEditingDatatables();
+                                                    if (!window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.getState()) {
+                                                        webix.message({
+                                                            text: 'No changes have been made.'
+                                                        });
+                                                    } else {
+                                                        window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.config.closeAfterSave = false;
+                                                        window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.send();
+                                                    }
+                                                }
+                                            },
+                                            disabled: window.FC_OpportunityProductsForm.opportunityRecord.StageName === 'Closed Won' && window.FC_OpportunityProductsForm.opportunityRecord.RecordTypeId !== window.FC_OpportunityProductsForm.opportunityRecordTypeDeveloperNameMap['Metrostudy_Opportunity_Record_Type_Consult']
+                                        },
+                                        {
+                                            view: 'button',
+                                            label: 'Save & Close',
+                                            width: 130,
+                                            on: {
+                                                onItemClick: function (id, event) {
+                                                    console.log('SAVE & CLOSE CLICKED');
+                                                    //$$('opportunityLineItemsDatatable').editStop();
+                                                    window.FC_OpportunityProductsForm.stopEditingDatatables();
+                                                    if (!window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.getState()) {
+                                                        window.location = '/{!Opportunity.Id}';
+                                                    } else {
+                                                        window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.config.closeAfterSave = true;
+                                                        window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.send();
+                                                    }
+                                                }
+                                            },
+                                            disabled: window.FC_OpportunityProductsForm.opportunityRecord.StageName === 'Closed Won' && window.FC_OpportunityProductsForm.opportunityRecord.RecordTypeId !== window.FC_OpportunityProductsForm.opportunityRecordTypeDeveloperNameMap['Metrostudy_Opportunity_Record_Type_Consult']
+                                        },
+                                        {
+                                            view: 'button',
+                                            label: 'Close',
+                                            width: 75,
+                                            on: {
+                                                onItemClick: function (id, event) {
+                                                    //$$('opportunityLineItemsDatatable').editStop();
+                                                    window.FC_OpportunityProductsForm.stopEditingDatatables();
+                                                    if (window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.getState()) {
+                                                        webix.confirm({
+                                                            title: 'Close',
+                                                            ok: 'Yes',
+                                                            cancel: 'No',
+                                                            text: 'Close without saving changes?',
+                                                            callback: function (result) {
+                                                                if (result) {
+                                                                    window.location = '/{!Opportunity.Id}';
+                                                                }
+                                                            }
+                                                        });
+                                                    } else {
+                                                        window.location = '/{!Opportunity.Id}';
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    id: 'opportunityLineItemsDatatable',
+                                    view: 'datatable',
+                                    autoheight: true,
+                                    scrollX: true,
+                                    columnWidth: 75,
+                                    minHeight: 500,
+                                    leftSplit: 3,
+                                    rightSplit: 1,
+                                    resizeColumn: true,
+                                    editable: true,
+                                    on: {
+                                        onSubViewCreate: function (view, item) {
+                                            var datatable = $$(view).queryView({ view: 'datatable' });
+                                            if (datatable) {
+                                                $$(datatable).config.opportunityLineItemId = item.id;
+                                                $$(datatable).config.billingInstructionSetId = item.FC_Billing_Instruction_Set__c;
+                                                $$(datatable).config.existingOpportunityLineItemId = item.Id;
+                                                $$(datatable).parse(item.BillingInstructionSet.BillingInstructionSteps);
+                                            }
+                                        },
+                                        onBeforeDelete: function (id) {
+                                            if (this.getEditState() && this.getEditState().row === id) {
+                                                this.editCancel();
+                                            }
+                                            return true;
+                                        },
+                                        onAfterAdd: function (id, index) {
+                                            window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.load(window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.config.url);
+                                            if (this.getSubView(id)) {
+                                                this.getSubView(id).refresh();
+                                            }
+                                        },
+                                        onAfterEditStop: function (state, editor, ignoreUpdate) {
+                                            var opportunityLineItem = window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.getItem(editor.row);
+
+                                            if (editor.column === 'FC_Sale_Price__c' && (opportunityLineItem.FC_Zuora_Action__c === 'Update' || opportunityLineItem.FC_Zuora_Action__c === 'No Action')) {
+
+                                                if (opportunityLineItem.FC_Sale_Price__c !== opportunityLineItem.FC_Original_Sale_Price__c) {
+                                                    var billingFrequencyDivisorMap = {
+                                                        'Annually': 1,
+                                                        'Monthly': 12,
+                                                        'Quarterly': 4,
+                                                        'Semi-Annually': 2
+                                                    };
+                                                    var billingFrequencyDivisor = 1;
+                                                    if (billingFrequencyDivisorMap[opportunityLineItem.Billing_Frequency__c]) {
+                                                        billingFrequencyDivisor = billingFrequencyDivisorMap[opportunityLineItem.Billing_Frequency__c];
+                                                    }
+                                                    window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.updateItem(editor.row, {
+                                                        FC_Zuora_Action__c: 'Update',
+                                                        BillingInstructionSet: {
+                                                            Opportunity_Line_Item_UUID__c: opportunityLineItem.FC_UUID__c,
+                                                            BillingInstructionSteps: [
+                                                                {
+                                                                    Status__c: 'New',
+                                                                    Execute_Immediately__c: true,
+                                                                    RecordTypeId: window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap['Amend_Modify'],
+                                                                    Contract_Effective_Date__c: opportunityLineItem.FC_Effective_Date__c,
+                                                                    Price__c: opportunityLineItem.FC_Sale_Price__c / billingFrequencyDivisor,
+                                                                    Metrostudy_Product_Geography_Seg3__c: opportunityLineItem.FC_Product_Geography_Seg3__c
+                                                                }
+                                                            ]
+                                                        }
+                                                    });
+
+                                                } else {
+                                                    window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.updateItem(editor.row, {
+                                                        FC_Zuora_Action__c: 'No Action',
+                                                        BillingInstructionSet: {
+                                                            Opportunity_Line_Item_UUID__c: opportunityLineItem.FC_UUID__c,
+                                                            BillingInstructionSteps: []
+                                                        }
+                                                    });
+                                                }
+                                                window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.save(editor.row, 'update');
+
+                                                // Reload the datatable from the data collection.
+                                                var subview = this.getSubView(editor.row);
+                                                if (subview) {
+                                                    var subviewDatatable = subview.queryView({ view: 'datatable' });
+                                                    subviewDatatable.clearAll();
+                                                    subviewDatatable.parse(opportunityLineItem.BillingInstructionSet.BillingInstructionSteps);
+                                                    this.resizeSubView(editor.row);
+                                                }
+
+                                            }
+
+                                            // If the effective date changes on the opportunity line item, update the billing steps.
+                                            if (editor.column === 'FC_Effective_Date__c') {
+
+                                                if (opportunityLineItem.FC_Zuora_Action__c === 'Remove') {
+                                                    opportunityLineItem.FC_End_Date__c = opportunityLineItem.FC_Effective_Date__c;
+                                                }
+
+                                                if (opportunityLineItem.BillingInstructionSet &&
+                                                    opportunityLineItem.BillingInstructionSet.BillingInstructionSteps) {
+                                                    for (billingInstructionStep of opportunityLineItem.BillingInstructionSet.BillingInstructionSteps) {
+                                                        if (billingInstructionStep.Status__c === 'New') {
+                                                            billingInstructionStep.Contract_Effective_Date__c = opportunityLineItem.FC_Effective_Date__c;
+                                                        }
+                                                    }
+                                                    window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.updateItem(editor.row, opportunityLineItem);
+                                                    window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.save(editor.row, 'update');
+
+                                                    // Reload the datatable from the data collection.
+                                                    var subview = this.getSubView(editor.row);
+                                                    if (subview) {
+                                                        var subviewDatatable = subview.queryView({ view: 'datatable' });
+                                                        subviewDatatable.clearAll();
+                                                        subviewDatatable.parse(opportunityLineItem.BillingInstructionSet.BillingInstructionSteps);
+                                                        this.resizeSubView(editor.row);
+                                                    }
+
+                                                }
+                                            }
+
+                                            window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.load(window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.config.url);
+                                            if (this.getSubView(editor.row) && this.getSubView(editor.row).refresh) {
+                                                this.getSubView(editor.row).refresh();
+                                            }
+                                        }
+                                    },
+                                    data: [],
+                                    ready: function () {
+                                        window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection = new webix.DataCollection({ url: 'javascript->loadVisibleProductGeographySeg3s' });
+                                    },
+                                    onClick: {
+                                        editBillingInstructionSetParameters: function (event, id, trigger) {
+
+                                            var billingInstructionSetPromise = webix.promise.defer();
+                                            var billingInstructionSetModel = new SObjectModel.FC_Billing_Instruction_Set__c();
+                                            if (this.getItem(id.row).Id) {
+                                                billingInstructionSetModel.retrieve({
+                                                        where: { Id: { eq: this.getItem(id.row).FC_Billing_Instruction_Set__c } }
+                                                    },
+                                                    function (billingInstructionSetError, billingInstructionSetResults, billingInstructionSetEvent) {
+                                                        if (!billingInstructionSetError) {
+                                                            billingInstructionSetPromise.resolve(billingInstructionSetResults[0]._props);
+                                                        } else {
+                                                            console.error('ERROR RETRIEVING BILLING INSTRUCTION SET', billingInstructionSetError);
+                                                            billingInstructionSetPromise.reject(arguments);
+                                                        }
+                                                    });
+                                            } else {
+                                                billingInstructionSetPromise.resolve(this.getItem(id.row).BillingInstructionSet);
+                                            }
+
+                                            var productGeographySeg3Promise = webix.promise.defer();
+                                            var productGeographySeg3Model = new SObjectModel.FC_Metroclient_Product_Geography_Seg3__c();
+                                            productGeographySeg3Model.retrieve({ where: { Id: { eq: this.getItem(id.row).FC_Product_Geography_Seg3__c } } },
+                                                function (productGeographySeg3Error, productGeographySeg3Result, productGeographySeg3Event) {
+                                                    if (!productGeographySeg3Error) {
+                                                        productGeographySeg3Promise.resolve(arguments);
+                                                    } else {
+                                                        console.error('ERROR RETRIEVING PRODUCT GEOGRAPHY SEG3', productGeographySeg3Error);
+                                                        productGeographySeg3Promise.reject(argments);
+                                                    }
+                                                });
+
+                                            webix.promise.all([billingInstructionSetPromise, productGeographySeg3Promise]).then(function (results) {
+                                                console.log('BILLING INSTRUCTION SET PROMISE RESULTS', results);
+                                                var selectedBillingInstructionSet = results[0];
+                                                var selectedSeg3Record = results[1][1][0]._props;
+                                                var selectedBillingInstructionTemplateName = window.FC_OpportunityProductsForm.billingInstructionTemplateOptionsMap[selectedBillingInstructionSet.Template__c];
+                                                var billingInstructionParametersWindow = window.FC_OpportunityProductsForm.buildBillingInstructionParametersWindow(selectedBillingInstructionTemplateName);
+                                                var instructionParametersJson = selectedBillingInstructionSet.Instruction_Parameters__c;
+                                                var instructionParameters = {};
+                                                if (instructionParametersJson) {
+                                                    try {
+                                                        instructionParameters = JSON.parse(window.FC_OpportunityProductsForm.decode(selectedBillingInstructionSet.Instruction_Parameters__c));
+                                                    } catch (e) {
+                                                        console.log('Exception caught parsing JSON', e);
+                                                        // Do nothing.
+                                                    }
+                                                }
+                                                console.log("OPEN WINDOW ARGS", selectedBillingInstructionTemplateName, $$('billingInstructionParametersForm'),
+                                                    window.FC_OpportunityProductsForm.opportunityLineItemDataCollection,
+                                                    selectedSeg3Record,
+                                                    $$('billingInstructionParametersOkButton'),
+                                                    instructionParameters,
+                                                    id.row,
+                                                    window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.getItem(id.row).FC_UUID__c);
+                                                window.FC_OpportunityProductsForm.billingInstructionTemplates[selectedBillingInstructionTemplateName].initParameterForm(
+                                                    $$('billingInstructionParametersForm'),
+                                                    window.FC_OpportunityProductsForm.opportunityLineItemDataCollection,
+                                                    selectedSeg3Record,
+                                                    $$('billingInstructionParametersOkButton'),
+                                                    instructionParameters,
+                                                    id.row,
+                                                    window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.getItem(id.row).FC_UUID__c,
+                                                    window.FC_OpportunityProductsForm.opportunityRecord,
+                                                    function () {
+                                                        billingInstructionParametersWindow.show();
+                                                    }
+                                                );
+
+                                            }).fail(function (error) {
+                                                console.error('ERROR ON RETRIEVING BILLING INSTRUCTION SET PROMISE', billingInstructionSetError);
+                                            });
+                                        },
+                                        deleteOpportunityProduct: function (event, id, trigger) {
+                                            console.log('DELETE OPPORTUNITY PRODUCT', arguments, this);
+                                            window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.save(id.row, 'delete');
+                                            window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.remove(id.row);
+                                        },
+                                        revertOpportunityProduct: function (event, id, trigger) {
+                                            var opportunityLineItem = window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.getItem(id.row);
+                                            window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.updateItem(id.row, {
+                                                FC_Zuora_Action__c: 'No Action',
+                                                FC_Sale_Price__c: opportunityLineItem.FC_Original_Sale_Price__c,
+                                                FC_End_Date__c: null,
+                                                BillingInstructionSet: {
+                                                    Opportunity_Line_Item_UUID__c: opportunityLineItem.FC_UUID__c,
+                                                    BillingInstructionSteps: []
+                                                }
+                                            });
+                                            window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.save(id.row, 'update');
+
+                                            // Reload the datatable from the data collection.
+                                            var subview = this.getSubView(id.row);
+                                            if (subview) {
+                                                var subviewDatatable = subview.queryView({ view: 'datatable' });
+                                                subviewDatatable.clearAll();
+                                                subviewDatatable.parse(opportunityLineItem.BillingInstructionSet.BillingInstructionSteps);
+                                                this.resizeSubView(id.row);
+                                            }
+                                        },
+                                        markOpportunityProductForRemoval: function (event, id, trigger) {
+                                            var opportunityLineItem = window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.getItem(id.row);
+                                            window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.updateItem(id.row, {
+                                                FC_Zuora_Action__c: 'Remove',
+                                                FC_End_Date__c: opportunityLineItem.FC_Effective_Date__c,
+                                                BillingInstructionSet: {
+                                                    Opportunity_Line_Item_UUID__c: opportunityLineItem.FC_UUID__c,
+                                                    BillingInstructionSteps: [
+                                                        {
+                                                            Status__c: 'New',
+                                                            Execute_Immediately__c: true,
+                                                            RecordTypeId: window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap['Amend_Remove'],
+                                                            Contract_Effective_Date__c: opportunityLineItem.FC_Effective_Date__c
+                                                        }
+                                                    ]
+                                                }
+                                            });
+                                            window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.save(id.row, 'update');
+
+                                            // Reload the datatable from the data collection.
+                                            var subview = this.getSubView(id.row);
+                                            if (subview) {
+                                                var subviewDatatable = subview.queryView({ view: 'datatable' });
+                                                subviewDatatable.clearAll();
+                                                subviewDatatable.parse(opportunityLineItem.BillingInstructionSet.BillingInstructionSteps);
+                                                this.resizeSubView(id.row);
+                                            }
+                                        }
+                                    },
+                                    columns: [
+                                        {
+                                            id: 'leftColumn',
+                                            header: '',
+                                            width: 50,
+                                            template: function (item) {
+                                                var result = '';
+                                                var executedStepCount = 0;
+
+                                                if (item.BillingInstructionSet && item.BillingInstructionSet.BillingInstructionSteps) {
+                                                    for (billingInstructionStep of item.BillingInstructionSet.BillingInstructionSteps) {
+                                                        if (billingInstructionStep.Status__c === 'Executed') {
+                                                            executedStepCount++;
+                                                        }
+                                                    }
+                                                }
+
+                                                if (executedStepCount === 0 && item.FC_Zuora_Action__c === 'Add') {
+                                                    result = '<i class="editBillingInstructionSetParameters fa fa-pencil"></i>';
+                                                }
+                                                return result;
+                                            }
+                                        },
+                                        {
+                                            id: 'subrow',
+                                            header: '',
+                                            width: 40,
+                                            template: '{common.subrow()}'
+                                        },
+                                        {
+                                            id: 'FC_Metrostudy_Product__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.FC_Metrostudy_Product__c.Label}',
+                                            width: 400
+                                        },
+                                        {
+                                            id: 'FC_Geography_Type__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.FC_Geography_Type__c.Label}'
+                                        },
+                                        {
+                                            id: 'FC_Geography__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.FC_Geography__c.Label}',
+                                            width: 250
+                                        },
+                                        {
+                                            id: 'FC_Bill_Case__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.FC_Bill_Case__c.Label}',
+                                            width: 125
+                                        },
+                                        {
+                                            id: 'FC_Effective_Date__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.FC_Effective_Date__c.Label}',
+                                            editor: 'date',
+                                            css: 'editableCell',
+                                            format: webix.Date.dateToStr('%m/%d/%Y')
+
+                                        },
+                                        {
+                                            id: 'FC_Sale_Price__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.FC_Sale_Price__c.Label}',
+                                            editor: 'text',
+                                            css: 'editableCell'
+                                        },
+                                        {
+                                            id: 'Billing_Frequency__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.Billing_Frequency__c.Label}'
+                                        },
+                                        {
+                                            id: 'MS_Segment__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.MS_Segment__c.Label}',
+                                            editor: 'richselect',
+                                            css: 'editableCell',
+                                            options: window.FC_OpportunityProductsForm.msSegmentOptions
+                                        },
+                                        {
+                                            id: 'FC_Seg3__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.FC_Seg3__c.Label}'
+                                        },
+                                        {
+                                            id: 'FC_Zuora_Action__c',
+                                            header: '{!$ObjectType.OpportunityLineItem.Fields.FC_Zuora_Action__c.Label}'
+                                        },
+                                        {
+                                            id: 'rightColumn',
+                                            header: '',
+                                            width: 50,
+                                            template: function (item) {
+                                                var result = '';
+                                                var executedStepCount = 0;
+
+                                                if (item.BillingInstructionSet && item.BillingInstructionSet.BillingInstructionSteps) {
+                                                    for (billingInstructionStep of item.BillingInstructionSet.BillingInstructionSteps) {
+                                                        if (billingInstructionStep.Status__c === 'Executed') {
+                                                            executedStepCount++;
+                                                        }
+                                                    }
+                                                }
+
+                                                if (executedStepCount === 0) {
+                                                    if (item.FC_Zuora_Action__c === 'Add') {
+                                                        result = '<i class="deleteOpportunityProduct fa fa-trash"></i>';
+                                                    } else if (item.FC_Zuora_Action__c === 'Update') {
+                                                        result = '<i class="revertOpportunityProduct fa fa-undo"></i>';
+                                                    } else if (item.FC_Zuora_Action__c === 'Remove') {
+                                                        result = '<i class="revertOpportunityProduct fa fa-undo"></i>';
+                                                    } else if (item.FC_Zuora_Action__c === 'No Action') {
+                                                        result = '<i class="markOpportunityProductForRemoval fa fa-trash"></i>';
+                                                    }
+                                                }
+                                                return result;
+                                            }
+
+                                        }
+                                    ],
+                                    subview: {
+                                        type: 'space',
+                                        borderless: true,
+                                        rows: [
+                                            {
+                                                view: 'toolbar',
+                                                elements: [
+                                                    {
+                                                        view: 'button',
+                                                        label: 'Add Billing Instruction',
+                                                        width: 150,
+                                                        on: {
+                                                            onItemClick: function (id, event) {
+
+                                                                // Add the billing instruction to the data collection, not the datatable.
+                                                                var datatable = this.getTopParentView().queryView({ view: 'datatable' });
+                                                                var opportunityLineItem = window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.getItem(datatable.config.opportunityLineItemId);
+                                                                opportunityLineItem.BillingInstructionSet.BillingInstructionSteps.push({
+                                                                    Status__c: 'New',
+                                                                    Execute_Immediately__c: true
+                                                                });
+                                                                window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.save(datatable.config.opportunityLineItemId, 'update');
+
+                                                                // Reload the datatable from the data collection.
+                                                                datatable.clearAll();
+                                                                datatable.parse(opportunityLineItem.BillingInstructionSet.BillingInstructionSteps);
+                                                                $$('opportunityLineItemsDatatable').resizeSubView(datatable.config.opportunityLineItemId);
+                                                                this.refresh();
+
+                                                            }
+                                                        }
+
+                                                    }
+
+                                                ]
+                                            },
+                                            {
+                                                view: 'datatable',
+                                                autoheight: true,
+                                                columnWidth: 150,
+                                                resizeColumn: true,
+                                                leftSplit: 4,
+                                                rightSplit: 1,
+                                                editable: true,
+                                                on: {
+                                                    onBeforeLoad: function () {
+                                                        window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.load(window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.config.url);
+                                                    },
+                                                    onAfterEditStop: function (state, editor, ignoreUpdate) {
+                                                        console.log('SUBVIEW ON AFTER EDIT STOP THIS', this);
+                                                        console.log('SUBVIEW ON AFTER EDIT STOP STATE', state);
+                                                        console.log('SUBVIEW ON AFTER EDIT STOP EDITOR', editor);
+                                                        console.log('SUBVIEW ON AFTER EDIT STOP IGNORE UPDATE', ignoreUpdate);
+
+                                                        // Mark this row in the data collection for saving
+                                                        var opportunityLineItem = window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.getItem(this.config.opportunityLineItemId);
+                                                        for (var i = 0; i < opportunityLineItem.BillingInstructionSet.BillingInstructionSteps.length; i++) {
+                                                            var billingInstructionStep = opportunityLineItem.BillingInstructionSet.BillingInstructionSteps[i];
+                                                            if (billingInstructionStep.id === editor.row) {
+                                                                opportunityLineItem.BillingInstructionSet.BillingInstructionSteps[i] = this.getItem(editor.row);
+                                                                break;
+                                                            }
+                                                        }
+                                                        window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.save(this.config.opportunityLineItemId, 'update');
+
+                                                        // Reload the datatable from the data collection.
+                                                        var datatable = this.getTopParentView().queryView({ view: 'datatable' });
+                                                        datatable.clearAll();
+                                                        datatable.parse(opportunityLineItem.BillingInstructionSet.BillingInstructionSteps);
+                                                        $$('opportunityLineItemsDatatable').resizeSubView(this.config.opportunityLineItemId);
+                                                    }
+                                                },
+                                                scheme: {
+                                                    $init: function (item) {
+                                                        console.log('SCHEME INIT THIS', this);
+                                                        console.log('SCHEME INIT ITEM', item);
+                                                        if (item.Contract_Effective_Date__c) {
+                                                            item.Contract_Effective_Date__c = moment(item.Contract_Effective_Date__c).toDate();
+                                                        }
+                                                        if (item.Trigger_Date__c) {
+                                                            item.Trigger_Date__c = moment(item.Trigger_Date__c).toDate();
+                                                        }
+                                                        if (item.Specific_End_Date__c) {
+                                                            item.Specific_End_Date__c = moment(item.Specific_End_Date__c).toDate();
+                                                        }
+                                                        if (item.T_C_Term_Start_Date__c) {
+                                                            item.T_C_Term_Start_Date__c = moment(item.T_C_Term_Start_Date__c).toDate();
+                                                        }
+                                                    }
+                                                },
+                                                columns: [
+                                                    {
+                                                        id: 'Status__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Status__c.Label}',
+                                                        width: 75
+                                                    },
+                                                    {
+                                                        id: 'Execute_Immediately__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Execute_Immediately__c.Label}',
+                                                        width: 75,
+                                                    },
+                                                    {
+                                                        id: 'RecordTypeId',
+                                                        header: 'ZAction',
+                                                        editor: 'richselect',
+                                                        options: window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeOptions,
+                                                        css: 'editableCell'
+                                                    },
+                                                    {
+                                                        id: 'Description__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Description__c.Label}',
+                                                        editor: 'text',
+                                                        css: 'editableCell',
+                                                        width: 350
+                                                    },
+                                                    {
+                                                        id: 'Contract_Effective_Date__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Contract_Effective_Date__c.Label}',
+                                                        editor: 'date',
+                                                        css: 'editableCell',
+                                                        format: webix.Date.dateToStr('%m/%d/%Y')
+                                                    },
+                                                    {
+                                                        id: 'Price__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Price__c.Label}',
+                                                        editor: 'text',
+                                                        css: 'editableCell'
+                                                    },
+                                                    //{
+                                                    //    id: 'Quantity__c',
+                                                    //    header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Quantity__c.Label}',
+                                                    //    editor: 'text',
+                                                    //    css: 'editableCell'
+                                                    //},
+                                                    {
+                                                        id: 'Billing_Period__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Billing_Period__c.Label}',
+                                                        editor: 'richselect',
+                                                        options: window.FC_OpportunityProductsForm.billingPeriodOptions,
+                                                        css: 'editableCell'
+                                                    },
+                                                    //{
+                                                    //    id: 'Specific_Billing_Period__c',
+                                                    //    header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Specific_Billing_Period__c.Label}',
+                                                    //    editor: 'text',
+                                                    //    css: 'editableCell'
+                                                    //},
+                                                    {
+                                                        id: 'Billing_Period_Alignment__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Billing_Period_Alignment__c.Label}',
+                                                        editor: 'richselect',
+                                                        options: window.FC_OpportunityProductsForm.billingPeriodAlignmentOptions,
+                                                        css: 'editableCell'
+                                                    },
+                                                    //{
+                                                    //    id: 'Bill_Cycle_Type__c',
+                                                    //    header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Bill_Cycle_Type__c.Label}',
+                                                    //    editor: 'richselect',
+                                                    //    options: window.FC_OpportunityProductsForm.billCycleTypeOptions,
+                                                    //    css: 'editableCell'
+                                                    //},
+                                                    {
+                                                        id: 'Bill_Cycle_Day__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Bill_Cycle_Day__c.Label}',
+                                                        editor: 'richselect',
+                                                        options: window.FC_OpportunityProductsForm.billCycleDayOptions,
+                                                        css: 'editableCell'
+                                                    },
+
+                                                    //{
+                                                    //    id: 'Trigger_Date__c',
+                                                    //    header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Trigger_Date__c.Label}',
+                                                    //    editor: 'date',
+                                                    //    css: 'editableCell',
+                                                    //    format: webix.Date.dateToStr('%m/%d/%Y')
+                                                    //},
+                                                    //{
+                                                    //    id: 'Trigger_Event__c',
+                                                    //    header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Trigger_Event__c.Label}',
+                                                    //    editor: 'richselect',
+                                                    //    options: window.FC_OpportunityProductsForm.triggerEventOptions,
+                                                    //    css: 'editableCell'
+                                                    //},
+                                                    {
+                                                        id: 'End_Date_Condition__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.End_Date_Condition__c.Label}',
+                                                        editor: 'richselect',
+                                                        options: window.FC_OpportunityProductsForm.endDateConditionOptions,
+                                                        css: 'editableCell'
+                                                    },
+                                                    {
+                                                        id: 'Up_To_Periods__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Up_To_Periods__c.Label}',
+                                                        editor: 'text',
+                                                        css: 'editableCell'
+                                                    },
+                                                    {
+                                                        id: 'Up_To_Periods_Type__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Up_To_Periods_Type__c.Label}',
+                                                        editor: 'richselect',
+                                                        options: window.FC_OpportunityProductsForm.upToPeriodsTypeOptions,
+                                                        css: 'editableCell'
+                                                    },
+                                                    {
+                                                        id: 'Specific_End_Date__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Specific_End_Date__c.Label}',
+                                                        editor: 'date',
+                                                        css: 'editableCell',
+                                                        format: webix.Date.dateToStr('%m/%d/%Y')
+                                                    },
+                                                    {
+                                                        id: 'T_C_Term_Start_Date__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.T_C_Term_Start_Date__c.Label}',
+                                                        editor: 'date',
+                                                        css: 'editableCell',
+                                                        format: webix.Date.dateToStr('%m/%d/%Y')
+                                                    },
+                                                    {
+                                                        id: 'Metrostudy_Product_Geography_Seg3__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Metrostudy_Product_Geography_Seg3__c.Label}',
+                                                        editor: 'productGeographySeg3SelectorPopup',
+                                                        css: 'editableCell',
+                                                        template: function (item) {
+                                                            if (window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.getItem(item.Metrostudy_Product_Geography_Seg3__c)) {
+                                                                return window.FC_OpportunityProductsForm.visibleProductRatePlanDataCollection.getItem(item.Metrostudy_Product_Geography_Seg3__c).value;
+                                                            }
+                                                            return item.Metrostudy_Product_Geography_Seg3__c;
+                                                        }
+                                                    },
+                                                    {
+                                                        id: 'Product_Rate_Plan__c',
+                                                        header: '{!$ObjectType.FC_Billing_Instruction_Step__c.Fields.Product_Rate_Plan__c.Label}',
+                                                        editor: 'productRatePlanSelectorPopup',
+                                                        css: 'editableCell'
+                                                    },
+                                                    {
+                                                        id: 'rightColumn',
+                                                        header: '',
+                                                        width: 50,
+                                                        template: '<i class="deleteBillingInstructionStep fa fa-trash"></i>'
+                                                    }
+                                                ],
+                                                onClick: {
+                                                    deleteBillingInstructionStep: function (event, id, trigger) {
+
+                                                        // Delete the billing instruction from the data collection, not the datatable.
+                                                        var opportunityLineItem = window.FC_OpportunityProductsForm.opportunityLineItemDataCollection.getItem(this.config.opportunityLineItemId);
+                                                        for (var i = 0; i < opportunityLineItem.BillingInstructionSet.BillingInstructionSteps.length; i++) {
+                                                            var billingInstructionStep = opportunityLineItem.BillingInstructionSet.BillingInstructionSteps[i];
+                                                            if (billingInstructionStep.id === id.row) {
+                                                                opportunityLineItem.BillingInstructionSet.BillingInstructionSteps.splice(i, 1);
+                                                                break;
+                                                            }
+                                                        }
+                                                        window.FC_OpportunityProductsForm.opportunityLineItemDataProcessor.save(this.config.opportunityLineItemId, 'update');
+
+                                                        // Reload the datatable from the data collection.
+                                                        var datatable = this.getTopParentView().queryView({ view: 'datatable' });
+                                                        datatable.clearAll();
+                                                        datatable.parse(opportunityLineItem.BillingInstructionSet.BillingInstructionSteps);
+                                                        $$('opportunityLineItemsDatatable').resizeSubView(this.config.opportunityLineItemId);
+                                                    }
+                                                },
+                                                data: [],
+                                                ready: function () {
+                                                    console.log('BILLING INSTRUCTION STEPS SUBVIEW READY', this);
+                                                    if (this.config.opportunityLineItemId) {
+                                                        $$('opportunityLineItemsDatatable').resizeSubView(this.config.opportunityLineItemId);
+                                                    }
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        });
+
+                        $$('opportunityLineItemsDatatable').data.sync(window.FC_OpportunityProductsForm.opportunityLineItemDataCollection);
+
+                        // var productRatePlanDataCollection = new webix.DataCollection({ url: 'javascript->loadProductRatePlans' });
+
+                        webix.extend($$('appLayout'), webix.OverlayBox);
+                        window.FC_OpportunityProductsForm.resizeAppLayout();
+
+                    }).fail(function (error) {
+                        console.error('ALL PROMISE ERROR', arguments);
+                    });
+
+                });
+            },
+
+            loadingOverlay: function (text) {
+                var result = '<div class="loadingOverlay">';
+                if (text) {
+                    result += '<div class="loadingOverlayText">' + text + '<br /><br /><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>';
+                }
+                result += '</div>';
+                return result;
+            },
+
+            msSegmentOptions: [],
+
+            openAddProductsWindow: function () {
+                var addProductsWindow = webix.ui({
+                    view: 'window',
+                    modal: true,
+                    width: 800,
+                    height: 500,
+                    position: 'top',
+                    resize: true,
+                    head: {
+                        view: 'toolbar',
+                        cols: [
+                            {
+                                view: 'label',
+                                label: 'Add Products'
+                            },
+                            {},
+                            {
+                                view: 'icon',
+                                icon: 'times',
+                                on: {
+                                    onItemClick: function (id, event) {
+                                        $$(this).getTopParentView().close();
+                                    }
+                                }
+                            }
+                        ]
+
+                    },
+                    body: {
+                        type: 'space',
+                        rows: [
+                            {
+                                view: 'datatable',
+                                columnWidth: 100,
+                                resizeColumn: true,
+                                url: 'javascript->loadProductGeographySeg3s',
+                                datafetch: 50,
+                                loadahead: 50,
+                                datathrottle: 250,
+                                select: 'row',
+                                on: {
+                                    onBeforeLoad: function () {
+                                        this.showOverlay(window.FC_OpportunityProductsForm.loadingOverlay('Loading...'));
+                                    },
+                                    onAfterLoad: function () {
+                                        this.hideOverlay();
+                                    },
+                                    onSelectChange: function () {
+                                        this.getTopParentView().updateAddProductButtonStatus();
+                                        var selectedItem = this.getSelectedItem();
+                                        if (selectedItem) {
+                                            if (selectedItem.Default_Billing_Instruction_Template__c) {
+                                                $$('addProductsBillingInstructionTemplateSelect').setValue(selectedItem.Default_Billing_Instruction_Template__c);
+                                            } else {
+                                                $$('addProductsBillingInstructionTemplateSelect').setValue('{!defaultBillingInstructionTemplateId}');
+                                            }
+                                        }
+                                    }
+                                },
+                                columns: [
+                                    {
+                                        id: 'Metrostudy_Product__c',
+                                        header: [
+                                            '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Metrostudy_Product__c.Label}',
+                                            { content: 'serverFilter' }
+                                        ],
+                                        fillspace: 4
+                                    },
+                                    {
+                                        id: 'Geography_Type__c',
+                                        header: [
+                                            '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Geography_Type__c.Label}',
+                                            {
+                                                content: 'serverMultiComboFilter',
+                                                inputConfig: {
+                                                    suggest: {
+                                                        fitMaster: false,
+                                                        on: {
+                                                            onBeforeShow: function () {
+                                                                this.define('width', 100);
+                                                                this.resize();
+                                                            }
+                                                        }
+
+                                                    }
+                                                },
+                                                options: window.FC_OpportunityProductsForm.geographyTypeOptions
+                                            }
+                                        ],
+                                        fillspace: 1
+                                    },
+                                    {
+                                        id: 'Geography__c',
+                                        header: [
+                                            '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Geography__c.Label}',
+                                            { content: 'serverFilter' }
+                                        ],
+                                        fillspace: 3
+                                    },
+                                    {
+                                        id: 'Seg3__c',
+                                        header: [
+                                            '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Seg3__c.Label}',
+                                            {
+                                                content: 'serverMultiComboFilter',
+                                                options: window.FC_OpportunityProductsForm.seg3Options
+                                            }
+                                        ],
+                                        fillspace: 1
+                                    },
+                                    {
+                                        id: 'Charge_Type__c',
+                                        header: [
+                                            '{!$ObjectType.FC_Metroclient_Product_Geography_Seg3__c.Fields.Charge_Type__c.Label}',
+                                            {
+                                                content: 'serverMultiComboFilter',
+                                                options: window.FC_OpportunityProductsForm.chargeTypeOptions
+                                            }
+                                        ],
+                                        fillspace: 1
+                                    },
+                                ]
+                            },
+                            {
+                                view: 'toolbar',
+                                cols: [
+                                    {},
+                                    {
+                                        id: 'addProductsBillingInstructionTemplateSelect',
+                                        view: 'richselect',
+                                        label: 'Billing Instruction Template',
+                                        labelWidth: 175,
+                                        labelAlign: 'right',
+                                        options: window.FC_OpportunityProductsForm.billingInstructionTemplateOptions,
+                                        value: '{!defaultBillingInstructionTemplateId}',
+                                        on: {
+                                            onChange: function (newValue, oldValue) {
+                                                this.getTopParentView().updateAddProductButtonStatus();
+                                            }
+                                        }
+                                    },
+                                    {
+                                        id: 'addProductButton',
+                                        view: 'button',
+                                        label: 'Add Product',
+                                        disabled: true,
+                                        width: 100,
+                                        on: {
+                                            onItemClick: function (id, event) {
+                                                var selectedBillingInstructionTemplateName =
+                                                    window.FC_OpportunityProductsForm.billingInstructionTemplateOptionsMap[$$('addProductsBillingInstructionTemplateSelect').getValue()];
+                                                var datatable = this.getTopParentView().queryView({ view: 'datatable' });
+                                                var selectedSeg3Record = datatable.getSelectedItem();
+                                                console.log('SELECTED SEG3', selectedSeg3Record);
+                                                var billingInstructionParametersWindow = window.FC_OpportunityProductsForm.buildBillingInstructionParametersWindow(selectedBillingInstructionTemplateName);
+                                                window.FC_OpportunityProductsForm.billingInstructionTemplates[selectedBillingInstructionTemplateName].initParameterForm(
+                                                    $$('billingInstructionParametersForm'),
+                                                    window.FC_OpportunityProductsForm.opportunityLineItemDataCollection,
+                                                    selectedSeg3Record,
+                                                    $$('billingInstructionParametersOkButton'),
+                                                    null,
+                                                    null,
+                                                    null,
+                                                    window.FC_OpportunityProductsForm.opportunityRecord,
+                                                    function () {
+                                                        billingInstructionParametersWindow.show();
+                                                    });
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                });
+                addProductsWindow.updateAddProductButtonStatus = function () {
+                    console.log('UPDATE ADD PRODUCT BUTTON STATUS THIS', this);
+                    var addProductButton = $$('addProductButton');
+                    var datatable = this.queryView({ view: 'datatable' });
+                    var billingInstructionTemplateSelect = $$('addProductsBillingInstructionTemplateSelect');
+                    if (datatable.getSelectedItem() && billingInstructionTemplateSelect.getValue()) {
+                        addProductButton.enable();
+                    } else {
+                        addProductButton.disable();
+                    }
+                };
+                var datatable = addProductsWindow.queryView({ view: 'datatable' });
+                if (datatable) {
+                    webix.extend($$(datatable), webix.OverlayBox);
+                }
+                addProductsWindow.show();
+            },
+
+            opportunityRecord: {},
+
+            // This will be populated asynchronously on UI init
+            opportunityRecordTypeDeveloperNameMap: {},
+
+            // This will be populated asynchronously on UI init
+            opportunityLineItemDataCollection: null,
+
+            // This will be populated asynchronously on UI init
+            opportunityLineItemDataProcessor: null,
+
+            rebuildSubview: function (opportunityLineItemId) {
+
+                // Reload the datatable from the data collection.
+                var opportunityLineItem = this.opportunityLineItemDataCollection.getItem(opportunityLineItemId);
+
+                if (opportunityLineItem) {
+                    var subview = $$('opportunityLineItemsDatatable').getSubView(opportunityLineItemId);
+                    if (subview) {
+                        var subviewDatatable = subview.queryView({ view: 'datatable' });
+                        subviewDatatable.clearAll();
+                        subviewDatatable.parse(opportunityLineItem.BillingInstructionSet.BillingInstructionSteps);
+                        $$('opportunityLineItemsDatatable').resizeSubView(opportunityLineItemId);
+                    }
+                }
+
+            },
+
+            // Resize the application layout to fit in the window.
+            resizeAppLayout: function () {
+                var newWidthValue = $j(window).innerWidth() - 40;
+                $j('#appContainer').width(newWidthValue);
+                $$('appLayout').define('width', newWidthValue);
+                $$('appLayout').resize();
+            },
+
+            // This will be populated asynchronously on UI init
+            seg3Options: [],
+
+            stopEditingDatatables: function () {
+                var datatable = $$('opportunityLineItemsDatatable');
+                if (datatable.data.order) {
+                    for (rowId of datatable.data.order) {
+                        var subview = datatable.getSubView(rowId);
+                        if (subview) {
+                            var subDatatable = subview.queryView({ view: 'datatable' });
+                            if (subDatatable) {
+                                subDatatable.editStop();
+                            }
+                        }
+
+                    }
+                }
+                datatable.editStop();
+            },
+
+            // This will be populated asynchronously on UI init
+            triggerEventOptions: [],
+
+            // This will be populated asynchronously on UI init
+            upToPeriodsTypeOptions: [],
+
+            visibleProductRatePlanDataCollection: null,
+
+            visibleSeg3DataCollection: null
+
+        };
+
+        window.onresize = function () {
+            window.FC_OpportunityProductsForm.resizeAppLayout();
+        };
+
+        $j(function () {
+            if ($j('#appContainer')) {
+                window.FC_OpportunityProductsForm.initUi();
+            }
+        });
+        // ]]>
+    </script>
+
+    <apex:repeat id="theScripts" value="{!billingInstructionTemplates}" var="template">
+        <apex:includeScript loadOnReady="true"
+                            value="/apex/{!template.Custom_Javascript_Visualforce_Page__c}?id={!Opportunity.Id}&core.apexpages.devmode.url=0"/>
+    </apex:repeat>
+
+    <apex:form id="theForm">
+        <apex:sectionHeader title="Select Products for" subTitle="{!Opportunity.Name}"/>
+        <apex:pageMessages />
+        <apex:pageBlock rendered="{!ISBLANK(Opportunity.Pricebook2Id)}">
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Save" action="{!saveOpportunityRecord}" reRender="theForm,theScripts"
+                                    onComplete="window.FC_OpportunityProductsForm.initUi();"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection collapsible="false" columns="1" title="Please select a pricebook.">
+                <apex:selectList value="{!Opportunity.Pricebook2Id}" multiselect="false" size="1">
+                    <apex:selectOptions value="{!pricebook2Options}"/>
+                    <apex:actionSupport event="onchange" action="{!saveOpportunityRecord}" reRender="theForm,theScripts"
+                                        onComplete="window.FC_OpportunityProductsForm.initUi();"/>
+                </apex:selectList>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:outputPanel layout="block" rendered="{!!ISBLANK(Opportunity.Pricebook2Id)}">
+            <div id="appContainer"></div>
+        </apex:outputPanel>
+
+    </apex:form>
+</apex:page>

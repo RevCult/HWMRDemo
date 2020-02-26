@@ -1,0 +1,234 @@
+<apex:page contentType="text/javascript" standardController="Opportunity">
+    // <!--@formatter:off-->
+    // <script type="text/javascript">
+    // @formatter:on
+    /* <![CDATA[ */
+    $j(function () {
+        var templateName = 'Standard';
+        window.FC_OpportunityProductsForm.billingInstructionTemplates[templateName] = {
+
+            initParameterForm: function (form, opportunityLineItemsData, selectedSeg3Record, okButton, previousValues,
+                                         opportunityLineItemId, opportunityLineItemUuid, opportunityRecord, callback) {
+                console.log('INIT PARAMETER FORM FOR STANDARD');
+                console.log('INIT PARAMETER FORM FORM', form);
+                console.log('INIT PARAMETER FORM OPPORTUNITY LINE ITEMS DATA', opportunityLineItemsData);
+                console.log('INIT PARAMETER FORM SELECTED SEG3 RECORD', selectedSeg3Record);
+                console.log('INIT PARAMETER FORM OK BUTTON', okButton);
+                console.log('INIT PARAMETER FORM PREVIOUS VALUES', previousValues);
+                console.log('INIT PARAMETER FORM OPPORTUNITY LINE ITEM ID', opportunityLineItemId);
+                console.log('INIT PARAMETER FORM OPPORTUNITY LINE ITEM UUID', opportunityLineItemUuid);
+
+                var templateId = window.FC_OpportunityProductsForm.billingInstructionTemplateNameToIdMap[templateName];
+                var opportunityContractEffectiveDate = moment(opportunityRecord.FC_Contract_Effective_Date__c);
+                console.log("OPPORTUNITY CONTRACT EFFECTIVE DATE", opportunityContractEffectiveDate);
+
+                var listPriceFieldMap = {
+                    'Month': 'Monthly_List_Price__c',
+                    'Quarter': 'Quarterly_List_Price__c',
+                    'Semi_Annual': 'Semi_Annual_List_Price__c',
+                    'Annual': 'Annual_List_Price__c'
+                };
+
+                var selectedProductName = selectedSeg3Record.Metrostudy_Product__c + ' | ' +
+                        selectedSeg3Record.Geography_Type__c + ' | ' +
+                        selectedSeg3Record.Geography__c + ' | ' +
+                        selectedSeg3Record.Seg3__c + ' | ' +
+                        selectedSeg3Record.Charge_Type__c;
+                formConfig = {
+                    id: $$(form).config.id,
+                    view: 'form',
+                    elements: [
+                        {
+                            view: 'text',
+                            label: 'Selected Product',
+                            labelWidth: 125,
+                            readonly: true,
+                            disabled: true,
+                            value: selectedProductName
+                        },
+                        {
+                            view: 'datepicker',
+                            label: 'Start Date',
+                            labelWidth: 125,
+                            name: 'startDate',
+                            required: true,
+                            stringResult: true,
+                            format: webix.Date.dateToStr("%m/%d/%Y"),
+                            value: window.FC_OpportunityProductsForm.billingInstructionParametersDefaults.startDate || opportunityContractEffectiveDate.format('YYYY-MM-DD')
+                        },
+                        {
+                            view: 'richselect',
+                            label: 'Billing Period',
+                            labelWidth: 125,
+                            name: 'billingPeriod',
+                            options: [
+                                { id: 'Month', value: 'Month' },
+                                { id: 'Quarter', value: 'Quarter' },
+                                { id: 'Semi_Annual', value: 'Semi-Annual' },
+                                { id: 'Annual', value: 'Annual' }
+                            ],
+                            required: selectedSeg3Record.Charge_Type__c === 'Recurring',
+                            hidden: selectedSeg3Record.Charge_Type__c === 'OneTime',
+                            value: selectedSeg3Record.Charge_Type__c === 'Recurring' ? window.FC_OpportunityProductsForm.billingInstructionParametersDefaults.billingPeriod : null,
+                            on: {
+                                onChange: function (newValue, oldValue) {
+                                    this.getFormView().setValues({ listPrice: '' }, true);
+                                    if (newValue) {
+                                        this.getFormView().setValues({ listPrice: selectedSeg3Record[listPriceFieldMap[newValue]] }, true);
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            view: 'text',
+                            label: 'Price',
+                            labelWidth: 125,
+                            name: 'price',
+                            required: true
+                        },
+                        {
+                            view: 'text',
+                            label: 'List Price',
+                            name: 'listPrice',
+                            labelWidth: 125,
+                            readonly: true,
+                            disabled: true,
+                            value: selectedSeg3Record.Charge_Type__c === 'OneTime' ? selectedSeg3Record.One_Time_List_Price__c : ''
+                        }
+
+                    ],
+                    rules: {}
+                };
+                form = webix.ui(formConfig, $$(form).getParentView(), $$(form));
+                if (previousValues) {
+                    form.setValues(previousValues);
+                }
+                $$(okButton).attachEvent('onItemClick', function (id, event) {
+                    var windowBody = form.getTopParentView().getBody();
+                    windowBody.showOverlay(window.FC_OpportunityProductsForm.loadingOverlay('Please wait...'));
+                    if (form.validate()) {
+                        var promises = [];
+
+                        // Retrieve pricebook entry id of the product we are adding
+                        var pricebookEntryModel = new SObjectModel.PricebookEntry();
+                        var pricebookEntryPromise = webix.promise.defer();
+                        promises.push(pricebookEntryPromise);
+                        pricebookEntryModel.retrieve({
+                                    where: {
+                                        and: {
+                                            Pricebook2Id: { eq: opportunityRecord.Pricebook2Id },
+                                            Product2Id: { eq: selectedSeg3Record.Product__c }
+                                        }
+                                    }
+                                },
+                                function (pricebookEntryError, pricebookEntryResults, pricebookEntryEvent) {
+                                    if (!pricebookEntryError) {
+                                        pricebookEntryPromise.resolve(arguments);
+                                    } else {
+                                        console.error('ERROR RETRIEVING PRICEBOOK ENTRY', pricebookEntryError);
+                                        pricebookEntryPromise.reject(arguments);
+                                    }
+                                });
+
+                        webix.promise.all(promises).then(function (results) {
+
+                            var annualizationMultiplierMap = {
+                                'Month': 12,
+                                'Quarter': 4,
+                                'Semi_Annual': 2,
+                                'Annual': 1
+                            };
+                            var annualizationMultiplier = annualizationMultiplierMap[form.elements.billingPeriod.getValue()] || 1;
+
+                            console.log('ALL PROMISE RESULTS', arguments);
+                            var pricebookEntryResults = results[0][1];
+
+                            if (opportunityLineItemUuid === null) {
+                                opportunityLineItemUuid = uuid();
+                            }
+
+                            console.log("PRODUCT START DATE", form.elements.startDate.getValue(), moment(form.elements.startDate.getValue()));
+
+                            var startDate = moment(form.elements.startDate.getValue());
+                            var isSubscribe = !opportunityRecord.ContractId &&
+                                    !opportunityRecord.FC_Last_Sent_To_Zuora__c &&
+                                    startDate.isSame(opportunityContractEffectiveDate, 'day');
+                            console.log("IS SUBSCRIBE", isSubscribe);
+                            var opportunityLineItemData = {
+                                Billing_Frequency__c: selectedSeg3Record.Charge_Type__c === 'Recurring' ? window.FC_OpportunityProductsForm.billingPeriodToBillingFrequencyMap[form.elements.billingPeriod.getValue()] : 'One-Time',
+                                FC_Bill_Case__c: templateName,
+                                FC_Effective_Date__c: startDate.clone().toDate(),
+                                FC_Geography__c: selectedSeg3Record.Geography__c, // FORMULA
+                                FC_Geography_Type__c: selectedSeg3Record.Geography_Type__c, // FORMULA
+                                FC_Metrostudy_Product__c: selectedSeg3Record.Metrostudy_Product__c, // FORMULA
+                                FC_Product_Geography_Seg3__c: selectedSeg3Record.Id,
+                                FC_Seg3__c: selectedSeg3Record.Seg3__c, // FORMULA
+                                FC_UUID__c: opportunityLineItemUuid,
+                                FC_Zuora_Action__c: 'Add',
+                                MS_Segment__c: opportunityRecord.MS_Segments__c,
+                                PricebookEntryId: pricebookEntryResults[0].get('Id'),
+                                Quantity: 1,
+                                FC_Sale_Price__c: Number(form.elements.price.getValue()) * annualizationMultiplier,
+                                BillingInstructionSet: {
+                                    Instruction_Parameters__c: JSON.stringify(form.getValues()),
+                                    Opportunity_Line_Item_UUID__c: opportunityLineItemUuid,
+                                    Template__c: templateId,
+                                    BillingInstructionSteps: [
+                                        {
+                                            Status__c: 'New',
+                                            Execute_Immediately__c: selectedSeg3Record.Execute_Immediately__c,
+                                            RecordTypeId: isSubscribe ? window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap['Subscribe'] : window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap['Amend_Add'],
+                                            Metrostudy_Product_Geography_Seg3__c: selectedSeg3Record.Id,
+                                            Product_Rate_Plan__c: selectedSeg3Record.Product_Rate_Plan__c,
+                                            Contract_Effective_Date__c: startDate.clone().toDate(),
+                                            Price__c: form.elements.price.getValue(),
+                                            Billing_Period__c: selectedSeg3Record.Charge_Type__c === 'Recurring' ? form.elements.billingPeriod.getValue() : null,
+                                            Billing_Period_Alignment__c: selectedSeg3Record.Charge_Type__c === 'Recurring' ?
+                                                    (form.elements.billingPeriod.getValue() === 'Month' ? 'AlignToCharge' : 'AlignToTermStart') : null,
+                                            Description__c: selectedSeg3Record.Metrostudy_Product__c + ' | ' + selectedSeg3Record.Geography_Type__c + ' | ' + selectedSeg3Record.Geography__c + ' | ' + (selectedSeg3Record.Charge_Type__c === 'Recurring' ? form.elements.billingPeriod.getValue() : 'One-Time'),
+                                            T_C_Term_Start_Date__c: selectedSeg3Record.Charge_Type__c === 'Recurring' ? startDate.clone().toDate() : null,
+                                            Billing_Instruction_Description__c: 'Standard'
+                                        }
+                                    ]
+                                }
+                            };
+
+                            var rowId = opportunityLineItemId;
+                            if (opportunityLineItemId === null) {
+
+                                // Add a new opportunity line item row
+                                rowId = opportunityLineItemsData.add(opportunityLineItemData);
+
+                                window.FC_OpportunityProductsForm.billingInstructionParametersDefaults.startDate = form.elements.startDate.getValue();
+                                window.FC_OpportunityProductsForm.billingInstructionParametersDefaults.billingPeriod = form.elements.billingPeriod.getValue();
+
+                            } else {
+
+                                // Modify opportunity line item row
+                                opportunityLineItemsData.updateItem(opportunityLineItemId, opportunityLineItemData);
+
+                            }
+
+                            window.FC_OpportunityProductsForm.rebuildSubview(rowId);
+
+                            form.getTopParentView().close();
+                        }).fail(function (error) {
+                            console.error('ALL PROMISE ERROR', error);
+                        });
+                    } else {
+                        windowBody.hideOverlay();
+                    }
+
+                });
+
+                if (callback) {
+                    callback();
+                }
+            }
+        }
+    });
+    /* ]]> */
+    // @formatter:off
+    // </script>
+    // <!--@formatter:on-->
+</apex:page>

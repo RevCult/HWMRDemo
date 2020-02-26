@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>A subscription is a product or service that has recurring charges, such as a monthly flat fee or charges based on usage. Subscriptions can also include one-time charges, such as activation fees.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>Zuora__fields_for_select_billing_account_compon</fullName>
+        <availableFields>
+            <field>Zuora__AutoRenew__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Zuora__ContractAcceptanceDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Zuora__Notes__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Zuora__ServiceActivationDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Zuora__SubscriptionEndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Zuora__SubscriptionStartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Zuora__TermEndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Zuora__TermStartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Zuora__Version__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Zuora__Zuora_Id__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Used for select billing account component</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Zuora__ContractEffectiveDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Zuora__TermSettingType__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Zuora__Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Zuora__InitialTerm__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Zuora__RenewalTerm__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Subscriptions</label>
+    </fieldSets>
+    <fields>
+        <fullName>Account_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Zuora__Account__r.Region__c)</formula>
+        <label>Account Region</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Subscription__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp; Zuora__Account__r.Id, Zuora__Account__r.Name) &amp; &quot; / &quot; &amp; HYPERLINK(&quot;/&quot; &amp; Id, Name)</formula>
+        <label>Account / Subscription</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BillCase__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Bill Case</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Billing_Account_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Zuora__CustomerAccount__r.Zuora__AccountNumber__c</formula>
+        <label>Billing Account Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CARR__c</fullName>
+        <externalId>false</externalId>
+        <formula>Zuora__MRR__c * 12</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CARR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CQRR__c</fullName>
+        <externalId>false</externalId>
+        <formula>Zuora__MRR__c * 3</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CQRR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_Booking_Month__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Month( DateValue(Zuora__OriginalCreated_Date__c ))
+,1, &quot;Jan&quot;
+,2, &quot;Feb&quot;
+,3, &quot;Mar&quot;
+,4, &quot;Apr&quot;
+,5, &quot;May&quot;
+,6, &quot;Jun&quot;
+,7, &quot;Jul&quot;
+,8, &quot;Aug&quot;
+,9, &quot;Sep&quot;
+,10, &quot;Oct&quot;
+,11, &quot;Nov&quot;
+,&quot;Dec&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) Booking Month</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Contract_Term_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(Zuora__TermSettingType__c) == &quot;TERMED&quot; &amp;&amp; !Zuora__AutoRenew__c, &quot;Termed&quot;,
+            &quot;Evergreen&quot;)</formula>
+        <label>(FC) Contract Term Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Eligible_to_Cancel_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Eligible to Cancel End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FC_Eligible_to_Cancel_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Eligible to Cancel Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FC_Eligible_to_Cancel_in_31_60_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Eligible_to_Cancel_Start_Date__c - TODAY() &gt;= 31 &amp;&amp;
+FC_Eligible_to_Cancel_Start_Date__c - TODAY() &lt;= 60</formula>
+        <label>(FC) Eligible to Cancel in 31-60 Days</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Eligible_to_Cancel_in_61_90_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Eligible_to_Cancel_Start_Date__c - TODAY() &gt;= 61 &amp;&amp;
+FC_Eligible_to_Cancel_Start_Date__c - TODAY() &lt;= 90</formula>
+        <label>(FC) Eligible to Cancel in 61-90 Days</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Eligible_to_Cancel_in_over_90_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Eligible_to_Cancel_Start_Date__c - TODAY() &gt; 90</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) Eligible to Cancel in over 90 Days</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Eligible_to_Cancel_within_30_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>(FC_Eligible_to_Cancel_Start_Date__c - TODAY() &gt; 0 &amp;&amp;
+FC_Eligible_to_Cancel_Start_Date__c - TODAY() &lt;= 30) || (NOT(FC_Eligible_to_be_Cancelled__c) &amp;&amp; (TODAY() &gt; FC_Eligible_to_Cancel_End_Date__c))</formula>
+        <label>(FC) Eligible to Cancel within 30 Days</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Eligible_to_be_Cancelled__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Eligible_to_Cancel_Start_Date__c - TODAY() &lt;= 0 &amp;&amp; TODAY() &lt;= FC_Eligible_to_Cancel_End_Date__c</formula>
+        <label>(FC) Eligible to be Cancelled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Latest_Charge_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Latest Charge Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FC_One_Time_Charge_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) One-Time Charge Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Opp_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT($Api.Partner_Server_URL_260, FIND( &apos;/services&apos;, $Api.Partner_Server_URL_260)) &amp; OpportunityID__c</formula>
+        <label>(FC) Opp Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Override_Eligible_to_Cancel_Dates__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>(FC) Override Eligible to Cancel Dates</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Recurring_Charge_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Recurring Charge Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FirstOpenInvoiceDate__c</fullName>
+        <externalId>false</externalId>
+        <label>First Open Invoice Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HasNonAnnualRecurring__c</fullName>
+        <externalId>false</externalId>
+        <label>HasNonAnnualRecurring</label>
+        <length>1</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Reportable__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Term_Status__c = &apos;Active&apos; || Term_Status__c = &apos;Future&apos; || 
+	(Term_Status__c = &apos;Cancelled&apos; &amp;&amp; TODAY() &lt;=  Zuora__SubscriptionEndDate__c )
+)
+ 
+&amp;&amp; NOT(
+	ISPICKVAL(Zuora__TermSettingType__c, &apos;TERMED&apos;) 
+	&amp;&amp; Term_Length_Months__c &lt; 12
+	&amp;&amp; Zuora__MRR__c &lt;= 0
+	) 
+&amp;&amp; NOT(CONTAINS(Name, &apos;aging&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Reportable?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Link_to_Zuora__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK( $Setup.FC_Zuora_Client_Settings__c.Zuora_UI_Endpoint_Base_URL__c &amp; &quot;/apps/Subscription.do?method=view&amp;id=&quot; &amp; Zuora__External_Id__c , &quot;Link to Zuora&quot;, &quot;_blank&quot;)</formula>
+        <label>Link to Zuora</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunityID__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity ID (deprecated)</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Subscriptions</relationshipLabel>
+        <relationshipName>Subscriptions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK( Quote_SFDC_ID__c )),
+     HYPERLINK(&quot;/&quot; &amp; Quote_SFDC_ID__c, &quot;Link To Quote&quot;),
+     &quot;&quot;)</formula>
+        <label>Quote</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_SFDC_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote_SFDC_ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <description>Region field populated from Opportunity</description>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Term_Length_Months__c</fullName>
+        <externalId>false</externalId>
+        <formula>(YEAR( Zuora__TermEndDate__c ) * 12 + MONTH(Zuora__TermEndDate__c)) +((IF(MONTH(Zuora__TermEndDate__c) == MONTH( Zuora__TermStartDate__c ) || DAY(Zuora__TermEndDate__c) == DAY(Zuora__TermStartDate__c), 0, 1)) - (YEAR(Zuora__TermStartDate__c) * 12 + MONTH(Zuora__TermStartDate__c)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Term Length (Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Term_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Zuora__Status__c == &quot;Cancelled&quot; &amp;&amp; Zuora__CancelledDate__c &gt;= TODAY(),
+            &quot;Active&quot;, /* future dated cancellations */
+            IF(Zuora__Status__c == &quot;Cancelled&quot;,&quot;Cancelled&quot;,
+            IF(FC_One_Time_Charge_Count__c &gt; 0 &amp;&amp; FC_Recurring_Charge_Count__c == 0,
+            IF(Zuora__TermStartDate__c &gt; TODAY(), &quot;Future&quot;,
+            IF(FC_Latest_Charge_Effective_Date__c &lt; TODAY(), &quot;Expired&quot;,
+            &quot;Active&quot;
+            )
+            ),
+            IF(FC_Recurring_Charge_Count__c &gt; 0,
+            IF(Zuora__TermStartDate__c &gt; TODAY(),
+            &quot;Future&quot;,
+            IF(TEXT(Zuora__TermSettingType__c) == &quot;TERMED&quot;,
+            IF(Zuora__TermEndDate__c &lt; TODAY(), &quot;Expired&quot;, &quot;Active&quot;),
+            Zuora__Status__c
+            )
+            ),
+            Zuora__Status__c
+            )
+            )
+            )
+)</formula>
+        <label>Term Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Subscriptions</relationshipLabel>
+        <relationshipName>Subscriptions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__AutoRenew__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>AutoRenew?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__CancelledDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date of the Amendment object that canceled the subscription.</description>
+        <externalId>false</externalId>
+        <label>Cancelled Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__ContractAcceptanceDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the date on which the contract was accepted by the customer, and will trigger charges that have their trigger event set to Upon Customer Acceptance.</description>
+        <externalId>false</externalId>
+        <label>Contract Acceptance Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__ContractEffectiveDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the date on which the contract becomes effective, and will trigger charges that have their trigger event set to Upon Contract Effective.</description>
+        <externalId>false</externalId>
+        <label>Contract Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__CurrentTermPeriodType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The period type for the current subscription term.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The period type of the current subscription term.</inlineHelpText>
+        <label>Current Term Period Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Month</fullName>
+                    <default>false</default>
+                    <label>Month</label>
+                </value>
+                <value>
+                    <fullName>Year</fullName>
+                    <default>false</default>
+                    <label>Year</label>
+                </value>
+                <value>
+                    <fullName>Day</fullName>
+                    <default>false</default>
+                    <label>Day</label>
+                </value>
+                <value>
+                    <fullName>Week</fullName>
+                    <default>false</default>
+                    <label>Week</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Zuora__CurrentTerm__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Current Term</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__CustomerAccount__c</fullName>
+        <deleteConstraint>Cascade</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Billing Account</label>
+        <referenceTo>Zuora__CustomerAccount__c</referenceTo>
+        <relationshipLabel>Subscriptions</relationshipLabel>
+        <relationshipName>Subscriptions</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>This field holds the Zuora object ID, and is used as external ID for data synchronization between Salesforce and Zuora.</description>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__InitialTermPeriodType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The period type for the first subscription term.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The period type for the first subscription term.</inlineHelpText>
+        <label>Initial Term Period Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Month</fullName>
+                    <default>false</default>
+                    <label>Month</label>
+                </value>
+                <value>
+                    <fullName>Year</fullName>
+                    <default>false</default>
+                    <label>Year</label>
+                </value>
+                <value>
+                    <fullName>Day</fullName>
+                    <default>false</default>
+                    <label>Day</label>
+                </value>
+                <value>
+                    <fullName>Week</fullName>
+                    <default>false</default>
+                    <label>Week</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Zuora__InitialTerm__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Initial Term</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__InvoiceOwner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Invoice Owner</label>
+        <referenceTo>Zuora__CustomerAccount__c</referenceTo>
+        <relationshipLabel>Subscriptions (Invoice Owner)</relationshipLabel>
+        <relationshipName>Subscriptions1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__MRR__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>CMRR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__NextChargeDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Next Charge Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__NextRenewalDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Next Renewal Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__Notes__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Zuora__OpportunityCloseDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Opportunity Close Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__OpportunityName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Opportunity Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__OriginalCreatedDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date when the subscription was originally created. This value is the same as the CreatedDate value until the subscription is amended.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date when the subscription was originally created. This value is the same as the CreatedDate value until the subscription is amended.</inlineHelpText>
+        <label>Original Created Date (Deprecated)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__OriginalCreated_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date when the subscription was originally created. This value is the same as the CreatedDate value until the subscription is amended.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The date when the subscription was originally created. This value is the same as the CreatedDate value until the subscription is amended.</inlineHelpText>
+        <label>Original Created Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__OriginalId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The original ID of this subscription.</description>
+        <externalId>false</externalId>
+        <label>Original Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__PreviousSubscriptionId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The subscription ID immediately prior to the current subscription.</description>
+        <externalId>false</externalId>
+        <label>Previous Subscription Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__QuoteBusinessType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Quote Business Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__QuoteNumber__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Quote Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__QuoteType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Quote Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__RenewalTermPeriodType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The period type for the subscription renewal term.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The period type for the subscription renewal term.</inlineHelpText>
+        <label>Renewal Term Period Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Month</fullName>
+                    <default>false</default>
+                    <label>Month</label>
+                </value>
+                <value>
+                    <fullName>Year</fullName>
+                    <default>false</default>
+                    <label>Year</label>
+                </value>
+                <value>
+                    <fullName>Day</fullName>
+                    <default>false</default>
+                    <label>Day</label>
+                </value>
+                <value>
+                    <fullName>Week</fullName>
+                    <default>false</default>
+                    <label>Week</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Zuora__RenewalTerm__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Renewal Term</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__ServiceActivationDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is when the service was activated, and will trigger charges that have their trigger event set to Upon Service Activation.</description>
+        <externalId>false</externalId>
+        <label>Service Activation Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__SubscriptionEndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is when the subscription ends. This is always equal to term end date, unless the subscription has been cancelled. If the subscription has been cancelled, this is set to the cancellation date.</description>
+        <externalId>false</externalId>
+        <label>Subscription End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__SubscriptionNumber__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Subscription Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__SubscriptionStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The date when the subscription term starts. This is equal to the term start date if the subscription is on its initial term. Otherwise, it is the original term start date if the subscription has renewed.</description>
+        <externalId>false</externalId>
+        <label>Subscription Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__TCV__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>TCV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__TermEndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Term End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__TermSettingType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Case sensitive. Denotes if a subscription is evergreen (has no end date or term length) or has a term.</description>
+        <externalId>false</externalId>
+        <label>Term Setting Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>TERMED</fullName>
+                    <default>false</default>
+                    <label>TERMED</label>
+                </value>
+                <value>
+                    <fullName>EVERGREEN</fullName>
+                    <default>false</default>
+                    <label>EVERGREEN</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Zuora__TermStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Term Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Zuora__Version__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Version</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Zuora__Zuora_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Zuora Id (external primary key) of this Subscription.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Zuora Id (external primary key) of this Subscription.</inlineHelpText>
+        <label>Zuora Id (Deprecated)</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>zzMark__c</fullName>
+        <externalId>false</externalId>
+        <label>zzMark</label>
+        <length>1</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Subscription</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Zuora__Account__c</columns>
+        <columns>Zuora__CustomerAccount__c</columns>
+        <columns>Zuora__TermSettingType__c</columns>
+        <columns>CQRR__c</columns>
+        <columns>CARR__c</columns>
+        <columns>Zuora__OriginalCreatedDate__c</columns>
+        <columns>Zuora__Status__c</columns>
+        <columns>Zuora__Version__c</columns>
+        <columns>Term_Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>reportable</fullName>
+        <columns>NAME</columns>
+        <columns>Is_Reportable__c</columns>
+        <columns>Term_Status__c</columns>
+        <columns>Zuora__Status__c</columns>
+        <columns>Zuora__SubscriptionEndDate__c</columns>
+        <columns>Zuora__MRR__c</columns>
+        <columns>Zuora__InitialTerm__c</columns>
+        <columns>Zuora__TermSettingType__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>reportable</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Subscription Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Subscriptions</pluralLabel>
+    <searchLayouts>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchResultsAdditionalFields>Zuora__Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Zuora__Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Term_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Zuora__NextChargeDate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>FC_Latest_Charge_Effective_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>FC_Generate_Invoice</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>(FC) Generate Invoice</masterLabel>
+        <openType>replace</openType>
+        <page>FC_ZuoraSubscriptionGenerateInvoice</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>FC_T_C_Amendment</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>page</linkType>
+        <masterLabel>(FC) T&amp;C Amendment</masterLabel>
+        <openType>replace</openType>
+        <page>FC_ZuoraSubscriptionTCAmendmentForm</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

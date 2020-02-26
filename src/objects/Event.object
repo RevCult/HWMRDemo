@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Decline</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Decline</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Decline</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewEvent</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewEvent</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewEvent</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewSfdcEvent</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewSfdcEvent</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewSfdcEvent</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Today</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Today</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Today</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ActivityDateTime</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Attendees</fullName>
+    </fields>
+    <fields>
+        <fullName>ClientGuid</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>DurationInMinutes</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>EndDateTime</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>EventSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>IsAllDayEvent</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>IsException</fullName>
+    </fields>
+    <fields>
+        <fullName>IsPrivate</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence2</fullName>
+    </fields>
+    <fields>
+        <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Location</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OriginalInstanceDateTime</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>ShowAs</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>StartDateTime</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>MS_Event</fullName>
+        <active>true</active>
+        <label>MS Event</label>
+        <picklistValues>
+            <picklist>Activity_Type_2__c</picklist>
+            <values>
+                <fullName>Call - Client Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Client Voice Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Prospecting Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Prospecting Left Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Prospecting Voice Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Client%3A Casual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Client%3A Formal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Consultation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Demo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Migration Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Prospect%3A Casual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Prospect%3A Formal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Quarterly Briefing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Standard</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Meeting - Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration Call - no response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration Call - successful</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_type__c</picklist>
+            <values>
+                <fullName>Existing client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New%2FProspect Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Past client</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Briefing Attendee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Insight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Insight w%2FiPad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Lead Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Discovery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Export%2FReport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HBO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homebuilders Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insight On Ramp</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Planning Optimization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Monitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Snapshot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Study</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metrosearch %2F HA %2F PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Pro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MortgagePro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Housing Profiles %26 Statistics Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permit Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Published Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RRI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Economic Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaking Engagement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategic Positioning Model</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>U%2ES%2E Pool Market Reports</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WS%26T</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region_2__c</picklist>
+            <values>
+                <fullName>Albuquerque</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atlanta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - National</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - Northeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central%2FNorthern FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charlotte</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dallas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Houston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idaho</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jacksonville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Las Vegas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maryland%2FNorthern VA%2FDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Eastern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Lower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Upper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY%2FNJ%2FPA%2FDE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nashville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phoenix%2FTucson%2FPrescott</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE - East</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Raleigh</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Antonio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SoCal 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SoCal 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southern FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tampa%2FSarasota</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utah</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Washington%2FOregon</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fill in Subject</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Proposal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Task_Subtype__c</picklist>
+            <values>
+                <fullName>Mem Svs%3A General Touchpoint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Health Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Internal Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Onboarding Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Post Mortem Interview</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Private Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Welcome Client Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Welcome Client Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem svs%3A Troubleshooting%2FCustom Task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Client Retention Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo-GoToMeeting %28Prospective Client%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo-In Person Meeting %28Prospective Client%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Demo-NO SHOW</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Consult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Quarterly Briefing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training - GoToMeeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training - In Person</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Media_Event_Record_Type</fullName>
+        <active>true</active>
+        <description>Media Event Record Type</description>
+        <label>Media Event Record Type</label>
+        <picklistValues>
+            <picklist>Activity_Type_2__c</picklist>
+            <values>
+                <fullName>Call - Client Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Client Voice Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Prospecting Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Prospecting Left Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Prospecting Voice Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Client%3A Casual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Client%3A Formal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Consultation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Prospect%3A Casual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Prospect%3A Formal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_type__c</picklist>
+            <values>
+                <fullName>Existing client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New%2FProspect Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Past client</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Briefing Attendee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Insight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Insight w%2FiPad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Lead Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Discovery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Export%2FReport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HBO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homebuilders Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insight On Ramp</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Planning Optimization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Monitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Snapshot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Study</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metrosearch %2F HA %2F PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Pro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MortgagePro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Housing Profiles %26 Statistics Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permit Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Published Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE %2F Consulting Toolkit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RRI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Economic Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaking Engagement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategic Positioning Model</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>U%2ES%2E Pool Market Reports</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WS%26T</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region_2__c</picklist>
+            <values>
+                <fullName>Albuquerque</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atlanta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - National</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - Northeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central%2FNorthern FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charlotte</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dallas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Houston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idaho</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jacksonville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Las Vegas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maryland%2FNorthern VA%2FDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Eastern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Lower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Upper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY%2FNJ%2FPA%2FDE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nashville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phoenix%2FTucson%2FPrescott</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE - East</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Raleigh</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Antonio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SoCal 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SoCal 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southern FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tampa%2FSarasota</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utah</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Washington%2FOregon</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Voice Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fill in Subject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Consult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Quarterly Briefing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration Call - No Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration Call - Successful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Proposal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Task_Subtype__c</picklist>
+            <values>
+                <fullName>Mem Svs%3A Alternate Welcome Client Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A General Touchpoint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Health Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Internal Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Onboarding Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Post Mortem Interview</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Private Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Welcome Client Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Welcome Client Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem svs%3A Troubleshooting%2FCustom Task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call %E2%80%93 Conversation w%2F Decision Maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 Inbound%2FOutbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email %E2%80%93 Conversation w%2F Decision Maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email %E2%80%93 Inbound%2FOutbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up%2FReminder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting %E2%80%93 Conversation w%2F Decision Maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>fullName</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

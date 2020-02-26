@@ -1,0 +1,13 @@
+<apex:page standardController="Opportunity" extensions="FC_CreateRenewalOpportunityController"
+           action="{!createRenewalOpportunity}">
+    <apex:outputText rendered="false" value="{!Opportunity.Id}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Contract.FC_Next_Charge_Date__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Contract.FC_Subscription_Start_Date__c}"/>
+    <apex:sectionHeader title="Create Renewal Opportunity" subTitle="{!Opportunity.Name}"/>
+    <apex:pageMessages escape="false"/>
+    <apex:outputPanel layout="block">
+        <apex:outputLink value="/{!Opportunity.Id}">
+            <apex:outputText value="&lt;&lt; Back to Opportunity: {!Opportunity.Name}" escape="false"/>
+        </apex:outputLink>
+    </apex:outputPanel>
+</apex:page>

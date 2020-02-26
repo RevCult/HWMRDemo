@@ -1,0 +1,2391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddCampaign</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AdvancedSetup</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AdvancedSetup</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AdvancedSetup</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Adding_Contact</fullName>
+        <fields>ParentId</fields>
+        <fields>Name</fields>
+        <fields>Type</fields>
+        <fields>Status</fields>
+        <fields>StartDate</fields>
+        <fields>EndDate</fields>
+        <label>Adding Contact</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>ActualCost</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>AmountAllOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>AmountWonOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>BudgetedCost</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Campagin_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Campaign Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CampaignMemberRecordTypeId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Data_Quality_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Data_Quality_Score__c =100,&quot;All Campaign Details Captured&quot;, &quot;Missing: &quot;&amp;IF( LEN( Name)&lt;5,&quot;Meaningful Campaign Name, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF(ISPICKVAL( Type ,&quot;&quot;), &quot;Type, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( ISPICKVAL( Status ,&quot;&quot;), &quot;Status, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( LEN(TEXT(MONTH( StartDate )))=0, &quot;Start Date, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( LEN(TEXT(MONTH( EndDate )))=0, &quot;End Date, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF(NumberOfContacts  +  NumberOfLeads = 0, &quot;No Associated Members, &quot;,&quot;&quot;)&amp;&quot;&quot;&amp;IF( LEN(TEXT( ExpectedRevenue ))=0, &quot;Expected Revenue&quot;,&quot;&quot;))</formula>
+        <label>Data Quality Description</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Data_Quality_Score__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(LEN(  Name  ) &lt; 5, 0,20) + IF(ISPICKVAL(  Type ,&quot;&quot; ), 0,20) + IF(ISPICKVAL( Status ,&quot;&quot; ), 0,20) + IF(LEN( TEXT(MONTH( StartDate )))= 0, 0,10) + IF( LEN(TEXT(MONTH( EndDate ))) = 0, 0,10) + IF(  NumberOfContacts  +  NumberOfLeads = 0, 0,10)  + IF( LEN( TEXT( ExpectedRevenue ) ) = 0, 0,10)</formula>
+        <label>Data Quality Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>EndDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ExpectedResponse</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ExpectedRevenue</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>HierarchyActualCost</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyAmountAllOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyAmountWonOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyBudgetedCost</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyExpectedRevenue</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfContacts</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfConvertedLeads</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfLeads</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfResponses</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberOfWonOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>HierarchyNumberSent</fullName>
+    </fields>
+    <fields>
+        <fullName>Hit_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>ExpectedResponse</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hit Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Industry_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>&quot;Builders and Developers,</fullName>
+                    <default>false</default>
+                    <label>&quot;Builders and Developers,</label>
+                </value>
+                <value>
+                    <fullName>Building Product Manufacturers,</fullName>
+                    <default>false</default>
+                    <label>Building Product Manufacturers,</label>
+                </value>
+                <value>
+                    <fullName>Apartment Owners and Managers,</fullName>
+                    <default>false</default>
+                    <label>Apartment Owners and Managers,</label>
+                </value>
+                <value>
+                    <fullName>Lenders and Investors,</fullName>
+                    <default>false</default>
+                    <label>Lenders and Investors,</label>
+                </value>
+                <value>
+                    <fullName>Industry Associates,</fullName>
+                    <default>false</default>
+                    <label>Industry Associates,</label>
+                </value>
+                <value>
+                    <fullName>Other,</fullName>
+                    <default>false</default>
+                    <label>Other,</label>
+                </value>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Industry_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry Code</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ACCT - ACCOUNTING FIRMS,</fullName>
+                    <default>false</default>
+                    <label>ACCT - ACCOUNTING FIRMS,</label>
+                </value>
+                <value>
+                    <fullName>ADVR - ADVERTISING,</fullName>
+                    <default>false</default>
+                    <label>ADVR - ADVERTISING,</label>
+                </value>
+                <value>
+                    <fullName>APPL - APPLIANCE COMPANY,</fullName>
+                    <default>false</default>
+                    <label>APPL - APPLIANCE COMPANY,</label>
+                </value>
+                <value>
+                    <fullName>APPR - APPRAISER,</fullName>
+                    <default>false</default>
+                    <label>APPR - APPRAISER,</label>
+                </value>
+                <value>
+                    <fullName>APTM - APARTMENT MANAGER,</fullName>
+                    <default>false</default>
+                    <label>APTM - APARTMENT MANAGER,</label>
+                </value>
+                <value>
+                    <fullName>APTO - APARTMENT OWNERS,</fullName>
+                    <default>false</default>
+                    <label>APTO - APARTMENT OWNERS,</label>
+                </value>
+                <value>
+                    <fullName>ARCH - ARCHITECT,</fullName>
+                    <default>false</default>
+                    <label>ARCH - ARCHITECT,</label>
+                </value>
+                <value>
+                    <fullName>ASSOC - BLDING INDUSTRY ASSOC &amp; CNCIL,</fullName>
+                    <default>false</default>
+                    <label>ASSOC - BLDING INDUSTRY ASSOC &amp; CNCIL,</label>
+                </value>
+                <value>
+                    <fullName>ATTY - ATTORNEY,</fullName>
+                    <default>false</default>
+                    <label>ATTY - ATTORNEY,</label>
+                </value>
+                <value>
+                    <fullName>BLDR - BUILDERS,</fullName>
+                    <default>false</default>
+                    <label>BLDR - BUILDERS,</label>
+                </value>
+                <value>
+                    <fullName>BPM  - OTHR BLDING PRDCT MANUFTRS,</fullName>
+                    <default>false</default>
+                    <label>BPM  - OTHR BLDING PRDCT MANUFTRS,</label>
+                </value>
+                <value>
+                    <fullName>BROK - LAND BROKER,</fullName>
+                    <default>false</default>
+                    <label>BROK - LAND BROKER,</label>
+                </value>
+                <value>
+                    <fullName>CABI - CABINETS,</fullName>
+                    <default>false</default>
+                    <label>CABI - CABINETS,</label>
+                </value>
+                <value>
+                    <fullName>CONS - RESEARCH CONSULTANT,</fullName>
+                    <default>false</default>
+                    <label>CONS - RESEARCH CONSULTANT,</label>
+                </value>
+                <value>
+                    <fullName>DEVC - DEVELOPER-COMMERCIAL,</fullName>
+                    <default>false</default>
+                    <label>DEVC - DEVELOPER-COMMERCIAL,</label>
+                </value>
+                <value>
+                    <fullName>DEVL - DEVELOPER-RESIDENTIAL LAND,</fullName>
+                    <default>false</default>
+                    <label>DEVL - DEVELOPER-RESIDENTIAL LAND,</label>
+                </value>
+                <value>
+                    <fullName>DOOR - DOORS MANUFACTURER,</fullName>
+                    <default>false</default>
+                    <label>DOOR - DOORS MANUFACTURER,</label>
+                </value>
+                <value>
+                    <fullName>ELEC - ELECTRICAL,</fullName>
+                    <default>false</default>
+                    <label>ELEC - ELECTRICAL,</label>
+                </value>
+                <value>
+                    <fullName>ENGR - ENGINEER,</fullName>
+                    <default>false</default>
+                    <label>ENGR - ENGINEER,</label>
+                </value>
+                <value>
+                    <fullName>FAUC - FAUCET MANUFACTURER,</fullName>
+                    <default>false</default>
+                    <label>FAUC - FAUCET MANUFACTURER,</label>
+                </value>
+                <value>
+                    <fullName>FLOOR - FLOORING MANUFACTURER,</fullName>
+                    <default>false</default>
+                    <label>FLOOR - FLOORING MANUFACTURER,</label>
+                </value>
+                <value>
+                    <fullName>GOVT - GOVERNMENT/CITY/COUNTY,</fullName>
+                    <default>false</default>
+                    <label>GOVT - GOVERNMENT/CITY/COUNTY,</label>
+                </value>
+                <value>
+                    <fullName>HVAC - HEATING, VENILATION, AIRCON</fullName>
+                    <default>false</default>
+                    <label>HVAC - HEATING, VENILATION, AIRCON</label>
+                </value>
+                <value>
+                    <fullName>INSUL - INSULATION,</fullName>
+                    <default>false</default>
+                    <label>INSUL - INSULATION,</label>
+                </value>
+                <value>
+                    <fullName>INTD - INTERIOR DESIGNER,</fullName>
+                    <default>false</default>
+                    <label>INTD - INTERIOR DESIGNER,</label>
+                </value>
+                <value>
+                    <fullName>INVB - INVESTMENT BANKER (EQUITY),</fullName>
+                    <default>false</default>
+                    <label>INVB - INVESTMENT BANKER (EQUITY),</label>
+                </value>
+                <value>
+                    <fullName>LEND - LENDER/BANK,</fullName>
+                    <default>false</default>
+                    <label>LEND - LENDER/BANK,</label>
+                </value>
+                <value>
+                    <fullName>LUMB - LUMBER,</fullName>
+                    <default>false</default>
+                    <label>LUMB - LUMBER,</label>
+                </value>
+                <value>
+                    <fullName>MISC - OTHER INDUSTRY,</fullName>
+                    <default>false</default>
+                    <label>MISC - OTHER INDUSTRY,</label>
+                </value>
+                <value>
+                    <fullName>MORT - MORTGAGE COMPANY,</fullName>
+                    <default>false</default>
+                    <label>MORT - MORTGAGE COMPANY,</label>
+                </value>
+                <value>
+                    <fullName>PAINT - PAINT,</fullName>
+                    <default>false</default>
+                    <label>PAINT - PAINT,</label>
+                </value>
+                <value>
+                    <fullName>PERI - PERIODICALS (NEWSPPR/MAG),</fullName>
+                    <default>false</default>
+                    <label>PERI - PERIODICALS (NEWSPPR/MAG),</label>
+                </value>
+                <value>
+                    <fullName>PLAN - LAND PLANNER,</fullName>
+                    <default>false</default>
+                    <label>PLAN - LAND PLANNER,</label>
+                </value>
+                <value>
+                    <fullName>PROP - PROPERTY MANAGER,</fullName>
+                    <default>false</default>
+                    <label>PROP - PROPERTY MANAGER,</label>
+                </value>
+                <value>
+                    <fullName>REAL - REALTOR,</fullName>
+                    <default>false</default>
+                    <label>REAL - REALTOR,</label>
+                </value>
+                <value>
+                    <fullName>REIT - REIT&apos;s,</fullName>
+                    <default>false</default>
+                    <label>REIT - REIT&apos;s,</label>
+                </value>
+                <value>
+                    <fullName>RETT - RETAIL TENANT</fullName>
+                    <default>false</default>
+                    <label>RETT - RETAIL TENANT</label>
+                </value>
+                <value>
+                    <fullName>ROOF - ROOFING MANUFACTURER,</fullName>
+                    <default>false</default>
+                    <label>ROOF - ROOFING MANUFACTURER,</label>
+                </value>
+                <value>
+                    <fullName>SCHO - SCHOOL/LIBRARY,</fullName>
+                    <default>false</default>
+                    <label>SCHO - SCHOOL/LIBRARY,</label>
+                </value>
+                <value>
+                    <fullName>SIDI - SIDING,</fullName>
+                    <default>false</default>
+                    <label>SIDI - SIDING,</label>
+                </value>
+                <value>
+                    <fullName>SMKT - SALES &amp; MARKETING COMP,</fullName>
+                    <default>false</default>
+                    <label>SMKT - SALES &amp; MARKETING COMP,</label>
+                </value>
+                <value>
+                    <fullName>SUBC - SUBCONTRACTOR,</fullName>
+                    <default>false</default>
+                    <label>SUBC - SUBCONTRACTOR,</label>
+                </value>
+                <value>
+                    <fullName>TITL - TITLE COMPANY,</fullName>
+                    <default>false</default>
+                    <label>TITL - TITLE COMPANY,</label>
+                </value>
+                <value>
+                    <fullName>UTIL - UTILITY COMPANY,</fullName>
+                    <default>false</default>
+                    <label>UTIL - UTILITY COMPANY,</label>
+                </value>
+                <value>
+                    <fullName>WIND - WINDOW MANUFACTURER,</fullName>
+                    <default>false</default>
+                    <label>WIND - WINDOW MANUFACTURER,</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IsActive</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Lead_Interest_s__c</fullName>
+        <externalId>false</externalId>
+        <label>Lead Interest(s)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Housing Key Market Indicator Alert</fullName>
+                    <default>false</default>
+                    <label>Housing Key Market Indicator Alert</label>
+                </value>
+                <value>
+                    <fullName>Corporate News &amp; Events</fullName>
+                    <default>false</default>
+                    <label>Corporate News &amp; Events</label>
+                </value>
+                <value>
+                    <fullName>Customer Updatesw</fullName>
+                    <default>false</default>
+                    <label>Customer Updatesw</label>
+                </value>
+                <value>
+                    <fullName>Housing Market Key Indicator Alert</fullName>
+                    <default>false</default>
+                    <label>Housing Market Key Indicator Alert</label>
+                </value>
+                <value>
+                    <fullName>New Home Data Alert - Subscribers Only</fullName>
+                    <default>false</default>
+                    <label>New Home Data Alert - Subscribers Only</label>
+                </value>
+                <value>
+                    <fullName>Product News &amp; Promotions</fullName>
+                    <default>false</default>
+                    <label>Product News &amp; Promotions</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Local_Speaker__c</fullName>
+        <description>List of Local Speakers for FRAME Events.</description>
+        <externalId>false</externalId>
+        <label>Local Speaker</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Deanna Sihon</fullName>
+                    <default>false</default>
+                    <label>Deanna Sihon</label>
+                </value>
+                <value>
+                    <fullName>JT Swartz</fullName>
+                    <default>false</default>
+                    <label>JT Swartz</label>
+                </value>
+                <value>
+                    <fullName>Michelle Weedon</fullName>
+                    <default>false</default>
+                    <label>Michelle Weedon</label>
+                </value>
+                <value>
+                    <fullName>Mike Rinner</fullName>
+                    <default>false</default>
+                    <label>Mike Rinner</label>
+                </value>
+                <value>
+                    <fullName>Mike Timmerman</fullName>
+                    <default>false</default>
+                    <label>Mike Timmerman</label>
+                </value>
+                <value>
+                    <fullName>Scott Davis</fullName>
+                    <default>false</default>
+                    <label>Scott Davis</label>
+                </value>
+                <value>
+                    <fullName>Shaun McCutcheon</fullName>
+                    <default>false</default>
+                    <label>Shaun McCutcheon</label>
+                </value>
+                <value>
+                    <fullName>Steve LaTerra</fullName>
+                    <default>false</default>
+                    <label>Steve LaTerra</label>
+                </value>
+                <value>
+                    <fullName>Steve Smiley</fullName>
+                    <default>false</default>
+                    <label>Steve Smiley</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Meyers_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</inlineHelpText>
+        <label>Meyers Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>National_Speaker__c</fullName>
+        <description>List of National Speakers for FRAME Events</description>
+        <externalId>false</externalId>
+        <label>National Speaker</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ali Wolf</fullName>
+                    <default>false</default>
+                    <label>Ali Wolf</label>
+                </value>
+                <value>
+                    <fullName>Steve LaTerra</fullName>
+                    <default>false</default>
+                    <label>Steve LaTerra</label>
+                </value>
+                <value>
+                    <fullName>Tim Sullivan</fullName>
+                    <default>false</default>
+                    <label>Tim Sullivan</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>NumberOfContacts</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfConvertedLeads</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfLeads</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfResponses</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfWonOpportunities</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberSent</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Number_in_Campaign__c</fullName>
+        <externalId>false</externalId>
+        <formula>NumberOfLeads +  NumberOfContacts</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number in Campaign</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Objective__c</fullName>
+        <externalId>false</externalId>
+        <label>Objective</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>StartDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub-type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Placeholder</fullName>
+                    <default>false</default>
+                    <label>Placeholder</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Theme__c</fullName>
+        <description>FRAME&apos;s Themes</description>
+        <externalId>false</externalId>
+        <label>Theme</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Builder</fullName>
+                    <default>false</default>
+                    <label>Builder</label>
+                </value>
+                <value>
+                    <fullName>Capital</fullName>
+                    <default>false</default>
+                    <label>Capital</label>
+                </value>
+                <value>
+                    <fullName>Consumer</fullName>
+                    <default>false</default>
+                    <label>Consumer</label>
+                </value>
+                <value>
+                    <fullName>Land Panel</fullName>
+                    <default>false</default>
+                    <label>Land Panel</label>
+                </value>
+                <value>
+                    <fullName>Local</fullName>
+                    <default>false</default>
+                    <label>Local</label>
+                </value>
+                <value>
+                    <fullName>Millennial</fullName>
+                    <default>false</default>
+                    <label>Millennial</label>
+                </value>
+                <value>
+                    <fullName>Multifamily</fullName>
+                    <default>false</default>
+                    <label>Multifamily</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>cirrusadv__Created_by_Cirrus_Insight__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates that this record was created by Cirrus Insight. This checkbox does not have to be included on the page layout, except with Contact Manager, Group, and Professional Edition organizations.</description>
+        <externalId>false</externalId>
+        <label>Created by Cirrus Insight</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>cirrusadv__Num_of_Clicks__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label># of Clicks</label>
+        <summarizedField>CampaignMember.cirrusadv__Num_of_Clicks__c</summarizedField>
+        <summaryForeignKey>CampaignMember.CampaignId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>cirrusadv__Num_of_Emails_Clicked__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label># of Emails Clicked</label>
+        <summaryFilterItems>
+            <field>CampaignMember.cirrusadv__Num_of_Clicks__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CampaignMember.CampaignId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>cirrusadv__Num_of_Emails_Opened__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label># of Emails Opened</label>
+        <summaryFilterItems>
+            <field>CampaignMember.cirrusadv__Num_of_Opens__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </summaryFilterItems>
+        <summaryForeignKey>CampaignMember.CampaignId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>cirrusadv__Num_of_Opens__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label># of Opens</label>
+        <summarizedField>CampaignMember.cirrusadv__Num_of_Opens__c</summarizedField>
+        <summaryForeignKey>CampaignMember.CampaignId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>cirrusadv__Num_of_Replies__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label># of Replies</label>
+        <summarizedField>CampaignMember.cirrusadv__Num_of_Replies__c</summarizedField>
+        <summaryForeignKey>CampaignMember.CampaignId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>cirrusadv__Template_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Template Name</label>
+        <length>180</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>cirrusadv__mass_email_id__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Mass Email Id</label>
+        <length>180</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sbxe1__sbx_EventsNumberOfTicketsRollup__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The number of tickets associated with this campaign, using the trigger rollup process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of tickets associated with this campaign, using the trigger rollup process.</inlineHelpText>
+        <label>Total Tickets</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>silverpop__Silverpop_ID__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>Silverpop_ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <listViews>
+        <fullName>Active_FRAME_Events</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>PARENT_NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PARENT_NAME</field>
+            <operation>contains</operation>
+            <value>frame</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.STATUS</field>
+            <operation>notEqual</operation>
+            <value>Completed,Aborted</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Active FRAME Events</label>
+    </listViews>
+    <listViews>
+        <fullName>Active_Metrostudy_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONVERTED_LEADS</columns>
+        <columns>AMOUNT_WON</columns>
+        <columns>CAMPAIGN.NUM_WON_OPPORTUNITIES</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Maynard,Knutson,Ealey</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.START_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_YEAR,LAST_YEAR</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>notContain</operation>
+            <value>Briefing,Memsrv</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.STATUS</field>
+            <operation>equals</operation>
+            <value>In Progress</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>MS</value>
+        </filters>
+        <label>Active Metrostudy Campaigns</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Active_Metrostudy_Campaigns_2017</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONVERTED_LEADS</columns>
+        <columns>AMOUNT_WON</columns>
+        <columns>CAMPAIGN.NUM_WON_OPPORTUNITIES</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>notContain</operation>
+            <value>Briefing,Memsrv</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.START_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_YEAR</value>
+        </filters>
+        <label>Active Metrostudy Campaigns - 2017</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>AllActiveCampaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.CREATED_DATE</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>All Inactive Campaigns</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Briefing_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Briefing</value>
+        </filters>
+        <label>Briefing Campaigns</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Council_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Council</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>q18,q19</value>
+        </filters>
+        <label>Council Campaigns</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Crittenden_REF_Conf_Spnsrshp_9_14_MIA</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.ID</columns>
+        <columns>PARENT_NAME</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <filterScope>Everything</filterScope>
+        <label>Crittenden REF Conf Spnsrshp 9/14 MIA</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Media_Kit_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CAMPAIGN.NUM_LEADS</columns>
+        <columns>CAMPAIGN.NUM_CONTACTS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>kit</value>
+        </filters>
+        <label>Media Kit Campaigns</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>MemSrv_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>startsWith</operation>
+            <value>MemSrv</value>
+        </filters>
+        <label>MemSrv Campaigns</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>MyActiveCampaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>My Active Campaigns</label>
+    </listViews>
+    <listViews>
+        <fullName>Quarterly_Briefing_Campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Briefing</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.ACTIVE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>1Q16</value>
+        </filters>
+        <label>Quarterly Briefing Campaigns</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>X1Q17_Briefings</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Q17</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Briefing</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>notContain</operation>
+            <value>Reminder</value>
+        </filters>
+        <label>2017 Briefings</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>X2Q16_Briefings</fullName>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>2Q16</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Briefing</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>notContain</operation>
+            <value>reminder</value>
+        </filters>
+        <label>2Q16 Briefings</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>X3Q15_In_Person_Briefings</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>3Q15</value>
+        </filters>
+        <label>3Q15 In Person Briefings</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Metrostudy_Membership_Services</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>X4Q15_In_Person_Briefings</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>4Q15</value>
+        </filters>
+        <label>4Q15 In Person Briefings</label>
+        <language>en_US</language>
+        <sharedTo>
+            <group>Metrostudy_Membership_Services</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>X4Q17_Briefings</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>CAMPAIGN.ACTIVE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>4Q17</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>contains</operation>
+            <value>Briefing</value>
+        </filters>
+        <filters>
+            <field>CAMPAIGN.NAME</field>
+            <operation>notContain</operation>
+            <value>Reminder</value>
+        </filters>
+        <label>4Q17 Briefings</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>danielle_s_campaigns</fullName>
+        <columns>CAMPAIGN.NAME</columns>
+        <columns>CAMPAIGN.START_DATE</columns>
+        <columns>CAMPAIGN.END_DATE</columns>
+        <columns>CAMPAIGN.BUDGETED_COST</columns>
+        <columns>CAMPAIGN.ACTUAL_COST</columns>
+        <columns>CAMPAIGN.CAMPAIGN_TYPE</columns>
+        <columns>CAMPAIGN.STATUS</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CORE.USERS.LAST_NAME</field>
+            <operation>equals</operation>
+            <value>Fiore</value>
+        </filters>
+        <label>danielle&apos;s campaigns</label>
+        <language>en_US</language>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Market_Intelligence_Campaign_Record_Type</fullName>
+        <active>true</active>
+        <label>MS_Market Intelligence Campaign Record Type</label>
+        <picklistValues>
+            <picklist>Industry_Category__c</picklist>
+            <values>
+                <fullName>%22Builders and Developers%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apartment Owners and Managers%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building Product Manufacturers%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry Associates%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lenders and Investors%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry_Code__c</picklist>
+            <values>
+                <fullName>ACCT - ACCOUNTING FIRMS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADVR - ADVERTISING%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APPL - APPLIANCE COMPANY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APPR - APPRAISER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APTM - APARTMENT MANAGER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APTO - APARTMENT OWNERS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ARCH - ARCHITECT%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSOC - BLDING INDUSTRY ASSOC %26 CNCIL%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATTY - ATTORNEY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BLDR - BUILDERS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM  - OTHR BLDING PRDCT MANUFTRS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BROK - LAND BROKER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CABI - CABINETS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONS - RESEARCH CONSULTANT%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEVC - DEVELOPER-COMMERCIAL%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEVL - DEVELOPER-RESIDENTIAL LAND%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOOR - DOORS MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ELEC - ELECTRICAL%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ENGR - ENGINEER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FAUC - FAUCET MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FLOOR - FLOORING MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GOVT - GOVERNMENT%2FCITY%2FCOUNTY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HVAC - HEATING%2C VENILATION%2C AIRCON</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSUL - INSULATION%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTD - INTERIOR DESIGNER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INVB - INVESTMENT BANKER %28EQUITY%29%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LEND - LENDER%2FBANK%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LUMB - LUMBER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MISC - OTHER INDUSTRY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MORT - MORTGAGE COMPANY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAINT - PAINT%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PERI - PERIODICALS %28NEWSPPR%2FMAG%29%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PLAN - LAND PLANNER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PROP - PROPERTY MANAGER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REAL - REALTOR%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REIT - REIT%27s%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RETT - RETAIL TENANT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROOF - ROOFING MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCHO - SCHOOL%2FLIBRARY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIDI - SIDING%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMKT - SALES %26 MARKETING COMP%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUBC - SUBCONTRACTOR%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TITL - TITLE COMPANY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UTIL - UTILITY COMPANY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WIND - WINDOW MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Interest_s__c</picklist>
+            <values>
+                <fullName>Corporate News %26 Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Updatesw</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Key Market Indicator Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Market Key Indicator Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Home Data Alert - Subscribers Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product News %26 Promotions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Local_Speaker__c</picklist>
+            <values>
+                <fullName>Deanna Sihon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JT Swartz</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michelle Weedon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mike Rinner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mike Timmerman</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scott Davis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shaun McCutcheon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Steve LaTerra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Steve Smiley</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>National_Speaker__c</picklist>
+            <values>
+                <fullName>Ali Wolf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Steve LaTerra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tim Sullivan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Aborted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planned</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_type__c</picklist>
+            <values>
+                <fullName>Placeholder</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Theme__c</picklist>
+            <values>
+                <fullName>Builder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Panel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Millennial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multifamily</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Banner Ad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Booth Attendee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content %2F White Paper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Frame</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Imported List</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In-Person Event</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Landing Page</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metrostudy Newsletter</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metrostudy%2Ecom</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Networking - Breakfast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Networking - Dinner%2FCocktail Hr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Print Ad</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Product Launch</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Briefing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seminar %2F Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signup %2F Trial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media - Organic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media - Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>sbx_Registration_Campaign</fullName>
+        <active>true</active>
+        <description>Soapbox Events registration Campaign record type</description>
+        <label>Soapbox Registration</label>
+        <picklistValues>
+            <picklist>Industry_Category__c</picklist>
+            <values>
+                <fullName>%22Builders and Developers%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apartment Owners and Managers%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Building Product Manufacturers%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Industry Associates%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lenders and Investors%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Industry_Code__c</picklist>
+            <values>
+                <fullName>ACCT - ACCOUNTING FIRMS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ADVR - ADVERTISING%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APPL - APPLIANCE COMPANY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APPR - APPRAISER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APTM - APARTMENT MANAGER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>APTO - APARTMENT OWNERS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ARCH - ARCHITECT%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ASSOC - BLDING INDUSTRY ASSOC %26 CNCIL%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ATTY - ATTORNEY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BLDR - BUILDERS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM  - OTHR BLDING PRDCT MANUFTRS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BROK - LAND BROKER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CABI - CABINETS%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CONS - RESEARCH CONSULTANT%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEVC - DEVELOPER-COMMERCIAL%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DEVL - DEVELOPER-RESIDENTIAL LAND%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>DOOR - DOORS MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ELEC - ELECTRICAL%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ENGR - ENGINEER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FAUC - FAUCET MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FLOOR - FLOORING MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>GOVT - GOVERNMENT%2FCITY%2FCOUNTY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HVAC - HEATING%2C VENILATION%2C AIRCON</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INSUL - INSULATION%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INTD - INTERIOR DESIGNER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>INVB - INVESTMENT BANKER %28EQUITY%29%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LEND - LENDER%2FBANK%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LUMB - LUMBER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MISC - OTHER INDUSTRY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MORT - MORTGAGE COMPANY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PAINT - PAINT%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PERI - PERIODICALS %28NEWSPPR%2FMAG%29%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PLAN - LAND PLANNER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PROP - PROPERTY MANAGER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REAL - REALTOR%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REIT - REIT%27s%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RETT - RETAIL TENANT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ROOF - ROOFING MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SCHO - SCHOOL%2FLIBRARY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIDI - SIDING%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SMKT - SALES %26 MARKETING COMP%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SUBC - SUBCONTRACTOR%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>TITL - TITLE COMPANY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UTIL - UTILITY COMPANY%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WIND - WINDOW MANUFACTURER%2C</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lead_Interest_s__c</picklist>
+            <values>
+                <fullName>Corporate News %26 Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Customer Updatesw</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Key Market Indicator Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Market Key Indicator Alert</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Home Data Alert - Subscribers Only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product News %26 Promotions</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Local_Speaker__c</picklist>
+            <values>
+                <fullName>Deanna Sihon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>JT Swartz</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Michelle Weedon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mike Rinner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mike Timmerman</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scott Davis</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shaun McCutcheon</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Steve LaTerra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Steve Smiley</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>National_Speaker__c</picklist>
+            <values>
+                <fullName>Ali Wolf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Steve LaTerra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tim Sullivan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Aborted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planned</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_type__c</picklist>
+            <values>
+                <fullName>Placeholder</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Theme__c</picklist>
+            <values>
+                <fullName>Builder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Capital</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Panel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Millennial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multifamily</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Conference</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Content %2F White Paper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Frame</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly Briefing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signup %2F Trial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media - Organic</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Social Media - Paid</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>CAMPAIGN.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CAMPAIGN.STATUS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CAMPAIGN.START_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>CAMPAIGN.NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CAMPAIGN.NAME</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NUM_CONTACTS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>SendExactTargetEmail</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send ExactTarget Email</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>https://members.exacttarget.com/Integration/SalesforceUI/EmailSend.aspx?sendtype=Campaign&amp;sfid={!Campaign.Id}&amp;sessid={!API.Session_ID}&amp;sessurl={!API.Partner_Server_URL_60}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Tickets_Report</fullName>
+        <availability>online</availability>
+        <description>Takes the user to the Ticket List report which tickets associated with this particular Campaign.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Tickets Report</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://na6.salesforce.com/00O80000005gXEY?pv0={!Campaign.Name}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>ViewAllCampaignMembers</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>500</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View All Campaign Members</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/camp/rptcmpgncalldown.jsp?scope=1&amp;scopeid={!Campaign_Name}</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>ViewCampaignInfluenceReport</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>500</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>View Campaign Influence Report</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00O?rt=117&amp;break0=CAN&amp;scope=1&amp;scopeid_lkid={!Campaign.Id}&amp;scopeid={!Campaign_Name}&amp;c=CAN&amp;c=MR&amp;c=PCS&amp;c=CFN&amp;c=RN&amp;c=ON&amp;c=OA&amp;c=OS&amp;c=OCD&amp;c=AN&amp;s=OA&amp;duel0=CAN%2CMR%2CCFN%2CRN%2CAN%2CON%2CPCS%2COS%2COCD%2COA&amp;details=yes&amp;format=t</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>silverpop__Send_Silverpop_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Silverpop Email</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>//Display new window 90% of height
+
+var contactnumber = {!FLOOR(Campaign.NumberOfContacts)};
+var leadnumber = {!FLOOR(Campaign.NumberOfLeads)};
+
+if ( !{!ISNULL( Campaign.silverpop__Silverpop_ID__c )}  || !{!ISBLANK( Campaign.silverpop__Silverpop_ID__c )} ) {
+
+    alert(&apos;This Campaign is already associated with a Silverpop Sent Email. Create a new Campaign to send another Silverpop Email.&apos;);
+
+} else if ((contactnumber &lt;= 0) &amp;&amp; (leadnumber &lt;= 0)) {
+      
+     alert(&apos;This Campaign must have at least one member before an email can be sent.&apos;);   
+        
+} else {
+     window.open(&apos;/apex/silverpop__SP_EngageCampaignLogin?id={!Campaign.Id}&apos;, &apos;_blank&apos;, 
+    &apos;height=700,width=1024,location=0,resizable=0,toolbar=0,status=0,menubar=no,scrollbars=1&apos;);
+
+}</url>
+    </webLinks>
+</CustomObject>

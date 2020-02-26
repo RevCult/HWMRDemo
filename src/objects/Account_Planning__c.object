@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Planning for FY Account activity by product group</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Division__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Division</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Account_Manager__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Manager</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Adam Mowrey</fullName>
+                    <default>false</default>
+                    <label>Adam Mowrey</label>
+                </value>
+                <value>
+                    <fullName>Andy Reid</fullName>
+                    <default>false</default>
+                    <label>Andy Reid</label>
+                </value>
+                <value>
+                    <fullName>Bob Marinez</fullName>
+                    <default>false</default>
+                    <label>Bob Marinez</label>
+                </value>
+                <value>
+                    <fullName>Brian Sherry</fullName>
+                    <default>false</default>
+                    <label>Brian Sherry</label>
+                </value>
+                <value>
+                    <fullName>Carol Weinman</fullName>
+                    <default>false</default>
+                    <label>Carol Weinman</label>
+                </value>
+                <value>
+                    <fullName>Christie Bardo</fullName>
+                    <default>false</default>
+                    <label>Christie Bardo</label>
+                </value>
+                <value>
+                    <fullName>Clare ODower</fullName>
+                    <default>false</default>
+                    <label>Clare ODower</label>
+                </value>
+                <value>
+                    <fullName>Cliff Smith</fullName>
+                    <default>false</default>
+                    <label>Cliff Smith</label>
+                </value>
+                <value>
+                    <fullName>Daniel Colunio</fullName>
+                    <default>false</default>
+                    <label>Daniel Colunio</label>
+                </value>
+                <value>
+                    <fullName>David Clark</fullName>
+                    <default>false</default>
+                    <label>David Clark</label>
+                </value>
+                <value>
+                    <fullName>Don McComb</fullName>
+                    <default>false</default>
+                    <label>Don McComb</label>
+                </value>
+                <value>
+                    <fullName>Edwin Kraft</fullName>
+                    <default>false</default>
+                    <label>Edwin Kraft</label>
+                </value>
+                <value>
+                    <fullName>Fredderick Chandler</fullName>
+                    <default>false</default>
+                    <label>Fredderick Chandler</label>
+                </value>
+                <value>
+                    <fullName>Gary Carr</fullName>
+                    <default>false</default>
+                    <label>Gary Carr</label>
+                </value>
+                <value>
+                    <fullName>Gregory Cooke</fullName>
+                    <default>false</default>
+                    <label>Gregory Cooke</label>
+                </value>
+                <value>
+                    <fullName>House</fullName>
+                    <default>false</default>
+                    <label>House</label>
+                </value>
+                <value>
+                    <fullName>Howard Lubinger</fullName>
+                    <default>false</default>
+                    <label>Howard Lubinger</label>
+                </value>
+                <value>
+                    <fullName>J. Glasnapp</fullName>
+                    <default>false</default>
+                    <label>J. Glasnapp</label>
+                </value>
+                <value>
+                    <fullName>Jaeda Mohr</fullName>
+                    <default>false</default>
+                    <label>Jaeda Mohr</label>
+                </value>
+                <value>
+                    <fullName>Jamie Volpe</fullName>
+                    <default>false</default>
+                    <label>Jamie Volpe</label>
+                </value>
+                <value>
+                    <fullName>Jim Bagan</fullName>
+                    <default>false</default>
+                    <label>Jim Bagan</label>
+                </value>
+                <value>
+                    <fullName>Jim Philbin</fullName>
+                    <default>false</default>
+                    <label>Jim Philbin</label>
+                </value>
+                <value>
+                    <fullName>John Magner</fullName>
+                    <default>false</default>
+                    <label>John Magner</label>
+                </value>
+                <value>
+                    <fullName>John Murphy</fullName>
+                    <default>false</default>
+                    <label>John Murphy</label>
+                </value>
+                <value>
+                    <fullName>Kay Ross-Baker</fullName>
+                    <default>false</default>
+                    <label>Kay Ross-Baker</label>
+                </value>
+                <value>
+                    <fullName>Kenneth Wilson</fullName>
+                    <default>false</default>
+                    <label>Kenneth Wilson</label>
+                </value>
+                <value>
+                    <fullName>Kent Brooks</fullName>
+                    <default>false</default>
+                    <label>Kent Brooks</label>
+                </value>
+                <value>
+                    <fullName>Larry Rice</fullName>
+                    <default>false</default>
+                    <label>Larry Rice</label>
+                </value>
+                <value>
+                    <fullName>Lisa Heitner</fullName>
+                    <default>false</default>
+                    <label>Lisa Heitner</label>
+                </value>
+                <value>
+                    <fullName>Mark Taussig</fullName>
+                    <default>false</default>
+                    <label>Mark Taussig</label>
+                </value>
+                <value>
+                    <fullName>Mark Weinstein</fullName>
+                    <default>false</default>
+                    <label>Mark Weinstein</label>
+                </value>
+                <value>
+                    <fullName>Mary Beth McCoy</fullName>
+                    <default>false</default>
+                    <label>Mary Beth McCoy</label>
+                </value>
+                <value>
+                    <fullName>Maura Jacob</fullName>
+                    <default>false</default>
+                    <label>Maura Jacob</label>
+                </value>
+                <value>
+                    <fullName>Melissa Sklenar</fullName>
+                    <default>false</default>
+                    <label>Melissa Sklenar</label>
+                </value>
+                <value>
+                    <fullName>Michael Boyle</fullName>
+                    <default>false</default>
+                    <label>Michael Boyle</label>
+                </value>
+                <value>
+                    <fullName>Michael DeAnzeris</fullName>
+                    <default>false</default>
+                    <label>Michael DeAnzeris</label>
+                </value>
+                <value>
+                    <fullName>Michael Gilbert</fullName>
+                    <default>false</default>
+                    <label>Michael Gilbert</label>
+                </value>
+                <value>
+                    <fullName>Michael Lesko</fullName>
+                    <default>false</default>
+                    <label>Michael Lesko</label>
+                </value>
+                <value>
+                    <fullName>Michael Worley</fullName>
+                    <default>false</default>
+                    <label>Michael Worley</label>
+                </value>
+                <value>
+                    <fullName>Mike Marino</fullName>
+                    <default>false</default>
+                    <label>Mike Marino</label>
+                </value>
+                <value>
+                    <fullName>Pamela Singletary</fullName>
+                    <default>false</default>
+                    <label>Pamela Singletary</label>
+                </value>
+                <value>
+                    <fullName>Patrick Zazzara</fullName>
+                    <default>false</default>
+                    <label>Patrick Zazzara</label>
+                </value>
+                <value>
+                    <fullName>Patty Morin</fullName>
+                    <default>false</default>
+                    <label>Patty Morin</label>
+                </value>
+                <value>
+                    <fullName>Paul Mattioli</fullName>
+                    <default>false</default>
+                    <label>Paul Mattioli</label>
+                </value>
+                <value>
+                    <fullName>Paul Pettersen</fullName>
+                    <default>false</default>
+                    <label>Paul Pettersen</label>
+                </value>
+                <value>
+                    <fullName>Paul Tourbaf</fullName>
+                    <default>false</default>
+                    <label>Paul Tourbaf</label>
+                </value>
+                <value>
+                    <fullName>Philip Guerra</fullName>
+                    <default>false</default>
+                    <label>Philip Guerra</label>
+                </value>
+                <value>
+                    <fullName>Philip Hernandez</fullName>
+                    <default>false</default>
+                    <label>Philip Hernandez</label>
+                </value>
+                <value>
+                    <fullName>Ray Giovine</fullName>
+                    <default>false</default>
+                    <label>Ray Giovine</label>
+                </value>
+                <value>
+                    <fullName>Richard Coleman</fullName>
+                    <default>false</default>
+                    <label>Richard Coleman</label>
+                </value>
+                <value>
+                    <fullName>Rich Davis</fullName>
+                    <default>false</default>
+                    <label>Rich Davis</label>
+                </value>
+                <value>
+                    <fullName>Robert Britt</fullName>
+                    <default>false</default>
+                    <label>Robert Britt</label>
+                </value>
+                <value>
+                    <fullName>Ryan Flom</fullName>
+                    <default>false</default>
+                    <label>Ryan Flom</label>
+                </value>
+                <value>
+                    <fullName>Scott Christie</fullName>
+                    <default>false</default>
+                    <label>Scott Christie</label>
+                </value>
+                <value>
+                    <fullName>Shelly Schneider</fullName>
+                    <default>false</default>
+                    <label>Shelly Schneider</label>
+                </value>
+                <value>
+                    <fullName>Stefan Erik Honum</fullName>
+                    <default>false</default>
+                    <label>Stefan Erik Honum</label>
+                </value>
+                <value>
+                    <fullName>Stuart Smith</fullName>
+                    <default>false</default>
+                    <label>Stuart Smith</label>
+                </value>
+                <value>
+                    <fullName>Susanna Lione</fullName>
+                    <default>false</default>
+                    <label>Susanna Lione</label>
+                </value>
+                <value>
+                    <fullName>Tom Hurley</fullName>
+                    <default>false</default>
+                    <label>Tom Hurley</label>
+                </value>
+                <value>
+                    <fullName>Tom Rousseau</fullName>
+                    <default>false</default>
+                    <label>Tom Rousseau</label>
+                </value>
+                <value>
+                    <fullName>Trow Meier</fullName>
+                    <default>false</default>
+                    <label>Trow Meier</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Accounts Planning</relationshipLabel>
+        <relationshipName>Accounts_Planning</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Amplify_Current_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Amplify - Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amplify_Current_vs_Planning_Year_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amplify_Current_vs_Planning_Year__c / Amplify_Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amplify - Current vs. Planning Year %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Amplify_Current_vs_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amplify_Planning_Year__c -  Amplify_Current_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amplify - Current vs. Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amplify_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Amplify - Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amplify_Previous_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Amplify - Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Current_Year_Budget__c</fullName>
+        <description>Budget for the year prior to the planning year</description>
+        <externalId>false</externalId>
+        <label>Current Year Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Year_Projection__c</fullName>
+        <description>For the year prior to the planning year.</description>
+        <externalId>false</externalId>
+        <label>Current Year Projection</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Year_vs_Budget_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Current_Year_vs_Budget__c /  Current_Year_Projection__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Year vs. Budget %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Current_Year_vs_Budget__c</fullName>
+        <externalId>false</externalId>
+        <formula>Current_Year_Projection__c -  Current_Year_Budget__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Year vs. Budget</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Year_vs_Planning_Year_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Current_Year_vs_Planning_Year__c /  Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Year vs. Planning Year %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Current_Year_vs_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Planning_Year__c -  Current_Year_Projection__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Year vs. Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Year_vs_Previous_Year_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Current_Year_vs_Previous_Year__c /  Current_Year_Projection__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Year vs. Previous Year %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Current_Year_vs_Previous_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Current_Year_Projection__c  -  Previous_Year_Revenue__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Current Year vs. Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Demand_Gen_Current_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Demand Gen -Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Demand_Gen_Current_vs_Planning_Year_Perc__c</fullName>
+        <externalId>false</externalId>
+        <formula>Demand_Gen_Current_vs_Planning_Year__c /  Demand_Gen_Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Demand Gen - Current vs. Planning Year %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Demand_Gen_Current_vs_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Demand_Gen_Planning_Year__c -  Demand_Gen_Current_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Demand Gen - Current vs. Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Demand_Gen_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Demand Gen - Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Demand_Gen_Previous_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Demand Gen - Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Digital_Current_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Digital - Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Digital_Current_vs_Planning_Year_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Digital_Current_vs_Planning_Year__c /  Digital_Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Digital - Current vs. Planning Year %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Digital_Current_vs_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Digital_Planning_Year__c -  Digital_Current_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Digital - Current vs. Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Digital_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Digital - Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Digital_Previous_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Digital - Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Education_Current_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Education - Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Education_Current_vs_Planning_Year_Perce__c</fullName>
+        <externalId>false</externalId>
+        <formula>Education_Current_vs_Planning_Year__c /  Education_Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Education - Current vs. Planning Year %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Education_Current_vs_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Education_Planning_Year__c -  Education_Current_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Education - Current vs. Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Education_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Education - Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Education_Previous_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Education - Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Events_Current_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Events - Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Events_Current_vs_Planning_Year_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Events_Current_vs_Planning_Year__c /  Events_Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Events - Current vs. Planning Year %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Events_Current_vs_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Events_Planning_Year__c -  Events_Current_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Events - Current vs. Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Events_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Events - Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Events_Previous_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Events - Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Exhibitions_Current_vs_Planning_Year_Per__c</fullName>
+        <externalId>false</externalId>
+        <formula>Exhibitions_Current_vs_Planning_Year__c /  Education_Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Exhibitions - Current vs. Planning YR %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Exhibitions_Current_vs_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Exhibitions_Planning_Year__c -  Exhibitions_Current_year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Exhibitions - Current vs. Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Exhibitions_Current_year__c</fullName>
+        <externalId>false</externalId>
+        <label>Exhibitions - Current year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Exhibitions_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Exhibitions - Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Exhibitions_Previous_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Exhibitions - Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FY__c</fullName>
+        <externalId>false</externalId>
+        <label>FY</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>2014</fullName>
+                    <default>false</default>
+                    <label>2014</label>
+                </value>
+                <value>
+                    <fullName>2015</fullName>
+                    <default>false</default>
+                    <label>2015</label>
+                </value>
+                <value>
+                    <fullName>2016</fullName>
+                    <default>false</default>
+                    <label>2016</label>
+                </value>
+                <value>
+                    <fullName>2017</fullName>
+                    <default>false</default>
+                    <label>2017</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MS_Current_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>MS - Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MS_Current_vs_Planning_Year_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>MS_Current_vs_Planning_Year__c /  MS_Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MS - Current vs. Planning Year %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MS_Current_vs_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>MS_Planning_Year__c -  MS_Current_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MS - Current vs. Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MS_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>MS - Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MS_Previous_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>MS - Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Meyers_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</inlineHelpText>
+        <label>Meyers Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amplify_Planning_Year__c +  Demand_Gen_Planning_Year__c +  Digital_Planning_Year__c +  Education_Planning_Year__c +  Events_Planning_Year__c +  Exhibitions_Planning_Year__c +  MS_Planning_Year__c +  Print_Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Year_Revenue__c</fullName>
+        <description>Revenue from the Account/Division from the previous year (2 years prior to the planning year)</description>
+        <externalId>false</externalId>
+        <label>Previous Year Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Print_Current_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Print - Current Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Print_Current_vs_Planning_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>Print_Current_vs_Planning__c /  Print_Planning_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Print - Current vs. Planning %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Print_Current_vs_Planning__c</fullName>
+        <externalId>false</externalId>
+        <formula>Print_Planning_Year__c -  Print_Current_Year__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Print - Current vs. Planning</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Print_Planning_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Print - Planning Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Print_Previous_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Print - Previous Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Account Planning</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Account Planning Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Accounts Planning</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,101 @@
+<apex:page standardController="OpportunityLineItem" extensions="DirectoryCategories">
+    <script>
+        function loading(val) {
+            if (val) {
+                document.getElementById('contentLoading').style.display = 'inline-block';
+            }
+            else {
+                document.getElementById('contentLoading').style.display = 'none';
+            }
+        }
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style>
+        #contentLoading{
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            position: fixed;
+            display: block;
+            opacity: 0.6;
+            background-color: #fff;
+            z-index: 10001;
+            text-align: center;
+        }
+
+        #contentLoading1{
+            position: absolute;
+            top:300px;
+            z-index: 10000;
+        }
+    </style>
+    <apex:form >
+        <apex:pageMessages id="msgs"></apex:pageMessages>
+        
+        <apex:actionFunction name="doSearch1" status="loading" action="{!search}" reRender="Op1,msgs">
+            <apex:param name="parm1" value="" assignTo="{!SearchAC}"/>
+        </apex:actionFunction>
+        
+        <apex:actionFunction name="doSearch2" status="loading" action="{!search2}" reRender="Op2,msgs">
+            <apex:param name="parm2" value="" assignTo="{!SearchPC}"/>
+        </apex:actionFunction>
+        
+        <!-- Loading -->
+        <apex:actionStatus id="loading" onstart="loading(true)" onstop="loading(false)" />
+        <div id="contentLoading" style="display:none; ">
+            <img id="contentLoading1" src="/img/loading32.gif" alt="Loading graphic" />
+        </div>
+        
+        <apex:pageBlock id="pb">
+            <!-- Available Categories -->
+            <div>
+                <apex:inputText value="{!SearchAC}" styleClass="SearchAC" html-placeholder="Enter search text" label="Search"/>&nbsp;&nbsp;
+                <apex:commandButton value="Search" onclick="doSearch1($('.SearchAC').val());return false;" title="Click to search"/>
+                <br/><br/>
+            </div>
+            
+            <apex:pageBlockSection columns="1" title="Select from Available Categories" collapsible="false" />
+            
+            <div style="height:300px; overflow:auto;">
+                <apex:outputPanel id="Op1">
+                    <apex:pageBlockTable value="{!directoryCategories}" var="item">
+                        <apex:column >
+                            <apex:inputCheckbox value="{!item.isSelected}"/>
+                        </apex:column>
+                        <apex:column value="{!item.dc.name}"/>
+                    </apex:pageBlockTable>
+                </apex:outputPanel>
+            </div>
+            <br/><br/>
+           
+            <!-- Premium Directory Categories -->
+            <div>
+                <apex:inputText value="{!SearchPC}" html-placeholder="Enter search text" styleClass="SearchPC"/> &nbsp;&nbsp;
+                <apex:commandButton value="Search" onclick="doSearch2($('.SearchPC').val());return false;" title="Click to search"/>
+                <br/>
+            </div>
+            <apex:pageBlockSection columns="1" title="Select Premium Directory Categories" collapsible="false" rendered="{!lineitem.Premium_Directory__c}" />
+                
+            <div style="height:300px; overflow:auto; display:{!IF(lineitem.Premium_Directory__c, 'block','none')}">
+                <apex:outputPanel id="Op2">
+                    <apex:pageBlockTable value="{!premiumDirectoryCategories}" var="item"  rendered="{!lineitem.Premium_Directory__c}">
+                        <apex:column >
+                            <apex:inputCheckbox value="{!item.isSelected}"/>
+                        </apex:column>
+                        <apex:column value="{!item.dc.name}"/>
+                    </apex:pageBlockTable>
+                </apex:outputPanel>
+            </div>
+            
+            
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+                
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

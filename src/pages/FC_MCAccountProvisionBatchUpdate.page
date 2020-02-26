@@ -1,0 +1,3 @@
+<apex:page controller="FC_MCAccountProvisionBatchUpdateCtrl" action="{!invoke}">
+    <apex:pageMessage severity="confirm" strength="1" summary="Your request has been submitted." />
+</apex:page>

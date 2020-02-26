@@ -1,0 +1,13 @@
+<apex:page showHeader="false" sidebar="false" standardController="Project__c" extensions="ProjectNearbyProjectsMapExt">
+    <apex:map width="600px" height="200px" mapType="roadmap" center="{!Project__c.Location__Latitude__s},{!Project__c.Location__Longitude__s}" zoomLevel="12" showOnlyActiveInfoWindow="false">
+        <apex:repeat value="{!nearbyProjects}" var="project">
+            <apex:mapMarker title="{! project.Name }" position="{!project.Location__Latitude__s},{!project.Location__Longitude__s}" icon="{!If(project.ID == prjid ,'http://www.google.com/mapfiles/dd-start.png','http://www.google.com/mapfiles/marker.png') }" >
+                <apex:mapInfoWindow >
+                    <apex:outputPanel layout="block" style="font-weight: bold;">
+                        <apex:outputLink value="/{!project.Id}">{! project.Name }</apex:outputLink>
+                    </apex:outputPanel> 
+                </apex:mapInfoWindow>
+            </apex:mapMarker>
+        </apex:repeat>
+    </apex:map>
+</apex:page>

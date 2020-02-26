@@ -1,0 +1,90 @@
+<apex:page standardController="Opportunity" extensions="FC_OpportunityCancellationFormController"
+           action="{!preValidate}">
+    <c:FC_JQuery renameJQuery="true"/>
+    <apex:stylesheet value="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/themes/classic.css"/>
+    <apex:stylesheet value="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/themes/classic.date.css"/>
+    <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/picker.js"/>
+    <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/picker.date.js"/>
+    <apex:includeScript value="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"/>
+    <script type="text/javascript">
+        // <![CDATA[
+        var initializeUi = function () {
+            $j('.datepicker').pickadate({
+                format: 'm/d/yyyy',
+                formatSubmit: 'yyyy-mm-dd',
+                onSet: function (context) {
+                    console.log('ON SET EFFECTIVE DATE CONTEXT', context);
+                    console.log('COMPONENT TO UPDATE', jqid('{!$Component.theForm.effectiveDateString}'));
+                    console.log('SELECTED DATE', moment(context.select).format('YYYY-MM-DD'));
+                    $j(jqid('{!$Component.theForm.effectiveDateString}')).val(moment(context.select).format('YYYY-MM-DD'));
+                }
+            });
+        }
+        $j(function () {
+            initializeUi();
+        });
+        // ]]>
+    </script>
+    <apex:outputText rendered="false" value="{!Opportunity.Id}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.ContractId}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Contract.FC_Subscription__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Contract.FC_Subscription__r.Name}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Contract.FC_Subscription__r.Zuora__Status__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Cancellation_Action__c}"/>
+    <apex:sectionHeader title="Process Cancellation" subtitle="{!Opportunity.Name}"/>
+    <apex:pageMessages />
+    <apex:form id="theForm" rendered="{!preValid && !success}">
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!processCancellation}" value="Process Cancellation"/>
+                <apex:commandButton action="{!cancel}" value="Go Back"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="2" collapsible="false">
+                <apex:outputField value="{!Opportunity.Name}"/>
+                <apex:outputField value="{!Opportunity.Contract.FC_Subscription__r.Zuora__CustomerAccount__c}"/>
+
+                <apex:outputField value="{!Opportunity.Account.Name}"/>
+                <apex:outputField value="{!Opportunity.Contract.FC_Subscription__r.Zuora__CustomerAccount__r.Zuora__AccountNumber__c}"/>
+
+                <apex:outputField value="{!Opportunity.Contract.FC_Subscription__c}"/>
+                <apex:outputField value="{!Opportunity.Contract.FC_Subscription__r.Zuora__CustomerAccount__r.Zuora__BillCycleDay__c}"/>
+
+                <apex:outputText value=""/>
+                <apex:outputField value="{!Opportunity.Contract.FC_Subscription__r.Zuora__TermStartDate__c}"/>
+
+                <apex:outputText value=""/>
+                <apex:outputField value="{!Opportunity.Contract.FC_Subscription__r.Zuora__TermEndDate__c}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1" collapsible="false">
+                <apex:inputText label="Effective Date" styleClass="datepicker"/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Cancellation Action"/>
+                    <apex:selectRadio value="{!selectedCancellationAction}" layout="pageDirection">
+                        <apex:actionSupport event="onchange" reRender="theForm" onComplete="initializeUi();"/>
+                        <apex:selectOption itemValue="SUBSCRIPTION" itemLabel="Cancel entire subscription"/>
+                        <apex:selectOption itemValue="PRODUCTS" itemLabel="Cancel specific products"/>
+                    </apex:selectRadio>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection id="productsToCancelSection" columns="1" collapsible="false"
+                                   title="Select Products to Cancel"
+                                   rendered="{!selectedCancellationAction == 'PRODUCTS'}">
+                <apex:pageBlockTable value="{!ratePlans}" var="rp">
+                    <apex:column width="10">
+                        <apex:inputCheckbox value="{!rp.selected}"/>
+                    </apex:column>
+                    <apex:column headerValue="Description" value="{!rp.description}"/>
+                    <apex:column headerValue="Effective Start Date" value="{!rp.effectiveStartDateString}"/>
+                    <apex:column headerValue="Effective End Date" value="{!rp.effectiveEndDateString}"/>
+                    <apex:column headerValue="Price" value="{!rp.price}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        <apex:inputHidden id="effectiveDateString" value="{!effectiveDateString}"/>
+    </apex:form>
+    <apex:outputPanel rendered="{!!preValid || success}" layout="block">
+        <apex:outputLink value="/{!Opportunity.Id}">
+            <apex:outputText value="&lt;&lt; Back to Opportunity: {!Opportunity.Name}" escape="false"/>
+        </apex:outputLink>
+    </apex:outputPanel>
+</apex:page>

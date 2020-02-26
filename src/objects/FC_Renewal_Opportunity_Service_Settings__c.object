@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>MS_Products_to_Exclude__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>A semicolon-delimited list of MS Product API values to exclude.</inlineHelpText>
+        <label>MS Products to Exclude</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchase_Types_to_Exclude__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>A semicolon-delimited list of Purchase Type API values to exclude.</inlineHelpText>
+        <label>Purchase Types to Exclude</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sale_Types_to_Exclude__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>A semicolon-delimited list of Sale Type API values to exclude.</inlineHelpText>
+        <label>Sale Types to Exclude</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>(FC) Renewal Opportunity Service Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

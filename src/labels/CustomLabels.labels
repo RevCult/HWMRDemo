@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AccountIdToSaveAttachments</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HW_AccountIdToSaveAttachments</shortDescription>
+        <value>a1I80000003tW77EAE</value>
+    </labels>
+    <labels>
+        <fullName>AccountIdToSaveRON</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HW_AccountIdToSaveRON</shortDescription>
+        <value>0018000001FUPZr</value>
+    </labels>
+    <labels>
+        <fullName>EmptyRONReport</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HW_EmptyRONReport</shortDescription>
+        <value>mskelnik@hanleywood.com;jpadilla@rainmaker-llc.com;hlubinger@hanleywood.com</value>
+    </labels>
+    <labels>
+        <fullName>MarketingUserForOTM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>HW_MarketingUserForOTM</shortDescription>
+        <value>Ryan Flom</value>
+    </labels>
+    <labels>
+        <fullName>MetroUserForOTM</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MS_MetroUserForOTM</shortDescription>
+        <value>Toby Morrison</value>
+    </labels>
+    <labels>
+        <fullName>NetRevenueForecastAdmin</fullName>
+        <categories>Class Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MS_NetRevenueForecastAdmin</shortDescription>
+        <value>Rainmaker Implementation</value>
+    </labels>
+    <labels>
+        <fullName>NetRevenueForecastErrorEmail</fullName>
+        <categories>Class Label</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MS_NetRevenueForecastErrorEmail</shortDescription>
+        <value>ragarwal@rainmakercloud.com</value>
+    </labels>
+</CustomLabels>

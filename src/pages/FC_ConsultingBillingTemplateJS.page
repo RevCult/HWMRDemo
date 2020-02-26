@@ -1,0 +1,309 @@
+<apex:page contentType="text/javascript" standardController="Opportunity">
+    // <!--@formatter:off-->
+    // <script type="text/javascript">
+    // @formatter:on
+    /* <![CDATA[ */
+    $j(function () {
+        var templateName = 'Consulting';
+        window.FC_OpportunityProductsForm.billingInstructionTemplates[templateName] = {
+
+            initParameterForm: function (form, opportunityLineItemsData, selectedSeg3Record, okButton, previousValues,
+                                         opportunityLineItemId, opportunityLineItemUuid, opportunityRecord, callback) {
+                console.log('INIT PARAMETER FORM FOR CONSULTING');
+                console.log('INIT PARAMETER FORM FORM', form);
+                console.log('INIT PARAMETER FORM OPPORTUNITY LINE ITEMS DATA', opportunityLineItemsData);
+                console.log('INIT PARAMETER FORM SELECTED SEG3 RECORD', selectedSeg3Record);
+                console.log('INIT PARAMETER FORM OK BUTTON', okButton);
+                console.log('INIT PARAMETER FORM PREVIOUS VALUES', previousValues);
+
+                var templateId = window.FC_OpportunityProductsForm.billingInstructionTemplateNameToIdMap[templateName];
+                var opportunityContractEffectiveDate = moment(opportunityRecord.FC_Contract_Effective_Date__c);
+                console.log("OPPORTUNITY CONTRACT EFFECTIVE DATE", opportunityContractEffectiveDate);
+
+
+                var selectedProductName = selectedSeg3Record.Metrostudy_Product__c + ' | ' +
+                        selectedSeg3Record.Geography_Type__c + ' | ' +
+                        selectedSeg3Record.Geography__c + ' | ' +
+                        selectedSeg3Record.Seg3__c + ' | ' +
+                        selectedSeg3Record.Charge_Type__c;
+                formConfig = {
+                    id: $$(form).config.id,
+                    view: 'form',
+                    elements: [
+                        {
+                            view: 'text',
+                            label: 'Selected Product',
+                            labelWidth: 125,
+                            readonly: true,
+                            disabled: true,
+                            value: selectedProductName
+                        },
+                        {
+                            view: 'datepicker',
+                            label: 'Start Date',
+                            labelWidth: 125,
+                            name: 'startDate',
+                            required: true,
+                            stringResult: true,
+                            format: webix.Date.dateToStr("%m/%d/%Y"),
+                            value: window.FC_OpportunityProductsForm.billingInstructionParametersDefaults.startDate || opportunityContractEffectiveDate.format('YYYY-MM-DD')
+                        },
+                        {
+                            view: 'text',
+                            label: 'Price',
+                            labelWidth: 125,
+                            name: 'price',
+                            required: true
+                        },
+                        {
+                            view: 'text',
+                            label: 'List Price',
+                            name: 'listPrice',
+                            labelWidth: 125,
+                            readonly: true,
+                            disabled: true,
+                            value: selectedSeg3Record.One_Time_List_Price__c
+                        }
+                    ],
+                    rules: {}
+                };
+                form = webix.ui(formConfig, $$(form).getParentView(), $$(form));
+                if (previousValues) {
+                    form.setValues(previousValues);
+                }
+                $$(okButton).attachEvent('onItemClick',
+                        function (id, event) {
+                            var windowBody = form.getTopParentView().getBody();
+                            windowBody.showOverlay(window.FC_OpportunityProductsForm.loadingOverlay('Please wait...'));
+                            if (form.validate()) {
+
+                                // Retrieve dependent seg3s
+                                var seg3Model = new SObjectModel.FC_Metroclient_Product_Geography_Seg3__c();
+                                var seg3Promise = webix.promise.defer();
+                                seg3Model.retrieve({
+                                            where: { Dependent_Seg3__c: { eq: selectedSeg3Record.Id } }
+                                        },
+                                        function (seg3Error, seg3Results, seg3Event) {
+                                            if (!seg3Error) {
+                                                seg3Promise.resolve(arguments);
+                                            } else {
+                                                console.error('ERROR RETRIEVING SEG3', seg3Error);
+                                                seg3Promise.reject(arguments);
+                                            }
+                                        });
+
+                                webix.promise.all([seg3Promise]).then(function (results) {
+                                    console.log('****** SEG3 PROMISE RESULTS', results);
+                                    var dependentSeg3Records = results[0][1];
+                                    var seg3IdsToLookup = [selectedSeg3Record.Id];
+                                    var seg3ProductIdsToLookup = [selectedSeg3Record.Product__c];
+                                    for (dependentSeg3Record of dependentSeg3Records) {
+                                        seg3IdsToLookup.push(dependentSeg3Record.get('Id'))
+                                        if (seg3ProductIdsToLookup.indexOf(dependentSeg3Record.get('Product__c')) === -1) {
+                                            seg3ProductIdsToLookup.push(dependentSeg3Record.get('Product__c'));
+                                        }
+                                    }
+
+                                    console.log('****** SEG3 IDS TO LOOKUP', seg3IdsToLookup);
+                                    console.log('****** SEG3 PRODUCT IDS TO LOOKUP', seg3ProductIdsToLookup);
+                                    // Retrive seg3 tags
+                                    var seg3TagModel = new SObjectModel.FC_Metroclient_Product_Geography_Seg3__Tag();
+                                    var seg3TagPromise = new webix.promise.defer();
+                                    seg3TagModel.retrieve({
+                                                where: {
+                                                    and: {
+                                                        ItemId: { in: seg3IdsToLookup },
+                                                        Type: { eq: 'Public' }
+                                                    }
+                                                }
+                                            },
+                                            function (seg3TagError, seg3TagResults, seg3TagEvent) {
+                                                if (!seg3TagError) {
+                                                    seg3TagPromise.resolve(arguments);
+                                                } else {
+                                                    console.error('ERROR RETRIEVING SEG3 TAG', seg3TagError);
+                                                    seg3TagPromise.reject(arguments);
+                                                }
+                                            });
+
+                                    // Retrieve pricebook entry id of the product we are adding
+                                    var pricebookEntryModel = new SObjectModel.PricebookEntry();
+                                    var pricebookEntryPromise = webix.promise.defer();
+                                    pricebookEntryModel.retrieve({
+                                                where: {
+                                                    and: {
+                                                        Pricebook2Id: { eq: opportunityRecord.Pricebook2Id },
+                                                        Product2Id: { in: seg3ProductIdsToLookup }
+                                                    }
+                                                }
+                                            },
+                                            function (pricebookEntryError, pricebookEntryResults, pricebookEntryEvent) {
+                                                if (!pricebookEntryError) {
+                                                    pricebookEntryPromise.resolve(arguments);
+                                                } else {
+                                                    console.error('ERROR RETRIEVING PRICEBOOK ENTRY', pricebookEntryError);
+                                                    pricebookEntryPromise.reject(arguments);
+                                                }
+                                            });
+
+                                    webix.promise.all([seg3TagPromise, pricebookEntryPromise]).then(function (results) {
+
+                                        var seg3Records = [selectedSeg3Record];
+                                        for (dependentSeg3Record of dependentSeg3Records) {
+                                            seg3Records.push(dependentSeg3Record._props);
+                                        }
+                                        console.log('******** SEG3 RECORDS TO ADD', seg3Records);
+
+                                        var seg3TagRecords = results[0][1];
+                                        var pricebookEntryRecords = results[1][1];
+
+                                        var seg3TagMap = {};
+                                        for (seg3TagRecord of seg3TagRecords) {
+                                            var tags = seg3TagMap[seg3TagRecord.get('ItemId')];
+                                            if (!tags) {
+                                                tags = [];
+                                                seg3TagMap[seg3TagRecord.get('ItemId')] = tags;
+                                            }
+                                            tags.push(seg3TagRecord.get('Name'));
+                                        }
+
+                                        console.log('******** SEG3 TAGS', seg3TagRecords);
+                                        console.log('******** SEG3 TAG MAP', seg3TagMap);
+
+                                        var productIdPricebookEntryMap = {};
+                                        for (pricebookEntryRecord of pricebookEntryRecords) {
+                                            productIdPricebookEntryMap[pricebookEntryRecord.get('Product2Id')] = pricebookEntryRecord.get('Id');
+                                        }
+
+                                        console.log('******** PRICEBOOK ENTRIES', pricebookEntryRecords);
+                                        console.log('******** PRODUCT PRICEBOOK ENTRY MAP', productIdPricebookEntryMap);
+
+                                        var seg3IdPricebookEntryIdMap = {};
+                                        seg3IdPricebookEntryIdMap[selectedSeg3Record.Id] = productIdPricebookEntryMap[selectedSeg3Record.Product__c];
+                                        if (dependentSeg3Records) {
+                                            for (dependentSeg3Record of dependentSeg3Records) {
+                                                seg3IdPricebookEntryIdMap[dependentSeg3Record.get('Id')] = productIdPricebookEntryMap[dependentSeg3Record.get('Product__c')];
+                                            }
+                                        }
+
+                                        console.log('******** SEG3 PRICEBOOK ENTRY MAP', seg3IdPricebookEntryIdMap);
+
+                                        var startDate = moment(form.elements.startDate.getValue());
+                                        var isSubscribe = !opportunityRecord.ContractId &&
+                                                !opportunityRecord.FC_Last_Sent_To_Zuora__c &&
+                                                startDate.isSame(opportunityContractEffectiveDate, 'day');
+                                        var inputPrice = Number(form.elements.price.getValue());
+                                        var retainerPrice = inputPrice / 2;
+                                        var balanceDuePrice = inputPrice - retainerPrice;
+                                        var billingInstructionSteps = [];
+                                        for (seg3Record of seg3Records) {
+
+                                            if (seg3Record.Id === selectedSeg3Record.Id) {
+                                                var billingInstructionStep = {
+                                                    Status__c: 'New',
+                                                    Execute_Immediately__c: seg3Record.Execute_Immediately__c,
+                                                    RecordTypeId: isSubscribe ? window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap['Subscribe'] : window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap['Amend_Add'],
+                                                    Metrostudy_Product_Geography_Seg3__c: seg3Record.Id,
+                                                    Product_Rate_Plan__c: seg3Record.Product_Rate_Plan__c,
+                                                    Contract_Effective_Date__c: startDate.clone().toDate(),
+                                                    Price__c: retainerPrice,
+                                                    Description__c: seg3Record.Metrostudy_Product__c + ' | ' + seg3Record.Geography_Type__c + ' | ' + seg3Record.Geography__c + ' | Retainer',
+                                                    Billing_Instruction_Description__c: 'Consulting'
+                                                };
+                                                billingInstructionSteps.push(billingInstructionStep);
+                                            } else if (seg3TagMap[seg3Record.Id] && seg3TagMap[seg3Record.Id].indexOf('Balance Due') >= 0) {
+                                                var billingInstructionStep = {
+                                                    Status__c: 'New',
+                                                    Execute_Immediately__c: seg3Record.Execute_Immediately__c,
+                                                    RecordTypeId: window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap['Amend_Add'],
+                                                    Metrostudy_Product_Geography_Seg3__c: seg3Record.Id,
+                                                    Product_Rate_Plan__c: seg3Record.Product_Rate_Plan__c,
+                                                    Contract_Effective_Date__c: opportunityRecord.Scheduled_Delivery_Date__c ? moment(opportunityRecord.Scheduled_Delivery_Date__c).toDate() : startDate.clone().add(6, 'month').toDate(),
+                                                    Price__c: balanceDuePrice,
+                                                    Description__c: seg3Record.Metrostudy_Product__c + ' | ' + seg3Record.Geography_Type__c + ' | ' + seg3Record.Geography__c + ' | Balance Due/Final',
+                                                    Billing_Instruction_Description__c: 'Consulting'
+                                                };
+                                                billingInstructionSteps.push(billingInstructionStep);
+                                            } else if (seg3TagMap[seg3Record.Id] && seg3TagMap[seg3Record.Id].indexOf('Expenses') >= 0) {
+                                                var billingInstructionStep = {
+                                                    Status__c: 'New',
+                                                    Execute_Immediately__c: seg3Record.Execute_Immediately__c,
+                                                    RecordTypeId: window.FC_OpportunityProductsForm.billingInstructionStepRecordTypeDeveloperNameMap['Amend_Add'],
+                                                    Metrostudy_Product_Geography_Seg3__c: seg3Record.Id,
+                                                    Product_Rate_Plan__c: seg3Record.Product_Rate_Plan__c,
+                                                    Contract_Effective_Date__c: opportunityRecord.Scheduled_Delivery_Date__c ? moment(opportunityRecord.Scheduled_Delivery_Date__c).toDate() : startDate.clone().add(6, 'month').toDate(),
+                                                    Price__c: 0,
+                                                    Description__c: seg3Record.Metrostudy_Product__c + ' | ' + seg3Record.Geography_Type__c + ' | ' + seg3Record.Geography__c + ' | Expenses',
+                                                    Billing_Instruction_Description__c: 'Consulting'
+                                                };
+                                                billingInstructionSteps.push(billingInstructionStep);
+                                            }
+                                        }
+
+                                        if (opportunityLineItemUuid === null) {
+                                            opportunityLineItemUuid = uuid();
+                                        }
+                                        var opportunityLineItemData = {
+                                            Billing_Frequency__c: 'One-Time',
+                                            FC_Bill_Case__c: templateName,
+                                            FC_Effective_Date__c: startDate.clone().toDate(),
+                                            FC_Geography__c: selectedSeg3Record.Geography__c, // FORMULA
+                                            FC_Geography_Type__c: selectedSeg3Record.Geography_Type__c, // FORMULA
+                                            FC_Metrostudy_Product__c: selectedSeg3Record.Metrostudy_Product__c, // FORMULA
+                                            FC_Product_Geography_Seg3__c: selectedSeg3Record.Id,
+                                            FC_Seg3__c: selectedSeg3Record.Seg3__c, // FORMULA
+                                            FC_UUID__c: opportunityLineItemUuid,
+                                            FC_Zuora_Action__c: 'Add',
+                                            MS_Segment__c: opportunityRecord.MS_Segments__c,
+                                            PricebookEntryId: seg3IdPricebookEntryIdMap[selectedSeg3Record.Id],
+                                            Quantity: 1,
+                                            FC_Sale_Price__c: form.elements.price.getValue(),
+                                            BillingInstructionSet: {
+                                                Instruction_Parameters__c: JSON.stringify(form.getValues()),
+                                                Opportunity_Line_Item_UUID__c: opportunityLineItemUuid,
+                                                Template__c: templateId,
+                                                BillingInstructionSteps: billingInstructionSteps
+                                            }
+                                        };
+
+                                        var rowId = opportunityLineItemId;
+                                        if (opportunityLineItemId === null) {
+
+                                            // Add a new opportunity line item row
+                                            rowId = opportunityLineItemsData.add(opportunityLineItemData);
+                                            window.FC_OpportunityProductsForm.billingInstructionParametersDefaults.startDate = form.elements.startDate.getValue();
+
+                                        } else {
+
+                                            // Modify opportunity line item row
+                                            opportunityLineItemsData.updateItem(opportunityLineItemId, opportunityLineItemData);
+
+                                        }
+
+                                        window.FC_OpportunityProductsForm.rebuildSubview(rowId);
+
+                                        form.getTopParentView().close();
+
+                                    }).fail(function (error) {
+                                        console.error('ERROR RESOLVING PROMISE FOR SEG3 TAGS AND PRICEBOOK ENTRY', error);
+                                    });
+
+                                }).fail(function (error) {
+                                    console.error('ERROR RESOLVING PROMISE FOR SEG3', error);
+                                });
+
+                            }
+                        });
+
+                if (callback) {
+                    callback();
+                }
+            }
+
+        };
+    });
+    /* ]]> */
+    // @formatter:off
+    // </script>
+    // <!--@formatter:on-->
+</apex:page>

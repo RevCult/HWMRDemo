@@ -1,0 +1,235 @@
+<apex:page standardController="Opportunity" showHeader="false" renderas="pdf">
+
+<table border="0" cellspacing="0" cellpadding="0" width="100%" id="table1">
+<tr>
+    <td>
+        <img src='{!URLFOR($Resource.HWMI_Logo)}' title="HWMI_Logo" />
+    </td>
+    <td  align="right"><font face="Arial" >
+    <b>License Agreement for {!Opportunity.Account.Name}</b></font><br/>
+    </td>
+</tr>
+<hr/>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="100%" id="table1">
+<tr>    <td><font face="Arial" >
+        {!$Organization.Name}<br/>
+        {!$Organization.Street}<br/>
+        {!$Organization.PostalCode} {!$Organization.City}<br/>
+        {!$Organization.Country}<br/>
+        </font></td> 
+        <td width="40%">&nbsp;</td>
+   <td ><font face="Arial">Proposal number: {!Opportunity.Proposal_Number__c}
+   {!Opportunity.QuoteVersion__c}<br/>
+        <br/>
+        Offer valid Through:&nbsp;<apex:OutputField value="{!Opportunity.CloseDate}"/><br/>    
+        Regional Sales Director: {!Opportunity.Owner.FirstName} {!Opportunity.Owner.LastName}<br/>
+        Phone: {!$User.Phone}</font>
+     </td>
+</tr>
+</table>
+<hr/>
+<p><b><font face="Arial" color="#000080">Address Information</font></b></p>
+<table border="0" width="100%" id="table2">
+<tr>
+       <td>          
+           <font face="Arial">Billing Information:<br/>
+                             Company: {!Opportunity.Account.Name}<br/>
+                             Address: {!Opportunity.Account.BillingStreet}<br/>
+                             {!Opportunity.Account.BillingCity}, {!Opportunity.Account.BillingState} {!Opportunity.Account.BillingPostalCode}<br/>
+                             Phone: {!Opportunity.Account.Phone}<br/>
+                             Industry Code:        {!Opportunity.Account.Industry_Code__c}
+           </font>
+        </td>
+        <td width="20%"></td>
+        <td >
+           <font face="Arial">Shipping Information:<br/>
+                              Contact:        {!Opportunity.Contact_Name1__c}<br/>
+                              Email:          {!Opportunity.Contact_Email__c}<br/>
+                              Address:         {!Opportunity.Account.ShippingStreet}<br/>
+                              {!Opportunity.Account.ShippingCity}, {!Opportunity.Account.ShippingState} {!Opportunity.Account.ShippingPostalCode}<br/> 
+                              Phone:         {!Opportunity.Account.Phone}
+           </font>
+        </td>
+</tr>    
+</table>
+<hr/>
+<p><b><font color="#000080" face="Arial">Products</font></b></p>
+<table border="0" width="100%" id="table4">
+<tr>
+       <td bgcolor="#C0C0C0"><font face="Arial">Product</font></td>
+       <td bgcolor="#C0C0C0"><font face="Arial">FIPS Code</font></td>
+       <td bgcolor="#C0C0C0"><font face="Arial">Delivery Frequency</font></td>
+       <td bgcolor="#C0C0C0"><font face="Arial">Billing Cycle</font></td>
+       <td bgcolor="#C0C0C0"><font face="Arial">Billing Price</font></td>
+</tr>
+<tr>
+       <apex:repeat value="{!Opportunity.OpportunityLineItems}" var="line">
+          <tr>
+             <td>{!line.PricebookEntry.Name}</td> 
+             <td>{!line.FIPS_Code__c}</td>       
+             <td>{!line.Delivery_Frequency_del__c}</td>
+             <td><apex:OutputField value="{!line.Subscription_Type__c}"/></td>
+             <td><apex:OutputField value="{!line.Billing_Price__c}"/></td>
+          </tr>
+       </apex:repeat>  
+</tr>
+<tr>
+       <td bgcolor="#C0C0C0" align="right" colspan="6">
+       <font face="Arial"><b>Total Annual Commitment:</b>&nbsp;<apex:OutputField value="{!Opportunity.Amount}"/></font></td>
+       <font face="Arial"><b>Amount above does not include shipping, handling and sales tax,</b></font>
+</tr>
+</table>
+<br/>
+<hr/>
+<p><b><font color="#000080" face="Arial">Special Billing Notes</font></b></p>
+<table border="0" width="100%" id="table3">
+<tr>
+        <td><font face="Arial"><apex:OutputField value="{!Opportunity.Accounting_Sales_Comments__c}"/><br/>
+              Existing Customer Key:&nbsp;<apex:OutputField value="{!Opportunity.QuoteEndDate__c}"/><br/>
+            </font>
+        </td>
+</tr>
+</table>
+<br/>
+<p><font face="Arial">{!Opportunity.Conditions__c}</font></p>
+<hr/>
+<table width="100%" id="table5">
+<tr>
+   <td width="50%"><b>{!$Organization.Name} Acceptance</b></td>
+   <td width="50%"><b>{!Opportunity.Account.Name} Acceptance</b></td>
+</tr>
+<tr>
+   <td width="50%">&nbsp;</td>
+   <td width="50%">&nbsp;</td>
+</tr>
+<tr>
+   <td width="50%">Signature<hr color="black" size="1"/></td>
+   <td width="50%">Signature<hr color="black" size="1"/></td>
+</tr>
+<tr>
+   <td width="50%">Name<hr color="black" size="1"/></td>
+   <td width="50%">Name<hr color="black" size="1"/></td>
+</tr>
+<tr>
+   <td width="50%">Title<hr color="black" size="1"/></td>
+   <td width="50%">Title<hr color="black" size="1"/></td>
+</tr>
+<tr>
+   <td width="50%">Date<hr color="black" size="1"/></td>
+   <td width="50%">Date<hr color="black" size="1"/></td>
+</tr>
+<tr> <td colspan="2"></td>
+    <table width="100%">
+    <tr><td width="50%"> &nbsp;</td>
+    <td valign="middle"><b> Review and Agree to Terms and Conditions Exhibit A </b></td>
+    <td valign="middle"><img src='{!URLFOR($Resource.Checkbox)}' title="Checkbox" /><td />
+    </tr>
+    <tr><td width="50%"> &nbsp;</td>
+    <td valign="middle"> <b>Review and Agree to Terms and Conditions Exhibit B</b></td>
+    <td valign="middle"><img src='{!URLFOR($Resource.Checkbox)}' title="Checkbox" /></td>
+    </tr>
+    </table></td>
+</tr>
+</table>
+
+</table>
+<p><font face="Arial"> Credit Card Authorization: For Credit Card Payment, complete the following </font></p>
+
+<table width="100%" id="table5">
+<tr>
+   <td width="50%">&nbsp;</td>
+   <td width="50%">&nbsp;</td>
+</tr>
+<tr>
+   <td width="50%"><b> Credit Card Type: {!Opportunity.Credit_Card_Type__c}<hr color="black" size="1"/></td>
+   <td width="50%"><b> Cardholder Name: {!Opportunity.Card_Holder_Name__c}<hr color="black" size="1"/></td>
+</tr>
+<tr>
+   <td width="50%"><b> Credit Card Number: {!Opportunity.Credit_Card_Number__c}<hr color="black" size="1"/></td>
+   <td width="50%"><b> Exp.: {!Opportunity.Credit_Card_Expiration__c} {!Opportunity.Credit_Card_Signature__c}<hr color="black" size="1"/></td>
+ </tr>
+ <tr> 
+   <td width="50%"><b> Signature: <hr color="black" size="1"/></td>
+</tr>
+</table>
+ <div style="page-break-before:always;"/>
+<table  border="1" cellspacing="0" cellpadding="0" width="100%" id="tbl_Terms" style="font-size:5pt;font-family:Arial">
+<tr><td align="center" style="font-weight:bold; font-size:6pt;font-family:Arial">
+Exhibit A 
+</td></tr><tr><td align="center" style="font-size:6pt;font-family:Arial">
+Terms & Conditions
+</td></tr><tr><td>
+Company: HWMI: Hanley Wood, LLC - Market Intelligence Division
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td  style="font-weight:bold">
+1.       SCOPE OF LICENSE
+</td></tr><tr><td>
+Effective upon delivery of the Software and the appropriate data (the “Data” and, together with the Software, the “Product”) to the Company, HW hereby grants to the Company a limited, non-exclusive, non-transferable license to use the Product solely for its own internal use in connection with its current business. The Company shall not (and shall not permit its employees, agents, representatives and/or contractors to), without the express prior written consent of HW: (a) reproduce, copy, transmit, sell, distribute, transfer, sublicense or store in a retrieval system or translate into any language or computer language, the Product, in any form, by any means; provided, that the Company shall have the right to maintain one copy of the Product for back-up and disaster recovery purposes only; (b) abstract, excerpt or summarize the Product; (c) use the Product in conjunction with any public or private offering of securities or other similar purpose where the Product may be relied upon to any degree by any party other than the Company; (d) publish the Product or use the name “Hanley-Wood”; (e) enter into a sub-license or other form of transfer agreement for the Product with any other party; (f) reverse engineer, decompile, disassemble or manipulate the Product; (g) use or store the Product outside the United States; or (h) remove any copyright or other proprietary rights. In addition, the Company will not use the Product in any way that violates any law, statute, ordinance or regulation, or is defamatory, trade libelous, unlawfully threatening or unlawfully harassing, nor will the Company use the Product as a factor in establishing an individual’s eligibility for credit, insurance or employment, or in connection with a determination of an individual’s eligibility for a license, or in connection with underwriting individual insurance, or in any way that would cause the Product to constitute a “consumer report” under applicable law. In the event the Company requests from HW the ability to sublicense or otherwise grant access to the Product to a third party consultant, HW will accommodate all such reasonable requests subject to the execution of an appropriate license agreement by such consultant.
+</td></tr><tr><td>
+The Product described in this Agreement is copyrighted and is subject to the protection of the U.S. Copyright Act, 17 U.S.C. Section 101 et. seq. The Product, including any and all patents, copyrights, trademarks, service marks, trade secrets, other intellectual property rights and any confidential information and any additional software modifications or enhancements thereto are and shall remain the sole and exclusive property of HW and the limited license granted above does not convey any proprietary interest in the Product to the Company, except the limited license to use the Product as expressly granted herein. For purposes of this Agreement, the software, the data provided and any update to the data shall be considered the “Product”.
+
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+2.       FEES
+</td></tr><tr><td>
+The Company shall pay to HW immediately and in full the amount stipulated on the “Total Annual Commitment” line found within the License Agreement, including applicable sales tax and shipping/handling charges, upon receipt of an invoice from HW. Any fee amount unpaid 30 days after the invoice date will be assessed a service charge of 1.5 percent per month. If delinquent accounts are referred for collection by HW, the Company shall reimburse HW for all fees incurred in connection with such collection, including, without limitation, all reasonable attorneys’ fees and disbursements. Any additional work outside the scope of this Agreement will be billed on a professional time and materials basis.
+
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+3.       NO REPRESENTATIONS OR WARRANTIES BY HWMI; LIMITATION OF LIABILITY
+</td></tr><tr><td>
+Other than as expressly provided herein, HW shall provide the Product to the Company on an “AS IS” basis and HW makes no representations or warranties, express or implied, including, without limitation, warranties of merchantability or fitness for a particular purpose, title and non-infringement concerning the Product. HW further does not represent that the Product is complete or free from error or will be available 24 hours per day, 7 days per week, and does not assume, and expressly disclaims, any liability to any person or entity for loss or damage caused by errors or omissions in the Product, whether resulting from negligence, accident or other cause. HW further makes no representations about the legality or propriety of the use of the Product in any geographic area. The Company shall not construe the Product as a representation by HW as to the condition of title to real property. The Company acknowledges that the Product may not include all recorded conveyances, instruments or documents which impact constructive notice with respect to any chain of title described in the services.
+
+The Product provided to the Company pursuant hereto constitutes raw data, factual materials and the opinions of HW. HW shall have no liability of any kind, including, without limitation, special, consequential, exemplary or incidental damages, whether in contract or in tort, to the Company or its employees, agents, representatives, contractors or to any other person using the Product, arising from or relating to the Product or this Agreement. FURTHERMORE, HW SHALL IN NO EVENT BE LIABLE FOR DAMAGES IN AN AMOUNT IN EXCESS OF THE FEES ACTUALLY RECEIVED BY HW FROM THE COMPANY UNDER THIS AGREEMENT.
+
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+4.       REPRESENTATIONS BY THE COMPANY
+</td></tr><tr><td>
+The Company represents that it has the power and authority to execute this Agreement, that all actions required to permit it to enter into this Agreement have been authorized and this Agreement shall be duly executed and delivered. The Company represents that this Agreement, once executed, is a legal, valid and binding obligation of it and is enforceable against it in accordance with its terms.
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+5.       CONFIDENTIALITY
+</td></tr><tr><td>
+The Company represents that it has the power and authority to execute this Agreement, that all actions required to permit it to enter into this Agreement have been authorized and this Agreement shall be duly executed and delivered. The Company represents that this Agreement, once executed, is a legal, valid and binding obligation of it and is enforceable against it in accordance with its terms.
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+
+6.       INJUNCTIVE RELIEF; AUDITS
+</td></tr><tr><td> 
+The parties hereto acknowledge and agree that a breach of any provision of this Agreement may cause permanent and irreparable damage to the non breaching party and that monetary damages may not be an adequate remedy for such breach. Accordingly, each party shall have the right to seek, in addition to any remedy available to it at law, equitable relief in the form of a temporary or permanent injunction or such other and further relief in equity as any court with jurisdiction may deem proper. If the Company receives parcel or lot level information as part of this Agreement, the Company shall permit HW to conduct an audit of the Company’s use of the Product to ensure compliance with the usage and other terms of this Agreement.
+
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+7.       TERM & TERMINATION
+</td></tr><tr><td>
+The term of this Agreement shall commence on the date of its execution by the Company and shall continue for two (2) years (the “Term”). The Company may not terminate this Agreement during the Term so long as HW is performing its obligations hereunder. HW may immediately cancel this Agreement at any time during the Term without cause or upon a breach of any material provision of this Agreement by the Company. In the event that HW terminates this Agreement, HW shall retain all fees previously paid by the Company, in addition to seeking damages under the U.S. Copyright Act or any other applicable law. If a dispute arises with respect to this Agreement, either party shall also be entitled to recover all expenses, including, without limitation, reasonable attorneys’ fees and expenses, incurred in ascertaining its rights, in preparing to enforce and enforcing its rights under this Agreement. Following the expiration of the initial two-year Term, this Agreement shall automatically renew for successive one (1) year Terms unless either party gives written notice to the other party of its cancellation of this Agreement at least 30 days prior to the end of the initial Term or any subsequent renewal Term. Within 15 days of expiration or termination of this Agreement, the Company will (a) return the Software, the Data and all copies of the same to HW and further certify to HW that it has returned the same, or (b) destroy the Software, the Data and all copies of the same and certify to HW that it has destroyed the same.
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+8.       NOTICES
+</td></tr><tr><td>
+Any notices or other communications required or permitted to be given or delivered under this Agreement shall be in writing and shall be deemed to have been duly sent or given on a date when such notice is delivered personally or mailed by first-class mail, postage prepaid to the parties hereto at the addresses set forth in this Agreement or to such other address or addressee as either party may from time to time designate to the other by written notice.
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+9.       BINDING EFFECT AND ASSIGNMENT
+</td></tr><tr><td>
+This Agreement shall inure to the benefit of and be binding upon the parties hereto and their respective legal successors and permitted assigns. The Company may not assign (by operation of law or otherwise) any or all of the rights and obligations under this Agreement without the express prior written consent of HW, and any such attempted assignment shall be void. HW may assign any or all of the rights and obligations under this Agreement. Not withstanding the foregoing, Company may assign this Agreement to an affiliate or subsidiary of the Company without the prior consent of HW.
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+10.       GOVERNING LAW
+</td></tr><tr><td>
+This Agreement shall be governed by and construed in accordance with the laws of the State of New York, without regard to conflicts of law rules.
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+11.    AMENDMENTS; ENTIRE AGREEMENT; NO WAIVER; SURVIVAL
+</td></tr><tr><td>
+No modification, amendment, supplement to or waiver of this Agreement or any of its provisions shall be binding upon the Company or HW unless made in writing and duly signed by both parties. This Agreement shall constitute the entire agreement between the Company and HW regarding the subject matter hereof and supersedes all previous agreements, promises, proposals, representations, understanding and negotiations, whether written or oral, between the Company and HW. A failure or delay of either party to this Agreement to enforce at any time any of the provisions of this Agreement shall in no way be construed to be a waiver of such provision. The provisions of Sections 2, 3, 4, 5, 6, 7, 9, 10 and 11 shall survive the termination of this Agreement.
+</td></tr> <tr> <td> &nbsp; 
+</td></tr><tr><td style="font-weight:bold">
+12.    SCOPE OF TRAINING
+</td></tr><tr><td>
+The scope of training provided by HW is defined as Basic Interactive Training & Onsite Training. Basic Interactive Training is conducted via Webex and addresses basic application & functionality topics. The Basic Interactive Training is included in the price of the subscription and is available for client to participate in an unlimited number of sessions.
+</td></tr> <tr> <td> &nbsp;
+<p align="center"><font face="Arial"><i>Copyright {!$Organization.Name}.</i></font></p>
+</apex:page>

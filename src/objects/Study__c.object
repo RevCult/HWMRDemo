@@ -1,0 +1,1737 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>MG_Study</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Studies</relationshipLabel>
+        <relationshipName>Studies</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Address_Line_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Address Line 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Address_Line_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Address Line 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Phone #</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Engagement_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Engagement Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Fee_Estimate__c</fullName>
+        <externalId>false</externalId>
+        <label>Fee Estimate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Job_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Complete</fullName>
+                    <default>false</default>
+                    <label>Complete</label>
+                </value>
+                <value>
+                    <fullName>Complete - Stopped Work</fullName>
+                    <default>false</default>
+                    <label>Complete - Stopped Work</label>
+                </value>
+                <value>
+                    <fullName>Dead</fullName>
+                    <default>false</default>
+                    <label>Dead</label>
+                </value>
+                <value>
+                    <fullName>Duplicate</fullName>
+                    <default>false</default>
+                    <label>Duplicate</label>
+                </value>
+                <value>
+                    <fullName>Each Asset New Number</fullName>
+                    <default>false</default>
+                    <label>Each Asset New Number</label>
+                </value>
+                <value>
+                    <fullName>LEAD</fullName>
+                    <default>false</default>
+                    <label>LEAD</label>
+                </value>
+                <value>
+                    <fullName>Proposal</fullName>
+                    <default>false</default>
+                    <label>Proposal</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Manager__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Manager</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Studies</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Meyers_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</inlineHelpText>
+        <label>Meyers Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active Adult</fullName>
+                    <default>false</default>
+                    <label>Active Adult</label>
+                </value>
+                <value>
+                    <fullName>Apartments</fullName>
+                    <default>false</default>
+                    <label>Apartments</label>
+                </value>
+                <value>
+                    <fullName>Cash Flow</fullName>
+                    <default>false</default>
+                    <label>Cash Flow</label>
+                </value>
+                <value>
+                    <fullName>Commercial</fullName>
+                    <default>false</default>
+                    <label>Commercial</label>
+                </value>
+                <value>
+                    <fullName>Condominium</fullName>
+                    <default>false</default>
+                    <label>Condominium</label>
+                </value>
+                <value>
+                    <fullName>High-Rise</fullName>
+                    <default>false</default>
+                    <label>High-Rise</label>
+                </value>
+                <value>
+                    <fullName>Hotel</fullName>
+                    <default>false</default>
+                    <label>Hotel</label>
+                </value>
+                <value>
+                    <fullName>Land</fullName>
+                    <default>false</default>
+                    <label>Land</label>
+                </value>
+                <value>
+                    <fullName>Litigation</fullName>
+                    <default>false</default>
+                    <label>Litigation</label>
+                </value>
+                <value>
+                    <fullName>Market Report</fullName>
+                    <default>false</default>
+                    <label>Market Report</label>
+                </value>
+                <value>
+                    <fullName>Master-Plan</fullName>
+                    <default>false</default>
+                    <label>Master-Plan</label>
+                </value>
+                <value>
+                    <fullName>Mixed Use</fullName>
+                    <default>false</default>
+                    <label>Mixed Use</label>
+                </value>
+                <value>
+                    <fullName>Multi-Family</fullName>
+                    <default>false</default>
+                    <label>Multi-Family</label>
+                </value>
+                <value>
+                    <fullName>Portfolio</fullName>
+                    <default>false</default>
+                    <label>Portfolio</label>
+                </value>
+                <value>
+                    <fullName>Report</fullName>
+                    <default>false</default>
+                    <label>Report</label>
+                </value>
+                <value>
+                    <fullName>Single Family</fullName>
+                    <default>false</default>
+                    <label>Single Family</label>
+                </value>
+                <value>
+                    <fullName>Speech</fullName>
+                    <default>false</default>
+                    <label>Speech</label>
+                </value>
+                <value>
+                    <fullName>Student Housing</fullName>
+                    <default>false</default>
+                    <label>Student Housing</label>
+                </value>
+                <value>
+                    <fullName>Townhome</fullName>
+                    <default>false</default>
+                    <label>Townhome</label>
+                </value>
+                <value>
+                    <fullName>Vacation</fullName>
+                    <default>false</default>
+                    <label>Vacation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AC - Alameda</fullName>
+                    <default>false</default>
+                    <label>AC - Alameda</label>
+                </value>
+                <value>
+                    <fullName>AK - Alaska</fullName>
+                    <default>false</default>
+                    <label>AK - Alaska</label>
+                </value>
+                <value>
+                    <fullName>AL - Alabama</fullName>
+                    <default>false</default>
+                    <label>AL - Alabama</label>
+                </value>
+                <value>
+                    <fullName>AR - Arkansas</fullName>
+                    <default>false</default>
+                    <label>AR - Arkansas</label>
+                </value>
+                <value>
+                    <fullName>AZ - Arizona</fullName>
+                    <default>false</default>
+                    <label>AZ - Arizona</label>
+                </value>
+                <value>
+                    <fullName>CA - California</fullName>
+                    <default>false</default>
+                    <label>CA - California</label>
+                </value>
+                <value>
+                    <fullName>CAN - Canada</fullName>
+                    <default>false</default>
+                    <label>CAN - Canada</label>
+                </value>
+                <value>
+                    <fullName>CCA - Central California</fullName>
+                    <default>false</default>
+                    <label>CCA - Central California</label>
+                </value>
+                <value>
+                    <fullName>CC - Contra Costa</fullName>
+                    <default>false</default>
+                    <label>CC - Contra Costa</label>
+                </value>
+                <value>
+                    <fullName>Cl - Santa Clara</fullName>
+                    <default>false</default>
+                    <label>Cl - Santa Clara</label>
+                </value>
+                <value>
+                    <fullName>CO - Colorado</fullName>
+                    <default>false</default>
+                    <label>CO - Colorado</label>
+                </value>
+                <value>
+                    <fullName>CT - Connecticut</fullName>
+                    <default>false</default>
+                    <label>CT - Connecticut</label>
+                </value>
+                <value>
+                    <fullName>CV - Central Valley</fullName>
+                    <default>false</default>
+                    <label>CV - Central Valley</label>
+                </value>
+                <value>
+                    <fullName>DC - District of Columbia</fullName>
+                    <default>false</default>
+                    <label>DC - District of Columbia</label>
+                </value>
+                <value>
+                    <fullName>DE - Delaware</fullName>
+                    <default>false</default>
+                    <label>DE - Delaware</label>
+                </value>
+                <value>
+                    <fullName>EUS - Eastern U.S.</fullName>
+                    <default>false</default>
+                    <label>EUS - Eastern U.S.</label>
+                </value>
+                <value>
+                    <fullName>FL - Florida</fullName>
+                    <default>false</default>
+                    <label>FL - Florida</label>
+                </value>
+                <value>
+                    <fullName>GA - Georgia</fullName>
+                    <default>false</default>
+                    <label>GA - Georgia</label>
+                </value>
+                <value>
+                    <fullName>GC - Grand Cayman</fullName>
+                    <default>false</default>
+                    <label>GC - Grand Cayman</label>
+                </value>
+                <value>
+                    <fullName>GU - Guam</fullName>
+                    <default>false</default>
+                    <label>GU - Guam</label>
+                </value>
+                <value>
+                    <fullName>HI - Hawaii</fullName>
+                    <default>false</default>
+                    <label>HI - Hawaii</label>
+                </value>
+                <value>
+                    <fullName>IA - Iowa</fullName>
+                    <default>false</default>
+                    <label>IA - Iowa</label>
+                </value>
+                <value>
+                    <fullName>IC - Imperial</fullName>
+                    <default>false</default>
+                    <label>IC - Imperial</label>
+                </value>
+                <value>
+                    <fullName>ID - Idaho</fullName>
+                    <default>false</default>
+                    <label>ID - Idaho</label>
+                </value>
+                <value>
+                    <fullName>IE - Inland Empire</fullName>
+                    <default>false</default>
+                    <label>IE - Inland Empire</label>
+                </value>
+                <value>
+                    <fullName>IL - Illinois</fullName>
+                    <default>false</default>
+                    <label>IL - Illinois</label>
+                </value>
+                <value>
+                    <fullName>IN - Indiana</fullName>
+                    <default>false</default>
+                    <label>IN - Indiana</label>
+                </value>
+                <value>
+                    <fullName>KE - Kern</fullName>
+                    <default>false</default>
+                    <label>KE - Kern</label>
+                </value>
+                <value>
+                    <fullName>KS - Kansas</fullName>
+                    <default>false</default>
+                    <label>KS - Kansas</label>
+                </value>
+                <value>
+                    <fullName>KY - Kentucky</fullName>
+                    <default>false</default>
+                    <label>KY - Kentucky</label>
+                </value>
+                <value>
+                    <fullName>LA - Louisiana</fullName>
+                    <default>false</default>
+                    <label>LA - Louisiana</label>
+                </value>
+                <value>
+                    <fullName>LV - Las Vegas</fullName>
+                    <default>false</default>
+                    <label>LV - Las Vegas</label>
+                </value>
+                <value>
+                    <fullName>MA - Massachusetts</fullName>
+                    <default>false</default>
+                    <label>MA - Massachusetts</label>
+                </value>
+                <value>
+                    <fullName>MC - Monterey</fullName>
+                    <default>false</default>
+                    <label>MC - Monterey</label>
+                </value>
+                <value>
+                    <fullName>MD - Maryland</fullName>
+                    <default>false</default>
+                    <label>MD - Maryland</label>
+                </value>
+                <value>
+                    <fullName>ME - Maine</fullName>
+                    <default>false</default>
+                    <label>ME - Maine</label>
+                </value>
+                <value>
+                    <fullName>MH - Marshall Islands</fullName>
+                    <default>false</default>
+                    <label>MH - Marshall Islands</label>
+                </value>
+                <value>
+                    <fullName>MI - Michigan</fullName>
+                    <default>false</default>
+                    <label>MI - Michigan</label>
+                </value>
+                <value>
+                    <fullName>MN - Minnesota</fullName>
+                    <default>false</default>
+                    <label>MN - Minnesota</label>
+                </value>
+                <value>
+                    <fullName>MO - Missouri</fullName>
+                    <default>false</default>
+                    <label>MO - Missouri</label>
+                </value>
+                <value>
+                    <fullName>MS - Mississippi</fullName>
+                    <default>false</default>
+                    <label>MS - Mississippi</label>
+                </value>
+                <value>
+                    <fullName>MT - Montana</fullName>
+                    <default>false</default>
+                    <label>MT - Montana</label>
+                </value>
+                <value>
+                    <fullName>MU - No Idea</fullName>
+                    <default>false</default>
+                    <label>MU - No Idea</label>
+                </value>
+                <value>
+                    <fullName>MX - Mexico</fullName>
+                    <default>false</default>
+                    <label>MX - Mexico</label>
+                </value>
+                <value>
+                    <fullName>NCA - Northern California</fullName>
+                    <default>false</default>
+                    <label>NCA - Northern California</label>
+                </value>
+                <value>
+                    <fullName>NC - North Carolina</fullName>
+                    <default>false</default>
+                    <label>NC - North Carolina</label>
+                </value>
+                <value>
+                    <fullName>ND - North Dakota</fullName>
+                    <default>false</default>
+                    <label>ND - North Dakota</label>
+                </value>
+                <value>
+                    <fullName>NE - Nebraska</fullName>
+                    <default>false</default>
+                    <label>NE - Nebraska</label>
+                </value>
+                <value>
+                    <fullName>NH - New Hampshire</fullName>
+                    <default>false</default>
+                    <label>NH - New Hampshire</label>
+                </value>
+                <value>
+                    <fullName>NJ - New Jersey</fullName>
+                    <default>false</default>
+                    <label>NJ - New Jersey</label>
+                </value>
+                <value>
+                    <fullName>NM - New Mexico</fullName>
+                    <default>false</default>
+                    <label>NM - New Mexico</label>
+                </value>
+                <value>
+                    <fullName>NS - Napa</fullName>
+                    <default>false</default>
+                    <label>NS - Napa</label>
+                </value>
+                <value>
+                    <fullName>NV - Nevada</fullName>
+                    <default>false</default>
+                    <label>NV - Nevada</label>
+                </value>
+                <value>
+                    <fullName>NY - New York</fullName>
+                    <default>false</default>
+                    <label>NY - New York</label>
+                </value>
+                <value>
+                    <fullName>OC - Orange</fullName>
+                    <default>false</default>
+                    <label>OC - Orange</label>
+                </value>
+                <value>
+                    <fullName>OH - Ohio</fullName>
+                    <default>false</default>
+                    <label>OH - Ohio</label>
+                </value>
+                <value>
+                    <fullName>OK - Oklahoma</fullName>
+                    <default>false</default>
+                    <label>OK - Oklahoma</label>
+                </value>
+                <value>
+                    <fullName>OR - Oregon</fullName>
+                    <default>false</default>
+                    <label>OR - Oregon</label>
+                </value>
+                <value>
+                    <fullName>PA - Pennsylvania</fullName>
+                    <default>false</default>
+                    <label>PA - Pennsylvania</label>
+                </value>
+                <value>
+                    <fullName>PH - Phoenix</fullName>
+                    <default>false</default>
+                    <label>PH - Phoenix</label>
+                </value>
+                <value>
+                    <fullName>PN - Panama</fullName>
+                    <default>false</default>
+                    <label>PN - Panama</label>
+                </value>
+                <value>
+                    <fullName>PR - Puerto Rico</fullName>
+                    <default>false</default>
+                    <label>PR - Puerto Rico</label>
+                </value>
+                <value>
+                    <fullName>PW - Palau</fullName>
+                    <default>false</default>
+                    <label>PW - Palau</label>
+                </value>
+                <value>
+                    <fullName>RC - Riverside</fullName>
+                    <default>false</default>
+                    <label>RC - Riverside</label>
+                </value>
+                <value>
+                    <fullName>RI - Rhode Island</fullName>
+                    <default>false</default>
+                    <label>RI - Rhode Island</label>
+                </value>
+                <value>
+                    <fullName>SB - San Bernardino</fullName>
+                    <default>false</default>
+                    <label>SB - San Bernardino</label>
+                </value>
+                <value>
+                    <fullName>SCA - Southern California</fullName>
+                    <default>false</default>
+                    <label>SCA - Southern California</label>
+                </value>
+                <value>
+                    <fullName>SC - South Carolina</fullName>
+                    <default>false</default>
+                    <label>SC - South Carolina</label>
+                </value>
+                <value>
+                    <fullName>SD - South Dakota</fullName>
+                    <default>false</default>
+                    <label>SD - South Dakota</label>
+                </value>
+                <value>
+                    <fullName>SF - San Francisco</fullName>
+                    <default>false</default>
+                    <label>SF - San Francisco</label>
+                </value>
+                <value>
+                    <fullName>SL - Stanislaus</fullName>
+                    <default>false</default>
+                    <label>SL - Stanislaus</label>
+                </value>
+                <value>
+                    <fullName>SM - San Mateo</fullName>
+                    <default>false</default>
+                    <label>SM - San Mateo</label>
+                </value>
+                <value>
+                    <fullName>SN - Sonoma</fullName>
+                    <default>false</default>
+                    <label>SN - Sonoma</label>
+                </value>
+                <value>
+                    <fullName>SO - Solano</fullName>
+                    <default>false</default>
+                    <label>SO - Solano</label>
+                </value>
+                <value>
+                    <fullName>TN - Tennessee</fullName>
+                    <default>false</default>
+                    <label>TN - Tennessee</label>
+                </value>
+                <value>
+                    <fullName>TS - Tuscan</fullName>
+                    <default>false</default>
+                    <label>TS - Tuscan</label>
+                </value>
+                <value>
+                    <fullName>TX - Texas</fullName>
+                    <default>false</default>
+                    <label>TX - Texas</label>
+                </value>
+                <value>
+                    <fullName>US - United States</fullName>
+                    <default>false</default>
+                    <label>US - United States</label>
+                </value>
+                <value>
+                    <fullName>UT - Utah</fullName>
+                    <default>false</default>
+                    <label>UT - Utah</label>
+                </value>
+                <value>
+                    <fullName>VA - Virginia</fullName>
+                    <default>false</default>
+                    <label>VA - Virginia</label>
+                </value>
+                <value>
+                    <fullName>VE - Ventura</fullName>
+                    <default>false</default>
+                    <label>VE - Ventura</label>
+                </value>
+                <value>
+                    <fullName>VI - Virgin Islands</fullName>
+                    <default>false</default>
+                    <label>VI - Virgin Islands</label>
+                </value>
+                <value>
+                    <fullName>VT - Vermont</fullName>
+                    <default>false</default>
+                    <label>VT - Vermont</label>
+                </value>
+                <value>
+                    <fullName>WA - Washington</fullName>
+                    <default>false</default>
+                    <label>WA - Washington</label>
+                </value>
+                <value>
+                    <fullName>WI - Wisconsin</fullName>
+                    <default>false</default>
+                    <label>WI - Wisconsin</label>
+                </value>
+                <value>
+                    <fullName>WUS - Western U.S.</fullName>
+                    <default>false</default>
+                    <label>WUS - Western U.S.</label>
+                </value>
+                <value>
+                    <fullName>WV - West Virginia</fullName>
+                    <default>false</default>
+                    <label>WV - West Virginia</label>
+                </value>
+                <value>
+                    <fullName>WY - Wyoming</fullName>
+                    <default>false</default>
+                    <label>WY - Wyoming</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Service_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Absorption Analysis</fullName>
+                    <default>false</default>
+                    <label>Absorption Analysis</label>
+                </value>
+                <value>
+                    <fullName>Desktop Analysis</fullName>
+                    <default>false</default>
+                    <label>Desktop Analysis</label>
+                </value>
+                <value>
+                    <fullName>Expert Witness</fullName>
+                    <default>false</default>
+                    <label>Expert Witness</label>
+                </value>
+                <value>
+                    <fullName>Highest &amp; Best Use</fullName>
+                    <default>false</default>
+                    <label>Highest &amp; Best Use</label>
+                </value>
+                <value>
+                    <fullName>Litigation</fullName>
+                    <default>false</default>
+                    <label>Litigation</label>
+                </value>
+                <value>
+                    <fullName>Macro Analysis</fullName>
+                    <default>false</default>
+                    <label>Macro Analysis</label>
+                </value>
+                <value>
+                    <fullName>Market Study</fullName>
+                    <default>false</default>
+                    <label>Market Study</label>
+                </value>
+                <value>
+                    <fullName>Memo of Opinion</fullName>
+                    <default>false</default>
+                    <label>Memo of Opinion</label>
+                </value>
+                <value>
+                    <fullName>Micro Analysis</fullName>
+                    <default>false</default>
+                    <label>Micro Analysis</label>
+                </value>
+                <value>
+                    <fullName>Pricing Analysis</fullName>
+                    <default>false</default>
+                    <label>Pricing Analysis</label>
+                </value>
+                <value>
+                    <fullName>Rent Analysis</fullName>
+                    <default>false</default>
+                    <label>Rent Analysis</label>
+                </value>
+                <value>
+                    <fullName>Rent Study</fullName>
+                    <default>false</default>
+                    <label>Rent Study</label>
+                </value>
+                <value>
+                    <fullName>Student Housing</fullName>
+                    <default>false</default>
+                    <label>Student Housing</label>
+                </value>
+                <value>
+                    <fullName>Survey</fullName>
+                    <default>false</default>
+                    <label>Survey</label>
+                </value>
+                <value>
+                    <fullName>Time and Material</fullName>
+                    <default>false</default>
+                    <label>Time and Material</label>
+                </value>
+                <value>
+                    <fullName>Update</fullName>
+                    <default>false</default>
+                    <label>Update</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>State__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AK</fullName>
+                    <default>false</default>
+                    <label>AK</label>
+                </value>
+                <value>
+                    <fullName>AL</fullName>
+                    <default>false</default>
+                    <label>AL</label>
+                </value>
+                <value>
+                    <fullName>AR</fullName>
+                    <default>false</default>
+                    <label>AR</label>
+                </value>
+                <value>
+                    <fullName>AS</fullName>
+                    <default>false</default>
+                    <label>AS</label>
+                </value>
+                <value>
+                    <fullName>AZ</fullName>
+                    <default>false</default>
+                    <label>AZ</label>
+                </value>
+                <value>
+                    <fullName>CA</fullName>
+                    <default>false</default>
+                    <label>CA</label>
+                </value>
+                <value>
+                    <fullName>CO</fullName>
+                    <default>false</default>
+                    <label>CO</label>
+                </value>
+                <value>
+                    <fullName>CT</fullName>
+                    <default>false</default>
+                    <label>CT</label>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                    <label>DC</label>
+                </value>
+                <value>
+                    <fullName>DE</fullName>
+                    <default>false</default>
+                    <label>DE</label>
+                </value>
+                <value>
+                    <fullName>FL</fullName>
+                    <default>false</default>
+                    <label>FL</label>
+                </value>
+                <value>
+                    <fullName>FM</fullName>
+                    <default>false</default>
+                    <label>FM</label>
+                </value>
+                <value>
+                    <fullName>GA</fullName>
+                    <default>false</default>
+                    <label>GA</label>
+                </value>
+                <value>
+                    <fullName>GU</fullName>
+                    <default>false</default>
+                    <label>GU</label>
+                </value>
+                <value>
+                    <fullName>HI</fullName>
+                    <default>false</default>
+                    <label>HI</label>
+                </value>
+                <value>
+                    <fullName>IA</fullName>
+                    <default>false</default>
+                    <label>IA</label>
+                </value>
+                <value>
+                    <fullName>ID</fullName>
+                    <default>false</default>
+                    <label>ID</label>
+                </value>
+                <value>
+                    <fullName>IL</fullName>
+                    <default>false</default>
+                    <label>IL</label>
+                </value>
+                <value>
+                    <fullName>IN</fullName>
+                    <default>false</default>
+                    <label>IN</label>
+                </value>
+                <value>
+                    <fullName>KS</fullName>
+                    <default>false</default>
+                    <label>KS</label>
+                </value>
+                <value>
+                    <fullName>KY</fullName>
+                    <default>false</default>
+                    <label>KY</label>
+                </value>
+                <value>
+                    <fullName>LA</fullName>
+                    <default>false</default>
+                    <label>LA</label>
+                </value>
+                <value>
+                    <fullName>MA</fullName>
+                    <default>false</default>
+                    <label>MA</label>
+                </value>
+                <value>
+                    <fullName>MD</fullName>
+                    <default>false</default>
+                    <label>MD</label>
+                </value>
+                <value>
+                    <fullName>ME</fullName>
+                    <default>false</default>
+                    <label>ME</label>
+                </value>
+                <value>
+                    <fullName>MH</fullName>
+                    <default>false</default>
+                    <label>MH</label>
+                </value>
+                <value>
+                    <fullName>MI</fullName>
+                    <default>false</default>
+                    <label>MI</label>
+                </value>
+                <value>
+                    <fullName>MN</fullName>
+                    <default>false</default>
+                    <label>MN</label>
+                </value>
+                <value>
+                    <fullName>MO</fullName>
+                    <default>false</default>
+                    <label>MO</label>
+                </value>
+                <value>
+                    <fullName>MP</fullName>
+                    <default>false</default>
+                    <label>MP</label>
+                </value>
+                <value>
+                    <fullName>MS</fullName>
+                    <default>false</default>
+                    <label>MS</label>
+                </value>
+                <value>
+                    <fullName>MT</fullName>
+                    <default>false</default>
+                    <label>MT</label>
+                </value>
+                <value>
+                    <fullName>NC</fullName>
+                    <default>false</default>
+                    <label>NC</label>
+                </value>
+                <value>
+                    <fullName>ND</fullName>
+                    <default>false</default>
+                    <label>ND</label>
+                </value>
+                <value>
+                    <fullName>NE</fullName>
+                    <default>false</default>
+                    <label>NE</label>
+                </value>
+                <value>
+                    <fullName>NH</fullName>
+                    <default>false</default>
+                    <label>NH</label>
+                </value>
+                <value>
+                    <fullName>NJ</fullName>
+                    <default>false</default>
+                    <label>NJ</label>
+                </value>
+                <value>
+                    <fullName>NM</fullName>
+                    <default>false</default>
+                    <label>NM</label>
+                </value>
+                <value>
+                    <fullName>NV</fullName>
+                    <default>false</default>
+                    <label>NV</label>
+                </value>
+                <value>
+                    <fullName>NY</fullName>
+                    <default>false</default>
+                    <label>NY</label>
+                </value>
+                <value>
+                    <fullName>OH</fullName>
+                    <default>false</default>
+                    <label>OH</label>
+                </value>
+                <value>
+                    <fullName>OK</fullName>
+                    <default>false</default>
+                    <label>OK</label>
+                </value>
+                <value>
+                    <fullName>OR</fullName>
+                    <default>false</default>
+                    <label>OR</label>
+                </value>
+                <value>
+                    <fullName>PA</fullName>
+                    <default>false</default>
+                    <label>PA</label>
+                </value>
+                <value>
+                    <fullName>PR</fullName>
+                    <default>false</default>
+                    <label>PR</label>
+                </value>
+                <value>
+                    <fullName>PW</fullName>
+                    <default>false</default>
+                    <label>PW</label>
+                </value>
+                <value>
+                    <fullName>RI</fullName>
+                    <default>false</default>
+                    <label>RI</label>
+                </value>
+                <value>
+                    <fullName>SC</fullName>
+                    <default>false</default>
+                    <label>SC</label>
+                </value>
+                <value>
+                    <fullName>SD</fullName>
+                    <default>false</default>
+                    <label>SD</label>
+                </value>
+                <value>
+                    <fullName>TN</fullName>
+                    <default>false</default>
+                    <label>TN</label>
+                </value>
+                <value>
+                    <fullName>TX</fullName>
+                    <default>false</default>
+                    <label>TX</label>
+                </value>
+                <value>
+                    <fullName>UT</fullName>
+                    <default>false</default>
+                    <label>UT</label>
+                </value>
+                <value>
+                    <fullName>VA</fullName>
+                    <default>false</default>
+                    <label>VA</label>
+                </value>
+                <value>
+                    <fullName>VI</fullName>
+                    <default>false</default>
+                    <label>VI</label>
+                </value>
+                <value>
+                    <fullName>VT</fullName>
+                    <default>false</default>
+                    <label>VT</label>
+                </value>
+                <value>
+                    <fullName>WA</fullName>
+                    <default>false</default>
+                    <label>WA</label>
+                </value>
+                <value>
+                    <fullName>WI</fullName>
+                    <default>false</default>
+                    <label>WI</label>
+                </value>
+                <value>
+                    <fullName>WV</fullName>
+                    <default>false</default>
+                    <label>WV</label>
+                </value>
+                <value>
+                    <fullName>WY</fullName>
+                    <default>false</default>
+                    <label>WY</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Study_Address_Line_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Study Address Line 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Study_Address_Line_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Study Address Line 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Study_City__c</fullName>
+        <externalId>false</externalId>
+        <label>Study City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Study_State__c</fullName>
+        <externalId>false</externalId>
+        <label>Study State</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AK</fullName>
+                    <default>false</default>
+                    <label>AK</label>
+                </value>
+                <value>
+                    <fullName>AL</fullName>
+                    <default>false</default>
+                    <label>AL</label>
+                </value>
+                <value>
+                    <fullName>AR</fullName>
+                    <default>false</default>
+                    <label>AR</label>
+                </value>
+                <value>
+                    <fullName>AS</fullName>
+                    <default>false</default>
+                    <label>AS</label>
+                </value>
+                <value>
+                    <fullName>AZ</fullName>
+                    <default>false</default>
+                    <label>AZ</label>
+                </value>
+                <value>
+                    <fullName>CA</fullName>
+                    <default>false</default>
+                    <label>CA</label>
+                </value>
+                <value>
+                    <fullName>CO</fullName>
+                    <default>false</default>
+                    <label>CO</label>
+                </value>
+                <value>
+                    <fullName>CT</fullName>
+                    <default>false</default>
+                    <label>CT</label>
+                </value>
+                <value>
+                    <fullName>DC</fullName>
+                    <default>false</default>
+                    <label>DC</label>
+                </value>
+                <value>
+                    <fullName>DE</fullName>
+                    <default>false</default>
+                    <label>DE</label>
+                </value>
+                <value>
+                    <fullName>FL</fullName>
+                    <default>false</default>
+                    <label>FL</label>
+                </value>
+                <value>
+                    <fullName>FM</fullName>
+                    <default>false</default>
+                    <label>FM</label>
+                </value>
+                <value>
+                    <fullName>GA</fullName>
+                    <default>false</default>
+                    <label>GA</label>
+                </value>
+                <value>
+                    <fullName>GU</fullName>
+                    <default>false</default>
+                    <label>GU</label>
+                </value>
+                <value>
+                    <fullName>HI</fullName>
+                    <default>false</default>
+                    <label>HI</label>
+                </value>
+                <value>
+                    <fullName>IA</fullName>
+                    <default>false</default>
+                    <label>IA</label>
+                </value>
+                <value>
+                    <fullName>ID</fullName>
+                    <default>false</default>
+                    <label>ID</label>
+                </value>
+                <value>
+                    <fullName>IL</fullName>
+                    <default>false</default>
+                    <label>IL</label>
+                </value>
+                <value>
+                    <fullName>IN</fullName>
+                    <default>false</default>
+                    <label>IN</label>
+                </value>
+                <value>
+                    <fullName>KS</fullName>
+                    <default>false</default>
+                    <label>KS</label>
+                </value>
+                <value>
+                    <fullName>KY</fullName>
+                    <default>false</default>
+                    <label>KY</label>
+                </value>
+                <value>
+                    <fullName>LA</fullName>
+                    <default>false</default>
+                    <label>LA</label>
+                </value>
+                <value>
+                    <fullName>MA</fullName>
+                    <default>false</default>
+                    <label>MA</label>
+                </value>
+                <value>
+                    <fullName>MD</fullName>
+                    <default>false</default>
+                    <label>MD</label>
+                </value>
+                <value>
+                    <fullName>ME</fullName>
+                    <default>false</default>
+                    <label>ME</label>
+                </value>
+                <value>
+                    <fullName>MH</fullName>
+                    <default>false</default>
+                    <label>MH</label>
+                </value>
+                <value>
+                    <fullName>MI</fullName>
+                    <default>false</default>
+                    <label>MI</label>
+                </value>
+                <value>
+                    <fullName>MN</fullName>
+                    <default>false</default>
+                    <label>MN</label>
+                </value>
+                <value>
+                    <fullName>MO</fullName>
+                    <default>false</default>
+                    <label>MO</label>
+                </value>
+                <value>
+                    <fullName>MP</fullName>
+                    <default>false</default>
+                    <label>MP</label>
+                </value>
+                <value>
+                    <fullName>MS</fullName>
+                    <default>false</default>
+                    <label>MS</label>
+                </value>
+                <value>
+                    <fullName>MT</fullName>
+                    <default>false</default>
+                    <label>MT</label>
+                </value>
+                <value>
+                    <fullName>NC</fullName>
+                    <default>false</default>
+                    <label>NC</label>
+                </value>
+                <value>
+                    <fullName>ND</fullName>
+                    <default>false</default>
+                    <label>ND</label>
+                </value>
+                <value>
+                    <fullName>NE</fullName>
+                    <default>false</default>
+                    <label>NE</label>
+                </value>
+                <value>
+                    <fullName>NH</fullName>
+                    <default>false</default>
+                    <label>NH</label>
+                </value>
+                <value>
+                    <fullName>NJ</fullName>
+                    <default>false</default>
+                    <label>NJ</label>
+                </value>
+                <value>
+                    <fullName>NM</fullName>
+                    <default>false</default>
+                    <label>NM</label>
+                </value>
+                <value>
+                    <fullName>NV</fullName>
+                    <default>false</default>
+                    <label>NV</label>
+                </value>
+                <value>
+                    <fullName>NY</fullName>
+                    <default>false</default>
+                    <label>NY</label>
+                </value>
+                <value>
+                    <fullName>OH</fullName>
+                    <default>false</default>
+                    <label>OH</label>
+                </value>
+                <value>
+                    <fullName>OK</fullName>
+                    <default>false</default>
+                    <label>OK</label>
+                </value>
+                <value>
+                    <fullName>OR</fullName>
+                    <default>false</default>
+                    <label>OR</label>
+                </value>
+                <value>
+                    <fullName>PA</fullName>
+                    <default>false</default>
+                    <label>PA</label>
+                </value>
+                <value>
+                    <fullName>PR</fullName>
+                    <default>false</default>
+                    <label>PR</label>
+                </value>
+                <value>
+                    <fullName>PW</fullName>
+                    <default>false</default>
+                    <label>PW</label>
+                </value>
+                <value>
+                    <fullName>RI</fullName>
+                    <default>false</default>
+                    <label>RI</label>
+                </value>
+                <value>
+                    <fullName>SC</fullName>
+                    <default>false</default>
+                    <label>SC</label>
+                </value>
+                <value>
+                    <fullName>SD</fullName>
+                    <default>false</default>
+                    <label>SD</label>
+                </value>
+                <value>
+                    <fullName>TN</fullName>
+                    <default>false</default>
+                    <label>TN</label>
+                </value>
+                <value>
+                    <fullName>TX</fullName>
+                    <default>false</default>
+                    <label>TX</label>
+                </value>
+                <value>
+                    <fullName>UT</fullName>
+                    <default>false</default>
+                    <label>UT</label>
+                </value>
+                <value>
+                    <fullName>VA</fullName>
+                    <default>false</default>
+                    <label>VA</label>
+                </value>
+                <value>
+                    <fullName>VI</fullName>
+                    <default>false</default>
+                    <label>VI</label>
+                </value>
+                <value>
+                    <fullName>VT</fullName>
+                    <default>false</default>
+                    <label>VT</label>
+                </value>
+                <value>
+                    <fullName>WA</fullName>
+                    <default>false</default>
+                    <label>WA</label>
+                </value>
+                <value>
+                    <fullName>WI</fullName>
+                    <default>false</default>
+                    <label>WI</label>
+                </value>
+                <value>
+                    <fullName>WV</fullName>
+                    <default>false</default>
+                    <label>WV</label>
+                </value>
+                <value>
+                    <fullName>WY</fullName>
+                    <default>false</default>
+                    <label>WY</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Study_ZIP_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Study ZIP Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ZIP_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>ZIP Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Study</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Engagement_Description__c</columns>
+        <columns>Account__c</columns>
+        <columns>Region__c</columns>
+        <columns>Study_City__c</columns>
+        <columns>Study_State__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{0}-{YY}</displayFormat>
+        <label>Study Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Studies</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

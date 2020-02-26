@@ -1,0 +1,5 @@
+<apex:page showHeader="false" sidebar="false" standardController="Project_Update_Request__c">
+	<apex:outputPanel layout="block" style="background: #f00; color: #fff; width: 100%; height: 30px; padding-left: 5px; line-height: 30px;" rendered="{!Project_Update_Request__c.Big_Change_Alert__c}">
+		<strong>BIG CHANGE ALERT</strong>: {!Project_Update_Request__c.Big_Change_Reasons__c}
+	</apex:outputPanel>
+</apex:page>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>PaymentConnect settings for each Sites website.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>pymt__Allow_Express_Checkout__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enables express checkout options, when supported by the processor on payment pages in various PaymentConnect add-ons.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables express checkout options, when supported by the processor on payment pages in various PaymentConnect add-ons.</inlineHelpText>
+        <label>Allow Express Checkout</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Alternate_Processor_Connection__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Optional) Used by add-on and payment landing pages to offer an alternate checkout option (e.g. ACHWorks)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Optional) Used by add-on and payment landing pages to offer an alternate checkout option (e.g. ACHWorks)</inlineHelpText>
+        <label>(Reserved for future use)</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Bank_Account_Management__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Type of bank account payment methods to use on the site.  None, Native, or Tokenized</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of bank acocunt payment methods to use on the site.</inlineHelpText>
+        <label>Bank Account Management</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Cancel_Subscription_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom URL to redirect customers to for cancelling a subscription. Must accept the payment profile record id parm (ppid)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Custom URL to redirect customers to for cancelling a subscription.</inlineHelpText>
+        <label>Cancel Subscription URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Card_Management__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Type of credit card payment methods to use on the site.  None, Native, or Tokenized</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of credit card payment methods to use on the site.</inlineHelpText>
+        <label>Card Management</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Currency_Format__c</fullName>
+        <defaultValue>&quot;$x.xx ISO&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Preferred layout for currency symbol, amount, and ISO code. $x.xx ISO, x.xx ISO, or $x.xx</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Preferred layout for currency symbol, amount, and ISO code.</inlineHelpText>
+        <label>Currency Format</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Debug__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enabled extended error message and other Sites page debug features.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enabled extended error message and other Sites page debug features.</inlineHelpText>
+        <label>Debug</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Default_ACH_Processor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Not currently used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Not currently used.</inlineHelpText>
+        <label>Deprecated</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Default_Portal_Account_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default account Id to use when registering portal users with the SiteRegister page included with PaymentConnect. You need to add the account owner into the role hierarchy for registrations to work. See Customer Portal Setup help for more information</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default account Id to use when registering portal users with the SiteRegister page included with PaymentConnect. You need to add the account owner into the role hierarchy for registrations to work. See Customer Portal Setup help for more information</inlineHelpText>
+        <label>Default Portal Account Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Default_Portal_User_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines which type of portal user the registration page tries to create. Your Salesforce configuration and Sites settings must support the option you select here.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines which type of portal user the registration page tries to create. Your Salesforce configuration and Sites settings must support the option you select here.</inlineHelpText>
+        <label>Default Portal User Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Default_Processor_Connection__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default processor connection to use with this Site.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default processor connection to use with this Site.</inlineHelpText>
+        <label>Default Processor Connection</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Display_CSS_Buttons__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enables CSS-Styled buttons on managed pages (instead of standard html buttons)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables CSS-Styled buttons on managed pages (instead of standard html buttons)</inlineHelpText>
+        <label>Display CSS Buttons</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Enable_Payment_Methods__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Deprecated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated</inlineHelpText>
+        <label>Deprecated</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Keep_Active_Payment_Method__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disables the ability to remove the last active payment method on an account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Disables the ability to remove the last active payment method on an account.</inlineHelpText>
+        <label>Keep Active Payment Method</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Native_Card_Management__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Deprecated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated</inlineHelpText>
+        <label>Deprecated</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Native_Recurring__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Sets the default recurring payment checkout to native recurring.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sets the default recurring payment checkout to native recurring.</inlineHelpText>
+        <label>Native Recurring</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Pay_Scheduled_Payment_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom URL to redirect customers to process a scheduled payment. Must accept the payment record id parm (pid)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Custom URL to redirect customers to process a scheduled payment. Must accept the payment record id parm (pid)</inlineHelpText>
+        <label>Pay Scheduled Payment URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Payment_Method_Model__c</fullName>
+        <defaultValue>&quot;Single&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Single or Multiple payment methods for this site.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Single or Multiple payment methods for this site.</inlineHelpText>
+        <label>Payment Method Model</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Update_Subscription_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Custom URL to redirect customers to for cancelling a subscription. Must accept the payment profile record id parm (ppid)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Custom URL to redirect customers to for cancelling a subscription.</inlineHelpText>
+        <label>Update Subscription URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Use_Billing_Agreements__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When creating PayPal payment methods, use Billing Agreements instead of $0 authorizations for reference transactions.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When creating PayPal payment methods, use Billing Agreements instead of $0 authorizations for reference transactions.</inlineHelpText>
+        <label>Use Billing Agreements</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Verify_Access_Keys__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, instructs public checkout pages to verify the payment or profile access key before displaying transaction details.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, instructs public checkout pages to verify the payment or profile access key before displaying transaction details.</inlineHelpText>
+        <label>Verify Access Keys</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Sites Website Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,13 @@
+<apex:page showHeader="false" sidebar="false" standardController="Community__c" extensions="CommunityProjectsMapExtn">  
+    <apex:map width="800px" height="200px" mapType="roadmap"  center="{!lat},{!lang}" scrollBasedZooming="true">
+        <apex:repeat value="{!commuPrjlist}" var="project">
+            <apex:mapMarker title="{!project.Name}" position="{!project.lat},{!project.lang}" icon="{!If(project.id == CommunityId ,'http://www.google.com/mapfiles/dd-start.png','http://www.google.com/mapfiles/marker.png') }">
+                <apex:mapInfoWindow >
+                    <apex:outputPanel layout="block" style="font-weight: bold;">
+                        <apex:outputLink value="/{!project.Id}">{!project.Name }</apex:outputLink>
+                    </apex:outputPanel>	
+                </apex:mapInfoWindow>
+            </apex:mapMarker>		
+        </apex:repeat>
+    </apex:map>
+</apex:page>

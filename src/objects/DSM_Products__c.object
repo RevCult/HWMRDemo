@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>GL_CODE__c</fullName>
+        <externalId>false</externalId>
+        <label>GL CODE</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inactive_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Inactive Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>true</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Inactive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Inactive DSM Products</description>
+        <externalId>false</externalId>
+        <label>Inactive</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsDFP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IsDFP</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Legacy_Product_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy Product ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Product_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+CONTAINS(Product_Type__c, &quot;Metrostudy&quot;), &quot;Metrostudy&quot;,
+IF(
+AND(CONTAINS(Product_Type__c, &quot;Marketing&quot;),Product_Type__c &lt;&gt; &quot;Strategic Marketing Services&quot;) , &quot;Marketing&quot;, 
+IF( 
+CONTAINS(Product_Type__c, &quot;Direct Mail List&quot;), &quot;Digital&quot;,
+
+CASE ( Product_Type__c , 
+&quot;White Paper (Sponsor Supplied)&quot;, &quot;Digital&quot;, 
+&quot;Webinar (Sponsor Supplied)&quot;, &quot;Digital&quot;, 
+&quot;Virtual Event&quot;, &quot;Digital&quot;, 
+&quot;Video (Sponsor Supplied)&quot;, &quot;Digital&quot;, 
+&quot;Strategic Marketing Services&quot;, &quot;Digital&quot;, 
+&quot;Roadblock&quot;, &quot;Digital&quot;, 
+&quot;Product Spotlight Blast&quot;, &quot;Digital&quot;, 
+&quot;Print&quot;, &quot;Print&quot;, 
+&quot;Newsletter&quot;, &quot;Digital&quot;, 
+&quot;newsletter&quot;, &quot;Digital&quot;, 
+&quot;HWTV (Sponsor Supplied)&quot;, &quot;Digital&quot;, 
+&quot;Email Promo Blast/Marketi&quot;, &quot;Digital&quot;, 
+&quot;Email List Blast&quot;, &quot;Digital&quot;, 
+&quot;Education&quot;, &quot;Digital&quot;, 
+&quot;Digital Edition&quot;, &quot;Digital&quot;, 
+&quot;Demand Generation&quot;, &quot;Digital&quot;, 
+&quot;Customer Engagement Progr&quot;, &quot;Digital&quot;, 
+&quot;Event Sponsorship&quot;, &quot;Event&quot;, 
+&quot;Branded Event&quot;,&quot;Event&quot;,
+&quot;CPM&quot;,&quot;Digital&quot;, 
+&quot;Standard CPM&quot;,&quot;Digital&quot;, 
+&quot;Building Know-How JLC&quot;,&quot;Digital&quot;, 
+&quot;Category Exclusive JLC&quot;,&quot;Digital&quot;, 
+&quot;Consumer Specials&quot;,&quot;Digital&quot;, 
+&quot;Dedicated Email&quot;,&quot;Digital&quot;, 
+&quot;Newsletter Plus&quot;,&quot;Digital&quot;, 
+&quot;Paid Promo Allocation&quot;,&quot;Digital&quot;, 
+&quot;Run of Network&quot;,&quot;Digital&quot;, 
+&quot;Targeted Sponsorship&quot;,&quot;Digital&quot;, 
+&quot;SMS&quot;,&quot;Digital&quot;, 
+&quot;Event&quot;,&quot;Event&quot;, 
+&quot;Event Sponsorship (Custom)&quot;,&quot;Event&quot;,
+&quot;Exhibitions Intercompany&quot;,&quot;Exhibitions&quot;, 
+&quot;Events - Tradeshow&quot;,&quot;Event&quot;,
+&quot;Events - Branded&quot;,&quot;Event&quot;,
+&quot;Events - Corporate&quot;,&quot;Event&quot;,
+&quot;Back Copy Sales&quot;,&quot;Print&quot;,
+&quot; &quot; 
+))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_ID__c</fullName>
+        <externalId>true</externalId>
+        <label>Product ID</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <externalId>true</externalId>
+        <inlineHelpText>Full Product Name (DSM Product Name field is truncated at 80 characters)</inlineHelpText>
+        <label>Product Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>false</default>
+                    <label>Inactive</label>
+                </value>
+                <value>
+                    <fullName>Archived</fullName>
+                    <default>false</default>
+                    <label>Archived</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Product_Subcategory__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+CONTAINS( Name , &quot;Classified&quot;), &quot;Classified&quot;, 
+
+IF( 
+CONTAINS (Name, &quot;Profile Nurturing&quot;), &quot;Demand Generation&quot;, 
+
+IF( 
+CONTAINS (Name, &quot;SMS Demand Generation&quot;), &quot;Demand Generation&quot;, 
+
+IF(
+CONTAINS (Name, &quot;Corner&quot;), &quot;Classified&quot;, 
+
+IF(
+AND(
+CONTAINS (Name, &quot;Surfaces&quot;), 
+NOT(CONTAINS(Name, &quot;Newsletter&quot;))),&quot;Classified&quot;,
+
+IF( 
+CONTAINS(Product_Type__c, &quot;Metrostudy&quot;), &quot;Metrostudy&quot;, 
+IF(
+AND(CONTAINS(Product_Type__c, &quot;Marketing&quot;),Product_Type__c &lt;&gt; &quot;Strategic Marketing Services&quot;) , &quot;Marketing&quot;,
+IF( 
+CONTAINS(Product_Type__c, &quot;Direct Mail List&quot;), &quot;Impressions/Branding&quot;, 
+
+CASE ( Product_Type__c , 
+&quot;White Paper (Sponsor Supplied)&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Webinar (Sponsor Supplied)&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Virtual Event&quot;,&quot;Demand Generation&quot;, 
+&quot;Video (Sponsor Supplied)&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Run of Network&quot;,&quot;Impressions/Branding&quot;,
+&quot;Stragetic Marketing Servi&quot;,&quot;SMS&quot;, 
+&quot;Strategic Marketing Services&quot;,&quot;SMS&quot;, 
+&quot;Roadblock&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Product Spotlight Blast&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Print&quot;,&quot;Print&quot;, 
+&quot;Newsletter&quot;,&quot;Impressions/Branding&quot;, 
+&quot;newsletter&quot;,&quot;Impressions/Branding&quot;, 
+&quot;HWTV (Sponsor Supplied)&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Email Promo Blast/Marketi&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Email List Blast&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Education&quot;,&quot;Demand Generation&quot;, 
+&quot;Digital Edition&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Customer Engagement Progr&quot;,&quot;Demand Generation&quot;, 
+&quot;Demand Generation&quot;,&quot;Demand Generation&quot;, 
+&quot;CPM&quot;, &quot;Impressions/Branding&quot;, 
+&quot;Standard CPM&quot;, &quot;Impressions/Branding&quot;, 
+&quot;Consumer Specials&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Event Sponsorship&quot;,&quot;Events&quot;, 
+&quot;Event Sponsorship (Custom)&quot;,&quot;Events&quot;,
+&quot;Branded Event&quot;,&quot;Events&quot;,
+&quot;Exhibitions Intercompany&quot;, &quot;Exhibitions&quot;,
+&quot;Events - Tradeshow&quot;,&quot;Events&quot;,
+&quot;Events - Branded&quot;,&quot;Events&quot;,
+&quot;Events - Corporate&quot;,&quot;Events&quot;,
+&quot;Back Copy Sales&quot;,&quot;Print&quot;,
+ 
+&quot; &quot; 
+) 
+))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Subcategory</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SOW_Term__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SOW Term</label>
+        <referenceTo>SOW_Term__c</referenceTo>
+        <relationshipLabel>DSM Products</relationshipLabel>
+        <relationshipName>DSM_Products</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WF_Template_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>WF Template ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>DSM Products</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Product_ID__c</columns>
+        <columns>Product_Type__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>WF_Template_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Inactive_Product__c</field>
+            <operation>equals</operation>
+            <value>No</value>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>DSM Products Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>DSM Products</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

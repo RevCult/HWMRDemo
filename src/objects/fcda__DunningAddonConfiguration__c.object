@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>fcda__Account_Id_Location__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Where the account id is found within the email</description>
+        <externalId>false</externalId>
+        <inlineHelpText>TOP if found at the very beginning of the document
+BOTTOM if found at the very bottom of the document
+HEADER if found within the email header (Header Name: X-SFDC-ACCOUNTID)</inlineHelpText>
+        <label>Account Id Location</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fcda__Header_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If account id is in the header, this is the configurable header name, i.e., X-SFDC-ACCOUNT-ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If account id is in the header, this is the configurable header name, i.e., X-SFDC-ACCOUNT-ID</inlineHelpText>
+        <label>Header Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Dunning Addon Configuration</label>
+    <visibility>Public</visibility>
+</CustomObject>

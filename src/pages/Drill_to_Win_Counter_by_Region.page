@@ -1,0 +1,11 @@
+<apex:page id="pg" controller="GaugeChartSupplemental_User">
+<script>
+function OpenPage(sourcePage){
+        var win=window.open('https://na29.salesforce.com/00O34000006Zqek?dbw=1&pv5={!UserName}', '_blank');
+        win.focus();
+}
+</script>
+    <apex:form >     
+        <apex:commandButton value="Details" onclick="OpenPage(); return false;"/>
+    </apex:form>
+</apex:page>

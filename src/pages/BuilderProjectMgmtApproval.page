@@ -1,0 +1,13 @@
+<apex:page showHeader="true" sidebar="true" standardController="Project_Update_Request__c" extensions="BuilderProjectMgmtApprovalExt">
+    <apex:form >
+        <apex:sectionHeader title="Project Update Request" subtitle="{!Project_Update_Request__c.Name}"/>
+        <apex:pageMessages />
+        <apex:pageBlock title="Confirm Approval" >
+            <p>Are you sure you'd like to approve this Project Update Request?  When you click the "Approve" button below, the system will automatically update the Project record on file and mark the update request as "Approved"</p>
+
+            <br/><br/>
+            <apex:commandButton value="Approve" action="{!updateProject}"/>
+            <br/><br/><br/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

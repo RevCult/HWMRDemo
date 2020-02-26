@@ -1,0 +1,93 @@
+<apex:page standardController="Plan__c" extensions="ManagePlansExt" recordSetVar="plans" title="Manage Plans: {!projectName}">
+    <apex:form >
+        <apex:sectionHeader title="Manage Plans"/>
+        <apex:outputLink rendered="{!projectId != null && projectId != ''}" value="/{!projectId}">Back to Project -- {!projectName}</apex:outputLink>
+        <br/><br/>
+        <apex:pageBlock title="Plan List">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Update Values for All Plans" action="{!updateValues}"/>
+                <apex:commandButton value="Delete Selected Plans" onclick="return confirm('Are you sure?');" action="{!deleteSelectedPlans}"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!planList}" var="p">
+                <apex:column width="50">
+                    <apex:facet name="header">
+                        <apex:inputCheckbox id="deleteCheckAll">
+                            Delete<br/>Plan
+                            <apex:actionSupport event="onclick" action="{!getSelected}" onsubmit="checkAll(this)"/>
+                        </apex:inputCheckbox>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!p.isSelected}" id="checkedone">
+                        <apex:actionSupport event="onclick" action="{!getSelected}" />
+                    </apex:inputCheckbox>
+                </apex:column>
+                <apex:column width="50">
+                    <apex:facet name="header">
+                        <apex:inputCheckbox id="dzCheckAll" onchange="checkAll(this)">
+                            Display in<br/>Zonda
+                        </apex:inputCheckbox>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!p.thePlan.Display_in_Zonda__c}" id="dizBox" />
+                </apex:column>
+                <apex:column width="50">
+                    <apex:facet name="header">
+                        <apex:inputCheckbox id="hiddenFromZicCheckAll" onchange="checkAll(this)">
+                            Hidden from<br/>ZIC Site
+                        </apex:inputCheckbox>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!p.thePlan.Hidden_from_ZIC_site__c}" id="hfzBox" />
+                </apex:column>
+                <apex:column width="50">
+                    <apex:facet name="header">
+                        <apex:inputCheckbox id="newCheck" onchange="checkAll(this)">
+                            Off<br/>Market
+                        </apex:inputCheckbox>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!p.thePlan.Off_Market__c}" id="newCheckBox" />
+                </apex:column>
+                <apex:column value="{!p.thePlan.Name}" width="180"/>
+                <apex:column value="{!p.thePlan.Square_Footage__c}" width="50" headerValue="Sq. Ft."/>
+                <apex:column value="{!p.thePlan.Price__c}" width="50"/>
+                <apex:column value="{!p.thePlan.CreatedBy.Name}" headerValue="Created By" width="120"/>
+                <apex:column value="{!p.thePlan.CreatedDate}" width="120"/>
+                <apex:column value="{!p.thePlan.LastModifiedDate}" width="120"/>
+                <apex:column value="{!p.thePlan.Plan_Notes__c}"/>
+                
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+
+    <script>
+        function checkAll(cb) {
+            if (cb.id.indexOf('dzCheckAll') != -1) {
+                var inputElem = document.getElementsByTagName('input');
+                for(var i=0; i<inputElem.length; i++) {
+                    if(inputElem[i].id.indexOf('dizBox')!=-1) {
+                        inputElem[i].checked = cb.checked;
+                    }
+                }
+            } else if (cb.id.indexOf('hiddenFromZicCheckAll') != -1) {
+                var inputElem = document.getElementsByTagName('input');
+                for(var i=0; i<inputElem.length; i++) {
+                    if(inputElem[i].id.indexOf('hfzBox')!=-1) {
+                        inputElem[i].checked = cb.checked;
+                    }
+                }
+            } else if (cb.id.indexOf('deleteCheckAll') != -1) {
+                var inputElem = document.getElementsByTagName('input');
+                for(var i=0; i<inputElem.length; i++) {
+                    if(inputElem[i].id.indexOf('checkedone')!=-1) {
+                        inputElem[i].checked = cb.checked;
+                    }
+                }
+            }
+            else if (cb.id.indexOf('newCheck') != -1) {
+                var inputElem = document.getElementsByTagName('input');
+                for(var i=0; i<inputElem.length; i++) {
+                    if(inputElem[i].id.indexOf('newCheckBox')!=-1) {
+                        inputElem[i].checked = cb.checked;
+                    }
+                }
+            }
+        }
+    </script>
+</apex:page>

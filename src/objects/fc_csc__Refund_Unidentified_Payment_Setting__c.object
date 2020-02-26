@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>fc_csc__Accounting_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The accounting code to be used to refund unidentified payments.</description>
+        <externalId>false</externalId>
+        <label>Accounting Code</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fc_csc__Billing_Account_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The billing account to be used to refund unidentified payments.</description>
+        <externalId>false</externalId>
+        <label>Billing Account ID</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fc_csc__Payment_Method_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The payment method to be used to refund unidentified payments.</description>
+        <externalId>false</externalId>
+        <label>Payment Method ID</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fc_csc__Product_Rate_Plan_Charge_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The product rate plan charge to be used to refund unidentified payments.</description>
+        <externalId>false</externalId>
+        <label>Product Rate Plan Charge ID</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fc_csc__Product_Rate_Plan_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The product rate plan to be used to refund unidentified payments.</description>
+        <externalId>false</externalId>
+        <label>Product Rate Plan ID</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fc_csc__Reason_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The reason code to be used to refund unidentified payments.</description>
+        <externalId>false</externalId>
+        <label>Reason Code</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fc_csc__Unidentified_Payment_Number__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Unidentified Payment Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Refund Unidentified Payment Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

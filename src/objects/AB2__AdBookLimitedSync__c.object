@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>The fields that will be synced during a limited operation. All other values will remain unchanged in AdBook.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AB2__AgencyCommission__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order AgencyCommission be synchronised?
+Corresponds to the Opportunity.ABAgencyCommission__c or AdBookSettings.agencyCommissionDefault</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order AgencyCommission be synchronised?
+Corresponds to the Opportunity.ABAgencyCommission__c or AdBookSettings.agencyCommissionDefault</inlineHelpText>
+        <label>Agency Commission</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__AgencyContactID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Sync only AdBook Id if defined. If there is no ID the Contact will also be created.
+Should the AdBook Order AgencyContactID be syncronised? Corresponds to the Opportunity.ABAgencyContact__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sync only AdBook Id if defined. If there is no ID the Contact will also be created.
+Should the AdBook Order AgencyContactID be syncronised? Corresponds to the Opportunity.ABAgencyContact__c field.</inlineHelpText>
+        <label>Agency Contact</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__AgencyID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order AgencyID be synchronised? Corresponds to the Opportunity.AB_Agency__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order AgencyID be synchronised? Corresponds to the Opportunity.AB_Agency__c field.</inlineHelpText>
+        <label>AgencyID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BillTo__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order BillTo be synchronised? Corresponds to the Opportunity.ABBillTo__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order BillTo be synchronised? Corresponds to the Opportunity.ABBillTo__c field.</inlineHelpText>
+        <label>BillTo</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BillTypeName__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order BillTypeName be synchronised? Corresponds to the Opportunity.ABBillType__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order BillTypeName be synchronised? Corresponds to the Opportunity.ABBillType__c field.</inlineHelpText>
+        <label>BillTypeName</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BillingComments__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order BillingComments be synchronised? Corresponds to the Opportunity.AB_Billing_Comments__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order BillingComments be synchronised? Corresponds to the Opportunity.AB_Billing_Comments__c field.</inlineHelpText>
+        <label>BillingComments</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BillingContactID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order BillingContactID be synchronised? Corresponds to the Opportunity.ABBillingContact__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order BillingContactID be synchronised? Corresponds to the Opportunity.ABBillingContact__c field.</inlineHelpText>
+        <label>BillingContactID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BillingModel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order BillingContactID be synchronised? Corresponds to the Opportunity.ABBillingContact__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order BillingContactID be synchronised? Corresponds to the Opportunity.ABBillingContact__c field.</inlineHelpText>
+        <label>BillingModel</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ClientContactID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order ClientContactID be synchronised? Corresponds to the Opportunity.ABClientContact__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order ClientContactID be synchronised? Corresponds to the Opportunity.ABClientContact__c field.</inlineHelpText>
+        <label>ClientContactID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ClientID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order ClientID be synchronised? Corresponds to the Opportunity.AccountID field unless using the AdBookSettings.opportunityClientAccountFieldLookupName.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order ClientID be synchronised? Corresponds to the Opportunity.AccountID field unless using the AdBookSettings.opportunityClientAccountFieldLookupName.</inlineHelpText>
+        <label>ClientID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ConfiguredContactGroupRepsMerge__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When performing a limited sync of Configured Contact Group Reps, should any Rep in AdBook with a Rep Type not covered in Salesforce be merged back in? This will prevent Salesforce from deleting Reps it doesn&apos;t know about. It also removes the ability for Salesforce to delete a Rep that is no longer needed on the order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When performing a limited sync of Configured Contact Group Reps, should any Rep in AdBook with a Rep Type not covered in Salesforce be merged back in? This will prevent Salesforce from deleting Reps it doesn&apos;t know about.</inlineHelpText>
+        <label>Configured Contact Group Reps Merge</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ConfiguredContactGroupReps__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should Configured Contact Group Reps be included in a limited sync?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should Configured Contact Group Reps be included in a limited sync?</inlineHelpText>
+        <label>Configured Contact Group Reps</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__CurrencyID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the Opportunity CurrencyIsoCode or users default currency be mapped to the AdBook CurrencyId?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the Opportunity CurrencyIsoCode or users default currency be mapped to the AdBook CurrencyId?</inlineHelpText>
+        <label>CurrencyID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__EstimateNumber__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Not currently mapped</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Not currently mapped</inlineHelpText>
+        <label>EstimateNumber</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ExternalID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Not currently mapped</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Not currently mapped</inlineHelpText>
+        <label>ExternalID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__IONumber__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order IONumber be synchronised? Corresponds to the Opportunity.AB_IO_Number__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order IONumber be synchronised? Corresponds to the Opportunity.AB_IO_Number__c field.</inlineHelpText>
+        <label>IONumber</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__InternalOrderNotes__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order InternalOrderNotes be synchronised? Corresponds to the Opportunity.AB_Internal_Campaign_Notes__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order InternalOrderNotes be synchronised? Corresponds to the Opportunity.AB_Internal_Campaign_Notes__c field.</inlineHelpText>
+        <label>InternalOrderNotes</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__InvoiceNumber__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Not currently mapped</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Not currently mapped</inlineHelpText>
+        <label>InvoiceNumber</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__MaterialsContactID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order MaterialsContactID be synchronised? Corresponds to the Opportunity.ABMaterialsContact__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order MaterialsContactID be synchronised? Corresponds to the Opportunity.ABMaterialsContact__c field.</inlineHelpText>
+        <label>MaterialsContactID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__OperationsRep__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Sync the Operations Rep in the OrderRep collection.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sync the Operations Rep in the OrderRep collection.</inlineHelpText>
+        <label>Operations Rep</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__OrderConfigurationID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order OrderConfigurationID be synchronised? Corresponds to the first matching FieldValueMap of type OrderConfiguration.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order OrderConfigurationID be synchronised? Corresponds to the first matching FieldValueMap of type OrderConfiguration.</inlineHelpText>
+        <label>OrderConfigurationID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__OrderID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Not currently applied</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Not currently applied</inlineHelpText>
+        <label>OrderID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__OrderName__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order OrderName be synchronised? Corresponds to the Opportunity.Name field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order OrderName be synchronised? Corresponds to the Opportunity.Name field.</inlineHelpText>
+        <label>OrderName</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__OrderNotes__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order OrderNotes be synchronised? Corresponds to the Opportunity.AB_Campaign_Notes__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order OrderNotes be synchronised? Corresponds to the Opportunity.AB_Campaign_Notes__c field.</inlineHelpText>
+        <label>Order Notes</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__OrderStatusID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order OrderStatusID be synchronised? Corresponds to the Opportunity.ABOrderStatus__c field if defined. Otherwise the mapped StageName.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order OrderStatusID be synchronised? Corresponds to the Opportunity.ABOrderStatus__c field if defined. Otherwise the mapped StageName.</inlineHelpText>
+        <label>OrderStatusID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__PONumber__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order PONumber be synchronised? Corresponds to the Opportunity.AB_PO_Number__c field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order PONumber be synchronised? Corresponds to the Opportunity.AB_PO_Number__c field.</inlineHelpText>
+        <label>PONumber</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__RateCardNameID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Order RateCardNameId be synchronised? If defined it will get the value from the Opportunity.ABRateCard__c field. Otherwise it will use the PriceBook to RateCard mapping.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Order RateCardNameId be synchronised? If defined it will get the value from the Opportunity.ABRateCard__c field. Otherwise it will use the PriceBook to RateCard mapping.</inlineHelpText>
+        <label>RateCardNameID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SalesReps__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should Sales Reps be included in the limited sync?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should Sales Reps be included in the limited sync?</inlineHelpText>
+        <label>Sales Reps</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ShowLimitedUpdateOrder__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the Limited Update Order button appear on the Order sync page?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the Limited Update Order button appear on the Order sync page?</inlineHelpText>
+        <label>Show Limited Update Order</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SuppressAttachmentsInLimitedSync__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should attachments be included in a limited sync?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should attachments be included in a limited sync?</inlineHelpText>
+        <label>Suppress Attachments In Limited Sync</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ThirdPartyAdServerID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>ThirdPartyAdServerID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>AdBook Limited Sync</label>
+    <visibility>Public</visibility>
+</CustomObject>

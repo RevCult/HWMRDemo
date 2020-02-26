@@ -1,0 +1,23 @@
+<apex:page showHeader="false" sidebar="false" controller="TestUptime" standardStylesheets="false">
+    <style type="text/css">
+        .wide-column { width: 225px; text-align: left; font-size: 1.2em; font-weight: bold; }
+        .normal-column { width: 70px; text-align: left; font-size: 1.2em; font-weight: bold; }
+        .narrow-column { width: 65px; text-align: left; font-size: 1.2em; font-weight: bold; }
+        .good { color: #0f0; }
+        .bad { color: #f00; }
+    </style>
+
+    <apex:form >
+        
+        <apex:dataTable value="{!theChecks}" var="c" id="checksTable">
+            <apex:column value="{!c.name}" headerValue="Check Name" headerClass="wide-column"/>
+            <apex:column value="{!c.isUp}" headerValue="Status" headerClass="normal-column" styleClass="{!IF(c.isUp == 'UP','good','bad')}"/>
+            <apex:column value="{!c.availability*100}%" headerValue="Uptime" headerClass="normal-column"/>
+            <apex:column value="{!c.responseTime}ms" headerValue="Response" headerClass="normal-column"/>
+        </apex:dataTable>
+
+        <apex:actionPoller action="{!getData}" reRender="checksTable" interval="5"/>
+
+    </apex:form>
+
+</apex:page>

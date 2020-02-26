@@ -1,0 +1,33 @@
+<apex:page standardController="Contact" extensions="MetroclientContactProvisioning" title="Provision Metrostudy User">
+
+    <style>
+    .contactTab .secondaryPalette, .individualPalette .contactBlock .secondaryPalette {
+        background-color: #ffffff !important;
+        border-color: #ffffff !important;
+    }
+    </style>
+    
+    <apex:form >
+    
+        <apex:pageBlock mode="maindetail">
+                    
+             <apex:sectionHeader title="Provision Metrostudy User" subtitle="{!contact.Account.Name} | {!contact.Name}"/>
+             <apex:outputLink value="/{!contact.Id}">Return to Contact</apex:outputLink>
+                                            
+             <apex:iframe height="700px" rendered="{!renderIframe}" src="https://hw64.metrostudy.com/Metrostudy/Production/Salesforce/Provisioning/Contacts/Controller.aspx?userId={!$User.Id}&contactId={!contact.Id}&accountId={!contact.Account.Id}&ultimateParentAccountId={!contact.Account.UltimateParentAccountId__c}" scrolling="false" id="theIframe"/>
+ 
+             <br/>
+             <br/>
+             <br/>
+             
+             <apex:pageMessage rendered="{!invalidHierarchyDepth}" summary="The depth of the account hierarchy of the selected contact exceeds the maximum allowable depth (up to four-levels deep)." severity="warning" strength="3" />              
+  
+             <apex:pageMessage rendered="{!(!validProductsExist)}" summary="The selected contact must have at least one product that can be provisioned in his/her account hierarchy." severity="warning" strength="3" />              
+             
+             <apex:pageMessage rendered="{!(!metrostudyUserExists)}" summary="The selected contact must be designated as a Metrostudy user." severity="warning" strength="3" />              
+                                   
+        </apex:pageBlock>
+        
+    </apex:form>
+
+</apex:page>

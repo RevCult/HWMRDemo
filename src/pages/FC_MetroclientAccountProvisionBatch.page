@@ -1,0 +1,20 @@
+<apex:page standardController="Account" extensions="FC_MetroclientAccountProvisionBatchCtrl" action="{!runBatchable}">
+    <apex:outputText rendered="false" value="{!Account.Id}"/>
+    <style type="text/css">
+        .backToAccountLink {
+            height: auto;
+            margin-top: 3px;
+            margin-bottom: 1em;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+            font-size: 91.3%;
+            vertical-align: middle;
+        }
+    </style>
+    <apex:sectionHeader title="Provision Batch Update" subTitle="{!Account.Name}"/>
+    <apex:pageMessages />
+    <apex:outputPanel layout="block" styleClass="backToAccountLink">
+        <apex:outputLink value="/{!Account.Id}">
+            <apex:outputText value="<< Back to Account: {!Account.Name}"/>
+        </apex:outputLink>
+    </apex:outputPanel>
+</apex:page>

@@ -1,0 +1,1606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <fieldSets>
+        <fullName>CRMC_PP__Batch_Add</fullName>
+        <description>Batch Add</description>
+        <displayedFields>
+            <field>AccountId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Subject</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ActivityDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Status</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Priority</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Description</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Batch Add</label>
+    </fieldSets>
+    <fields>
+        <fullName>ActivityDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence</fullName>
+    </fields>
+    <fields>
+        <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <listViews>
+        <fullName>CompletedTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>LAST_UPDATE</field>
+            <operation>equals</operation>
+            <value>TODAY,LAST_N_DAYS:30</value>
+        </filters>
+        <label>ENCODED:{!FilterNames.Task_CompletedTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>DelegatedTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Delegated</filterScope>
+        <label>ENCODED:{!FilterNames.Task_DelegatedTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>OpenTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DUE_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>LAST_N_DAYS:30</value>
+        </filters>
+        <label>ENCODED:{!FilterNames.Task_OpenTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>OverdueTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DUE_DATE</field>
+            <operation>lessThan</operation>
+            <value>TODAY</value>
+        </filters>
+        <label>ENCODED:{!FilterNames.Task_OverdueTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>RecurringTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>ENCODED:{!FilterNames.Task_RecurringTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>TodaysTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DUE_DATE</field>
+            <operation>equals</operation>
+            <value>TODAY,LAST_N_DAYS:30</value>
+        </filters>
+        <label>ENCODED:{!FilterNames.z_TodaysTasks}</label>
+    </listViews>
+    <listViews>
+        <fullName>UnscheduledTasks</fullName>
+        <columns>SUBJECT</columns>
+        <columns>WHO_NAME</columns>
+        <columns>WHAT_NAME</columns>
+        <columns>DUE_DATE</columns>
+        <columns>STATUS</columns>
+        <columns>PRIORITY</columns>
+        <columns>CORE.USERS.ALIAS</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER.ALIAS</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>IS_CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>IS_RECURRENCE</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>DUE_DATE</field>
+            <operation>equals</operation>
+        </filters>
+        <label>ENCODED:{!FilterNames.Task_UnscheduledTasks}</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Media_Task_Record_Type</fullName>
+        <active>true</active>
+        <description>Media Task Record Type</description>
+        <label>HW_Media Task Record Type</label>
+        <picklistValues>
+            <picklist>Activity_Type_2__c</picklist>
+            <values>
+                <fullName>Call - Client Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Client Voice Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Prospecting Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Prospecting Left Message</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Prospecting Voice Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Client%3A Casual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Client%3A Formal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Consultation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Prospect%3A Casual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Prospect%3A Formal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_type__c</picklist>
+            <values>
+                <fullName>Existing client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New%2FProspect Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Past client</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Briefing Attendee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Insight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Insight w%2FiPad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Lead Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Discovery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Export%2FReport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HBO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homebuilders Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insight On Ramp</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Planning Optimization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Monitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Snapshot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Study</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metrosearch %2F HA %2F PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Pro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MortgagePro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Housing Profiles %26 Statistics Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permit Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Published Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE %2F Consulting Toolkit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RRI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Economic Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaking Engagement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategic Positioning Model</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>U%2ES%2E Pool Market Reports</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WS%26T</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region_2__c</picklist>
+            <values>
+                <fullName>Albuquerque</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atlanta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - National</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - Northeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central%2FNorthern FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charlotte</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dallas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Houston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idaho</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jacksonville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Las Vegas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maryland%2FNorthern VA%2FDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Eastern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Lower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Upper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY%2FNJ%2FPA%2FDE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nashville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phoenix%2FTucson%2FPrescott</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE - East</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Raleigh</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Antonio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SoCal 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SoCal 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southern FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tampa%2FSarasota</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utah</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Washington%2FOregon</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration - No Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration - Successful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unsuccessful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting on someone else</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call - Conversation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Voice Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call - Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fill In Subject</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Marketing Follow Up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Consult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Quarterly Briefing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Standard</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting - Win Back</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration Call - No Response</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Migration Call - Successful</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Operational request</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Task_Subtype__c</picklist>
+            <values>
+                <fullName>Mem Svs%3A Alternate Welcome Client Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A General Touchpoint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Health Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Internal Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Onboarding Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Post Mortem Interview</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Private Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Welcome Client Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Welcome Client Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem svs%3A Troubleshooting%2FCustom Task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Call %E2%80%93 Conversation w%2F Decision Maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call %E2%80%93 Inbound%2FOutbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email %E2%80%93 Conversation w%2F Decision Maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email %E2%80%93 Inbound%2FOutbound</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up%2FReminder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Meeting %E2%80%93 Conversation w%2F Decision Maker</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Metrostudy_Task_Record_Type</fullName>
+        <active>true</active>
+        <description>To control values in picklists type</description>
+        <label>MS_Metrostudy Task Record Type</label>
+        <picklistValues>
+            <picklist>Activity_Type_2__c</picklist>
+            <values>
+                <fullName>Meeting - Quarterly Briefing</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Client_type__c</picklist>
+            <values>
+                <fullName>Existing client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New%2FProspect Client</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Past client</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Product__c</picklist>
+            <values>
+                <fullName>Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Briefing Attendee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Insight</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Insight w%2FiPad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Builder Lead Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Client Discovery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consumer Segmentation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Custom Export%2FReport</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HBO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Homebuilders Database</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Housing Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insight On Ramp</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land Planning Optimization</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Monitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Snapshot</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Market Study</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Metrosearch %2F HA %2F PA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Pro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MortgagePro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Housing Profiles %26 Statistics Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Permit Data</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Published Research</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RRI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential Economic Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Speaking Engagement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Strategic Positioning Model</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>U%2ES%2E Pool Market Reports</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>WS%26T</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region_2__c</picklist>
+            <values>
+                <fullName>Albuquerque</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Atlanta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Austin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - Great Lakes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - National</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - Northeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>BPM - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Central%2FNorthern FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Charlotte</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dallas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denver</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Houston</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Idaho</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jacksonville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Las Vegas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Maryland%2FNorthern VA%2FDC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Eastern</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Lower</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest - Upper</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NY%2FNJ%2FPA%2FDE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nashville</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northern CA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phoenix%2FTucson%2FPrescott</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE - East</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>REE - West</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Raleigh</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>San Antonio</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SoCal 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SoCal 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southern FL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tampa%2FSarasota</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Utah</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Washington%2FOregon</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Send Proposal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Task_Subtype__c</picklist>
+            <values>
+                <fullName>Mem Svs%3A Alternate Welcome Client Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A General Touchpoint</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Health Check</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Internal Communication</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Onboarding Outreach</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Post Mortem Interview</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Private Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Welcome Client Call</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem Svs%3A Welcome Client Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mem svs%3A Troubleshooting%2FCustom Task</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Advisory Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>E-Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Task_Assigned_to_AR</fullName>
+        <active>true</active>
+        <description>Tasks can&apos;t be assigned to Andy Reid</description>
+        <errorConditionFormula>Owner:User.Username  = &apos;areid@hanleywood.com&apos;</errorConditionFormula>
+        <errorMessage>Please re-assign this task.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>MA_MapIt_a5H34000000x6RPEAY</fullName>
+        <availability>online</availability>
+        <description>Maps this Task with selected tooltips</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Map It</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/sma__mapanything?recordId={!Task.Id}&amp;baseObjectId=a5H34000000x6RPEAY&amp;tooltipField=Status&amp;tooltipField2=AccountId&amp;tooltipField3=CallType&amp;tooltipField4=CreatedDate&amp;tooltipField5=Priority&amp;color=%2366FF00</url>
+    </webLinks>
+    <webLinks>
+        <fullName>pymt__Delete_Selected</fullName>
+        <availability>online</availability>
+        <description>Removes selected task items from a related task list.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Delete Selected</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.Event )}; 
+var taskRecords = {!GETRECORDIDS( $ObjectType.Task)}; 
+records = records.concat(taskRecords); 
+
+
+if (records[0] == null) { 
+alert(&quot;Please select at least one record.&quot;) } 
+else { 
+
+var errors = []; 
+var result = sforce.connection.deleteIds(records); 
+if (result &amp;&amp; result.length){ 
+var numFailed = 0; 
+var numSucceeded = 0; 
+for (var i = 0; i &lt; result.length; i++){ 
+var res = result[i]; 
+if (res &amp;&amp; res.success == &apos;true&apos;){ 
+numSucceeded++; 
+} else { 
+var es = res.getArray(&quot;errors&quot;); 
+if (es.length &gt; 0) { 
+errors.push(es[0].message); 
+} 
+numFailed++; 
+} 
+} 
+if (numFailed &gt; 0){ 
+alert(&quot;Failed: &quot; + numFailed + &quot;\nSucceeded: &quot; + numSucceeded + &quot; \n Due to: &quot; + errors.join(&quot;\n&quot;)); 
+} else { 
+alert(&quot;Number of records deleted: &quot; + numSucceeded); 
+} 
+} 
+window.location.reload(); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>qbdialer__Create_List</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create List</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&apos;https://sforce.insidesales.com/js/json.js&apos;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/lib/jquery.min.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/lib/jsonp.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/lib/persist.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/ISConference.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/c2c/ISClickToCall.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/c2csf.js&quot;)}
+
+
+var getTabClass = function() {
+    var bodytags = document.getElementsByTagName(&quot;body&quot;);
+    var classes  = bodytags[0].className.split(&apos; &apos;);
+    var hostname = window.location.hostname;
+    try {
+        try {
+            sforce.connection.sessionId=&quot;{!$Api.Session_ID}&quot;;
+        } catch (e) {
+            //
+        }
+        user  = sforce.connection.getUserInfo();
+        var theme = user.userUiSkin;
+        return {
+            &quot;css_base&quot;  : &quot;https://&quot;+window.location.hostname,
+            &quot;css_theme&quot; : theme,
+            &quot;css_class&quot; : classes[0]};
+    } catch (e) {
+        return {
+            &quot;css_base&quot; : &quot;https://&quot;+window.location.hostname,
+            &quot;css_class&quot; : classes[0],
+            &quot;css_theme&quot; : false
+        };
+    }
+};
+var getTabClassString = function() {
+    var css_info = getTabClass();
+    var tmp_url = &quot;&quot;;
+    tmp_url += &apos;&amp;css_base=&apos;+encodeURIComponent(css_info.css_base);
+    if (css_info.css_theme) {
+        tmp_url += &apos;&amp;css_theme=&apos;+encodeURIComponent(css_info.css_theme);
+    }
+    tmp_url += &apos;&amp;css_class=&apos;+encodeURIComponent(css_info.css_class);
+    return tmp_url;
+};
+
+var openPopup = function(){
+    var data = &quot;&quot;;
+    var items = idArray.join(&quot;,&quot;);
+    pd.requestSalesforceInstance(sforce.connection.sessionId);
+    pd.makeRequest(&apos;getAuthToken&apos;,
+        function (result) {
+            var jwt = typeof result == &apos;object&apos; &amp;&amp; &apos;token&apos; in result ? result.token : &apos;&apos;;
+            var use_jwt = jwt != &apos;&apos;;
+            pd.makeRequest(&apos;createStaticDialerList&apos;,
+                function (data) {
+                    if (!data) {
+                        alert(&apos;There was a problem creating the list.&apos;);
+                        return;
+                    }
+                    if (data.errors &amp;&amp; data.errors.length &gt; 0) {
+                        var err = &quot;&quot;;
+                        if (data.errors[0] &amp;&amp; data.errors[0][&apos;message&apos;]) {
+                            err = &apos;\nThe following message was returned.\n\n&apos;+data.errors[0][&apos;message&apos;];
+                        }
+                        alert(&apos;There was a problem creating the list.&apos;+err);
+                        return;
+                    }
+                    if (!data.items || !data.items.length) {
+                        alert(&apos;At least one selected row must be related to an Account, Contact, or Lead.&apos;);
+                        return;
+                    }
+                    var html = &quot;&lt;form name=&apos;createList&apos; method=&apos;post&apos; action=&apos;https://{!$User.qbdialer__is_subdomain__c}.insidesales.com/noauth/create_sf_list?&quot;
+                    html += &quot;salesforce_package_version=6.46.21&quot;;
+                    html += &quot;&amp;type=Task&quot;;
+                    html += &quot;&amp;agent_phone={!User.Phone}&quot;;
+                    if (!use_jwt) {
+                        html += &quot;&amp;token={!User.qbdialer__is_token__c}&quot;;
+                        html += &quot;&amp;organization_id={!$Organization.Id}&quot;;
+                    }
+                    html += getTabClassString();
+                    html += &quot;&apos;&gt;&lt;input type=&apos;submit&apos; style=&apos;visibility:hidden&apos;&gt;&quot;;
+                    if (use_jwt) {
+                        html += &quot;&lt;input type=&apos;hidden&apos; name=&apos;Authorization&apos; value=&apos;&quot;+jwt+&quot;&apos;&gt;&quot;;
+                    }
+                    for (var i=0; i &lt; data.items.length; i++) {
+                        html += &quot;&lt;input type=&apos;hidden&apos; name=&apos;leads[]&apos; value=&apos;&quot;+data.items[i]+&quot;&apos;&gt;&quot;;
+                    }
+                    html += &quot;&lt;&quot;+&quot;/form&gt;&quot;;
+                    html += &quot;&lt;script&gt;document.createList.submit();&lt;&quot;+&quot;/script&gt;&quot;;
+                    var host = document.location.protocol + &quot;//&quot; + document.location.hostname;
+                    var w = window.open(host, &quot;&quot;, &quot;height=700,width=800,menubar=0,resizable=1,scrollbars=1,status=0,titlebar=0,toolbar=0,location=0&quot;);
+                    w.document.write(html);
+                },
+                function (err) {
+                    alert(&apos;There was a problem creating the list.\n\n&apos;+err);
+                },
+                &quot;&amp;type=Activity&amp;ids=&quot; + items
+            );
+        }
+    );
+}
+
+var user_oauth_token = &apos;{!JSENCODE($User.qbdialer__is_token__c)}&apos;;
+if (!user_oauth_token) {
+    window.location.href=&quot;/apex/qbdialer__InsideSales_OAuth_Setup&quot;;
+} else {
+    var idArray = {!GETRECORDIDS($ObjectType.Task)};
+    if(idArray.length == 0){
+        alert(&quot;Please select at least one row&quot;);
+    }
+    else{
+        openPopup();
+    }
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>qbdialer__Launch_Click_to_Call</fullName>
+        <availability>online</availability>
+        <description>For Beta</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Launch Click-to-Call (Old)</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var th = window.top.document.body;
+			var s = window.top.document.createElement(&apos;script&apos;);
+			s.setAttribute(&apos;type&apos;,&apos;text/javascript&apos;);
+			s.setAttribute(&apos;src&apos;,&quot;/resource/qbdialer__c2c_resources/20180122090547/c2c_console.js&quot;);
+			th.appendChild(s);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>qbdialer__Manage_Lists</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Manage Lists</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&apos;/js/functions.js&apos;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/lib/jquery.min.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/lib/jsonp.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/lib/persist.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/ISConference.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/c2c/ISClickToCall.js&quot;)}
+{!REQUIRESCRIPT(&quot;/resource/qbdialer__c2c_resources/20180122090547/c2csf.js&quot;)}
+
+var openPopup = function() { 
+    pd.requestSalesforceInstance(sforce.connection.sessionId);
+    pd.makeRequest(&apos;getAuthToken&apos;,
+        function (result) {
+            var jwt = typeof result == &apos;object&apos; &amp;&amp; &apos;token&apos; in result ? result.token : &apos;&apos;;
+            var use_jwt = jwt != &apos;&apos;;
+            var html = &quot;&lt;html&gt;&lt;body&gt;&lt;form id=&apos;createList&apos; name=&apos;createList&apos; method=&apos;post&apos; action=&apos;https://{!$User.qbdialer__is_subdomain__c}.insidesales.com/noauth/manage_sf_lists?&quot;;
+            html += &quot;salesforce_package_version=6.46.21&quot;;
+            if (!use_jwt) {
+                html += &quot;&amp;organization_id={!$Organization.Id}&quot;;
+                html += &quot;&amp;token={!User.qbdialer__is_token__c}&quot;;
+            }
+            html += &quot;&amp;agent_phone={!User.Phone}&apos;&gt;&quot;; 
+            if (use_jwt) {
+                html += &quot;&lt;input type=&apos;hidden&apos; name=&apos;Authorization&apos; value=&apos;&quot;+jwt+&quot;&apos;&gt;&quot;;
+            }
+            html += &quot;&lt;input type=&apos;submit&apos; style=&apos;visibility:hidden&apos;&gt;&lt;&quot;+&quot;/form&gt;&quot;; 
+            html += &quot;&lt;script&gt;document.createList.submit();&lt;&quot;+&quot;/script&gt;&lt;/body&gt;&lt;/html&gt;&quot;; 
+            var host = document.location.protocol+&quot;//&quot;+ 
+            document.location.hostname; 
+            var w = window.open(host, &quot;&quot;, &quot;height=200,width=600,menubar=0,resizable=1,scrollbars=1,status=0,titlebar=0,toolbar=0,location=0&quot;); 
+            w.document.write(html); 
+        }
+    );
+} 
+
+var user_oauth_token = &apos;{!JSENCODE($User.qbdialer__is_token__c)}&apos;;
+if (!user_oauth_token) {
+    window.location.href=&quot;/apex/qbdialer__InsideSales_OAuth_Setup&quot;;
+} else {
+    openPopup();
+}</url>
+    </webLinks>
+</CustomObject>

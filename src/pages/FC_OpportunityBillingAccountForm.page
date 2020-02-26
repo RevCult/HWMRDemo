@@ -1,0 +1,115 @@
+<apex:page id="FC_OpportunityBillingAccountForm" standardController="Opportunity"
+           extensions="FC_OpportunityBillingAccountFormCtrl">
+    <apex:outputText rendered="false" value="{!Opportunity.AccountId}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Last_Sent_To_Zuora__c}"/>
+    <c:FC_JQuery renameJQuery="true"/>
+    <script type="text/javascript">
+        // <![CDATA[
+        var initializeUi = function () {
+            $j('.selectedBillingAccount').change(function () {
+                $j(jqid("{!$Component.theForm.thePageBlock.opportunityBillingAccountId}")).val($j(".selectedBillingAccount:checked").val());
+            });
+
+
+        };
+        $j(function () {
+            initializeUi();
+            if ("{!Opportunity.FC_Billing_Account__c}" != null && "{!Opportunity.FC_Billing_Account__c}" !== "") {
+                $j('.selectedBillingAccount[value={!Opportunity.FC_Billing_Account__c}]').attr('checked', true);
+                $j(jqid("{!$Component.theForm.thePageBlock.opportunityBillingAccountId}")).val($j(".selectedBillingAccount:checked").val());
+            }
+        });
+        // ]]>
+    </script>
+    <apex:sectionHeader title="Select Billing Account" subTitle="{!Opportunity.Name}"/>
+    <apex:pageMessages />
+    <apex:form id="theForm">
+        <apex:pageBlock id="thePageBlock" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!saveOpportunity}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel" immediate="true"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection collapsible="false" columns="1" title="Create New or Use Existing Billing Account">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Billing Account Action"/>
+                    <c:FC_RequiredDecorator forId="billingAccountAction">
+                        <apex:actionRegion >
+                            <apex:selectRadio label="Billing Account Action" id="billingAccountAction"
+                                              value="{!selectedBillingAccountAction}"
+                                              layout="pageDirection" required="true">
+                                <apex:actionSupport event="onchange" reRender="theForm" action="{!refreshUi}"
+                                                    onComplete="initializeUi();"/>
+                                <apex:selectOption itemValue="CREATE_NEW" itemLabel="Create new billng account"/>
+                                <apex:selectOption itemValue="USE_EXISTING" itemLabel="Use existing billing account"/>
+                            </apex:selectRadio>
+                        </apex:actionRegion>
+                    </c:FC_RequiredDecorator>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection rendered="{!selectedBillingAccountAction == 'CREATE_NEW'}" collapsible="false"
+                                   columns="1" title="Specify Billing Account Contacts">
+                <apex:pageMessage severity="warning" strength="1" rendered="{!billingAccountContactOptions.size == 1}"
+                                  summary="You need to specify at least one contact role on the opportunity."/>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="{!$ObjectType.Opportunity.Fields.FC_Bill_To_Contact__c.Label}"/>
+                    <c:FC_RequiredDecorator forId="billToContactId">
+                        <apex:selectList id="billToContactId" value="{!Opportunity.FC_Bill_To_Contact__c}"
+                                         required="true" multiSelect="false" size="1">
+                            <apex:selectOptions value="{!billingAccountContactOptions}"/>
+                        </apex:selectList>
+                    </c:FC_RequiredDecorator>
+                </apex:pageBlockSectionItem>
+                <apex:selectList value="{!Opportunity.FC_Sold_To_Contact__c}" multiSelect="false" size="1">
+                    <apex:selectOptions value="{!billingAccountContactOptions}"/>
+                </apex:selectList>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection rendered="{!selectedBillingAccountAction == 'USE_EXISTING'}" collapsible="false"
+                                   columns="1" title="Specify Billing Account">
+                <apex:pageBlockTable value="{!billingAccounts}" var="ba">
+                    <apex:column >
+                        <input type="radio" class="selectedBillingAccount" id="selectedBillingAccount"
+                               name="selectedBillingAccount" value="{!ba.Id}"/>
+                    </apex:column>
+                    <apex:column value="{!ba.Name}"/>
+                    <apex:column value="{!ba.Zuora__AccountNumber__c}"/>
+                    <apex:column value="{!ba.Zuora__Balance__c}"/>
+                    <apex:column headerValue="Bill To">
+                        <apex:outputPanel layout="block">
+                            <apex:outputText value="{!ba.Zuora__BillToName__c}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block">
+                            <apex:outputText value="{!ba.Zuora__BillToAddress1__c}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" rendered="{!!ISBLANK(ba.Zuora__BillToAddress2__c)}">
+                            <apex:outputText value="{!ba.Zuora__BillToAddress2__c}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block">
+                            <apex:outputText value="{!ba.Zuora__BillToCity__c}, {!ba.Zuora__BillToState__c} {!ba.Zuora__BillToPostalCode__c}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block">
+                            <apex:outputText value="{!ba.Zuora__BillToCountry__c}"/>
+                        </apex:outputPanel>
+                    </apex:column>
+                    <apex:column headerValue="Sold To">
+                        <apex:outputPanel layout="block">
+                            <apex:outputText value="{!ba.Zuora__SoldToName__c}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block">
+                            <apex:outputText value="{!ba.Zuora__SoldToAddress1__c}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" rendered="{!!ISBLANK(ba.Zuora__SoldToAddress2__c)}">
+                            <apex:outputText value="{!ba.Zuora__SoldToAddress2__c}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block">
+                            <apex:outputText value="{!ba.Zuora__SoldToCity__c}, {!ba.Zuora__SoldToState__c} {!ba.Zuora__SoldToPostalCode__c}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block">
+                            <apex:outputText value="{!ba.Zuora__SoldToCountry__c}"/>
+                        </apex:outputPanel>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:inputHidden id="opportunityBillingAccountId" value="{!selectedBillingAccountId}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page standardController="Account" cache="false">
+    <apex:iframe height="600px"
+                 src="https://nw1.app.insights.zuora.com/data/salesforce/account/{!account.Id}?sessionId={!$Api.Session_ID}&serverUrl={!URLENCODE($Api.Partner_Server_URL_230)}&apiToken=ZjAvRGaxZaLRmXaxElrBmeepprOnvyUg&userId={!$User.Id}&embed=true">
+    </apex:iframe>
+  </apex:page>

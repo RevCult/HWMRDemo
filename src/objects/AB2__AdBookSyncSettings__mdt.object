@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Settings controlling how records will be synced to and from AdBook.</description>
+    <fields>
+        <fullName>AB2__AutoLimitedSyncStageProbabilityThreshold__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Once an Opportunities Stage based probability reaches this threshold the order will be auto limited synced to AdBook</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Once an Opportunities Stage based probability reaches this threshold the order will be auto limited synced to AdBook</inlineHelpText>
+        <label>AutoLimitedSyncStageProbabilityThreshold</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__AutoSyncStageProbabilityThreshold__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Once an Opportunities Stage based probability reaches this threshold the order will be auto synced to AdBook</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Once an Opportunities Stage based probability reaches this threshold the order will be auto synced to AdBook</inlineHelpText>
+        <label>Auto Sync Stage Probability Threshold</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__RefreshApexCpuLimitThreshold__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Once the CPU limit is detected past this threshold of the available resources it will be changed to an Out Of Sync record for the batch process to handle</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Once the CPU limit is detected past this threshold of the available resources it will be changed to an Out Of Sync record for the batch process to handle</inlineHelpText>
+        <label>Refresh Apex CPU Limit Threshold</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SalesforceRefreshFromAdBookForOutOfSync__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Controls how Orders stored in AdBook will be synced to Salesforce when flagged as OutOfSync</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Controls how Orders stored in AdBook will be synced to Salesforce when flagged as OutOfSync</inlineHelpText>
+        <label>Salesforce Refresh from AdBook OutOfSync</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Off</fullName>
+                    <default>true</default>
+                    <label>Off</label>
+                </value>
+                <value>
+                    <fullName>OpportunityOnly</fullName>
+                    <default>false</default>
+                    <label>OpportunityOnly</label>
+                </value>
+                <value>
+                    <fullName>DropsOnly</fullName>
+                    <default>false</default>
+                    <label>DropsOnly</label>
+                </value>
+                <value>
+                    <fullName>Full</fullName>
+                    <default>false</default>
+                    <label>Full</label>
+                </value>
+                <value>
+                    <fullName>Limited</fullName>
+                    <default>false</default>
+                    <label>Limited</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__SalesforceRefreshFromAdBook__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Controls how Orders stored in AdBook will be synced to Salesforce</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Controls how Orders stored in AdBook will be synced to Salesforce</inlineHelpText>
+        <label>Salesforce Refresh From AdBook</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Off</fullName>
+                    <default>true</default>
+                    <label>Off</label>
+                </value>
+                <value>
+                    <fullName>OpportunityOnly</fullName>
+                    <default>false</default>
+                    <label>Opportunity Only</label>
+                </value>
+                <value>
+                    <fullName>DropsOnly</fullName>
+                    <default>false</default>
+                    <label>Drops Only</label>
+                </value>
+                <value>
+                    <fullName>Full</fullName>
+                    <default>false</default>
+                    <label>Full</label>
+                </value>
+                <value>
+                    <fullName>Limited</fullName>
+                    <default>false</default>
+                    <label>Limited</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__SalesforceSyncToAdBookForOutOfSync__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Controls how Orders stored in Salesforce will be synced to AdBook if the Opportunity is flagged as OutOfSync</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Controls how Orders stored in Salesforce will be synced to AdBook if the Opportunity is flagged as OutOfSync</inlineHelpText>
+        <label>Salesforce Sync To AdBook for OutOfSync</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Off</fullName>
+                    <default>true</default>
+                    <label>Off</label>
+                </value>
+                <value>
+                    <fullName>OpportunityOnly</fullName>
+                    <default>false</default>
+                    <label>Opportunity Only</label>
+                </value>
+                <value>
+                    <fullName>DropsOnly</fullName>
+                    <default>false</default>
+                    <label>Drops Only</label>
+                </value>
+                <value>
+                    <fullName>Full</fullName>
+                    <default>false</default>
+                    <label>Full</label>
+                </value>
+                <value>
+                    <fullName>Limited</fullName>
+                    <default>false</default>
+                    <label>Limited</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__SalesforceSyncToAdBook__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Controls how Orders stored in Salesforce will be synced to AdBook</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Controls how Orders stored in Salesforce will be synced to AdBook</inlineHelpText>
+        <label>Salesforce Sync To AdBook</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Off</fullName>
+                    <default>false</default>
+                    <label>Off</label>
+                </value>
+                <value>
+                    <fullName>Full</fullName>
+                    <default>true</default>
+                    <label>Full</label>
+                </value>
+                <value>
+                    <fullName>Limited</fullName>
+                    <default>false</default>
+                    <label>Limited</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ShowLimitedUpdateOrder__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the Limited Update Order button appear on the Order sync page?</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Should the Limited Update Order button appear on the Order sync page?</inlineHelpText>
+        <label>Show Limited Update Order</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>AdBook Sync Settings</label>
+    <pluralLabel>AdBook Sync Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,579 @@
+<apex:page standardController="Zonda_User_Group__c" showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0" applyHtmlTag="false" extensions="ZondaContractCoverageManagerViewOnlyExt">
+<apex:form >
+    <html lang="en">
+    <head>
+        <meta charset="utf-8"></meta>
+        <title>Coverage Manager</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"></link>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        
+        <style>
+            ul.tree, ul.tree ul {
+                list-style-type: none;
+                background: url(http://odyniec.net/articles/turning-lists-into-trees/vline.png) repeat-y;
+                margin: 0;
+                padding: 0;
+            }
+
+            ul.tree ul {
+                margin-left: 25px;
+            }
+
+            ul.tree li {
+                margin: 0;
+                padding: 0 10px;
+                line-height: 10px;
+                background: url(http://odyniec.net/articles/turning-lists-into-trees/node.png) no-repeat;
+                color: #369;
+                font-weight: normal;
+                font-size: 11px;
+            }
+
+            ul.tree li span{
+                cursor: pointer;
+            }
+
+            ul.tree li input{
+                cursor: pointer;
+            }
+
+            ul.tree li.last {
+                background: #fff url(http://odyniec.net/articles/turning-lists-into-trees/lastnode.png) no-repeat;
+            }
+
+            textarea {
+                font-size:8pt;
+            }
+        </style>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.js"></script>
+
+        <!-- Latest compiled and minified JavaScript -->
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"></link>
+
+        <!-- <script src="app.js"></script> -->
+        <!-- <script src="ZondaCoveragejs.resource"></script>  -->
+
+        <script>
+            var app = angular.module('coverageManager', []);
+            app.config(['$httpProvider', function($httpProvider) {
+                    $httpProvider.defaults.useXDomain = true;
+                    $httpProvider.defaults.withCredentials = true;
+                    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+                    $httpProvider.defaults.headers.common["Accept"] = "application/json";
+                    $httpProvider.defaults.headers.common["Content-Type"] = "application/json";
+                }
+            ]);
+
+            // I act a repository for the remote friend collection.
+            app.factory("coverageService", function ($http, $q) {
+                    var token = null;
+
+                    return({
+                        /*getCoverage: function getCoverage(customerID) {
+                            var request = $http({
+                                method: "get",
+                                url: "https://qazapi.zonda.co/v5/customers/" + customerID + "/coverage",//?access_token=" + token.access_token,
+                                //url: "http://qa.api.zonda.co:3180/v3/customers/" + customerID + "/coverage",
+                                params: {
+                                    action: "get"
+                                }
+                            });
+                            return( request.then(handleSuccess, handleError) );
+                        },*/
+            /*This section is needed to displaty the coverage trea*/
+                        getCoverageAreas: function getCoverageAreas() {
+                            var request = $http({
+                                method: "get",
+                                url: "{!$Resource.coverageAreas}"
+                            });
+                            return( request.then(handleSuccess, handleError) );
+                        },
+                        saveCoverage: function (customerID, coverage) {
+
+                            var dfd = $q.defer();
+                            $http.put('https://qazapi.zonda.co/v5/customers/' + customerID + "/coverage?access_token=" + token.access_token, coverage).then(function (response) {
+                                if (response.data.success) {
+                                    dfd.resolve(true);
+                                } else {
+                                    dfd.resolve(false);
+                                }
+                            });
+                            return dfd.promise;
+                        }
+                        /*,
+                        getAuthKey: function getAuthKey() {
+                            var url = "https://qazapi.zonda.co/v5/authenticate/healthcheck@meyersllc.com/healthcheck";
+
+                            $http.get(url)
+                                .success(function (data, status, header, config) {
+                                    token = data.token;
+                                    //console.log(token);
+                                    //
+                                    // Setup next call based on expires_in, leaving 5% buffer
+                                    console.log(token);
+                                    if(token.expires_in)
+                                        setInterval(getAuthKey, token.expires_in * .95);
+                                })
+                                .error(function (data, status, header, config) {
+                                    // console.log('url: '+url);
+                                    // console.log('data: '+data);
+                                    // console.log('status: '+status);
+                                    // console.log('header: '+header);
+                                    console.log('config: '+JSON.stringify(config));
+                                    console.log('error');
+                                });
+                        }*/
+                    });
+
+                    function handleError(response) {
+                        if (
+                            !angular.isObject(response.data) || !response.data.message
+                            ) {
+                            return( $q.reject("An unknown error occurred.") );
+                        }
+
+                        // Otherwise, use expected error message.
+                        return( $q.reject(response.data) );
+                    }
+
+                    function handleSuccess(response) {
+                        return( response.data );
+                    }
+                }
+            );
+
+            app.controller('MainCtrl', function ($scope, $http, $location, coverageService) {
+                var queryDict = {}
+                location.search.substr(1).split("&").forEach(function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]})
+                $scope.inputCustomer = $scope.myCustomer = queryDict.customer;
+                $scope.readOnly = queryDict.pageMode == 'readOnly' ? true : false;
+                
+                
+                function Choice(level, name, value, children) {
+                    this.level = level;
+                    this.name = name;
+                    this.value = value;
+                    this.checked = false;
+                    this.indeterminate = false;
+                    this.children = children || [];
+                }
+
+                // function Choice(name, children) {
+                //     this.name = name;
+                //     this.checked = false;
+                //     this.indeterminate = false;
+                //     this.children = children || [];
+                // }
+
+                $scope.myTree = null;
+
+                $scope.$watch('myTree', function(newValue, oldValue) {
+                    if (newValue)
+                        $scope.updateCoverage();
+                }, true);
+
+
+                $scope.countyList = '{!Zonda_User_Group__c.Coverage_String__c}'
+                
+                function buildCoverageTree(coverageAreas, customerCoverageList) {
+                    var customerList = customerCoverageList.split("|");
+
+                    var regions = {}, region, subregion, county, lastregion, lastsubregion, lastcounty;
+
+                    var recordset = coverageAreas;
+
+                    for (var i=0; i< recordset.length; i++) {
+                        region = regions[recordset[i].region];
+                        if(!region)
+                            region = regions[recordset[i].region] = new Choice('region', recordset[i].region, recordset[i].region);
+
+                        subregion = region.children[recordset[i].sub_region];
+                        if(!subregion)
+                            subregion = region.children[recordset[i].sub_region] = new Choice('subregion', recordset[i].sub_region, recordset[i].sub_region);
+
+                        county = subregion.children[recordset[i].county_equi_name];
+                        if(!county)
+                            county = subregion.children[recordset[i].county_equi_name] = new Choice('county', recordset[i].county_equi_name, recordset[i].state_county_code);
+
+                        // console.log(county);
+                        // console.log(customerList);
+                        county.checked = (customerList.indexOf(county.value) > -1);
+                    }
+
+                // function buildCoverageTree(coverageAreas, customerCoverageList) {
+                //     var customerList = customerCoverageList.split("|");
+
+                //     var regions = {}, region, subregion, county, lastregion, lastsubregion, lastcounty;
+
+                //     var recordset = coverageAreas;
+
+                //     for (var i=0; i< recordset.length; i++) {
+                //      region = regions[recordset[i].region];
+                //         if(!region)
+                //             region = regions[recordset[i].region] = new Choice(recordset[i].region);
+
+                //         subregion = region.children[recordset[i].sub_region];
+                //         if(!subregion)
+                //             subregion = region.children[recordset[i].sub_region] = new Choice(recordset[i].sub_region);
+
+                //         county = subregion.children[recordset[i].county_equi_name];
+                //         if(!county)
+                //             county = subregion.children[recordset[i].county_equi_name] = new Choice(recordset[i].state_county_code);//;new Choice(recordset[i].county_equi_name);
+
+                //         county.checked = (customerList.indexOf(county.name) > -1);
+                //     }
+
+        // Map and sort structures
+                    var retregions = [];
+                    for (a in regions) {
+                        regions[a].checked = true;
+
+                        // Sort children 2 layers
+                        var c1 = [];
+                        for (b in regions[a].children) {
+                            var c2 = [];
+                            regions[a].children[b].checked = true;
+                            for (c in regions[a].children[b].children) {
+                                regions[a].children[b].checked = !regions[a].children[b].children[c].checked ? false : regions[a].children[b].checked;
+                                regions[a].children[b].indeterminate = regions[a].children[b].children[c].checked ? true : regions[a].children[b].indeterminate;
+                                c2.push(regions[a].children[b].children[c]);
+                            }
+                            regions[a].children[b].indeterminate = regions[a].children[b].checked ? false : regions[a].children[b].indeterminate;
+                            regions[a].children[b].children = c2.sort(function (a, b) {return a.name > b.name ? 1 : -1;}); // asc;
+
+                            regions[a].checked = !regions[a].children[b].checked ? false : regions[a].checked;
+                            regions[a].indeterminate = regions[a].children[b].checked ? true : regions[a].indeterminate;
+                            c1.push(regions[a].children[b]);
+                        }
+
+                        regions[a].indeterminate = regions[a].checked ? false : regions[a].indeterminate;
+                        regions[a].children = c1.sort(function (a, b) {return a.name > b.name ? 1 : -1;}); // asc;
+
+                        retregions.push(regions[a]);
+                    }
+                    retregions = retregions.sort(function (a, b) {return a.name > b.name ? 1 : -1;}); // asc
+
+                    return retregions;
+                }
+
+
+                $scope.loadCoverage = function loadCoverage() {
+                    var customerCoverageList = null; // NEED TO FIGURE THIS OUT AND MERGE ABOVE
+                    $scope.coverageDataLoaded = false;
+                    // The coverageService returns a promise.
+                    //  alert($scope.inputCustomer);
+                    coverageService.getCoverageAreas()
+                        .then(
+                        function (coverageAreas) {
+                            var coverage = buildCoverageTree(coverageAreas, $scope.countyList);
+                            $scope.myCustomer = $scope.inputCustomer;
+                            coverageAreas = setReadOnlyFlag({"children":coverage}, $scope.readOnly);
+                            $scope.myTree = coverage;
+                            $scope.coverageDataLoaded = true;
+                            $scope.updateCoverage();
+                        }
+                    )
+                    ;
+                }
+
+                $scope.updateCoverage = function () {
+                    var coverage = $scope.myTree;
+                    var customer = $scope.myCustomer;
+                    var subregionList = [];
+                    var regionList = [];
+                    var countyList = [];
+
+                    // Process regions and subregions.  Counties get looked up by this in the SP_UPD_COVERAGE sp
+                    for (var i = 0; i < coverage.length; i++) {
+                        var region = coverage[i];
+                        //log.debug(region);
+                        // Capture the region if needed
+                        if (region && region.name && region.name != '') {
+
+                            if(region.checked)
+                                regionList.push("'" + region.name + "'");
+
+                            // Process children as subregions if needed
+                            var subregions = region.children;
+                            if (subregions && subregions.length > 0) {
+                                for (var j = 0; j < subregions.length; j++) {
+                                    var subregion = subregions[j];
+                                    if (subregion.name && subregion.name != '') {
+
+                                        if(subregion.checked)
+                                            subregionList.push("'" + subregion.name + "'");
+
+                                        // Process children as counties if needed
+                                        //log.debug(subregion);
+                                        var counties = subregion.children;
+                                        if (counties && counties.length > 0) {
+                                            for (var k = 0; k < counties.length; k++) {
+                                                var county = counties[k];
+                                                if (county.name && county.name != '') {
+
+                                                    if(county.checked)
+                                                        countyList.push(county.value);
+                                                        //countyList.push("'" + county.name + "'");
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    $scope.coverageString = JSON.stringify({customer_id:customer, regionList:regionList.join(','), subregionList:subregionList.join(','), countyList:countyList.join(',')})
+                    $scope.customer_id = customer;
+                    $scope.regionList = regionList.join(',');
+                    $scope.subregionList = subregionList.join(',');
+                    $scope.countyList = countyList.join('|');
+                    console.log($scope.countyList);
+                }
+
+                $scope.updateCoverageNew = function () {
+                    $scope.updateCoverage();
+                    // var coverage = $scope.myTree;
+                    // var customer = $scope.myCustomer;
+                    // var subregionList = [];
+                    // var regionList = [];
+                    // var countyList = [];
+
+                    // // Process regions and subregions.  Counties get looked up by this in the SP_UPD_COVERAGE sp
+                    // for (var i = 0; i < coverage.length; i++) {
+                    //     var region = coverage[i];
+                    //     //log.debug(region);
+                    //     // Capture the region if needed
+                    //     if (region && region.name && region.name != '') {
+
+                    //         if(region.checked)
+                    //             regionList.push("'" + region.name + "'");
+
+                    //         // Process children as subregions if needed
+                    //         var subregions = region.children;
+                    //         if (subregions && subregions.length > 0) {
+                    //             for (var j = 0; j < subregions.length; j++) {
+                    //                 var subregion = subregions[j];
+                    //                 if (subregion.name && subregion.name != '') {
+
+                    //                     if(subregion.checked)
+                    //                         subregionList.push("'" + subregion.name + "'");
+
+                    //                     // Process children as counties if needed
+                    //                     //log.debug(subregion);
+                    //                     var counties = subregion.children;
+                    //                     if (counties && counties.length > 0) {
+                    //                         for (var k = 0; k < counties.length; k++) {
+                    //                             var county = counties[k];
+                    //                             if (county.name && county.name != '') {
+
+                    //                                 if(county.checked)
+                    //                                     countyList.push(county.value);
+                    //                                     //countyList.push("'" + county.name + "'");
+                    //                             }
+                    //                         }
+                    //                     }
+                    //                 }
+                    //             }
+                    //         }
+                    //     }
+                    // }
+
+                    // $scope.coverageString = JSON.stringify({customer_id:customer, regionList:regionList.join(','), subregionList:subregionList.join(','), countyList:countyList.join(',')})
+                    // $scope.customer_id = customer;
+                    // $scope.regionList = regionList.join(',');
+                    // $scope.subregionList = subregionList.join(',');
+                    // $scope.countyList = countyList.join('|');
+                    // console.log($scope.countyList);
+                    // update the hidden page value that binds to the controller member variable
+                    $("[id$='updatedCoveragePlaceholder']").val($scope.countyList);
+                    // call the action function defined down below (a passthrough to a server side controller method)
+                    updateCoverageActionFunction($scope.countyList);
+                    // console.log($scope.countyList)
+                    // refresh the parent page (this page should be embedded in a page layout - we want to refresh that page)
+                    window.top.location.href = '/{!Zonda_User_Group__c.Id}';
+                }
+
+                $scope.expandCollapseAll = function (expand) {
+                    if(!expand)
+                        $(".collapse,.in").removeClass("in");
+                    else
+                        $(".collapse[level='region']").addClass("in");
+                        //$(".collapse").addClass("in");
+                }
+
+                // $scope.expandCollapseAll = function (expand) {
+                //     if(!expand)
+                //         $(".collapse,.in").removeClass("in");
+                //     else
+                //         $(".collapse").addClass("in");
+                // }
+
+                setTimeout($scope.loadCoverage, 500);
+
+                $scope.saveCoverage = function () {
+                    // The coverageService returns a promise.
+                    coverageService.saveCoverage($scope.myCustomer, $scope.myTree)
+                        .then(
+                        function (response) {
+                           alert(response ? "Coverage saved" : "Error saving coverage");
+                        }
+                    );
+                }
+            });
+
+            function setReadOnlyFlag(coverage, readOnly) {
+                if (coverage) {
+                    if (readOnly) {
+                        coverage.readOnly = true;
+                        if (coverage.children.length > 0) {
+                            for (var i=0; i<coverage.children.length; i++) {
+                                setReadOnlyFlag(coverage.children[i], readOnly);
+                            }
+                        }
+                    }
+                    return coverage;
+                }
+            }
+
+            var t1 = 0;
+            app.directive('choiceTree', function () {
+                t1 ++;
+                return {
+                    template:   /*'<div>' + 
+                                    '<a href="#" data-toggle="collapse" data-target="#demo{{$id}}">+</a>' +
+                                    '<div id="demo{{$id}}" class="collapse">' + */
+                                        '<ul class="list"><choice ng-repeat="choice in tree" disabled="disabled" ></choice></ul>' /*+
+                                    '</div>' +
+                                '</div>'*/,
+                    replace: true,
+                    transclude: true,
+                    restrict: 'E',
+                    scope: {
+                        tree: '=ngModel'
+                    }
+                };
+            });
+
+
+            app.directive('ngIndeterminate', function($compile) {
+                return {
+                    restrict: 'A',
+                    link: function(scope, element, attributes) {
+                        scope.$watch(attributes['ngIndeterminate'], function (value) {
+                            if(value)
+                                element.prop('indeterminate', !!value);
+                        });
+                    }
+                };
+            });
+
+            app.directive('choice', function ($compile) {
+                return {
+                    restrict: 'E',
+                    //In the template, we do the thing with the span so you can click the
+                    //text or the checkbox itself to toggle the check
+                    template: '<div>' + 
+                                    // '<a href="#" data-toggle="collapse" data-target="#div{{$id}}">+</a>' +
+                                    // '<div id="div{{$id}}" class="collapse in">' +
+                                        '<li class="list-unstyled">' + 
+                                            '<span ng-click="choiceClicked(choice)">' +
+                                                '<input ng-disabled="choice.readOnly || (choice.children && choice.children.length <= 0)" type="checkbox" ng-checked="choice.checked" ng-indeterminate="choice.indeterminate">' +
+                                            '</span>' +
+                                            ' <a href="#" ng-disabled="choice.readOnly || (choice.children && choice.children.length <= 0)" data-toggle="collapse" data-target="#div{{$id}}">{{choice.name}}</a>' +
+                                        '</li>' +
+                                    // '</div>' +
+                                '</div>',
+                    link: function (scope, elm, attrs) {
+                        scope.choiceClicked = function (choice) {
+                            if(choice.children && choice.children.length > 0) {
+                                choice.checked = !choice.checked;
+
+                                function checkChildren(c) {
+                                    angular.forEach(c.children, function (c) {
+                                        c.checked = choice.checked;
+                                        checkChildren(c);
+                                    });
+                                }
+
+                                checkChildren(choice);
+                            }
+                        };
+
+                        //Add children by $compiling and doing a new choice directive
+                        if (scope.choice.children.length > 0) {
+                            var childChoice = $compile(
+                                '<div>' + 
+            //                      '<a href="#" data-toggle="collapse" data-target="#div{{$id}}">+</a>' +
+                                    //'<div id="div{{$id}}" class="collapse">' +
+                                    '<div id="div{{$id}}" level="{{choice.level}}" class="collapse">' +
+                                        '<choice-tree ng-model="choice.children" id="div{{$id}}"></choice-tree>' +
+                                    '</div>' +
+                                '</div>'
+                            )(scope)
+                            elm.append(childChoice);
+                        }
+                    }
+                };
+            });
+        </script>
+
+
+    </head>
+    <body ng-app="coverageManager" ng-controller="MainCtrl" style="overflow:none;">
+        <apex:outputPanel id="theCoverage" layout="block">
+            <div class="navbar navbar-default navbar-fixed-top btn-group" style="padding-top: 10px; padding-left: 10px">
+                
+               <!--<span ng-click="updateCoverageNew()" title="Save" class="btn btn-default fa fa-floppy-o" ng-hide="readOnly"></span>-->
+                <!-- <span ng-click="loadCoverage()" title="Reset" class="btn btn-default fa fa-undo"></span> -->
+                <span ng-click="expandCollapseAll(true);expanded=!expanded;" ng-hide="expanded" title="Expand All" class="btn btn-default fa fa-plus"></span>
+                <span ng-click="expandCollapseAll(false);expanded=!expanded;" ng-hide="!expanded" title="Collapse All" class="btn btn-default fa fa-minus"></span>
+            </div> 
+            
+            <div ng-hide="coverageDataLoaded" style="margin: 70px;padding-top:10px; overflow:auto;">
+              <h4>Getting Subscription Information</h4>
+              <div style="margin: 30px 100px; padding-bottom: 50px">
+                <i class="fa fa-spinner fa-pulse fa-5x"></i>
+              </div>
+            </div>
+
+            <div class="col-lg-12" style="margin-top: 80px" ng-show="coverageDataLoaded" >
+                <div class= 'col-lg-12' >
+                    <choice-tree ng-model="myTree"></choice-tree>
+                </div>
+               <!--  <div class= 'col-lg-6' style="overflow:auto;">
+                    <h5>Counties</h5>
+                    <textarea style=" width: 100%; overflow:auto;" rows="20" type="text" name="countyList" id="countyList">{{countyList}}</textarea>
+                </div> -->
+            </div>      
+
+            <apex:inputHidden value="{!updatedCoverage}" id="updatedCoveragePlaceholder" />
+        </apex:outputPanel>
+
+
+                    <!-- <textarea readonly style=" width: 100%;" rows="20" type="text" name="countyList" id="countyList">{{countyList}}</textarea> -->
+
+        <!-- <div class="well">{{coverageString}}</div> -->
+        <!--<div class="well">{{customer_id}}</div>-->
+        <!--<div class="well">{{regionList}}</div>-->
+        <!--<div class="well">{{subregionList}}</div>-->
+        <!--<div class="well">{{countyList}}</div>-->
+
+
+    <!--<hr/>-->
+    <!--$scope.myTree = {{myTree | json}}-->
+    </body>
+    </html>
+    <apex:actionFunction action="{!apexUpdateCoverage}" name="updateCoverageActionFunction" rerender="theCoveragge">
+        <apex:param name="updatedCoverage" assignTo="{!updatedCoverage}" value="" />
+    </apex:actionFunction>
+</apex:form>
+</apex:page>

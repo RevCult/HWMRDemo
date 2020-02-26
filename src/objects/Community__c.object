@@ -1,0 +1,2196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>MG_Community</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Acreage__c</fullName>
+        <externalId>false</externalId>
+        <label>Acreage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Additional_Tax_Assessment__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Tax Assessment</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Address_calc__c</fullName>
+        <externalId>false</externalId>
+        <label>Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CBSA__c</fullName>
+        <externalId>false</externalId>
+        <label>CBSA</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City_calc__c</fullName>
+        <externalId>false</externalId>
+        <label>City</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Community_Characteristics__c</fullName>
+        <externalId>false</externalId>
+        <label>Community Characteristics</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Community_Characteristics</valueSetName>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Community_Key__c</fullName>
+        <externalId>true</externalId>
+        <label>Community Key</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Community_Open_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>&quot;Value to be displayed as year only in Master Plan Report.&quot;</inlineHelpText>
+        <label>Community Open Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Community_Website__c</fullName>
+        <externalId>false</externalId>
+        <label>Community Website</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>County_calc__c</fullName>
+        <externalId>false</externalId>
+        <label>County</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Developer_Reported_Sales_YTD__c</fullName>
+        <description>Number of Sales (YTD) reported by the developer.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Sales (YTD) reported by the developer.</inlineHelpText>
+        <label>Developer Reported Sales (YTD)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Display_in_Zonda__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Display in Zonda</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Disposition__c</fullName>
+        <externalId>false</externalId>
+        <label>Disposition</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Follow Up</fullName>
+                    <default>true</default>
+                    <label>Follow Up</label>
+                </value>
+                <value>
+                    <fullName>Baselined</fullName>
+                    <default>false</default>
+                    <label>Baselined</label>
+                </value>
+                <value>
+                    <fullName>Archive</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Archive</label>
+                </value>
+                <value>
+                    <fullName>Uncooperative</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Uncooperative</label>
+                </value>
+                <value>
+                    <fullName>Validated</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Validated</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Large_Scale_Amenities__c</fullName>
+        <externalId>false</externalId>
+        <label>Large-Scale Amenities</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active Adult</fullName>
+                    <default>false</default>
+                    <label>Active Adult</label>
+                </value>
+                <value>
+                    <fullName>Amphitheater</fullName>
+                    <default>false</default>
+                    <label>Amphitheater</label>
+                </value>
+                <value>
+                    <fullName>Ball Fields</fullName>
+                    <default>false</default>
+                    <label>Ball Fields</label>
+                </value>
+                <value>
+                    <fullName>Civic Uses</fullName>
+                    <default>false</default>
+                    <label>Civic Uses</label>
+                </value>
+                <value>
+                    <fullName>Clubhouse</fullName>
+                    <default>false</default>
+                    <label>Clubhouse</label>
+                </value>
+                <value>
+                    <fullName>Community Gardens</fullName>
+                    <default>false</default>
+                    <label>Community Gardens</label>
+                </value>
+                <value>
+                    <fullName>Country Club</fullName>
+                    <default>false</default>
+                    <label>Country Club</label>
+                </value>
+                <value>
+                    <fullName>Dog Park</fullName>
+                    <default>false</default>
+                    <label>Dog Park</label>
+                </value>
+                <value>
+                    <fullName>Fitness Center</fullName>
+                    <default>false</default>
+                    <label>Fitness Center</label>
+                </value>
+                <value>
+                    <fullName>Gated</fullName>
+                    <default>false</default>
+                    <label>Gated</label>
+                </value>
+                <value>
+                    <fullName>Golf</fullName>
+                    <default>false</default>
+                    <label>Golf</label>
+                </value>
+                <value>
+                    <fullName>Hotels</fullName>
+                    <default>false</default>
+                    <label>Hotels</label>
+                </value>
+                <value>
+                    <fullName>Mixed-Use</fullName>
+                    <default>false</default>
+                    <label>Mixed-Use</label>
+                </value>
+                <value>
+                    <fullName>Office</fullName>
+                    <default>false</default>
+                    <label>Office</label>
+                </value>
+                <value>
+                    <fullName>Open Space</fullName>
+                    <default>false</default>
+                    <label>Open Space</label>
+                </value>
+                <value>
+                    <fullName>Parks</fullName>
+                    <default>false</default>
+                    <label>Parks</label>
+                </value>
+                <value>
+                    <fullName>Playground</fullName>
+                    <default>false</default>
+                    <label>Playground</label>
+                </value>
+                <value>
+                    <fullName>Pool(s)</fullName>
+                    <default>false</default>
+                    <label>Pool(s)</label>
+                </value>
+                <value>
+                    <fullName>Recreation Center</fullName>
+                    <default>false</default>
+                    <label>Recreation Center</label>
+                </value>
+                <value>
+                    <fullName>Resort</fullName>
+                    <default>false</default>
+                    <label>Resort</label>
+                </value>
+                <value>
+                    <fullName>Restaurant(s)</fullName>
+                    <default>false</default>
+                    <label>Restaurant(s)</label>
+                </value>
+                <value>
+                    <fullName>Retail</fullName>
+                    <default>false</default>
+                    <label>Retail</label>
+                </value>
+                <value>
+                    <fullName>Schools</fullName>
+                    <default>false</default>
+                    <label>Schools</label>
+                </value>
+                <value>
+                    <fullName>Splash Pads</fullName>
+                    <default>false</default>
+                    <label>Splash Pads</label>
+                </value>
+                <value>
+                    <fullName>Tennis Courts</fullName>
+                    <default>false</default>
+                    <label>Tennis Courts</label>
+                </value>
+                <value>
+                    <fullName>Trails</fullName>
+                    <default>false</default>
+                    <label>Trails</label>
+                </value>
+                <value>
+                    <fullName>Transit Oriented Development</fullName>
+                    <default>false</default>
+                    <label>Transit Oriented Development</label>
+                </value>
+                <value>
+                    <fullName>Waterfront Recreation</fullName>
+                    <default>false</default>
+                    <label>Waterfront Recreation</label>
+                </value>
+                <value>
+                    <fullName>Water Slides</fullName>
+                    <default>false</default>
+                    <label>Water Slides</label>
+                </value>
+                <value>
+                    <fullName>Tot Lots</fullName>
+                    <default>false</default>
+                    <label>Tot Lots</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Last_Validation_Date_Community__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a manual field</inlineHelpText>
+        <label>Last Validation Date (Community)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Validation_Quarter__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( MONTH( Last_Validation_Date_Community__c ) = 1 || MONTH( Last_Validation_Date_Community__c ) = 2 || MONTH( Last_Validation_Date_Community__c ) = 3, &apos;Q1&apos;, IF( MONTH( Last_Validation_Date_Community__c ) = 4 || MONTH( Last_Validation_Date_Community__c ) = 5 || MONTH( Last_Validation_Date_Community__c ) = 6, &apos;Q2&apos;, IF( MONTH( Last_Validation_Date_Community__c ) = 7 || MONTH( Last_Validation_Date_Community__c ) = 8 || MONTH( Last_Validation_Date_Community__c ) = 9, &apos;Q3&apos;, IF( MONTH( Last_Validation_Date_Community__c ) = 10 || MONTH( Last_Validation_Date_Community__c ) = 11 || MONTH( Last_Validation_Date_Community__c ) = 12, &apos;Q4&apos;, &apos;&apos;)))) + &apos; &apos; + TEXT( YEAR( Last_Validation_Date_Community__c ))</formula>
+        <label>Last Validation Quarter</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <displayLocationInDecimal>true</displayLocationInDecimal>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <scale>6</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Location</type>
+    </fields>
+    <fields>
+        <fullName>Master_Plan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Master Plan</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Community__c.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Master Plan</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Community__c</referenceTo>
+        <relationshipLabel>Village</relationshipLabel>
+        <relationshipName>Master_Plans</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Meyers_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</inlineHelpText>
+        <label>Meyers Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Meyers_Notes_community__c</fullName>
+        <description>Notes field on the Community object.</description>
+        <externalId>false</externalId>
+        <label>Meyers Notes (community)</label>
+        <length>32768</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Number_of_Rental_Units__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Rental Units as applicable</inlineHelpText>
+        <label>Number of Rental Units</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Open_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is an estimated value.</inlineHelpText>
+        <label>Oldest Project Open Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Outside_Geographic_Coverage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Outside Geographic Coverage</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Override_Location_Information__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Override Location Information</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Prior_Sold_Developer_Lots__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Developer Lots sold before our data collection. This is an estimated value.</inlineHelpText>
+        <label>Prior Sold Developer Lots</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prior_Sold_Units_hard_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Prior Sold Units (hard code)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_TUP_calc__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is an estimated value.</inlineHelpText>
+        <label>Project TUP (calc)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_TUS_calc__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is an estimated value.</inlineHelpText>
+        <label>Project TUS (calc)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Region ID</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Region_ID</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rental_Units_hard_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Rental Units (hard code)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Research_Status__c</fullName>
+        <description>For the Teams annual review add a new Baselined status with the current year</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Each year the team will review and update the Baselined status to &quot;Baselined CURRENTYEAR&quot;</inlineHelpText>
+        <label>Research Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Follow up required</fullName>
+                    <default>true</default>
+                    <label>Follow up required</label>
+                </value>
+                <value>
+                    <fullName>Baselined 2018</fullName>
+                    <default>false</default>
+                    <label>Baselined 2018</label>
+                </value>
+                <value>
+                    <fullName>Baselined 2019</fullName>
+                    <default>false</default>
+                    <label>Baselined 2019</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sales_Call_Center__c</fullName>
+        <businessStatus>Active</businessStatus>
+        <description>Sales Call Center for Master Planned Community</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sales Call Center for Master Planned Community</inlineHelpText>
+        <label>Sales Call Center</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Shape_File_URL__c</fullName>
+        <businessStatus>Active</businessStatus>
+        <description>Location of the shape file in url format.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Location of the shape file in url format.</inlineHelpText>
+        <label>Shape File URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Short_URL__c</fullName>
+        <description>Shortened URL</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Shortened URL</inlineHelpText>
+        <label>Short URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Site_Plan_URL__c</fullName>
+        <businessStatus>Active</businessStatus>
+        <description>Location of the site plan in url format.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Location of the site plan in url format.</inlineHelpText>
+        <label>Site Plan URL</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>State_Calc__c</fullName>
+        <externalId>false</externalId>
+        <label>State</label>
+        <length>2</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Active</fullName>
+                    <default>false</default>
+                    <label>Active</label>
+                </value>
+                <value>
+                    <fullName>Sold Out</fullName>
+                    <default>false</default>
+                    <label>Sold Out</label>
+                </value>
+                <value>
+                    <fullName>Upcoming</fullName>
+                    <default>false</default>
+                    <label>Upcoming</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_Developer_Lots_Available_calc__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Developer_Lots_Planned__c  - ( Project_TUP_calc__c  +  Prior_Sold_Developer_Lots__c + Number_of_Rental_Units__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is an estimated value.</inlineHelpText>
+        <label>Total Developer Lots Available (calc)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Developer_Lots_Available_manual__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is an estimated value. For collection when other values are unavailable.</inlineHelpText>
+        <label>Total Developer Lots Available (manual)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Developer_Lots_Planned__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is an estimated value.</inlineHelpText>
+        <label>Total Developer Lots Planned</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Units_Planned_hard_code__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Units Planned (hard code)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Units_Remaining__c</fullName>
+        <externalId>false</externalId>
+        <formula>Project_TUP_calc__c  -  Project_TUS_calc__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>This is an estimated value.</inlineHelpText>
+        <label>Project TUR (calc)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Units_Remaining_calc__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Units_Planned_hard_code__c  -  Project_TUS_calc__c  -  Prior_Sold_Units_hard_code__c  - Rental_Units_hard_code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Units Remaining (calc)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unsold_Developer_Units__c</fullName>
+        <description>Created so that Research could vide this field without going into the App.
+-- currently this calc is done in the DB and this field is NOT passed to the DB</description>
+        <externalId>false</externalId>
+        <formula>Total_Units_Planned_hard_code__c - ( Prior_Sold_Units_hard_code__c +  Project_TUP_calc__c +  Rental_Units_hard_code__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Calc field - cannot be negative. No manual updates needed.
+
+Total_Units_Planned (hard code) - ([Prior_Sold_Units (hard code) + Project TUP (calc) + Rental Units (hard code))  -- currently this calc is done in the DB this field is not passed to the DB</inlineHelpText>
+        <label>Unsold Developer Units</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ZIP_Code_calc__c</fullName>
+        <externalId>false</externalId>
+        <label>ZIP Code</label>
+        <length>10</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Community</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Status__c</columns>
+        <columns>Region_ID__c</columns>
+        <columns>State_Calc__c</columns>
+        <columns>Master_Plan__c</columns>
+        <columns>Location__Latitude__s</columns>
+        <columns>Location__Longitude__s</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Master_Plans</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>Project_TUP_calc__c</columns>
+        <columns>Project_TUS_calc__c</columns>
+        <columns>Total_Developer_Lots_Available_calc__c</columns>
+        <columns>Total_Developer_Lots_Planned__c</columns>
+        <columns>Total_Units_Remaining__c</columns>
+        <columns>Prior_Sold_Developer_Lots__c</columns>
+        <columns>Acreage__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Community__c.Master_Plan</value>
+        </filters>
+        <label>All Master Plans</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Neighborhoods</fullName>
+        <columns>NAME</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>Project_TUP_calc__c</columns>
+        <columns>Project_TUS_calc__c</columns>
+        <columns>Total_Developer_Lots_Available_calc__c</columns>
+        <columns>Total_Developer_Lots_Planned__c</columns>
+        <columns>Total_Units_Remaining__c</columns>
+        <columns>Prior_Sold_Developer_Lots__c</columns>
+        <columns>Acreage__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Community__c.Neighborhood</value>
+        </filters>
+        <filters>
+            <field>Display_in_Zonda__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Neighborhoods</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All_Villages</fullName>
+        <columns>NAME</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>Master_Plan__c</columns>
+        <columns>Project_TUP_calc__c</columns>
+        <columns>Project_TUS_calc__c</columns>
+        <columns>Total_Developer_Lots_Available_calc__c</columns>
+        <columns>Total_Developer_Lots_Planned__c</columns>
+        <columns>Total_Units_Remaining__c</columns>
+        <columns>Prior_Sold_Developer_Lots__c</columns>
+        <columns>Acreage__c</columns>
+        <columns>Location__Latitude__s</columns>
+        <columns>Location__Longitude__s</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Community__c.Village</value>
+        </filters>
+        <label>All Villages</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Upcoming_Master_Plans</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Status__c</columns>
+        <columns>Project_TUP_calc__c</columns>
+        <columns>Project_TUS_calc__c</columns>
+        <columns>Total_Developer_Lots_Available_calc__c</columns>
+        <columns>Total_Developer_Lots_Planned__c</columns>
+        <columns>Total_Units_Remaining__c</columns>
+        <columns>Prior_Sold_Developer_Lots__c</columns>
+        <columns>Acreage__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>Community__c.Master_Plan</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Upcoming</value>
+        </filters>
+        <filters>
+            <field>Display_in_Zonda__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Upcoming Master Plans</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Name</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Communities</pluralLabel>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Master_Plan</fullName>
+        <active>true</active>
+        <description>1,000+ units with multiple product collections across multiple builders</description>
+        <label>Master Plan</label>
+        <picklistValues>
+            <picklist>Community_Characteristics__c</picklist>
+            <values>
+                <fullName>Active Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Affordable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alley Load SFD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carriage Homes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cluster Detached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condo Conversion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condo Hotel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condominiums</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detached Condo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplex%2FDuet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elevator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Golf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Rise %2812%2B Floors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LEED Certified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Live-Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Rise %281-4 Floors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Rise %285-11 Floors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixed-Use</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorcourts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Builder Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net Zero Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NexGen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ocean Views</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paired Homes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Passive House Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resort</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Lot Ordinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Temporarily Sold Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Townhomes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transit Oriented Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triplex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waterfront</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zero Lot Line</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Disposition__c</picklist>
+            <values>
+                <fullName>Baselined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Large_Scale_Amenities__c</picklist>
+            <values>
+                <fullName>Active Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amphitheater</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ball Fields</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civic Uses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clubhouse</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Gardens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Country Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dog Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitness Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Golf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hotels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixed-Use</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Space</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playground</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pool%28s%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recreation Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resort</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restaurant%28s%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Splash Pads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tennis Courts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tot Lots</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trails</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transit Oriented Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water Slides</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waterfront Recreation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region_ID__c</picklist>
+            <values>
+                <fullName>Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>East</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Florida</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mountain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>West</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Research_Status__c</picklist>
+            <values>
+                <fullName>Baselined 2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baselined 2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up required</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sold Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upcoming</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Neighborhood</fullName>
+        <active>true</active>
+        <description>Subdivision with &lt;1,000 units</description>
+        <label>Neighborhood</label>
+        <picklistValues>
+            <picklist>Community_Characteristics__c</picklist>
+            <values>
+                <fullName>Active Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Affordable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alley Load SFD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carriage Homes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cluster Detached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condo Conversion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condo Hotel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condominiums</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detached Condo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplex%2FDuet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elevator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Golf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Rise %2812%2B Floors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LEED Certified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Live-Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Rise %281-4 Floors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Rise %285-11 Floors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixed-Use</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorcourts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Builder Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net Zero Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NexGen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ocean Views</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paired Homes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Passive House Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resort</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Lot Ordinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Temporarily Sold Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Townhomes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transit Oriented Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triplex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waterfront</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zero Lot Line</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Disposition__c</picklist>
+            <values>
+                <fullName>Baselined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Large_Scale_Amenities__c</picklist>
+            <values>
+                <fullName>Active Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amphitheater</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ball Fields</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civic Uses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clubhouse</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Gardens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Country Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dog Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitness Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Golf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hotels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixed-Use</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Space</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playground</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pool%28s%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recreation Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resort</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restaurant%28s%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Splash Pads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tennis Courts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tot Lots</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trails</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transit Oriented Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water Slides</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waterfront Recreation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region_ID__c</picklist>
+            <values>
+                <fullName>Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>East</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Florida</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mountain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>West</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Research_Status__c</picklist>
+            <values>
+                <fullName>Baselined 2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baselined 2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up required</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sold Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upcoming</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Village</fullName>
+        <active>true</active>
+        <description>Contains projects and rolls up into a Master Plan</description>
+        <label>Village</label>
+        <picklistValues>
+            <picklist>Community_Characteristics__c</picklist>
+            <values>
+                <fullName>Active Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Affordable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alley Load SFD</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Basement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Carriage Homes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cluster Detached</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condo Conversion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condo Hotel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Condominiums</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Detached Condo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Duplex%2FDuet</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Elevator</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Golf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>High Rise %2812%2B Floors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LEED Certified</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Live-Work</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low Rise %281-4 Floors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mid-Rise %285-11 Floors%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixed-Use</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Motorcourts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Multi-Builder Community</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Net Zero Building</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NexGen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ocean Views</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Paired Homes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Passive House Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resort</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Small Lot Ordinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Temporarily Sold Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Townhomes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transit Oriented Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Triplex</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waterfront</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Zero Lot Line</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Disposition__c</picklist>
+            <values>
+                <fullName>Baselined</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow Up</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Large_Scale_Amenities__c</picklist>
+            <values>
+                <fullName>Active Adult</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amphitheater</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ball Fields</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Civic Uses</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Clubhouse</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Community Gardens</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Country Club</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dog Park</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitness Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gated</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Golf</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hotels</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mixed-Use</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open Space</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Playground</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pool%28s%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Recreation Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resort</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restaurant%28s%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Schools</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Splash Pads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tennis Courts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tot Lots</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trails</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Transit Oriented Development</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Water Slides</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waterfront Recreation</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Region_ID__c</picklist>
+            <values>
+                <fullName>Central</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>East</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Florida</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Midwest</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mountain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Northeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>South</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Southeast</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Texas</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>West</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Research_Status__c</picklist>
+            <values>
+                <fullName>Baselined 2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baselined 2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Follow up required</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Active</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sold Out</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Upcoming</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>State_Calc__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Region_ID__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Region_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>State_Calc__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>City_calc__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>State_Calc__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Region_ID__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

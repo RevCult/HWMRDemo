@@ -1,0 +1,90 @@
+<apex:page standardController="Opportunity" extensions="FC_OpportunitySendToZuoraController" action="{!sendToZuora}">
+    <apex:outputText rendered="false" value="{!Opportunity.Id}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.AccountId}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Account.Name}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.CloseDate}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.ContractId}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Contract.FC_Subscription__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Contract.FC_Subscription__r.Name}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Contract.FC_Subscription__r.Zuora__TermSettingType__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Contract.FC_Subscription_Number__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Auto_Renew__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Batch__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_Case__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_Cycle_Day__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.Billing_Email_Address__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.Email}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.Fax}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.FirstName}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.LastName}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.MailingCity}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.MailingCountryCode}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.MailingPostalCode}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.MailingState}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.MailingStateCode}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.MailingStreet}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Bill_To_Contact__r.Phone}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Billing_Account__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Billing_Account__r.Zuora__External_Id__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Currency__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Contract_Effective_Date__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Initial_Term__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Invoice_Separately__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Payment_Term__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Renew__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Renewal_Processed_On__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Renewal_Term__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Send_Provisioning_Notification__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Service_Activation_Date__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.Email}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.Fax}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.FirstName}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.LastName}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.MailingCity}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.MailingCountryCode}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.MailingPostalCode}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.MailingState}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.MailingStateCode}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.MailingStreet}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Sold_To_Contact__r.Phone}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Subscription_Notes__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_T_C_Term_Start_Date__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Target_Date__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.FC_Term_Type__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Metrostudy_Lead__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Name}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.One_time_Sale_Type__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Owner.Name}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Pricebook2Id}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Purchase_Type__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.Region__c}"/>
+
+    <style type="text/css">
+        .backToOppotunityLink {
+            height: auto;
+            margin-top: 3px;
+            margin-bottom: 1em;
+            font-family: 'Verdana', 'Geneva', sans-serif;
+            font-size: 91.3%;
+            vertical-align: middle;
+        }
+    </style>
+    <apex:sectionHeader title="Send To Zuora" subTitle="{!Opportunity.Name}"/>
+    <apex:outputPanel layout="block" styleClass="backToOppotunityLink">
+        <apex:outputLink value="/{!Opportunity.Id}">
+            <apex:outputText value="<< Back to Oppportunity: {!Opportunity.Name}"/>
+        </apex:outputLink>
+    </apex:outputPanel>
+
+    <apex:pageBlock mode="maindetail">
+        <apex:pageBlockSection collapsible="false" columns="1">
+            <apex:pageMessages />
+            <apex:pageBlockSectionItem rendered="{!hasAmendBillingInstructionSteps}">
+                <apex:outputLabel value="Amendment Status"/>
+                <c:FC_AmendmentJobStatus jobId="{!Opportunity.FC_Async_Amend_Job_Id__c}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

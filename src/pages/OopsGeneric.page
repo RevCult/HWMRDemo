@@ -1,0 +1,21 @@
+<apex:page showHeader="false" sidebar="false" docType="html-5.0" standardStylesheets="false">
+
+	<title>Oops...</title>
+
+	<style type="text/css">
+		* { background: #fffff3; font-family: "Trebuchet MS";}
+	</style>
+
+	<div style="text-align: center; padding-top: 100px;">
+
+		<img src="http://zonda.co/img/zonda-icon.png"/>
+
+		<h1>Oops... something's gone wrong here.</h1>
+
+		<h2>Please note what you were attempting to do when this occurred and contact your support team.</h2>
+
+		<h3>They'll be happy to hear from you anyway.</h3>
+
+	</div>
+	
+</apex:page>

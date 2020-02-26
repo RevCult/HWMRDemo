@@ -1,0 +1,34 @@
+<apex:page standardController="Account" extensions="MetroclientContactProvisioningByAccount" title="Provision Metrostudy Users">
+
+    <style>
+    .accountTab .secondaryPalette, .individualPalette .accountBlock .secondaryPalette {
+        background-color: #ffffff !important;
+        border-color: #ffffff !important;
+    }
+    </style>
+
+    <apex:form >
+    
+        <apex:pageBlock mode="maindetail">
+             
+            <apex:sectionHeader title="Provision Metrostudy Users" subtitle="{!account.Name}" />
+            <apex:outputLink value="/{!account.Id}">Return to Account</apex:outputLink>
+
+            <apex:iframe rendered="{!renderIframe}" src="https://hw64.metrostudy.com/Metrostudy/Production/Salesforce/Provisioning/Accounts/Controller.aspx?accountId={!account.Id}&ultimateParentAccountId={!account.UltimateParentAccountId__c}" scrolling="false" id="theIframe"/>
+ 
+             <br/>
+             <br/>
+             <br/>
+             
+             <apex:pageMessage rendered="{!invalidHierarchyDepth}" summary="The depth of the hierarchy of the selected account exceeds the maximum allowable depth (up to four-levels deep)." severity="warning" strength="3" />              
+  
+             <apex:pageMessage rendered="{!(!validProductsExist)}" summary="The selected account must have at least one product that can be provisioned in its hierarchy." severity="warning" strength="3" />              
+             
+             <apex:pageMessage rendered="{!(!metrostudyUserExists)}" summary="The selected account must have at least one contact designated as a Metrostudy user." severity="warning" strength="3" />              
+            
+            
+        </apex:pageBlock>       
+            
+    </apex:form>            
+
+</apex:page>

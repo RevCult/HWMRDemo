@@ -1,0 +1,6 @@
+<apex:page standardController="zqu__Quote__c" extensions="z_generate_quote_pdf" showHeader="true" sidebar="true" action="{!generate}">
+<apex:pageMessages id="msg" />
+    Test Page<br/>
+    Quote ID: {!quote.Id}<br/>
+    DefaultQuoteTemplate ID: {!defaultQuoteTemplateId}<br/>
+</apex:page>

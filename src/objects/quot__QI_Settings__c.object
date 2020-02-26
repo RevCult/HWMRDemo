@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Settings controlling the behavior of the Quotes and Invoices add-on for PaymentConnect.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>quot__Force_com_Domain__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Force.com domain for your instance of Salesforce (e.g. https://mycompany.na7.secure.force.com).  Your Sites or Community portal subdomain will be appended to this domain when constructing URLs to Quotes &amp; Invoices landing pages.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Force.com domain for your instance of Salesforce (e.g. https://mycompany.na7.secure.force.com).  Your Sites or Community portal subdomain will be appended to this domain when constructing URLs to Quotes &amp; Invoices landing pages.</inlineHelpText>
+        <label>Force.com Domain</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>quot__HideInvoiceShippingAddr__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides the shipping address details on invoice landing pages.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides the shipping address details on invoice landing pages.</inlineHelpText>
+        <label>Hide Invoice Shipping Addr</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>quot__HideQuoteShippingAddr__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides the shipping address details on quote landing pages.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides the shipping address details on quote landing pages.</inlineHelpText>
+        <label>Hide Quote Shipping Addr</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>quot__PtlInvoice_Page__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Optional) If a custom version of the PtlInvoice page is being used, register the page name here to override the default page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Optional) If a custom version of the PtlInvoice page is being used, register the page name here to override the default page.</inlineHelpText>
+        <label>PtlInvoice Page</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>quot__PtlQuoteApproval_Page__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Optional) If a custom version of the PtlQuoteApproval page is being used, register the page name here to override the default page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Optional) If a custom version of the PtlQuoteApproval page is being used, register the page name here to override the default page.</inlineHelpText>
+        <label>PtlQuoteApproval Page</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>quot__PtlSupportAuth_Page__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Optional) If a custom version of the PtlSupportAuth page is being used, register the page name here to override the default page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Optional) If a custom version of the PtlSupportAuth page is being used, register the page name here to override the default page.</inlineHelpText>
+        <label>PtlSupportAuth Page</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>quot__SF_Rich_Text_on_Cases__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Use the built-in rich text field type for Statement of Work on Cases, instead of the extended rich text editor included with Quotes &amp; Invoices.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use the built-in rich text field type for Statement of Work on Cases, instead of the extended rich text editor included with Quotes &amp; Invoices.</inlineHelpText>
+        <label>Use Saleforce Rich Text on Cases</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>quot__SF_Rich_Text_on_Opps__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Use the built-in rich text field type for Terms and Conditions on Opportunities, instead of the extended rich text editor included with Quotes &amp; Invoices.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use the built-in rich text field type for Terms and Conditions on Opportunities, instead of the extended rich text editor included with Quotes &amp; Invoices.</inlineHelpText>
+        <label>Use Salesforce Rich Text on Opps</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>quot__SiteInvoice_Page__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Optional) If a custom version of the SiteInvoice page is being used, register the page name here to override the default page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Optional) If a custom version of the SiteInvoice page is being used, register the page name here to override the default page.</inlineHelpText>
+        <label>SiteInvoice Page</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>quot__SiteInvoice_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Complete URL for the SiteInvoice page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Complete URL for the SiteInvoice page.</inlineHelpText>
+        <label>SiteInvoice URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>quot__SiteQuoteApproval_Page__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Optional) If a custom version of the SiteQuoteApproval page is being used, register the page name here to override the default page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Optional) If a custom version of the SiteQuoteApproval page is being used, register the page name here to override the default page.</inlineHelpText>
+        <label>SiteQuoteApproval Page</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>quot__SiteQuoteApproval_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Complete URL for the SiteQuoteApproval page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Complete URL for the SiteQuoteApproval page.</inlineHelpText>
+        <label>SiteQuoteApproval URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>quot__SiteSupportAuth_Page__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Optional) If a custom version of the SiteSupportAuth page is being used, register the page name here to override the default page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>(Optional) If a custom version of the SiteSupportAuth page is being used, register the page name here to override the default page.</inlineHelpText>
+        <label>SiteSupportAuth Page</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>quot__SiteSupportAuth_URL__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Complete URL for the SiteSupportAuth page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Complete URL for the SiteSupportAuth page.</inlineHelpText>
+        <label>SiteSupportAuth URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>quot__Sites_Website__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Database name of the default Sites website or Community portal that will be used in collecting online payments for quotes and invoices.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Database name of the default Sites website or Community portal that will be used in collecting online payments for quotes and invoices.</inlineHelpText>
+        <label>Community/Site</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>quot__Support_Auth_Batch_Job_Id__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Batch job ID used to keep track of the currently scheduled Support Auth field update batch script for scheduling/cancelling.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Batch job ID used to keep track of the currently scheduled Support Auth field update batch script for scheduling/cancelling.</inlineHelpText>
+        <label>Support Auth Batch Job Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>quot__Support_Auth_I_Agree__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Display and require the &quot;I Agree&quot; checkbox for online support authorizations.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display and require the &quot;I Agree&quot; checkbox for online support authorizations.</inlineHelpText>
+        <label>Support Auth I Agree</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Quotes And Invoices Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

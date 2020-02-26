@@ -1,0 +1,15 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" controller="ProjectStatusBoardController">
+	<style type="text/css">
+		h3 {padding: 0px 0px; margin: 5px 0px;}
+	</style>
+	<apex:form >
+		<apex:outputPanel layout="block" id="theDeets">
+			<h3>In Progress Project Updates:&nbsp;&nbsp;<apex:outputText value="{!inProgressUpdateCount}" /></h3>
+			<h3>Pending Project Updates:&nbsp;&nbsp;<apex:outputText value="{!pendingUpdateCount}" /></h3>
+			<h3>Total # of Builders:&nbsp;&nbsp;<apex:outputText value="{!totalBuilderCount}" /></h3>
+			<h3>Total # of Projects:&nbsp;&nbsp;<apex:outputText value="{!totalProjectCount}" /></h3>
+		</apex:outputPanel>
+		<apex:actionPoller reRender="theDeets" interval="5" />
+	</apex:form>
+
+</apex:page>

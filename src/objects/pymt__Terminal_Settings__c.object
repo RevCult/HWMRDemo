@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Allows management of PaymentConnect terminal features on a user-by-user basis.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>pymt__ARB_Default_Processor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default processor connection to use in the AuthNet Recurring Billing Terminal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default processor connection to use in the AuthNet Recurring Billing Terminal.</inlineHelpText>
+        <label>Default Processor Connection</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Auto_Check_Save_Payment_Method__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Auto-Check the &quot;Save Payment Method&quot; option checkbox.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Auto-Check the &quot;Save Payment Method&quot; option checkbox.</inlineHelpText>
+        <label>Auto-Check Save Payment Method</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Enable_Card_Swipe__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enables the card swipe option (check documentation for supported card readers).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables the card swipe option (check documentation for supported card readers).</inlineHelpText>
+        <label>Enable Card Swipe</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Enable_User_Edit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, allows users to edit their own personal terminal settings.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, allows users to edit their own personal terminal settings.</inlineHelpText>
+        <label>Enable User Edit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_ARB_Cat_Split_Names__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides the category split picklist on the AuthNet ARB Terminal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides the category split picklist on the AuthNet ARB Terminal.</inlineHelpText>
+        <label>Hide Category Split Names</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_ARB_Invoice_Number__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show/Hide the AuthNet ARB Terminal Invoice Number field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Show/Hide the AuthNet ARB Terminal Invoice Number field.</inlineHelpText>
+        <label>Hide ARB Invoice Number</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_ARB_Shipping__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show/Hide shipping fields on the AuthNet Recurring Billing terminal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Show/Hide shipping fields on the AuthNet Recurring Billing terminal</inlineHelpText>
+        <label>Hide ARB Shipping</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_AuthNet_Trial_Fields__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Hide/show trial subscription fields (trial amount, frequency, period &amp; occurrences) on the PayPal recurring payment terminal.</inlineHelpText>
+        <label>Hide AuthNet Trial Fields</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_Cash_Entry_Cat_Split_Names__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides the category split picklist from the Cash Entry terminal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides the category split picklist from the Cash Entry terminal</inlineHelpText>
+        <label>Hide Category Split Names</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_Cash_Entry_Shipping_Address_Fields__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides shipping address fields on the Cash Entry terminal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides shipping address fields on the Cash Entry terminal.</inlineHelpText>
+        <label>Hide Shipping Address Fields</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_Native_Recur_Cat_Split_Names__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides the category split names picklist on the native Scheduled Payments Terminal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides the category split names picklist on the native Scheduled Payments Terminal.</inlineHelpText>
+        <label>Hide Category Split Names</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_Native_Recur_Shipping_Address__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides the shipping address fields on the Native Scheduled Payments Terminal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides the shipping address fields on the Native Scheduled Payments Terminal.</inlineHelpText>
+        <label>Hide Shipping Address Fields</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_Native_Recur_Trial_Fields__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides the subscription trial fields on the Native Scheduled Payments Terminal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides the subscription trial fields on the Native Scheduled Payments Terminal.</inlineHelpText>
+        <label>Hide Subscription Trial Fields</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_PayPal_Profile_Reference__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide/Show the PayPal recurring payment profile Reference Number field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hide/Show the PayPal recurring payment profile Reference Number field.</inlineHelpText>
+        <label>Hide PayPal Profile Reference</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_PayPal_Recurring_Cat_Split_Names__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides the category split picklist on the PayPal Subscription Terminal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides the category split picklist on the PayPal Subscription Terminal.</inlineHelpText>
+        <label>Hide Category Split Names</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_PayPal_Recurring_Shipping__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show/Hide shipping fields on the PayPal Recurring Payments terminal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Show/Hide shipping fields on the PayPal Recurring Payments terminal</inlineHelpText>
+        <label>Hide PayPal Recurring Shipping</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_PayPal_Recurring_Tax__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show/Hide PayPal Recurring Payment tax fields on the terminal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Show/Hide PayPal Recurring Payment tax fields on the terminal</inlineHelpText>
+        <label>Hide PayPal Recurring Tax</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_PayPal_Trial_Fields__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Hide/show trial subscription fields (trial amount, frequency, period &amp; occurrences) on the PayPal recurring payment terminal.</inlineHelpText>
+        <label>Hide PayPal Trial Fields</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_Pmt_Term_Cat_Split_Names__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hides the category split picklist from the payment terminal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hides the category split picklist from the payment terminal</inlineHelpText>
+        <label>Hide Category Split Names</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_Pmt_Term_Invoice__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide/Show the invoice number field on the credit card terminal</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hide/Show the invoice number field</inlineHelpText>
+        <label>Hide Invoice Number</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_Pmt_Term_Shipping_Address__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Hide/show shipping address fields on the Payment Terminal</inlineHelpText>
+        <label>Hide Shipping Address Fields</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Hide_Pmt_Term_Shipping_Handling__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Hide/show the Payment Terminal shipping and handling amount field.</inlineHelpText>
+        <label>Hide Shipping and Handling</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__PRB_Default_Processor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default processor connection to use in the PayPal Recurring Billing Terminal.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default processor connection to use in the PayPal Recurring Billing Terminal.</inlineHelpText>
+        <label>Default Processor Connection</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Pmt_Term_Apply_Tax_To_Shipping__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Checks the &quot;Tax Shipping&quot; box on the Payment Terminal so that the tax percent is also applied to shipping amounts.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checks the &quot;Tax Shipping&quot; box on the Payment Terminal so that the tax percent is also applied to shipping amounts.</inlineHelpText>
+        <label>Apply Tax To Shipping</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>pymt__Pmt_Term_Default_Processor__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Default processor connection to use in the Credit Card terminal.  Can be overriden by setting terminal URL parameters or setting the processor connection on the Payment record being passed in.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default processor connection to use in the Credit Card terminal.  Can be overriden by setting terminal URL parameters or setting the processor connection on the Payment record being passed in.</inlineHelpText>
+        <label>Default Processor Connection</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Widget_1__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If blank, defaults to &quot;reportChart:pymt__Monthly_Receipts&quot;.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If blank, defaults to &quot;reportChart:pymt__Monthly_Receipts&quot;.</inlineHelpText>
+        <label>Widget 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Widget_2__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If blank, defaults to &quot;reportChart:pymt__Cart_Item_Revenue&quot;.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If blank, defaults to &quot;reportChart:pymt__Cart_Item_Revenue&quot;.</inlineHelpText>
+        <label>Widget 2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Widget_3__c</fullName>
+        <deprecated>false</deprecated>
+        <description>If blank, defaults to &quot;reportChart:pymt__Category_Totals_By_Month&quot;.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If blank, defaults to &quot;reportChart:pymt__Category_Totals_By_Month&quot;.</inlineHelpText>
+        <label>Widget 3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Widget_4__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Widget 4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Widget_5__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Widget 5</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>pymt__Widget_Size__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Corresponds to the visualforce reportChart size values (tiny, small, medium, large, huge)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Corresponds to the visualforce reportChart size values (tiny, small, medium, large, huge)</inlineHelpText>
+        <label>Widget Size</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Terminal Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

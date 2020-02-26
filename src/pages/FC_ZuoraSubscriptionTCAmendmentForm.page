@@ -1,0 +1,146 @@
+<apex:page docType="html-5.0" standardController="Zuora__Subscription__c"
+           extensions="FC_ZuoraSubscriptionTCAmendmentFormCtrl">
+    <apex:outputText rendered="false" value="{!Zuora__Subscription__c.Zuora__Account__c}"/>
+    <apex:outputText rendered="false" value="{!Zuora__Subscription__c.Zuora__TermStartDate__c}"/>
+    <apex:outputText rendered="false" value="{!Zuora__Subscription__c.Zuora__TermEndDate__c}"/>
+    <apex:outputText rendered="false" value="{!Zuora__Subscription__c.Zuora__CurrentTermPeriodType__c}"/>
+    <apex:outputText rendered="false" value="{!Zuora__Subscription__c.Zuora__RenewalTermPeriodType__c}"/>
+    <apex:outputText rendered="false" value="{!Zuora__Subscription__c.Zuora__AutoRenew__c}"/>
+    <style type="text/css">
+        table td.radio fieldset {
+            padding: 0;
+            margin: -5px;
+        }
+    </style>
+    <apex:form >
+        <apex:sectionHeader title="Term & Conditions Amendment"
+                            subTitle="{!Zuora__Subscription__c.Zuora__SubscriptionNumber__c}"/>
+        <apex:pageMessages />
+        <apex:pageBlock rendered="{!!success}">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!processAmendment}" value="Submit"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection collapsible="false" columns="1" title="Amendment Detail"/>
+            <apex:outputPanel layout="block" id="pnlFormTable">
+                <table width="100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Current Value</th>
+                        <th>New Value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Term Setting</td>
+                        <td>
+                            <apex:outputText value="{!Zuora__Subscription__c.Zuora__TermSettingType__c}"/>
+                        </td>
+                        <td class="radio">
+                            <apex:selectRadio value="{!termType}">
+                                <apex:actionSupport event="onchange" reRender="pnlFormTable"/>
+                                <apex:selectOption itemLabel="Evergreen" itemValue="EVERGREEN"/>
+                                <apex:selectOption itemLabel="Termed" itemValue="TERMED"/>
+                            </apex:selectRadio>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Current Term</td>
+                        <td>
+                            <apex:outputText rendered="{!Zuora__Subscription__c.Zuora__TermSettingType__c == 'TERMED'}"
+                                             value="{!Zuora__Subscription__c.Zuora__InitialTerm__c}"/>
+                            <apex:outputText rendered="{!Zuora__Subscription__c.Zuora__TermSettingType__c == 'EVERGREEN'}"
+                                    value="N/A"/>
+                        </td>
+                        <td>
+                            <apex:panelGrid rendered="{!termType == 'TERMED'}" columns="2">
+                                <apex:inputText value="{!currentTerm}">
+                                    <apex:actionSupport event="onchange" reRender="newTermEndDate"/>
+                                </apex:inputText>
+                                <apex:selectList value="{!currentTermPeriodType}" multiSelect="false" size="1">
+                                    <apex:actionSupport event="onchange" reRender="newTermEndDate"/>
+                                    <apex:selectOption itemLabel="Month(s)" itemValue="Month"/>
+                                    <apex:selectOption itemLabel="Year(s)" itemValue="Year"/>
+                                    <apex:selectOption itemLabel="Day(s)" itemValue="Day"/>
+                                    <apex:selectOption itemLabel="Week(s)" itemValue="Week"/>
+                                </apex:selectList>
+                            </apex:panelGrid>
+                            <apex:outputText rendered="{!termType == 'EVERGREEN'}" value="N/A"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Renewal Setting</td>
+                        <td>
+                            <apex:outputText rendered="{!Zuora__Subscription__c.Zuora__TermSettingType__c == 'TERMED'}"
+                                             value="Renew with Specific Term"/>
+                            <apex:outputText rendered="{!Zuora__Subscription__c.Zuora__TermSettingType__c == 'EVERGREEN'}"
+                                    value="N/A"/>
+                        </td>
+                        <td class="radio">
+                            <apex:selectRadio rendered="{!termType == 'TERMED'}" value="{!renewalSetting}">
+                                <apex:selectOption itemLabel="Renew with Specific Term"
+                                                   itemValue="RENEW_WITH_SPECIFIC_TERM"/>
+                                <apex:selectOption itemLabel="Renew To Evergreen" itemValue="RENEW_TO_EVERGREEN"/>
+                            </apex:selectRadio>
+                            <apex:outputText rendered="{!termType == 'EVERGREEN'}" value="N/A"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Renewal Term</td>
+                        <td>
+                            <apex:outputText rendered="{!Zuora__Subscription__c.Zuora__TermSettingType__c == 'TERMED'}"
+                                             value="{!Zuora__Subscription__c.Zuora__RenewalTerm__c}"/>
+                            <apex:outputText rendered="{!Zuora__Subscription__c.Zuora__TermSettingType__c == 'EVERGREEN'}"
+                                    value="N/A"/>
+                        </td>
+                        <td>
+                            <apex:panelGrid rendered="{!termType == 'TERMED'}" columns="2">
+                                <apex:inputText value="{!renewalTerm}">
+                                    <apex:actionSupport event="onchange" reRender="newTermEndDate"/>
+                                </apex:inputText>
+                                <apex:selectList value="{!renewalTermPeriodType}" multiSelect="false" size="1">
+                                    <apex:actionSupport event="onchange" reRender="newTermEndDate"/>
+                                    <apex:selectOption itemLabel="Month(s)" itemValue="Month"/>
+                                    <apex:selectOption itemLabel="Year(s)" itemValue="Year"/>
+                                    <apex:selectOption itemLabel="Day(s)" itemValue="Day"/>
+                                    <apex:selectOption itemLabel="Week(s)" itemValue="Week"/>
+                                </apex:selectList>
+                            </apex:panelGrid>
+                            <apex:outputText rendered="{!termType == 'EVERGREEN'}" value="N/A"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Current Term Start Date</td>
+                        <td>
+                            <apex:outputText value="{!displaySubscriptionTermStartDate}"/>
+                        </td>
+                        <td>
+                            <apex:input value="{!termStartDate}" type="date" html-pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Current Term End Date</td>
+                        <td>
+                            <apex:outputText value="{!displaySubscriptionTermEndDate}"/>
+                        </td>
+                        <td>
+                            <apex:outputText id="newTermEndDate" value="{!displayNewTermEndDate}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Auto Renewal</td>
+                        <td>
+                            <apex:outputText value="{!IF(Zuora__Subscription__c.Zuora__AutoRenew__c, 'Yes', 'No')}"/>
+                        </td>
+                        <td>
+                            <apex:inputCheckbox rendered="{!termType == 'TERMED'}" value="{!autoRenew}"/>
+                            <apex:outputText rendered="{!termType == 'EVERGREEN'}" value="N/A"/>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </apex:outputPanel>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

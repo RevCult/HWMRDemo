@@ -1,0 +1,3358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChoosePricebook</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EditAllProduct</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fieldSets>
+        <fullName>AB2__ExtendedSaveDropFields</fullName>
+        <availableFields>
+            <field>AB2__ABDropGoals__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>AB2__ABDropID__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>AB2__ABEndDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>AB2__ABStartDate__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>Quantity</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <availableFields>
+            <field>TotalPrice</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </availableFields>
+        <description>Additional fields to display on the summary at the top of the Drop finishing page (SaveDrop.page)</description>
+        <label>ExtendedSaveDropFields</label>
+    </fieldSets>
+    <fields>
+        <fullName>AB2__AB3rdPartyAdServer__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>AB 3rd Party Ad Server</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Atlas</fullName>
+                    <default>false</default>
+                    <label>Atlas</label>
+                </value>
+                <value>
+                    <fullName>DFA</fullName>
+                    <default>false</default>
+                    <label>DFA</label>
+                </value>
+                <value>
+                    <fullName>Eyeblaster</fullName>
+                    <default>false</default>
+                    <label>Eyeblaster</label>
+                </value>
+                <value>
+                    <fullName>MediaPlexxxx</fullName>
+                    <default>false</default>
+                    <label>MediaPlexxxx</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ABAdUnit__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>AB Ad Unit</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>110x75</fullName>
+                    <default>false</default>
+                    <label>110x75</label>
+                </value>
+                <value>
+                    <fullName>120x60</fullName>
+                    <default>false</default>
+                    <label>120x60</label>
+                </value>
+                <value>
+                    <fullName>120x90</fullName>
+                    <default>false</default>
+                    <label>120x90</label>
+                </value>
+                <value>
+                    <fullName>125x125</fullName>
+                    <default>false</default>
+                    <label>125x125</label>
+                </value>
+                <value>
+                    <fullName>130x100</fullName>
+                    <default>false</default>
+                    <label>130x100</label>
+                </value>
+                <value>
+                    <fullName>130x50</fullName>
+                    <default>false</default>
+                    <label>130x50</label>
+                </value>
+                <value>
+                    <fullName>140x200</fullName>
+                    <default>false</default>
+                    <label>140x200</label>
+                </value>
+                <value>
+                    <fullName>145 x 55</fullName>
+                    <default>false</default>
+                    <label>145 x 55</label>
+                </value>
+                <value>
+                    <fullName>200x200</fullName>
+                    <default>false</default>
+                    <label>200x200</label>
+                </value>
+                <value>
+                    <fullName>220x100</fullName>
+                    <default>false</default>
+                    <label>220x100</label>
+                </value>
+                <value>
+                    <fullName>234x60</fullName>
+                    <default>false</default>
+                    <label>234x60</label>
+                </value>
+                <value>
+                    <fullName>38x38</fullName>
+                    <default>false</default>
+                    <label>38x38</label>
+                </value>
+                <value>
+                    <fullName>400x40</fullName>
+                    <default>false</default>
+                    <label>400x40</label>
+                </value>
+                <value>
+                    <fullName>405x100</fullName>
+                    <default>false</default>
+                    <label>405x100</label>
+                </value>
+                <value>
+                    <fullName>468x60</fullName>
+                    <default>false</default>
+                    <label>468x60</label>
+                </value>
+                <value>
+                    <fullName>600x50</fullName>
+                    <default>false</default>
+                    <label>600x50</label>
+                </value>
+                <value>
+                    <fullName>Text</fullName>
+                    <default>false</default>
+                    <label>Text</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ABBillingModel__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook Drop Billing Model</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Drop Billing Model</inlineHelpText>
+        <label>AB Billing Model</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>DeliveryLifetimeCap</fullName>
+                    <default>true</default>
+                    <label>DeliveryLifetimeCap</label>
+                </value>
+                <value>
+                    <fullName>NotSpecified</fullName>
+                    <default>false</default>
+                    <label>NotSpecified</label>
+                </value>
+                <value>
+                    <fullName>UpFront</fullName>
+                    <default>false</default>
+                    <label>UpFront</label>
+                </value>
+                <value>
+                    <fullName>ProRata</fullName>
+                    <default>false</default>
+                    <label>ProRata</label>
+                </value>
+                <value>
+                    <fullName>Special</fullName>
+                    <default>false</default>
+                    <label>Special</label>
+                </value>
+                <value>
+                    <fullName>DeliveryUncapped</fullName>
+                    <default>false</default>
+                    <label>DeliveryUncapped</label>
+                </value>
+                <value>
+                    <fullName>DeliveryAccrual</fullName>
+                    <default>false</default>
+                    <label>DeliveryAccrual</label>
+                </value>
+                <value>
+                    <fullName>DeliveryProRataLifeTimeCap</fullName>
+                    <default>false</default>
+                    <label>DeliveryProRataLifeTimeCap</label>
+                </value>
+                <value>
+                    <fullName>DeliveryPeriodicCap</fullName>
+                    <default>false</default>
+                    <label>DeliveryPeriodicCap</label>
+                </value>
+                <value>
+                    <fullName>ProRataEvenMonths</fullName>
+                    <default>false</default>
+                    <label>ProRataEvenMonths</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ABCreativeDueDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>AB Creative Due Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropBilling__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated. Use ABBillingModel__c instead.</description>
+        <externalId>false</externalId>
+        <label>Deprecated: AB Drop Billing</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>100% Upfront</fullName>
+                    <default>false</default>
+                    <label>100% Upfront</label>
+                </value>
+                <value>
+                    <fullName>Pro-Rata</fullName>
+                    <default>true</default>
+                    <label>Pro-Rata</label>
+                </value>
+                <value>
+                    <fullName>Pro-Rata Even Months</fullName>
+                    <default>false</default>
+                    <label>Pro-Rata Even Months</label>
+                </value>
+                <value>
+                    <fullName>Delivery</fullName>
+                    <default>false</default>
+                    <label>Delivery</label>
+                </value>
+                <value>
+                    <fullName>Special</fullName>
+                    <default>false</default>
+                    <label>Special</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropCancelled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Has the drop been cancelled?
+Corresponds to the AdBook Drop.ActiveStatus == &apos;Cancelled&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the drop been cancelled?</inlineHelpText>
+        <label>AB Drop Cancelled</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropGoals__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Goal count for a Drop.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Goal count for a Drop.</inlineHelpText>
+        <label>AB Drop Goals</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropIDUnique__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Shadows the AB DropID field to enforce uniqueness. This field isn&apos;t marked as an External ID so that it doesn&apos;t contribute to the limit per object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Shadows the AB DropID field to enforce uniqueness.</inlineHelpText>
+        <label>AB DropID Unique</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>AB DropID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropNotes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Drop Notes</description>
+        <externalId>false</externalId>
+        <inlineHelpText>AdBook Drop Notes</inlineHelpText>
+        <label>AB Drop Notes</label>
+        <length>3000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropPrice__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Drop Price from last refresh</description>
+        <externalId>false</externalId>
+        <inlineHelpText>AdBook Drop Price from last refresh</inlineHelpText>
+        <label>AB Drop Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABEndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the End Date of the drop here.</inlineHelpText>
+        <label>AB End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABGrossCost__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook Net Price adjusted to include the Agency Commission.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Net Price adjusted to include the Agency Commission.</inlineHelpText>
+        <label>AB Gross Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABMediaElementID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook Media Element Id (Long)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Media Element Identifier</inlineHelpText>
+        <label>AB MediaElementID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABMediaElementPath__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>AB Media Element Path</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AB2__ABMediaElement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The AdBook Media Element for the drop.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Link to the Salesforce record for AdBook Media Element</inlineHelpText>
+        <label>AB MediaElement</label>
+        <referenceTo>AB2__MediaElement__c</referenceTo>
+        <relationshipLabel>Opportunity Drops</relationshipLabel>
+        <relationshipName>OpportunityLineItems</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABPackageDrop__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>AdBook Package Drop. Used if the Package Drop Components are stored in OLI records.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>AdBook Package Drop</inlineHelpText>
+        <label>AB Package Drop</label>
+        <referenceTo>AB2__AdBookPackageDrop__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>OpportunityLineItem</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABPackagePrice__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook Working User Price to override the standard pricing for Package Drops</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Price to override the standard pricing for Package Drops</inlineHelpText>
+        <label>AB Package Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABParentPackageID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Parent Package Media Element ID. This field must be populated to correctly associate a package component drop stored as an OLI with the parent package.</description>
+        <externalId>false</externalId>
+        <label>AB Package Media Element ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABParentPackageOpportunityLineItemID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Deprecated) Replaced by ABPackageDrop__c which is a direct lookup to the package drop.
+ID of the Parent Package (if applicable)</description>
+        <externalId>false</externalId>
+        <label>(Deprecated) AB Package Product ID</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABPayType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Billing Category - Paid For / Value  Add / Make Good / Remnant</description>
+        <externalId>false</externalId>
+        <inlineHelpText>AdBook Billing Category</inlineHelpText>
+        <label>AB Pay Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>PaidFor</fullName>
+                    <default>false</default>
+                    <label>PaidFor</label>
+                </value>
+                <value>
+                    <fullName>ValueAdd</fullName>
+                    <default>false</default>
+                    <label>ValueAdd</label>
+                </value>
+                <value>
+                    <fullName>MakeGood</fullName>
+                    <default>false</default>
+                    <label>MakeGood</label>
+                </value>
+                <value>
+                    <fullName>Remnant</fullName>
+                    <default>false</default>
+                    <label>Remnant</label>
+                </value>
+                <value>
+                    <fullName>TBD</fullName>
+                    <default>false</default>
+                    <label>TBD</label>
+                </value>
+                <value>
+                    <fullName>Barter</fullName>
+                    <default>false</default>
+                    <label>Barter</label>
+                </value>
+                <value>
+                    <fullName>Promo</fullName>
+                    <default>false</default>
+                    <label>Promo</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ABPriceTypeRecord__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The AdBook Price Type. Determines the AB Price Calculation Type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Price Type. Determines the AB Price Calculation Type.</inlineHelpText>
+        <label>AB Price Type</label>
+        <referenceTo>AB2__AdBookPriceType__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>OpportunityLineItem</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABPriceType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook PriceType that is used for pricing calculations</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook PriceType that is used for pricing calculations</inlineHelpText>
+        <label>AB Price Calculation Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CPM</fullName>
+                    <default>false</default>
+                    <label>CPM</label>
+                </value>
+                <value>
+                    <fullName>CPC</fullName>
+                    <default>false</default>
+                    <label>CPC</label>
+                </value>
+                <value>
+                    <fullName>Flat Rate</fullName>
+                    <default>false</default>
+                    <label>Flat Rate</label>
+                </value>
+                <value>
+                    <fullName>CPZ</fullName>
+                    <default>false</default>
+                    <label>CPZ</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ABQuantityZero__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Is the AdBook drop quantity zero?
+Allows for zero quantity drops. The Salesforce Quantity field will be set to 1 in these cases.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the AdBook drop quantity zero?</inlineHelpText>
+        <label>AB Quantity Zero</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Start Date of the drop here.</inlineHelpText>
+        <label>AB Start Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABUpdateFromCode__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When set to true(checked) indicates that the operation being performed on the OpportunityLineItem is triggered from code and should not result in an automated Sync/Rollup action.
+This field should only be set from code and will be cleared by a trigger when used.</description>
+        <externalId>false</externalId>
+        <label>AB UpdateFromCode</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__AB_Synchronization_Issue__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>In the event of a synchronization issue creating this drop in AdBook this record will be prevented from further sync operations until linked to the correct record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>In the event of a synchronization issue creating this drop in AdBook this record will be prevented from further sync operations until linked to the correct record.</inlineHelpText>
+        <label>AB Synchronization Issue</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__CPM_Cost_per_1000__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook Working Unit/Net Price. Maps to the AdBook Drop.Price field.
+For orders with PriceType of CPM this will be the price per 1000 impressions.
+For Flat Rate, CPA/CPC and CPL orders this is the price as entered.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Working Unit/Net Price. Maps to the AdBook Drop.Price field.
+For orders with PriceType of CPM this will be the price per 1000 impressions.
+For Flat Rate, CPA/CPC and CPL orders this is the price as entered.</inlineHelpText>
+        <label>AB Working Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DoNotDeploy_Topic__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used for internal testing of multi-select auto mapping only. DO NOT DEPLOY/PACKAGE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used for internal testing of multi-select auto mapping only. DO NOT DEPLOY/PACKAGE</inlineHelpText>
+        <label>DO NOT DEPLOY</label>
+        <required>false</required>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Option 1</fullName>
+                    <default>false</default>
+                    <label>Option 1</label>
+                </value>
+                <value>
+                    <fullName>Option 2</fullName>
+                    <default>false</default>
+                    <label>Option 2</label>
+                </value>
+                <value>
+                    <fullName>Option 3</fullName>
+                    <default>false</default>
+                    <label>Option 3</label>
+                </value>
+                <value>
+                    <fullName>Option 4</fullName>
+                    <default>false</default>
+                    <label>Option 4</label>
+                </value>
+                <value>
+                    <fullName>12345</fullName>
+                    <default>false</default>
+                    <label>12345</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AB_End_Date_Conversion__c</fullName>
+        <externalId>false</externalId>
+        <formula>DateTimeValue(AB2__ABEndDate__c) + 0.5</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AB End Date Conversion</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>AB_Start_Date_Conversion__c</fullName>
+        <externalId>false</externalId>
+        <formula>DateTimeValue( AB2__ABStartDate__c ) + 0.5</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AB Start Date Conversion</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Opportunity.AccountId ,
+
+Opportunity.Account.Name )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>R00N80000002yTmxEAE</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Expense_Less_Labor__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Expense Less Labor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Billing_Frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Billing Frequency</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Subscription_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>true</default>
+                    <label>Annually</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>One-Time</fullName>
+                    <default>false</default>
+                    <label>One-Time</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Semi-Annually</fullName>
+                    <default>false</default>
+                    <label>Semi-Annually</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Subscription</controllingFieldValue>
+                <valueName>Annually</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Subscription</controllingFieldValue>
+                <valueName>Monthly</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Subscription</controllingFieldValue>
+                <valueName>Quarterly</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Subscription</controllingFieldValue>
+                <valueName>Semi-Annually</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>One-Time Purchase</controllingFieldValue>
+                <valueName>One-Time</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Billing_Price__c</fullName>
+        <defaultValue>ListPrice</defaultValue>
+        <externalId>false</externalId>
+        <label>Billing Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Boomi_Integration_Approval_Error__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Boomi Integration Approval Error</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Boomi_Integration_Error_Bypass_OLI__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Boomi Integration Error Bypass OLI</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Brand_Group2__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand Group2</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Residential Construction</fullName>
+                    <default>false</default>
+                    <label>Residential Construction</label>
+                </value>
+                <value>
+                    <fullName>Commercial Design</fullName>
+                    <default>false</default>
+                    <label>Commercial Design</label>
+                </value>
+                <value>
+                    <fullName>Consumer</fullName>
+                    <default>false</default>
+                    <label>Consumer</label>
+                </value>
+                <value>
+                    <fullName>Residential Remodeling</fullName>
+                    <default>false</default>
+                    <label>Residential Remodeling</label>
+                </value>
+                <value>
+                    <fullName>Commercial Construction</fullName>
+                    <default>false</default>
+                    <label>Commercial Construction</label>
+                </value>
+                <value>
+                    <fullName>HW Media</fullName>
+                    <default>false</default>
+                    <label>HW Media</label>
+                </value>
+                <value>
+                    <fullName>FedEx</fullName>
+                    <default>false</default>
+                    <label>FedEx</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Brand_Group_Test__c</fullName>
+        <externalId>false</externalId>
+        <label>Brand Group WFR</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Brand_Group__c</fullName>
+        <externalId>false</externalId>
+        <formula>Brand_Group_Test__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Brand Group</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Brand__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT(DSM_Product_Name__c , 
+(FIND(&quot;|&quot;, DSM_Product_Name__c)-2)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Brand</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cancellation_Already_Counted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Cancellation Already Counted</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cancellation_Date2__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity.CloseDate &gt; FC_Effective_Date__c, Opportunity.CloseDate, FC_Effective_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cancellation Date2</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cancellation_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Opportunity.CloseDate &gt; FC_End_Date__c, Opportunity.CloseDate, FC_End_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Cancellation Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cancellation_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancellation Status</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cancel</fullName>
+                    <default>false</default>
+                    <label>Cancel</label>
+                </value>
+                <value>
+                    <fullName>Restructure</fullName>
+                    <default>false</default>
+                    <label>Restructure</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cancelled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This is an indicator to show if the subscription for the product should cancel.</description>
+        <externalId>false</externalId>
+        <label>Cancelled</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Contract_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity.Contract_Type__c)</formula>
+        <label>Contract Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Creative_Status_Creative_Chase__c</fullName>
+        <externalId>false</externalId>
+        <label>Creative Status (Creative Chase)</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Custom_Services__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Services</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Custom Services</fullName>
+                    <default>false</default>
+                    <label>Custom Services</label>
+                </value>
+                <value>
+                    <fullName>Custom Services Added</fullName>
+                    <default>false</default>
+                    <label>Custom Services Added</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DSM_Prod_WF_Template_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(DSM_Product_Lookup__r.WF_Template_ID__c &lt;&gt; &quot;&quot;,
+DSM_Product_Lookup__r.WF_Template_ID__c, PricebookEntry.Product2.WF_Template_ID__c )</formula>
+        <label>DSM Prod WF Template ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DSM_Product_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>HW DSM Product Id</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DSM_Product_Lookup__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>DSM Product Lookup</label>
+        <referenceTo>DSM_Products__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DSM_Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>HW DSM Product Name</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DSM_Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>RIGHT(DSM_Product_Name__c , 
+(FIND(&quot;|&quot;, DSM_Product_Name__c)+1) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DSM Product</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DST_Off_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2011&quot;, 
+&quot;11/06/2011&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2012&quot;, 
+&quot;11/04/2012&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2013&quot;, 
+&quot;11/03/2013&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2014&quot;, 
+&quot;11/02/2014&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2015&quot;, 
+&quot;11/01/2015&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2016&quot;, 
+&quot;11/06/2016&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2017&quot;, 
+&quot;11/05/2017&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2018&quot;, 
+&quot;11/04/2018&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2019&quot;, 
+&quot;11/03/2019&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2020&quot;, 
+&quot;11/01/2020&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2021&quot;, 
+&quot;11/07/2021&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2022&quot;, 
+&quot;11/06/2022&quot;,  
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2023&quot;, 
+&quot;11/05/2023&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2024&quot;, 
+&quot;11/03/2024&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2025&quot;, 
+&quot;11/02/2025&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2026&quot;, 
+&quot;11/01/2026&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2027&quot;, 
+&quot;11/07/2027&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2028&quot;, 
+&quot;11/05/2028&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2029&quot;, 
+&quot;11/04/2029&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2030&quot;, 
+&quot;11/03/2030&quot;, 
+&quot;Need More Dates&quot; 
+))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DST Off End Date</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DST_Off_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2011&quot;, 
+&quot;11/06/2011&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2012&quot;, 
+&quot;11/04/2012&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2013&quot;, 
+&quot;11/03/2013&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2014&quot;, 
+&quot;11/02/2014&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2015&quot;, 
+&quot;11/01/2015&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2016&quot;, 
+&quot;11/06/2016&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2017&quot;, 
+&quot;11/05/2017&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2018&quot;, 
+&quot;11/04/2018&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2019&quot;, 
+&quot;11/03/2019&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2020&quot;, 
+&quot;11/01/2020&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2020&quot;, 
+&quot;11/01/2020&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2021&quot;, 
+&quot;11/07/2021&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2022&quot;, 
+&quot;11/06/2022&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2023&quot;, 
+&quot;11/05/2023&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2024&quot;, 
+&quot;11/03/2024&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2025&quot;, 
+&quot;11/02/2025&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2026&quot;, 
+&quot;11/01/2026&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2027&quot;, 
+&quot;11/07/2027&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2028&quot;, 
+&quot;11/05/2028&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2029&quot;, 
+&quot;11/04/2029&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2030&quot;, 
+&quot;11/03/2030&quot;, 
+&quot;Need More Dates&quot; 
+)))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DST Off Start Date</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DST_On_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2011&quot;, 
+&quot;03/13/2011&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2012&quot;, 
+&quot;03/11/2012&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2013&quot;, 
+&quot;03/10/2013&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2014&quot;, 
+&quot;03/09/2014&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2015&quot;, 
+&quot;03/08/2015&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2016&quot;, 
+&quot;03/13/2016&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2017&quot;, 
+&quot;03/12/2017&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2018&quot;, 
+&quot;03/11/2018&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2019&quot;, 
+&quot;03/10/2019&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2020&quot;, 
+&quot;03/08/2020&quot;,  
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2021&quot;, 
+&quot;03/14/2021&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2022&quot;, 
+&quot;03/13/2022&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2023&quot;, 
+&quot;03/12/2023&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2024&quot;, 
+&quot;03/10/2024&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2025&quot;, 
+&quot;03/09/2025&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2026&quot;, 
+&quot;03/08/2026&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2027&quot;, 
+&quot;03/14/2027&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2028&quot;, 
+&quot;03/12/2028&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2029&quot;, 
+&quot;03/11/2029&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_End_Date__c),1,4)=&quot;2030&quot;, 
+&quot;03/10/2030&quot;,
+&quot;Need More Dates&quot; 
+))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DST On End Date</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DST_On_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2011&quot;, 
+&quot;03/13/2011&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2012&quot;, 
+&quot;03/11/2012&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2013&quot;, 
+&quot;03/10/2013&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2014&quot;, 
+&quot;03/09/2014&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2015&quot;, 
+&quot;03/08/2015&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2016&quot;, 
+&quot;03/13/2016&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2017&quot;, 
+&quot;03/12/2017&quot;,
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2018&quot;, 
+&quot;03/11/2018&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2019&quot;, 
+&quot;03/10/2019&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2020&quot;, 
+&quot;03/08/2020&quot;,  
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2021&quot;, 
+&quot;03/14/2021&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2022&quot;, 
+&quot;03/13/2022&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2023&quot;, 
+&quot;03/12/2023&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2024&quot;, 
+&quot;03/10/2024&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2025&quot;, 
+&quot;03/09/2025&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2026&quot;, 
+&quot;03/08/2026&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2027&quot;, 
+&quot;03/14/2027&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2028&quot;, 
+&quot;03/12/2028&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2029&quot;, 
+&quot;03/11/2029&quot;, 
+IF( 
+MID(TEXT(HW_Line_Item_Start_Date__c),1,4)=&quot;2030&quot;, 
+&quot;03/10/2030&quot;, 
+&quot;Need More Dates&quot; 
+))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DST On Start Date</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Delivery_Frequency_del__c</fullName>
+        <externalId>false</externalId>
+        <label>Delivery Frequency</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Subscription_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Weekly</fullName>
+                    <default>false</default>
+                    <label>Weekly</label>
+                </value>
+                <value>
+                    <fullName>Monthly</fullName>
+                    <default>false</default>
+                    <label>Monthly</label>
+                </value>
+                <value>
+                    <fullName>Quarterly</fullName>
+                    <default>false</default>
+                    <label>Quarterly</label>
+                </value>
+                <value>
+                    <fullName>Semi-Annually</fullName>
+                    <default>false</default>
+                    <label>Semi-Annually</label>
+                </value>
+                <value>
+                    <fullName>Annually</fullName>
+                    <default>false</default>
+                    <label>Annually</label>
+                </value>
+                <value>
+                    <fullName>One-Time</fullName>
+                    <default>false</default>
+                    <label>One-Time</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Subscription</controllingFieldValue>
+                <valueName>N/A</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>One-Time Purchase</controllingFieldValue>
+                <valueName>One-Time</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Description</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Description</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Directory_Brand__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT( PricebookEntry.Product2.Name , FIND(&quot;|&quot;,PricebookEntry.Product2.Name)-2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Directory Brand</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Directory_Categories__c</fullName>
+        <externalId>false</externalId>
+        <label>Directory Categories</label>
+        <length>3200</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>Event_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CONTAINS(DSM_Product_Name__c,&quot;AHF Live Developers Summit&quot;), &quot;AHF Live Developers Summit&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;AHF Live Developers Forum&quot;), &quot;AHF Live Developers Forum&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;P/A Awards&quot;), &quot;P/A Awards&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;Builder Connections&quot;), &quot;Builder Connections&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;Housing Leadership Summit&quot;), &quot;Housing Leadership Summit&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;WOC&quot;), &quot;WOC&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;Executive Conference&quot;), &quot;Executive Conference&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;Executive Leadership Summit&quot;), &quot;Executive Leadership Summit&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;ProSales 100 Conference&quot;), &quot;ProSales 100&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;Hanley Award&quot;), &quot;Hanley Award&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;ProSales Connections&quot;), &quot;ProSales Connections&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;HIVE Sponsorship&quot;), &quot;HIVE Sponsorship&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;Remodelers Summit&quot;), &quot;Remodelers Summit&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;MFE Connections&quot;), &quot;MFE Connections&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;Architect Connections&quot;),&quot;Architect Connections&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;ReNEWable Living Home&quot;),&quot;ReNEWable Living Home&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;Infrastructure Imperative&quot;),&quot;Infrastructure Imperative&quot;, 
+IF(CONTAINS(DSM_Product_Name__c,&quot;HIVE Design&quot;),&quot;HIVE Design&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;HIVE Architect Workshop&quot;),&quot;HIVE Architect Workshop&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;ProjeKT 2.0 Concept Home&quot;),&quot;ProjeKT 2.0&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Light &amp; Architecture Design Awards&quot;),&quot;Light &amp; Architecture Design Awards&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Greenbuild Unity Home&quot;),&quot;Greenbuild&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Responsive Home&quot;),&quot;Responsive Home&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Custom Home Design Awards&quot;),&quot;Custom Home Design Awards&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Dealer Roundtable&quot;),&quot;Dealer Roundtable&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;NARI Local Event&quot;),&quot;NARI Local Event&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Leadership Conference&quot;),&quot;Leadership Conference&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Peak Performance Conference&quot;),&quot;Peak Performance Conference&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Remodeling Show Big 50 Lounge Sponsorship&quot;),&quot;Remodeling Show Big 50 Lounge&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Roofing Market Special Event&quot;),&quot;Roofing Market Special Event&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;ProSales Connection&quot;),&quot;ProSales Connection&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Greenbuild KB Home Projekt&quot;),&quot;Greenbuild KB Home Projekt&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;NEXTadventure Home&quot;),&quot;NEXTadventure Home&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Lighting: The Next Frontier&quot;),&quot;Lighting: The Next Frontier&quot;,
+IF(CONTAINS(DSM_Product_Name__c,&quot;Infrastructure Imperative&quot;),&quot;Infrastructure Imperative&quot;,
+NULL)))))))))))))))))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Event Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Annualize_New_Revenue__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>(FC) Annualize New Revenue?</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Annualized_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>(TotalPrice / BLANKVALUE(FC_Deal_Length__c, 1)) * 12</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) Annualized Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_Bill_Case__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Bill Case</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Billing_Instruction_Set__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>(FC) Billing Instruction Set</label>
+        <referenceTo>FC_Billing_Instruction_Set__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FC_Cancellation_Revenue_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(FC_Purchase_Type__c , &quot;Cancellation&quot;) &amp;&amp; ISPICKVAL(Billing_Frequency__c , &quot;One-Time&quot;), FC_Original_Sale_Price__c * -1,
+
+IF(ISPICKVAL(FC_Purchase_Type__c , &quot;Cancellation&quot;) , TotalPrice, 
+
+IF(ISPICKVAL(FC_Purchase_Type__c , &quot;Cancellation - Reversal&quot;), TotalPrice, 0)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) Cancellation Revenue*</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_Cancellation_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>xx_(FC) Cancellation Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Consulting_Expenses__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Consulting Expenses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_DBD_Percentage__c</fullName>
+        <defaultValue>1</defaultValue>
+        <externalId>false</externalId>
+        <label>(FC) DBD Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>15</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>FC_DBD_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(FC_Pay_DBD__c &amp;&amp; !ISBLANK(FC_DBD_Percentage__c), TotalPrice * FC_DBD_Percentage__c, TotalPrice)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) DBD Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_Deal_Length__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Deal Length</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Delta_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(FC_Zuora_Action__c), 
+   &quot;Remove&quot;, FC_Original_Sale_Price__c * -1, 
+   &quot;Add&quot;, 0, 
+   &quot;Update&quot;, FC_Sale_Price__c - FC_Original_Sale_Price__c, 
+   &quot;No Action&quot;, 0 
+   ,0 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>xx_(FC) Price Increase/Decrease</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Do_Not_Annualize__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>(FC) Do Not Annualize</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Effective_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Eff. Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FC_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FC_Geography_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Product_Geography_Seg3__r.Product_Geography__r.ProductGeographyType__r.GeographyType__r.Name</formula>
+        <label>Geo Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Geography__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Product_Geography_Seg3__r.Product_Geography__r.Geography__r.Name</formula>
+        <label>(FC) Geography</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Line_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Description</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Metrostudy_Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Product_Geography_Seg3__r.Product_Geography__r.ProductGeographyType__r.Product__r.Name</formula>
+        <label>(FC) Metrostudy Product</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Monthly_Do_Not_Annualize__c</fullName>
+        <externalId>false</externalId>
+        <formula>If( AND (FC_Do_Not_Annualize__c,  TEXT(Billing_Frequency__c) = &quot;Monthly&quot;),3,1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) Monthly Do Not Annualize</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_New_Business_for_RD__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(FC_Purchase_Type__c), &quot;Upsell&quot;, TotalPrice, &quot;New&quot;, TotalPrice, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) New Business for RD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_New_Revenue_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(FC_Purchase_Type__c , &quot;New&quot;), 
+    IF(FC_Annualize_New_Revenue__c, 
+        FC_Annualized_Amount__c, TotalPrice), 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) New Revenue*</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_New_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>xx_(FC) New Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_One_If_One_Time_Charge__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(Billing_Frequency__c) == &apos;One-Time&apos;, 1, 0)</formula>
+        <label>(FC) One If One-Time Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_One_If_Pay_DBD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(FC_Pay_DBD__c, 1, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) One If Pay DBD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_One_If_Recurring_Charge__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(!ISBLANK(TEXT(Billing_Frequency__c)) &amp;&amp; TEXT(Billing_Frequency__c) != &apos;One-Time&apos;,
+            1, 0)</formula>
+        <label>(FC) One If Recurring Charge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Opportunity_Renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>(FC) Opportunity Renewal</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Original_Sale_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Original Sale Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Override_Purchase_Type__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>(FC) Override Purchase Type</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Pay_DBD_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(FC_Pay_DBD__c,
+    FC_DBD_Revenue__c - ( FC_New_Revenue_Formula__c + FC_Upsell_Revenue_Formula__c + FC_Price_Increase_Decrease_Formula__c +  FC_Cancellation_Revenue_Formula__c),
+    0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) Pay DBD Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_Pay_DBD__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>(FC) Pay DBD</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FC_Price_Increase_Decrease_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(FC_Purchase_Type__c , &quot;Renewal&quot;) || ISPICKVAL(FC_Purchase_Type__c , &quot;Price Change&quot;), FC_Sale_Price__c - FC_Original_Sale_Price__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) Price Increase/Decrease*</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_Price_Per_Period__c</fullName>
+        <externalId>false</externalId>
+        <formula>(FC_Sale_Price__c /
+    CASE(TEXT(Billing_Frequency__c),
+        &quot;Semi-Annually&quot;, 2,
+        &quot;Quarterly&quot;, 4,
+        &quot;Monthly&quot;, 12,
+        1)
+)
+  /
+ FC_Monthly_Do_Not_Annualize__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Price / Period</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Product_Geography_Seg3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>(FC) Metrostudy Product Geography Seg3</label>
+        <referenceTo>FC_Metroclient_Product_Geography_Seg3__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FC_Product_Geography__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Product_Geography_Seg3__r.Product_Geography__r.Name</formula>
+        <label>(FC) Product Geography</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Purchase_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Purchase Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>true</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Renewal</fullName>
+                    <default>false</default>
+                    <label>Renewal</label>
+                </value>
+                <value>
+                    <fullName>Renewal Upsell</fullName>
+                    <default>false</default>
+                    <label>Renewal Upsell</label>
+                </value>
+                <value>
+                    <fullName>Upsell</fullName>
+                    <default>false</default>
+                    <label>Upsell</label>
+                </value>
+                <value>
+                    <fullName>Price Change</fullName>
+                    <default>false</default>
+                    <label>Price Change</label>
+                </value>
+                <value>
+                    <fullName>Cancellation</fullName>
+                    <default>false</default>
+                    <label>Cancellation</label>
+                </value>
+                <value>
+                    <fullName>Cancellation - Reversal</fullName>
+                    <default>false</default>
+                    <label>Cancellation - Reversal</label>
+                </value>
+                <value>
+                    <fullName>Restructure</fullName>
+                    <default>false</default>
+                    <label>Restructure</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FC_RD_Assignment__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>(FC) RD Assignment</label>
+        <referenceTo>MetrostudySalesRegionAssignment__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>Opportunity_Product</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FC_RD__c</fullName>
+        <externalId>false</externalId>
+        <formula>TRIM(FC_RD_Assignment__r.User__r.FirstName &amp; &quot; &quot; &amp; FC_RD_Assignment__r.User__r.LastName)</formula>
+        <label>(FC) RD</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Renewal_Revenue_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(FC_Purchase_Type__c, &quot;Renewal&quot;) || (ISPICKVAL(FC_Purchase_Type__c, &quot;Price Change&quot;) &amp;&amp; FC_Sale_Price__c != 0 &amp;&amp; FC_Opportunity_Renewal__c),
+    IF(FC_Do_Not_Annualize__c,
+        CASE(TEXT(Billing_Frequency__c), 
+             &quot;Monthly&quot;, FC_Sale_Price__c / 12, 
+             &quot;Quarterly&quot;, FC_Sale_Price__c / 4, 
+             &quot;Semi-Annually&quot;, FC_Sale_Price__c / 2,
+             FC_Sale_Price__c),
+        FC_Sale_Price__c),
+    IF(ISPICKVAL(FC_Purchase_Type__c, &quot;Renewal Upsell&quot;),
+        FC_Original_Sale_Price__c,
+        0)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) Renewal Revenue*</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_Renewal_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <label>xx_(FC) Renewal Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Revenue_Type_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(Opportunity.Purchase_Type__c) == &quot;One-time&quot;, &quot;One-Time Revenues&quot;,
+        IF(TEXT( Opportunity.Purchase_Type__c ) == &quot;Membership&quot;,  &quot;Subscription Revenues&quot;, NULL))</formula>
+        <label>(FC) Revenue Type Category</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Revenue_Type_Sub_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(FC_Revenue_Type_Category__c, 
+    &quot;Subscription Revenues&quot;, IF(TEXT(Opportunity.FC_Term_Type__c) == &quot;TERMED&quot;, &quot;Termed Revenues&quot;, &quot;Evergreen Revenues&quot;), 
+    &quot;One-Time Revenues&quot;, 
+        IF(TEXT(Opportunity.One_time_Sale_Type__c) == &quot;Custom Export/Report&quot;, &quot;Data Reports&quot;, 
+            IF(CONTAINS(TEXT(Opportunity.One_time_Sale_Type__c), &quot;Sponsorship&quot;), &quot;Sponsorships&quot;, 
+                IF(TEXT(Opportunity.One_time_Sale_Type__c) == &quot;Consulting/Engagement&quot;, &quot;Consulting&quot;, NULL))), NULL)</formula>
+        <label>(FC) Revenue Type Sub-Category</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Revenue_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TRIM(FC_Revenue_Type_Category__c &amp; IF(!ISBLANK(FC_Revenue_Type_Category__c) &amp;&amp; !ISBLANK(FC_Revenue_Type_Sub_Category__c), &quot;: &quot;, &quot;&quot;) &amp; FC_Revenue_Type_Sub_Category__c)</formula>
+        <label>(FC) Revenue Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Sale_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Annualized Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Seg2_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Product_Geography_Seg3__r.Product_Geography__r.Geography__r.Seg2_Name__c</formula>
+        <label>(FC) Seg2 Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Seg2__c</fullName>
+        <externalId>false</externalId>
+        <formula>FC_Product_Geography_Seg3__r.Product_Geography__r.Geography__r.Seg2__c</formula>
+        <label>(FC) Seg2</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Seg3_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Seg3</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Seg3__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(FC_Product_Geography_Seg3__r.Seg3__c)</formula>
+        <label>Seg3</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Term_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(Opportunity.ContractId), TEXT(Opportunity.FC_Term_Type__c),
+            TEXT(Opportunity.Contract.FC_Subscription__r.Zuora__TermSettingType__c))</formula>
+        <label>Term Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FC_UUID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>(FC) UUID</label>
+        <length>36</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>FC_Upsell_Revenue_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(FC_Purchase_Type__c), 
+    &quot;Upsell&quot;, TotalPrice, 
+    &quot;Renewal Upsell&quot;, FC_Sale_Price__c - FC_Original_Sale_Price__c, 
+    0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>(FC) Upsell Revenue*</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_Upsell_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(FC_Purchase_Type__c) == &quot;Upsell&quot;, TotalPrice, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>xx_(FC) Upsell Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FC_Zuora_Action__c</fullName>
+        <externalId>false</externalId>
+        <label>(FC) Zuora Action</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No Action</fullName>
+                    <default>false</default>
+                    <label>No Action</label>
+                </value>
+                <value>
+                    <fullName>Add</fullName>
+                    <default>false</default>
+                    <label>Add</label>
+                </value>
+                <value>
+                    <fullName>Update</fullName>
+                    <default>false</default>
+                    <label>Update</label>
+                </value>
+                <value>
+                    <fullName>Remove</fullName>
+                    <default>false</default>
+                    <label>Remove</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>FIPS_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.FIPS_Code__c</formula>
+        <label>FIPS Code</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GL_CODE_2__c</fullName>
+        <externalId>false</externalId>
+        <label>GL CODE 2</label>
+        <length>15</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GL_CODE_3__c</fullName>
+        <externalId>false</externalId>
+        <label>GL CODE 3</label>
+        <length>15</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GL_CODE__c</fullName>
+        <description>3-26-19, Lawton Added a check and local override to allow AB to set the GL Code on the line. Kept the product lookup for historical purposes. Per Sarah W.</description>
+        <externalId>false</externalId>
+        <formula>IF(G_L_Code__c = &quot;&quot;, PricebookEntry.Product2.G_L_Code__c , G_L_Code__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GL CODE</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GL_Code_2_Percent__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>GL Code 2 Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code_2_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>TotalPrice *  GL_Code_2_Percent__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GL Code 2 Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code_3_Percent__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(GL_Code_Percent__c &gt; 0,
+1 -  GL_Code_Percent__c -  GL_Code_2_Percent__c,
+0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GL Code 3 Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code_3_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>TotalPrice -  GL_Code_Revenue__c - GL_Code_2_Revenue__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GL Code 3 Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code_Percent__c</fullName>
+        <defaultValue>1</defaultValue>
+        <externalId>false</externalId>
+        <label>GL Code Percent</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>GL_Code_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+GL_Code_Percent__c &gt; 0,
+TotalPrice * GL_Code_Percent__c,
+TotalPrice)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GL Code Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>GMT_Start__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(HW_Line_Item_Start_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>GMT Start</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>G_L_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>G/L Code</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HW_DC_DSM_Product_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>HW DC DSM Product ID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HW_DFP_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>HW DFP Comments</label>
+        <length>2000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>HW_DSM_Product_Name_Mirror__c</fullName>
+        <externalId>false</externalId>
+        <formula>DSM_Product_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>HW DSM Product Name Mirror</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HW_Line_Item_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>HW Line Item End Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>HW_Line_Item_Id__c</fullName>
+        <externalId>true</externalId>
+        <label>HW Line Item Id</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HW_Line_Item_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>HW Line Item Start Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Integration_Admin_Error_Msg__c</fullName>
+        <externalId>false</externalId>
+        <label>Integration Admin Error Msg</label>
+        <length>254</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Integration_Admin_Processed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Integration Admin Processed</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Integration_Admin_Sync__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Integration Admin Sync</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_Sync_to_WF__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Sync to WF</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Legacy_DSM_ID_Line_Item__c</fullName>
+        <externalId>false</externalId>
+        <label>Legacy DSM ID (Line Item)</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Item_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Item End Date for I/O</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Item_Start_Date_Only__c</fullName>
+        <externalId>false</externalId>
+        <formula>HW_Line_Item_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Line Item Start - Date Only</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Line_Item_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Item Start Date for I/O</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ListPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>MS_MortgagePro_Product_Sold__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>MS - MortgagePro Product Sold</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MS_New_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>OR(
+FC_New_Revenue_Formula__c  &lt;&gt; 0,
+AND(
+FC_New_Revenue_Formula__c  = 0,
+FC_Pay_DBD__c = TRUE
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>MS New Revenue</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MS_Segment__c</fullName>
+        <externalId>false</externalId>
+        <label>MS Seg</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market_County__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Market_County__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Market/County</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Marketing_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Marketing Product</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Media_Category_Classification__c</fullName>
+        <externalId>false</externalId>
+        <formula>case( Product_Type__c ,&apos;Consumer Specials&apos;,&apos;Branding&apos;, 
+&apos;CPM&apos;,&apos;Branding&apos;, 
+&apos;Demand Generation&apos;,&apos;Lead Generation&apos;,
+&apos;Digital Edition&apos;,&apos;Branding&apos;,
+&apos;Direct Mail List&apos;,&apos;Branding&apos;,
+&apos;Directory Listing&apos;,&apos;Branding&apos;,
+&apos;Directory Listing&apos;,&apos;Branding&apos;,
+&apos;Education&apos;,&apos;Branding&apos;,
+&apos;Email List Blast&apos;,&apos;Branding&apos;,
+&apos;Newsletter&apos;,&apos;Branding&apos;,
+&apos;Print&apos;,&apos;Branding&apos;,
+&apos;Product Spotlight Blast&apos;,&apos;Branding&apos;, 
+&apos;Roadblock&apos;,&apos;Branding&apos;, 
+&apos;Run of Network&apos;,&apos;Branding&apos;, 
+&apos;Strategic Marketing Services&apos;,&apos;SMS&apos;, 
+&apos;Virtual Event&apos;,&apos;Lead Generation&apos;, 
+&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Media Category Classification</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MetroStudy_Product__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>MetroStudy Product</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Meyers_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</inlineHelpText>
+        <label>Meyers Id</label>
+        <length>80</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Meyers_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(!ISBLANK(Meyers_Id__c), HYPERLINK(&quot;https://na56.salesforce.com/&quot; + Meyers_Id__c, &quot;Meyers Link&quot;),&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Meyers Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Monthly_Subscription_Fee__c</fullName>
+        <externalId>false</externalId>
+        <formula>UnitPrice</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Monthly Subscription Fee</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Net_Cost_Changed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Net Cost Changed</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Net_Cost_Field_Update__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Cost Field Update</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Net_Cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>Units_Purchased__c * AB2__ABGrossCost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Net_Revenue_Factor__c</fullName>
+        <externalId>false</externalId>
+        <formula>/* IF( Net_Revenue__c &gt;0, Net_Revenue__c /TotalPrice,1) */
+
+/* Updated formula to handle negative Net Rev */
+IF 
+( 
+Net_Revenue__c &gt;0, Net_Revenue__c /TotalPrice, 
+IF 
+( 
+Net_Revenue__c=0,0, 
+(TotalPrice - IF( Actual_Expense_Less_Labor__c &gt;0, Actual_Expense_Less_Labor__c, Planned_Expense_Less_Labor__c ))/TotalPrice 
+) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Revenue Factor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>10</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Net_Revenue__c</fullName>
+        <externalId>false</externalId>
+        <formula>TotalPrice - IF( Actual_Expense_Less_Labor__c &gt;0, Actual_Expense_Less_Labor__c, Planned_Expense_Less_Labor__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Revenue</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opp_Record_Type_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.RecordTypeId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opp Record Type ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Probability__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Probability</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Probability</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Product_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Product ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Product_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp; Id, PricebookEntry.Product2.Name)</formula>
+        <label>Opportunity Product Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opty_Product_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>LEFT(PricebookEntry.Product2.Product_ID__c,99)</formula>
+        <label>Opty Product ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pay_DBD_Changed_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Pay DBD Changed By</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pay_DBD_Changed_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Pay DBD Changed On</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Pay_DBD_Greater_Than_Amount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pay DBD Greater Than Amount</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Planned_Expense_Less_Labor__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned Expense Less Labor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Premium_Directory_Categories__c</fullName>
+        <externalId>false</externalId>
+        <label>Premium Directory Categories</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Premium_Directory__c</fullName>
+        <externalId>false</externalId>
+        <formula>CONTAINS(PricebookEntry.Product2.Name, &quot;(Premium)&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Premium Directory</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Print_Edition__c</fullName>
+        <externalId>false</externalId>
+        <label>Print Edition</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Print_Section__c</fullName>
+        <externalId>false</externalId>
+        <label>Print Section</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Product2Id</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ProductCode</fullName>
+    </fields>
+    <fields>
+        <fullName>Product_Category__c</fullName>
+        <description>CASE (   Product_Type__c  ,
+&quot;White Paper (Sponsor Supplied)&quot;, &quot;Digital&quot;,
+&quot;Webinar (Sponsor Supplied)&quot;, &quot;Digital&quot;,
+&quot;Virtual Event&quot;, &quot;Digital&quot;,
+&quot;Video (Sponsor Supplied)&quot;, &quot;Digital&quot;,
+&quot;Stragetic Marketing Servi&quot;, &quot;Digital&quot;,
+&quot;Roadblock&quot;, &quot;Digital&quot;,
+&quot;Product Spotlight Blast&quot;, &quot;Digital&quot;,
+&quot;Print&quot;, &quot;Print&quot;,
+&quot;Newsletter&quot;, &quot;Digital&quot;,
+&quot;HWTV (Sponsor Supplied)&quot;, &quot;Digital&quot;,
+&quot;Email Promo Blast/Marketi&quot;, &quot;Digital&quot;,
+&quot;Email List Blast&quot;, &quot;Digital&quot;,
+&quot;Education&quot;, &quot;Digital&quot;,
+&quot;Digital Edition&quot;, &quot;Digital&quot;,
+&quot;Demand Generation&quot;, &quot;Digital&quot;,
+&quot;Customer Engagement Progr&quot;, &quot;Digital&quot;,
+&quot;Event Sponsorship&quot;, &quot;Event&quot;,
+&quot;CPM&quot;,&quot;Digital&quot;,
+&quot;Direct Mail List&quot;,&quot;Digital&quot;,
+&quot;Digital Field Guide Subscription&quot;,&quot;Digital&quot;,
+&quot;PSNDE&quot;,&quot;Digital&quot;,
+&quot; &quot;
+)</description>
+        <externalId>false</externalId>
+        <formula>IF( 
+CONTAINS(Product_Type__c, &quot;Metrostudy&quot;), &quot;Metrostudy&quot;,
+IF(
+AND(CONTAINS(Product_Type__c, &quot;Marketing&quot;),Product_Type__c &lt;&gt; &quot;Strategic Marketing Services&quot;) , &quot;Marketing&quot;,
+IF( 
+CONTAINS(Product_Type__c, &quot;Direct Mail List&quot;), &quot;Digital&quot;,  
+
+CASE (   Product_Type__c  ,
+&quot;White Paper (Sponsor Supplied)&quot;, &quot;Digital&quot;,
+&quot;Webinar (Sponsor Supplied)&quot;, &quot;Digital&quot;,
+&quot;Virtual Event&quot;, &quot;Digital&quot;,
+&quot;Video (Sponsor Supplied)&quot;, &quot;Digital&quot;,
+&quot;Strategic Marketing Services&quot;, &quot;Digital&quot;,
+&quot;Roadblock&quot;, &quot;Digital&quot;,
+&quot;Product Spotlight Blast&quot;, &quot;Digital&quot;,
+&quot;Print&quot;, &quot;Print&quot;,
+&quot;Newsletter&quot;, &quot;Digital&quot;,
+&quot;newsletter&quot;, &quot;Digital&quot;,
+&quot;HWTV (Sponsor Supplied)&quot;, &quot;Digital&quot;,
+&quot;Email Promo Blast/Marketi&quot;, &quot;Digital&quot;,
+&quot;Email List Blast&quot;, &quot;Digital&quot;,
+&quot;Education&quot;, &quot;Digital&quot;,
+&quot;Digital Edition&quot;, &quot;Digital&quot;,
+&quot;Demand Generation&quot;, &quot;Digital&quot;,
+&quot;Customer Engagement Progr&quot;, &quot;Digital&quot;,
+&quot;Event Sponsorship&quot;, &quot;Event&quot;,
+&quot;Branded Event&quot;, &quot;Event&quot;,
+&quot;Custom Event&quot;, &quot;Event&quot;,
+&quot;Event Sponsorship (Custom)&quot;, &quot;Event&quot;,
+&quot;Education Event&quot;, &quot;Event&quot;,
+&quot;CPM&quot;,&quot;Digital&quot;,
+&quot;Standard CPM&quot;,&quot;Digital&quot;,
+&quot;Building Know-How JLC&quot;,&quot;Digital&quot;,
+&quot;Category Exclusive JLC&quot;,&quot;Digital&quot;,
+&quot;Consumer Specials&quot;,&quot;Digital&quot;,
+&quot;Dedicated Email&quot;,&quot;Digital&quot;,
+&quot;Newsletter Plus&quot;,&quot;Digital&quot;,
+&quot;Paid Promo Allocation&quot;,&quot;Digital&quot;,
+&quot;Run of Network&quot;,&quot;Digital&quot;,
+&quot;Targeted Sponsorship&quot;,&quot;Digital&quot;,
+&quot;SMS&quot;,&quot;Digital&quot;,
+&quot;Event&quot;,&quot;Event&quot;,
+&quot;Exhibitions Intercompany&quot;,&quot;Exhibitions&quot;,
+&quot;Direct Mail List&quot;,&quot;Digital&quot;,
+&quot;Standard CPM&quot;,&quot;Digital&quot;,
+&quot;Digital Field Guide Subscription&quot;,&quot;Digital&quot;,
+&quot;Digital Subscription&quot;,&quot;Digital&quot;,
+&quot;PSNDE&quot;,&quot;Digital&quot;,
+&quot;Pool &amp; Spa News Digital&quot;,&quot;Digital&quot;,
+&quot;Directory Listing&quot;,&quot;Digital&quot;,
+&quot;Events - Tradeshow&quot;,&quot;Event&quot;,
+&quot;Events - Branded&quot;,&quot;Event&quot;,
+&quot;Events - Corporate&quot;,&quot;Event&quot;,
+&quot;Back Copy Sales&quot;,&quot;Print&quot;,
+&quot; &quot;
+))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Category</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Description</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Description</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Price_Summary__c</fullName>
+        <externalId>false</externalId>
+        <formula>Billing_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Price Summary</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Product_Subcategory__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+CONTAINS(DSM_Product_Name__c, &quot;CEU&quot;), &quot;Education&quot;, 
+
+IF(
+CONTAINS (DSM_Product_Name__c, &quot;Profile Nurturing&quot;), &quot;Demand Generation&quot;,
+
+IF(
+CONTAINS (DSM_Product_Name__c, &quot;SMS Demand Generation&quot;), &quot;Demand Generation&quot;,
+
+
+IF( 
+CONTAINS(Product_Type__c, &quot;Metrostudy&quot;), &quot;Metrostudy&quot;, 
+IF(
+AND(CONTAINS(Product_Type__c, &quot;Marketing&quot;),Product_Type__c &lt;&gt; &quot;Strategic Marketing Services&quot;) , &quot;Marketing&quot;, 
+IF( 
+CONTAINS(Product_Type__c, &quot;Direct Mail List&quot;), &quot;Impressions/Branding&quot;,
+
+CASE ( Product_Type__c , 
+&quot;White Paper (Sponsor Supplied)&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Webinar (Sponsor Supplied)&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Virtual Event&quot;,&quot;Demand Generation&quot;, 
+&quot;Video (Sponsor Supplied)&quot;,&quot;Impressions/Branding&quot;,
+&quot;Run of Network&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Stragetic Marketing Servi&quot;,&quot;SMS&quot;, 
+&quot;Strategic Marketing Services&quot;,&quot;SMS&quot;, 
+&quot;Roadblock&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Product Spotlight Blast&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Print&quot;,&quot;Print&quot;, 
+&quot;Newsletter&quot;,&quot;Impressions/Branding&quot;, 
+&quot;newsletter&quot;,&quot;Impressions/Branding&quot;, 
+&quot;HWTV (Sponsor Supplied)&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Email Promo Blast/Marketi&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Email List Blast&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Education&quot;,&quot;Demand Generation&quot;, 
+&quot;Digital Edition&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Customer Engagement Progr&quot;,&quot;Demand Generation&quot;, 
+&quot;Demand Generation&quot;,&quot;Demand Generation&quot;,
+&quot;CPM&quot;, &quot;Impressions/Branding&quot;, 
+&quot;Standard CPM&quot;, &quot;Impressions/Branding&quot;,
+&quot;Consumer Specials&quot;,&quot;Impressions/Branding&quot;, 
+&quot;Branded Event&quot;,&quot;Events&quot;,
+&quot;Custom Event&quot;,&quot;Events&quot;,
+&quot;Event Sponsorship (Custom)&quot;,&quot;Events&quot;,
+&quot;Education Event&quot;,&quot;Events&quot;,
+&quot;Event Sponsorship&quot;,&quot;Events&quot;,
+&quot;Event Sponsorship (Custom)&quot;,&quot;Events&quot;,
+&quot;Exhibitions Intercompany&quot;, &quot;Exhibitions&quot;,
+&quot;Paid Promo Allocation&quot;, &quot;Impressions/Branding&quot;,
+&quot;Direct Mail List&quot;, &quot;Impressions/Branding&quot;,
+&quot;Standard CPM&quot;, &quot;Impressions/Branding&quot;,
+&quot;Digital Subscription&quot;, &quot;Impressions/Branding&quot;,
+&quot;Directory Listing&quot;, &quot;Impressions/Branding&quot;,
+&quot;Events - Tradeshow&quot;,&quot;Events&quot;,
+&quot;Events - Branded&quot;,&quot;Events&quot;,
+&quot;Events - Corporate&quot;,&quot;Events&quot;,
+&quot;Back Copy Sales&quot;,&quot;Print&quot;,
+&quot; &quot; 
+) 
+))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Subcategory</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Type</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quantity</fullName>
+    </fields>
+    <fields>
+        <fullName>Quantity_Units_Purchased__c</fullName>
+        <externalId>false</externalId>
+        <formula>Units_Purchased__c &lt;&gt;  Quantity</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Quantity &lt;&gt; Units Purchased</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Revenue_Category__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Revenue_Category__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Revenue Category</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__ParentID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>ID of the opportunity product that came from this product&apos;s bundle.</inlineHelpText>
+        <label>Parent ID</label>
+        <length>18</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SBQQ__QuoteLine__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Quote line that generated this Opportunity Product.</description>
+        <externalId>false</externalId>
+        <label>Quote Line</label>
+        <referenceTo>SBQQ__QuoteLine__c</referenceTo>
+        <relationshipLabel>Opportunity Product</relationshipLabel>
+        <relationshipName>OpportunityProducts</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SBQQ__SubscriptionType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Indicates the subscription type to determine contract&apos;s pricing.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates the subscription type to determine contract&apos;s pricing.</inlineHelpText>
+        <label>Subscription Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>SBQQ__SubscriptionType</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SOW_Days__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATEVALUE(HW_Line_Item_End_Date__c) -  DATEVALUE(HW_Line_Item_Start_Date__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SOW Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SOW_Term2__c</fullName>
+        <externalId>false</externalId>
+        <formula>DSM_Product_Lookup__r.SOW_Term__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SOW Term</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Price_Mirror__c</fullName>
+        <externalId>false</externalId>
+        <formula>UnitPrice</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Price Mirror</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(UnitPrice)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Price</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ServiceDate</fullName>
+    </fields>
+    <fields>
+        <fullName>Subscription_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Subscription Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Subscription</fullName>
+                    <default>true</default>
+                    <label>Subscription</label>
+                </value>
+                <value>
+                    <fullName>One-Time Purchase</fullName>
+                    <default>false</default>
+                    <label>One-Time Purchase</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+    </fields>
+    <fields>
+        <fullName>Sync_to_WF_Project__c</fullName>
+        <externalId>false</externalId>
+        <formula>(DSM_Prod_WF_Template_ID__c &lt;&gt; &apos;&apos; &amp;&amp;
+WF_Project_ID__c = null &amp;&amp;  
+HW_Line_Item_Id__c  &lt;&gt; &apos;&apos; &amp;&amp; 
+Opportunity.WF_Portfolio_ID__c &lt;&gt; null)</formula>
+        <label>Initial Sync to WF Project</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Total_Price_AB_Working_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>AB2__CPM_Cost_per_1000__c  &lt;&gt;  TotalPrice</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Price &lt;&gt; AB Working Price</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Total_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(TotalPrice)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Price</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>UnitPrice</fullName>
+    </fields>
+    <fields>
+        <fullName>Units_Purchased__c</fullName>
+        <description>Units_Purchased__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Units_Purchased__c</inlineHelpText>
+        <label>Units Purchased</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Update_Sync_to_WF_Project__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Update Sync to WF Project</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>WF_Account_Name__c</fullName>
+        <description>For Work front use</description>
+        <externalId>false</externalId>
+        <formula>Opportunity.Account.Name</formula>
+        <label>Account Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Company_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Account.WF_Company_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WF Company ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Company_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://hanleywood.my.workfront.com/company/view?ID=&quot; +  WF_Company_Id__c , &quot;WF Company&quot;,&quot;_blank&quot;)</formula>
+        <label>WF Company Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Portfolio_ID_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>WF Portfolio ID Text</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Portfolio_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(WF_Portfolio_ID_Text__c &lt;&gt; &quot;&quot;, WF_Portfolio_ID_Text__c, Opportunity.WF_Portfolio_ID__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WF Portfolio ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Portfolio_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://hanleywood.my.workfront.com/portfolio/view?ID=&quot; +  Opportunity.WF_Portfolio_ID__c   , &quot;WF Portfolio&quot;,&quot;_blank&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WF Portfolio Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Product_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>PricebookEntry.Product2.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WF Product Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Project_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>WF Project ID</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Project_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;https://hanleywood.my.workfront.com/project/view?ID=&quot; +  WF_Project_ID__c   , &quot;WF Project&quot;,&quot;_blank&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WF Project Link</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Project_Name__c</fullName>
+        <description>This field is used to control the project name in WF</description>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK( DSM_Product_Name__c ),
+
+  IF( !ISBLANK(Legacy_DSM_ID_Line_Item__c),
+  Legacy_DSM_ID_Line_Item__c &amp; &quot; &quot; &amp; PricebookEntry.Product2.Name  &amp; &quot; - &quot; &amp; WF_Account_Name__c,
+  HW_Line_Item_Id__c &amp; &quot; &quot; &amp; PricebookEntry.Product2.Name &amp; &quot; - &quot; &amp; WF_Account_Name__c)
+,
+  IF( !ISBLANK(Legacy_DSM_ID_Line_Item__c),
+  Legacy_DSM_ID_Line_Item__c &amp; &quot; &quot; &amp; DSM_Product_Name__c &amp; &quot; - &quot; &amp; WF_Account_Name__c,
+  HW_Line_Item_Id__c &amp; &quot; &quot; &amp; DSM_Product_Name__c &amp; &quot; - &quot; &amp; WF_Account_Name__c)
+)</formula>
+        <label>WF Project Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WF_Trigger_Time_01__c</fullName>
+        <description>used in WF to fire time dependent WF after 1 minutes</description>
+        <externalId>false</externalId>
+        <formula>Now()  -  0.04097222</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>WF Trigger Time 01</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+    <validationRules>
+        <fullName>Enforce_End_Date_Range</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (
+Opportunity.RecordTypeId = &quot;01280000000BiIi&quot;,
+
+OR (
+HW_Line_Item_End_Date__c  &lt; Opportunity.HW_Start_Date__c ,
+HW_Line_Item_End_Date__c &gt;  Opportunity.HW_End_Date__c 
+)
+)</errorConditionFormula>
+        <errorMessage>The Line Item End Date must be within the Start and End Date on the Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Enforce_Start_Date_Range</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (
+Opportunity.RecordTypeId = &quot;01280000000BiIi&quot;,
+
+OR (
+HW_Line_Item_Start_Date__c &lt; Opportunity.HW_Start_Date__c ,
+HW_Line_Item_Start_Date__c &gt;  Opportunity.HW_End_Date__c 
+)
+)</errorConditionFormula>
+        <errorMessage>The Line Item Start Date must be within the Start and End Date on the Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Maximum_Percent_Discount</fullName>
+        <active>false</active>
+        <description>Rep can only discount a product 10%, if more than 10%, Rep cannot save the product</description>
+        <errorConditionFormula>UnitPrice &gt;0.10</errorConditionFormula>
+        <errorMessage>Product discount cannot exceed 10%</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_Products_on_Media_Opps</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND (OR(
+Opportunity.RecordTypeId = &quot;01280000000BhaG&quot;,
+Opportunity.RecordTypeId = &quot;01280000000BiIi&quot;),
+NOT (ISBLANK ( Line_Item_ID__c )),
+NOT ( $User.ProfileId =&quot;00e80000000tVFl&quot;),
+OR (
+ISCHANGED (  OpportunityId  ),
+ISCHANGED (  Account_Name__c ),
+ISCHANGED (  Product2Id ),
+ISCHANGED (  Product_Description__c ),
+ISCHANGED (  ListPrice ),
+ISCHANGED (  Product_Type__c ),
+ISCHANGED (  ServiceDate ),
+ISCHANGED (   Ad_ID__c ),
+ISCHANGED (  AdName_Comments__c ),
+ISCHANGED (  Adv_Rate__c ),
+ISCHANGED (  Adv_Rate_Base__c ),
+ISCHANGED (  Cost__c ),
+ISCHANGED (  Cost_Base__c ),
+ISCHANGED (  Custom_ProdType__c ),
+ISCHANGED (  GDFP_Ad_ID__c ),
+ISCHANGED (  GDFP_LI_Comments__c ),
+ISCHANGED (  GDFP_Size__c ),
+ISCHANGED (  DSM_ProdID__c ),
+ISCHANGED (  DSM_ProdName__c ),
+ISCHANGED (  is_flat_fee__c ),
+ISCHANGED (  LI_StartDate__c ),
+ISCHANGED (  LI_EndDate__c ),
+ISCHANGED (  Line_Item_ID__c ),
+ISCHANGED (  Net_Cost__c ),
+ISCHANGED (  Net_Cost_Base__c ),
+ISCHANGED (  Rate_Method__c ),
+ISCHANGED (  Sitename__c ),
+ISCHANGED (  Sitename__c ),
+ISCHANGED (  DFP_Sitename__c ),
+ISCHANGED (  Size__c ),
+ISCHANGED (  Units_Delivered__c ),
+ISCHANGED (  Units_Purchased__c ),
+ISCHANGED (  Description )
+
+
+
+)
+
+
+)</errorConditionFormula>
+        <errorMessage>Line items can only be edited in DSM.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>AB2__AB_Add_Drop</fullName>
+        <availability>online</availability>
+        <description>AdBook Button to Add Drops</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Add Drop</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/AB2__AddDrop?OppId={!Opportunity.Id}&amp;retURL=%2F{!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>AB2__AB_Create_Update_Order</fullName>
+        <availability>online</availability>
+        <description>Sync the Opportunity to AdBook</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create/Update Order</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/AB2__CreateUpdateOrder?oppId={!Opportunity.Id}&amp;orderId={!Opportunity.AB2__ABOrderID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>AB2__AB_Edit_Drop</fullName>
+        <availability>online</availability>
+        <description>AdBook Button to Edit Drops</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Edit Drop</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/AB2__savedrop?oppId={!Opportunity.Id}&amp;retURL=%2F{!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>AB2__AB_Refresh_from_AdBook</fullName>
+        <availability>online</availability>
+        <description>Refresh the Opportunity with details from AdBook</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Refresh from AdBook</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/AB2__refreshOrder?oppId={!Opportunity.Id}&amp;orderId={!Opportunity.AB2__ABOrderID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Directory_Categories</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Directory Categories</masterLabel>
+        <openType>sidebar</openType>
+        <page>DirectoryCategories</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

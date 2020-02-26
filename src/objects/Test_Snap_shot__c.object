@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Used by Finance for final month end numbers</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Prospect</fullName>
+                    <default>false</default>
+                    <label>Prospect</label>
+                </value>
+                <value>
+                    <fullName>Briefing Sponsor</fullName>
+                    <default>false</default>
+                    <label>Briefing Sponsor</label>
+                </value>
+                <value>
+                    <fullName>Win Back Customer</fullName>
+                    <default>false</default>
+                    <label>Win Back Customer</label>
+                </value>
+                <value>
+                    <fullName>Customer - Strategic Account</fullName>
+                    <default>false</default>
+                    <label>Customer - Strategic Account</label>
+                </value>
+                <value>
+                    <fullName>Customer - Quarterly Membership</fullName>
+                    <default>false</default>
+                    <label>Customer - Quarterly Membership</label>
+                </value>
+                <value>
+                    <fullName>Customer - Consulting</fullName>
+                    <default>false</default>
+                    <label>Customer - Consulting</label>
+                </value>
+                <value>
+                    <fullName>Customer - Custom Export/Report</fullName>
+                    <default>false</default>
+                    <label>Customer - Custom Export/Report</label>
+                </value>
+                <value>
+                    <fullName>Customer - Database Access</fullName>
+                    <default>false</default>
+                    <label>Customer - Database Access</label>
+                </value>
+                <value>
+                    <fullName>Customer - Web Account</fullName>
+                    <default>false</default>
+                    <label>Customer - Web Account</label>
+                </value>
+                <value>
+                    <fullName>Customer - Multiple Purchase types</fullName>
+                    <default>false</default>
+                    <label>Customer - Multiple Purchase types</label>
+                </value>
+                <value>
+                    <fullName>Former Customer</fullName>
+                    <default>false</default>
+                    <label>Former Customer</label>
+                </value>
+                <value>
+                    <fullName>Duplicate - pls. merge with original</fullName>
+                    <default>false</default>
+                    <label>Duplicate - pls. merge with original</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>BPM</fullName>
+                    <default>false</default>
+                    <label>BPM</label>
+                </value>
+                <value>
+                    <fullName>Consulting</fullName>
+                    <default>false</default>
+                    <label>Consulting</label>
+                </value>
+                <value>
+                    <fullName>E-Commerce</fullName>
+                    <default>false</default>
+                    <label>E-Commerce</label>
+                </value>
+                <value>
+                    <fullName>House</fullName>
+                    <default>false</default>
+                    <label>House</label>
+                </value>
+                <value>
+                    <fullName>Inside Sales</fullName>
+                    <default>false</default>
+                    <label>Inside Sales</label>
+                </value>
+                <value>
+                    <fullName>Direct</fullName>
+                    <default>false</default>
+                    <label>Direct</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Client_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ACCOUNTING FIRMS</fullName>
+                    <default>false</default>
+                    <label>ACCOUNTING FIRMS</label>
+                </value>
+                <value>
+                    <fullName>ADVERTISING</fullName>
+                    <default>false</default>
+                    <label>ADVERTISING</label>
+                </value>
+                <value>
+                    <fullName>APPLIANCE COMPANY</fullName>
+                    <default>false</default>
+                    <label>APPLIANCE COMPANY</label>
+                </value>
+                <value>
+                    <fullName>APPRAISER</fullName>
+                    <default>false</default>
+                    <label>APPRAISER</label>
+                </value>
+                <value>
+                    <fullName>APARTMENT MANAGER</fullName>
+                    <default>false</default>
+                    <label>APARTMENT MANAGER</label>
+                </value>
+                <value>
+                    <fullName>APARTMENT OWNERS</fullName>
+                    <default>false</default>
+                    <label>APARTMENT OWNERS</label>
+                </value>
+                <value>
+                    <fullName>ARCHITECT</fullName>
+                    <default>false</default>
+                    <label>ARCHITECT</label>
+                </value>
+                <value>
+                    <fullName>BUILDING INDUSTRY ASSOCIATION AND COUNCIL</fullName>
+                    <default>false</default>
+                    <label>BUILDING INDUSTRY ASSOCIATION AND COUNCIL</label>
+                </value>
+                <value>
+                    <fullName>ATTORNEY</fullName>
+                    <default>false</default>
+                    <label>ATTORNEY</label>
+                </value>
+                <value>
+                    <fullName>BUILDERS</fullName>
+                    <default>false</default>
+                    <label>BUILDERS</label>
+                </value>
+                <value>
+                    <fullName>OTHER BUILDING PRODUCT MANUFACTURERS</fullName>
+                    <default>false</default>
+                    <label>OTHER BUILDING PRODUCT MANUFACTURERS</label>
+                </value>
+                <value>
+                    <fullName>LAND BROKER</fullName>
+                    <default>false</default>
+                    <label>LAND BROKER</label>
+                </value>
+                <value>
+                    <fullName>CABINETS</fullName>
+                    <default>false</default>
+                    <label>CABINETS</label>
+                </value>
+                <value>
+                    <fullName>RESEARCH CONSULTANT</fullName>
+                    <default>false</default>
+                    <label>RESEARCH CONSULTANT</label>
+                </value>
+                <value>
+                    <fullName>DEVELOPER-COMMERCIAL</fullName>
+                    <default>false</default>
+                    <label>DEVELOPER-COMMERCIAL</label>
+                </value>
+                <value>
+                    <fullName>DOORS MANUFACTURER</fullName>
+                    <default>false</default>
+                    <label>DOORS MANUFACTURER</label>
+                </value>
+                <value>
+                    <fullName>ELECTRICAL</fullName>
+                    <default>false</default>
+                    <label>ELECTRICAL</label>
+                </value>
+                <value>
+                    <fullName>ENGINEER</fullName>
+                    <default>false</default>
+                    <label>ENGINEER</label>
+                </value>
+                <value>
+                    <fullName>FAUCET MANUFACTURER</fullName>
+                    <default>false</default>
+                    <label>FAUCET MANUFACTURER</label>
+                </value>
+                <value>
+                    <fullName>FLOORING MANUFACTURER</fullName>
+                    <default>false</default>
+                    <label>FLOORING MANUFACTURER</label>
+                </value>
+                <value>
+                    <fullName>GOVERNMENT/CITY/COUNTY</fullName>
+                    <default>false</default>
+                    <label>GOVERNMENT/CITY/COUNTY</label>
+                </value>
+                <value>
+                    <fullName>HEATING, VENILATION, AIR CONDITIONING</fullName>
+                    <default>false</default>
+                    <label>HEATING, VENILATION, AIR CONDITIONING</label>
+                </value>
+                <value>
+                    <fullName>HANLEY WOOD</fullName>
+                    <default>false</default>
+                    <label>HANLEY WOOD</label>
+                </value>
+                <value>
+                    <fullName>INSULATION</fullName>
+                    <default>false</default>
+                    <label>INSULATION</label>
+                </value>
+                <value>
+                    <fullName>INTERIOR DESIGNER</fullName>
+                    <default>false</default>
+                    <label>INTERIOR DESIGNER</label>
+                </value>
+                <value>
+                    <fullName>INVESTMENT BANKER (EQUITY)</fullName>
+                    <default>false</default>
+                    <label>INVESTMENT BANKER (EQUITY)</label>
+                </value>
+                <value>
+                    <fullName>LENDER/BANK</fullName>
+                    <default>false</default>
+                    <label>LENDER/BANK</label>
+                </value>
+                <value>
+                    <fullName>LUMBER</fullName>
+                    <default>false</default>
+                    <label>LUMBER</label>
+                </value>
+                <value>
+                    <fullName>OTHER INDUSTRY</fullName>
+                    <default>false</default>
+                    <label>OTHER INDUSTRY</label>
+                </value>
+                <value>
+                    <fullName>MORTGAGE COMPANY</fullName>
+                    <default>false</default>
+                    <label>MORTGAGE COMPANY</label>
+                </value>
+                <value>
+                    <fullName>PAINT</fullName>
+                    <default>false</default>
+                    <label>PAINT</label>
+                </value>
+                <value>
+                    <fullName>PERIODICALS (NEWSPAPERS/MAGAZINES)</fullName>
+                    <default>false</default>
+                    <label>PERIODICALS (NEWSPAPERS/MAGAZINES)</label>
+                </value>
+                <value>
+                    <fullName>LAND PLANNER</fullName>
+                    <default>false</default>
+                    <label>LAND PLANNER</label>
+                </value>
+                <value>
+                    <fullName>PROPERTY MANAGER</fullName>
+                    <default>false</default>
+                    <label>PROPERTY MANAGER</label>
+                </value>
+                <value>
+                    <fullName>REALTOR</fullName>
+                    <default>false</default>
+                    <label>REALTOR</label>
+                </value>
+                <value>
+                    <fullName>REIT&apos;s</fullName>
+                    <default>false</default>
+                    <label>REIT&apos;s</label>
+                </value>
+                <value>
+                    <fullName>RETAIL TENANT</fullName>
+                    <default>false</default>
+                    <label>RETAIL TENANT</label>
+                </value>
+                <value>
+                    <fullName>ROOFING MANUFACTURER</fullName>
+                    <default>false</default>
+                    <label>ROOFING MANUFACTURER</label>
+                </value>
+                <value>
+                    <fullName>SCHOOL/LIBRARY</fullName>
+                    <default>false</default>
+                    <label>SCHOOL/LIBRARY</label>
+                </value>
+                <value>
+                    <fullName>SIDING</fullName>
+                    <default>false</default>
+                    <label>SIDING</label>
+                </value>
+                <value>
+                    <fullName>SALES AND MARKETING COMP</fullName>
+                    <default>false</default>
+                    <label>SALES AND MARKETING COMP</label>
+                </value>
+                <value>
+                    <fullName>SUBCONTRACTOR</fullName>
+                    <default>false</default>
+                    <label>SUBCONTRACTOR</label>
+                </value>
+                <value>
+                    <fullName>TITLE COMPANY</fullName>
+                    <default>false</default>
+                    <label>TITLE COMPANY</label>
+                </value>
+                <value>
+                    <fullName>UTILITY COMPANY</fullName>
+                    <default>false</default>
+                    <label>UTILITY COMPANY</label>
+                </value>
+                <value>
+                    <fullName>WINDOW MANUFACTURER</fullName>
+                    <default>false</default>
+                    <label>WINDOW MANUFACTURER</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Close_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Close Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Delivery_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Delivery Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Last_Modified_Date__c</fullName>
+        <description>timestamp</description>
+        <externalId>false</externalId>
+        <label>Last Modified Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Meyers_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</description>
+        <externalId>true</externalId>
+        <inlineHelpText>Used to store the Meyers SF ID for the merge. May be removed after the merge or 12/19</inlineHelpText>
+        <label>Meyers Id</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>One_time_Sale_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>One-time Sale Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Consulting/Engagement</fullName>
+                    <default>false</default>
+                    <label>Consulting/Engagement</label>
+                </value>
+                <value>
+                    <fullName>Custom Export/Report</fullName>
+                    <default>false</default>
+                    <label>Custom Export/Report</label>
+                </value>
+                <value>
+                    <fullName>Database</fullName>
+                    <default>false</default>
+                    <label>Database</label>
+                </value>
+                <value>
+                    <fullName>Claritas</fullName>
+                    <default>false</default>
+                    <label>Claritas</label>
+                </value>
+                <value>
+                    <fullName>Internet Sales</fullName>
+                    <default>false</default>
+                    <label>Internet Sales</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Briefing Sponsorship</fullName>
+                    <default>false</default>
+                    <label>Briefing Sponsorship</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opp_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Opp Owner</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Purchase_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Purchase Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Subscription/Membership</fullName>
+                    <default>false</default>
+                    <label>Subscription/Membership</label>
+                </value>
+                <value>
+                    <fullName>One-time</fullName>
+                    <default>false</default>
+                    <label>One-time</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Reconciled_by_Acctg__c</fullName>
+        <description>Populates if accounting has all necessary documentation to book the rev in that month</description>
+        <externalId>false</externalId>
+        <label>Reconciled by Acctg</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Referring_DBD__c</fullName>
+        <externalId>false</externalId>
+        <label>Referring DBD</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Albuquerque</fullName>
+                    <default>false</default>
+                    <label>Albuquerque</label>
+                </value>
+                <value>
+                    <fullName>Atlanta</fullName>
+                    <default>false</default>
+                    <label>Atlanta</label>
+                </value>
+                <value>
+                    <fullName>Austin</fullName>
+                    <default>false</default>
+                    <label>Austin</label>
+                </value>
+                <value>
+                    <fullName>Booking mapping SFDC to Finance</fullName>
+                    <default>false</default>
+                    <label>Booking mapping SFDC to Finance</label>
+                </value>
+                <value>
+                    <fullName>Central</fullName>
+                    <default>false</default>
+                    <label>Central</label>
+                </value>
+                <value>
+                    <fullName>Central/Northern FL</fullName>
+                    <default>false</default>
+                    <label>Central/Northern FL</label>
+                </value>
+                <value>
+                    <fullName>Charlotte</fullName>
+                    <default>false</default>
+                    <label>Charlotte</label>
+                </value>
+                <value>
+                    <fullName>Dallas</fullName>
+                    <default>false</default>
+                    <label>Dallas</label>
+                </value>
+                <value>
+                    <fullName>Denver</fullName>
+                    <default>false</default>
+                    <label>Denver</label>
+                </value>
+                <value>
+                    <fullName>Houston</fullName>
+                    <default>false</default>
+                    <label>Houston</label>
+                </value>
+                <value>
+                    <fullName>Idaho</fullName>
+                    <default>false</default>
+                    <label>Idaho</label>
+                </value>
+                <value>
+                    <fullName>IL/WI/IN/MO/IA/KY/OH</fullName>
+                    <default>false</default>
+                    <label>IL/WI/IN/MO/IA/KY/OH</label>
+                </value>
+                <value>
+                    <fullName>Las Vegas</fullName>
+                    <default>false</default>
+                    <label>Las Vegas</label>
+                </value>
+                <value>
+                    <fullName>Maryland/Northern VA/DC</fullName>
+                    <default>false</default>
+                    <label>Maryland/Northern VA/DC</label>
+                </value>
+                <value>
+                    <fullName>Minnesota</fullName>
+                    <default>false</default>
+                    <label>Minnesota</label>
+                </value>
+                <value>
+                    <fullName>Nashville</fullName>
+                    <default>false</default>
+                    <label>Nashville</label>
+                </value>
+                <value>
+                    <fullName>National - BPM</fullName>
+                    <default>false</default>
+                    <label>National - BPM</label>
+                </value>
+                <value>
+                    <fullName>Northern CA</fullName>
+                    <default>false</default>
+                    <label>Northern CA</label>
+                </value>
+                <value>
+                    <fullName>NY/NJ/PA/DE</fullName>
+                    <default>false</default>
+                    <label>NY/NJ/PA/DE</label>
+                </value>
+                <value>
+                    <fullName>Philadelphia</fullName>
+                    <default>false</default>
+                    <label>Philadelphia</label>
+                </value>
+                <value>
+                    <fullName>Phoenix/Tucson/Prescott</fullName>
+                    <default>false</default>
+                    <label>Phoenix/Tucson/Prescott</label>
+                </value>
+                <value>
+                    <fullName>Raleigh</fullName>
+                    <default>false</default>
+                    <label>Raleigh</label>
+                </value>
+                <value>
+                    <fullName>San Antonio</fullName>
+                    <default>false</default>
+                    <label>San Antonio</label>
+                </value>
+                <value>
+                    <fullName>Southeast</fullName>
+                    <default>false</default>
+                    <label>Southeast</label>
+                </value>
+                <value>
+                    <fullName>Southern CA</fullName>
+                    <default>false</default>
+                    <label>Southern CA</label>
+                </value>
+                <value>
+                    <fullName>Southern FL</fullName>
+                    <default>false</default>
+                    <label>Southern FL</label>
+                </value>
+                <value>
+                    <fullName>Tampa/Sarasota</fullName>
+                    <default>false</default>
+                    <label>Tampa/Sarasota</label>
+                </value>
+                <value>
+                    <fullName>Utah</fullName>
+                    <default>false</default>
+                    <label>Utah</label>
+                </value>
+                <value>
+                    <fullName>Washington/Oregon</fullName>
+                    <default>false</default>
+                    <label>Washington/Oregon</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New Opportunity</fullName>
+                    <default>false</default>
+                    <label>New Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Prospect Engaged</fullName>
+                    <default>false</default>
+                    <label>Prospect Engaged</label>
+                </value>
+                <value>
+                    <fullName>Evaluation</fullName>
+                    <default>false</default>
+                    <label>Evaluation</label>
+                </value>
+                <value>
+                    <fullName>Budget Qualification</fullName>
+                    <default>false</default>
+                    <label>Budget Qualification</label>
+                </value>
+                <value>
+                    <fullName>Proposal Submitted</fullName>
+                    <default>false</default>
+                    <label>Proposal Submitted</label>
+                </value>
+                <value>
+                    <fullName>Technically Selected</fullName>
+                    <default>false</default>
+                    <label>Technically Selected</label>
+                </value>
+                <value>
+                    <fullName>Contract Negotiation</fullName>
+                    <default>false</default>
+                    <label>Contract Negotiation</label>
+                </value>
+                <value>
+                    <fullName>Final Signature</fullName>
+                    <default>false</default>
+                    <label>Final Signature</label>
+                </value>
+                <value>
+                    <fullName>In Purchasing</fullName>
+                    <default>false</default>
+                    <label>In Purchasing</label>
+                </value>
+                <value>
+                    <fullName>Closed Won</fullName>
+                    <default>false</default>
+                    <label>Closed Won</label>
+                </value>
+                <value>
+                    <fullName>Lost/Expired</fullName>
+                    <default>false</default>
+                    <label>Lost/Expired</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Existing Customer</fullName>
+                    <default>false</default>
+                    <label>Existing Customer</label>
+                </value>
+                <value>
+                    <fullName>New Customer</fullName>
+                    <default>false</default>
+                    <label>New Customer</label>
+                </value>
+                <value>
+                    <fullName>Renewal</fullName>
+                    <default>false</default>
+                    <label>Renewal</label>
+                </value>
+                <value>
+                    <fullName>Duplicate; pls. delete</fullName>
+                    <default>false</default>
+                    <label>Duplicate; pls. delete</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Month End Audit Snapshot</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Opportunity_Name__c</columns>
+        <columns>Amount__c</columns>
+        <columns>Close_Date__c</columns>
+        <columns>Reconciled_by_Acctg__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Audit Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Month End Audit Snapshots</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Configuration settings for the Linvio Content Items add-on for Salesforce.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ctnt__RSS_Feed_Description__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Description to display for the RSS feed generated using RSS Feed Content Items and SiteRSSFeed page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description to display for the RSS feed generated using RSS Feed Content Items and SiteRSSFeed page.</inlineHelpText>
+        <label>RSS Feed Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ctnt__RSS_Feed_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Title to display for the RSS feed generated using RSS Feed Content Items and SiteRSSFeed page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Title to display for the RSS feed generated using RSS Feed Content Items and SiteRSSFeed page.</inlineHelpText>
+        <label>RSS Feed Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Content Items Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

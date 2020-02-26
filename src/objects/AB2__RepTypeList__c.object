@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Obsolete - replaced by RepType__c custom object to allow for relationships from Opportunity.
+
+This list contains all the AdBook Rep Types. Maps between the Rep Type Code and the Rep Type Id. Populated by the [Get Rep Type List] button on the AdBook Administration tab.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AB2__RepTypeCode__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Optional, not all Configured Contact Rep Types will have a RepTypeCode.</description>
+        <externalId>false</externalId>
+        <label>RepTypeCode</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__RepTypeID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>RepTypeID</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Rep Type List</label>
+    <visibility>Public</visibility>
+</CustomObject>

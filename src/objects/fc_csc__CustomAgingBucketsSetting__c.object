@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This custom setting holds custom aging bucket field information to be used to sum overdue invoices.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>fc_csc__ApiFieldName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field holds the Api name of the custom aging bucket field to be populated on the Account object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field holds the Api name of the custom aging bucket field to be populated on the Account object.</inlineHelpText>
+        <label>Api Field Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fc_csc__From__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the start of the range of the number of days an invoice is overdue for the specific aging bucket.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the start of the range of the number of days an invoice is overdue for the specific aging bucket.</inlineHelpText>
+        <label>From</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>fc_csc__To__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the end of the range of the number of days an invoice is overdue for the specific aging bucket.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the end of the range of the number of days an invoice is overdue for the specific aging bucket.</inlineHelpText>
+        <label>To</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>CustomAgingBucketsSetting</label>
+    <visibility>Public</visibility>
+</CustomObject>

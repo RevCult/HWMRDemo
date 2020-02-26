@@ -1,0 +1,91 @@
+<apex:page standardController="Builder__c" sidebar="false" showHeader="false" standardStylesheets="false" docType="html-5.0" extensions="BuilderProjectMgmtExt">
+	<head>
+		<title>Zonda iPad App, Real-time homebuilding data from Meyers, a Kennedy Wilson Company</title>
+		<apex:stylesheet value="{!$Resource.zonda_css}" />
+		
+		<apex:stylesheet value="{!URLFOR($Resource.jqueryui, 'jquery-ui/jquery-ui.min.css')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.jqueryui, 'jquery-ui/jquery-ui.structure.min.css')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.jqueryui, 'jquery-ui/jquery-ui.theme.min.css')}" />
+
+		<style type="text/css">
+			.projectDataLabel {font-weight: normal; width: 185px; display: inline-block;}
+			.wideInput {width: 400px;}
+			.multiSelectPicklistTable {width: 400px; display: inline-block;}
+			select[id$="selected"] { width: 200px; }
+			input {width: 200px;}
+
+			.section-container {clear: both;}
+			.section-header {font-weight: bold; line-height: 2em;}
+			.section-details {line-height: 2em; font-size: .7em;}
+			.section-details .left-col {width: 49%; float: left; }
+			.section-details .right-col {width: 49%; float: left; }
+			.section-details .single-col {width: 100%; clear: both;}
+
+			.dateFormat {display: none;}
+			.datePicker {font-size: .8em;}
+
+			.hidden {visibility: hidden;}
+		</style>
+
+		<!-- There's a bunch of javascript at the bottom of this page -->
+	</head>
+
+	<header>
+		<div class="container">
+			<a href="https://www.meyersresearchllc.com/zonda/"><img src="http://assets.zonda.co/images/logo.png" class="logo preload" style="border:0;" onload="imgLoad()"/></a>
+			<nav>
+				<ul>
+					<li class="active"><a href="https://www.meyersresearchllc.com/zonda/">iPad App</a></li><li><a data-target="benefits">Features</a></li><li><a data-target="download">Download</a></li><li><a data-target="demo">Get a Demo</a></li><li><a href="http://www.meyersresearchllc.com">About Meyers Research</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div id="top"></div>
+
+	<div id="body_container">
+		<apex:form >
+
+			<div id="masthead" style="height:200px;">
+				<div class="container">
+					<img src="http://assets.zonda.co/images/mast-logo.png" id="mast-logo" class="preload"/>
+					<h2>Building knowledge on-the-go.</h2>
+				</div>
+			</div>
+
+			<div id="benefits">
+				<div class="container">
+					<h2 class="uppercase"><a href="{!URLFOR($Page.BuilderProjectMgmt)}">THANKS</a></h2>
+					<hr class="shortHR"/>
+				</div>
+			</div>
+			
+			<apex:outputPanel styleClass="benefits3" layout="block" rendered="{!userType==null || userType == '' || userType=='unknown'}" style="background: #fff;">
+				<div class="container">
+					<div id="portfolio-foresight" class="desc">
+						Sorry, no user information found. :(
+					</div>
+					<div style="height: 350px;"><!-- GIMME SPACE!!!!! --></div>
+				</div>
+			</apex:outputPanel>			
+
+			<apex:outputPanel id="benefits2" layout="block" rendered="{!userType!=null && userType != '' && userType!='unknown'}">
+				<div style="height: 100px;"><!-- GIMME SPACE!!!!! --></div>
+				<div class="container">
+					<br/><br/>
+					<apex:commandLink value="Update Another Project" action="{!$Page.BuilderProjectMgmt}?userId={!userId}" styleClass="button"/>
+				</div>
+				<div style="height: 350px;"><!-- GIMME SPACE!!!!! --></div>
+			</apex:outputPanel>
+		</apex:form>
+
+	</div> <!-- /body_container -->
+		
+	<script type="text/javascript" src="{!URLFOR($Resource.jqueryui, 'jquery-ui/external/jquery/jquery.js')}"></script>
+	<script type="text/javascript" src="{!URLFOR($Resource.jqueryui, 'jquery-ui/jquery-ui.min.js')}"></script>
+	<script type="text/javascript" src="{!$Resource.bpm_js}"></script>
+	<script type="text/javascript" src="{!$Resource.modernizr_js}"></script>
+	<script type="text/javascript" src="{!$Resource.typekit_js}"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+</apex:page>

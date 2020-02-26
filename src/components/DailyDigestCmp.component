@@ -1,0 +1,50 @@
+<!--
+ - Created by 10K/Mike Gill on 05/10/2017.
+ - @changelog Added Name and date formatting
+ -            10K MG 11/28 Added Amount Rounding
+ - @changelog Added Purchase Type to layout.
+ -            BE 2/8/19
+ -->
+
+<apex:component controller="DailyDigestController" id="DailyDigestCmp" access="global">
+
+    <apex:attribute name="strFilter" type="String" description="filter string" assignTo="{!digestFilter}"/>
+
+    <table border = "0" cellspacing = "5">
+        <tr>
+            <td>Daily Digest</td>
+
+        </tr>
+        <apex:repeat value="{!opptys}" var="o" rendered="true">
+            <tr>
+                <td>
+                    <br/>
+                    Name: {!o.Name} <br/>
+                    Link: {!o.Opportunity_Link__c} <br/>
+                    Close Date:
+                    <apex:outputText value=" {0,date,MM/dd/yyyy}">
+                        <apex:param value="{!o.CloseDate}"/>
+                    </apex:outputText><br/>
+                    Stage: {!o.StageName} <br/>
+                    Amount: {!ROUND(o.Amount,2)} <br/>
+                    Channel Type: {!o.Channel_Type__c} <br/>
+                    Purchase Type: {!o.Purchase_Type__c} <br/>
+                    Region: {!o.Region__c} <br/>
+                    Opportunity Owner: {!o.Owner.Name} <br/>
+                    Term of Contract: {!o.Membership_Term__c} <br/>
+                    Upsell Amount: {!o.FC_Upsell_Revenue__c} <br/>
+                    Price Increase/Decrease: {!o.FC_Price_Increase_Decrease__c} <br/>
+                    <apex:outputLabel rendered="{!IF (digestFilter == 'cancel', true, false)}">
+                    Cancellation Status: {!o.Cancellation_Status__c} <br/>
+                    Cancellation Type: {!o.Cancellation_Type__c} <br/>
+                    Cancellation Category: {!o.Cancellation_Category__c} <br/>
+                    Cancellation Reason: {!o.Cancellation_Reason__c} <br/>
+                    </apex:outputLabel>
+
+
+                </td>
+            </tr>
+        </apex:repeat>
+    </table>
+
+</apex:component>

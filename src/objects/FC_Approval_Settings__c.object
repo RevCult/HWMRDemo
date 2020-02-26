@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Bypass_DBD_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bypass DBD Approval</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>(FC) Approval Settings</label>
+    <listViews>
+        <fullName>dbd_approval</fullName>
+        <columns>Bypass_DBD_Approval__c</columns>
+        <columns>SETUP_OWNER_NAME</columns>
+        <filterScope>Everything</filterScope>
+        <label>dbd approval</label>
+        <language>en_US</language>
+    </listViews>
+    <visibility>Protected</visibility>
+</CustomObject>

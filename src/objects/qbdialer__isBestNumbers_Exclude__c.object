@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Add the names of the phone fields you would like to exclude from Best Phone.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>qbdialer__Exclude_from_best_phone__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Add all API names of the phone fields separated by a comma that you would like to exclude from Best Phone.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Add all API names of the phone fields separated by a comma that you would like to exclude from Best Phone.</inlineHelpText>
+        <label>Exclude from best phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>isBestNumbers_Exclude</label>
+    <visibility>Public</visibility>
+</CustomObject>

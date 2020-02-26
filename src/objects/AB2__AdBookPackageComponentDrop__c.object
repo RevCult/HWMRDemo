@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>AdBook Package Component Drops</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AB2__ABAdUnit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Ad Unit</description>
+        <externalId>false</externalId>
+        <label>AB Ad Unit</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>110x75</fullName>
+                    <default>false</default>
+                    <label>110x75</label>
+                </value>
+                <value>
+                    <fullName>120x60</fullName>
+                    <default>false</default>
+                    <label>120x60</label>
+                </value>
+                <value>
+                    <fullName>120x90</fullName>
+                    <default>false</default>
+                    <label>120x90</label>
+                </value>
+                <value>
+                    <fullName>125x125</fullName>
+                    <default>false</default>
+                    <label>125x125</label>
+                </value>
+                <value>
+                    <fullName>130x100</fullName>
+                    <default>false</default>
+                    <label>130x100</label>
+                </value>
+                <value>
+                    <fullName>130x50</fullName>
+                    <default>false</default>
+                    <label>130x50</label>
+                </value>
+                <value>
+                    <fullName>140x200</fullName>
+                    <default>false</default>
+                    <label>140x200</label>
+                </value>
+                <value>
+                    <fullName>145x55</fullName>
+                    <default>false</default>
+                    <label>145x55</label>
+                </value>
+                <value>
+                    <fullName>200x200</fullName>
+                    <default>false</default>
+                    <label>200x200</label>
+                </value>
+                <value>
+                    <fullName>220x100</fullName>
+                    <default>false</default>
+                    <label>220x100</label>
+                </value>
+                <value>
+                    <fullName>234x60</fullName>
+                    <default>false</default>
+                    <label>234x60</label>
+                </value>
+                <value>
+                    <fullName>38x38</fullName>
+                    <default>false</default>
+                    <label>38x38</label>
+                </value>
+                <value>
+                    <fullName>400x40</fullName>
+                    <default>false</default>
+                    <label>400x40</label>
+                </value>
+                <value>
+                    <fullName>405x100</fullName>
+                    <default>false</default>
+                    <label>405x100</label>
+                </value>
+                <value>
+                    <fullName>468x60</fullName>
+                    <default>false</default>
+                    <label>468x60</label>
+                </value>
+                <value>
+                    <fullName>600x50</fullName>
+                    <default>false</default>
+                    <label>600x50</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ABBillingModel__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook Package Component Drop Billing Model</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Package Component Drop Billing Model</inlineHelpText>
+        <label>AB Billing Model</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>AB2__ABBillingModel</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropCancelled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Has the drop been cancelled? 
+Corresponds to the AdBook Drop.ActiveStatus == &apos;Cancelled&apos;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Has the drop been cancelled?</inlineHelpText>
+        <label>AB Drop Cancelled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropGoals__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Goal count for a Package Component Drop.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Goal count for a Package Component Drop.</inlineHelpText>
+        <label>AB Drop Goals</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>AdBook Package Component Drop ID</description>
+        <externalId>true</externalId>
+        <label>AB DropID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropNotes__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Drop Notes</description>
+        <externalId>false</externalId>
+        <label>AB Drop Notes</label>
+        <length>400</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AB2__ABDropPrice__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Drop Price from last refresh operation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>AdBook Drop Price from last refresh operation</inlineHelpText>
+        <label>AB Drop Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABEndDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook End Date. Should mirror the EndDate of the parent OpportunityLineItem</description>
+        <externalId>false</externalId>
+        <label>AB End Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABMediaElementID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Media Element ID</description>
+        <externalId>false</externalId>
+        <label>AB MediaElementID</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABMediaElementPath__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Media Element Path</description>
+        <externalId>false</externalId>
+        <label>AB MediaElement Path</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABMediaElement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>AB MediaElement</label>
+        <referenceTo>AB2__MediaElement__c</referenceTo>
+        <relationshipLabel>AdBook Package Component Drops</relationshipLabel>
+        <relationshipName>AdBook_Package_Component_Drops</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABParentPackageDropID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook Drop ID for the parent package</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Drop ID for the parent package</inlineHelpText>
+        <label>AB Parent Package Drop ID</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABParentPackageID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Media Element Id of the Parent Package - long</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Media Element Id of the Parent Package - long</inlineHelpText>
+        <label>AB Parent Package Media Element ID</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABParentPackageOpportunityLineItemID__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Parent Package Drop OpportunityLineItem ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Salesforce OpportunityLineItem Id of the Package Drop (if applicable)</inlineHelpText>
+        <label>AB Parent Package OpportunityLineItem ID</label>
+        <length>18</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ABPayType__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Payment Type</description>
+        <externalId>false</externalId>
+        <label>AB Pay Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>PaidFor</fullName>
+                    <default>false</default>
+                    <label>PaidFor</label>
+                </value>
+                <value>
+                    <fullName>ValueAdd</fullName>
+                    <default>false</default>
+                    <label>ValueAdd</label>
+                </value>
+                <value>
+                    <fullName>MakeGood</fullName>
+                    <default>false</default>
+                    <label>MakeGood</label>
+                </value>
+                <value>
+                    <fullName>Remnant</fullName>
+                    <default>false</default>
+                    <label>Remnant</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AB2__ABPriceTypeRecord__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The AdBook Price Type. Determines the AB Price Calculation Type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Price Type. Determines the AB Price Calculation Type.</inlineHelpText>
+        <label>AB Price Type</label>
+        <referenceTo>AB2__AdBookPriceType__c</referenceTo>
+        <relationshipLabel>AdBook Package Component Drops</relationshipLabel>
+        <relationshipName>AdBook_Package_Component_Drops</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABStartDate__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook Start Date. Should mirror the StartDate of the parent OpportunityLineItem</description>
+        <externalId>false</externalId>
+        <label>AB Start Date</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ABWorkingPrice__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The AdBook Working Unit/Net Price. Maps to the AdBook Drop.Price field. 
+For orders with PriceType of CPM this will be the price per 1000 impressions. 
+For Flat Rate, CPA/CPC and CPL orders this is the price as entered.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Working Unit/Net Price. Maps to the AdBook Drop.Price field. 
+For orders with PriceType of CPM this will be the price per 1000 impressions. 
+For Flat Rate, CPA/CPC and CPL orders this is the price as entered.</inlineHelpText>
+        <label>AB Working Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Impressions__c</fullName>
+        <deprecated>false</deprecated>
+        <description>AdBook Impressions</description>
+        <externalId>false</externalId>
+        <label>Impressions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__Opportunity__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Parent Opportunity Record</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>AdBook Package Component Drops</relationshipLabel>
+        <relationshipName>AdBook_Package_Component_Drops</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>AB2__PricebookEntryId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>PricebookEntryId</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__TotalPrice__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Calculated Total Price for the Package Component</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Calculated Total Price for the Package Component</inlineHelpText>
+        <label>Total Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>AdBook Package Component Drop</label>
+    <nameField>
+        <label>AdBook Package Component Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>AdBook Package Component Drops</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

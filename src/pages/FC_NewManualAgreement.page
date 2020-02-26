@@ -1,0 +1,31 @@
+<apex:page showHeader="true" sidebar="true" controller="FC_NewManualAgreementController" action="{!createDocument}">
+    <apex:form >
+       <apex:sectionHeader title="New Manual Agreement" />
+        <apex:pageBlock mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="EchoSign Manual Agreement" columns="2">
+                <apex:outputField value="{!clientAgreement.echosign_dev1__Account__c}" label="Account"/>
+                <apex:inputField value="{!clientAgreement.Name}" />
+                <apex:inputField value="{!clientAgreement.echosign_dev1__Status__c}" />
+                <apex:outputField value="{!clientAgreement.echosign_dev1__Recipient2__c}" />
+                <apex:outputField value="{!clientAgreement.echosign_dev1__Opportunity__c}" />
+                <apex:inputField value="{!clientAgreement.Quote__c}" />
+                <apex:inputField value="{!clientAgreement.echosign_dev1__SignatureType__c}" />
+                <apex:inputField value="{!clientAgreement.echosign_dev1__DateSigned__c}" />
+                <apex:inputField value="{!clientAgreement.echosign_dev1__AgreementLocale__c}" />
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Upload Agreement Document">
+                 <!-- <apex:inputField value="{!AgreementDocument.Name}" /> -->
+                 <apex:inputFile value="{!AgreementDocument.body}"  filename="{!AgreementDocument.name}" id="agreementDoc"/>
+                 <!-- cancel -->
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+<!-- echosign_dev1__Account__c
+Name
+ Written Signature -->
+
+</apex:page>

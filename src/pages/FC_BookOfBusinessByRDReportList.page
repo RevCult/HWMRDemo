@@ -1,0 +1,18 @@
+<apex:page controller="FC_RegionalDirectorListController">
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!regionalDirectorNames}" var="rd">
+            <apex:column headerValue="Regional Director">
+                <apex:outputLink target="_blank"
+                                 value="/{!$Setup.FC_Book_of_Business_by_RD_Settings__c.By_RD_Report_ID__c}?{!$Setup.FC_Book_of_Business_by_RD_Settings__c.RD_Name_Parameter__c}={!URLENCODE(rd)}">
+                    <apex:outputText value="{!rd}"/>
+                </apex:outputLink>
+                <apex:facet name="header">
+                    <apex:outputLink target="_blank"
+                                     value="/{!$Setup.FC_Book_of_Business_by_RD_Settings__c.All_RDs_Report_ID__c}">Book
+                        of Business - All
+                    </apex:outputLink>
+                </apex:facet>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

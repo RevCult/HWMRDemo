@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>40.0</apiVersion>
+    <description>10K/MG 01/11 Add Name and Date Formatting</description>
+    <label>DailyDigestCmp</label>
+</ApexComponent>

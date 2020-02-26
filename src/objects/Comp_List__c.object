@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Comp_List__c</fullName>
+        <externalId>false</externalId>
+        <label>Comp List</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AFT - Digital</fullName>
+                    <default>false</default>
+                    <label>AFT - Digital</label>
+                </value>
+                <value>
+                    <fullName>AFT - Print</fullName>
+                    <default>false</default>
+                    <label>AFT - Print</label>
+                </value>
+                <value>
+                    <fullName>AHF - Digital</fullName>
+                    <default>false</default>
+                    <label>AHF - Digital</label>
+                </value>
+                <value>
+                    <fullName>AHF - Print</fullName>
+                    <default>false</default>
+                    <label>AHF - Print</label>
+                </value>
+                <value>
+                    <fullName>AL - Digital</fullName>
+                    <default>false</default>
+                    <label>AL - Digital</label>
+                </value>
+                <value>
+                    <fullName>AL - Print</fullName>
+                    <default>false</default>
+                    <label>AL - Print</label>
+                </value>
+                <value>
+                    <fullName>AQ - Digital</fullName>
+                    <default>false</default>
+                    <label>AQ - Digital</label>
+                </value>
+                <value>
+                    <fullName>AQ - Print</fullName>
+                    <default>false</default>
+                    <label>AQ - Print</label>
+                </value>
+                <value>
+                    <fullName>AR - Digital</fullName>
+                    <default>false</default>
+                    <label>AR - Digital</label>
+                </value>
+                <value>
+                    <fullName>AR - Print</fullName>
+                    <default>false</default>
+                    <label>AR - Print</label>
+                </value>
+                <value>
+                    <fullName>BD - Digital</fullName>
+                    <default>false</default>
+                    <label>BD - Digital</label>
+                </value>
+                <value>
+                    <fullName>BD - Print</fullName>
+                    <default>false</default>
+                    <label>BD - Print</label>
+                </value>
+                <value>
+                    <fullName>CC - Digital</fullName>
+                    <default>false</default>
+                    <label>CC - Digital</label>
+                </value>
+                <value>
+                    <fullName>CCP - Digital</fullName>
+                    <default>false</default>
+                    <label>CCP - Digital</label>
+                </value>
+                <value>
+                    <fullName>CCP - Print</fullName>
+                    <default>false</default>
+                    <label>CCP - Print</label>
+                </value>
+                <value>
+                    <fullName>CC - Print</fullName>
+                    <default>false</default>
+                    <label>CC - Print</label>
+                </value>
+                <value>
+                    <fullName>CH - Digital</fullName>
+                    <default>false</default>
+                    <label>CH - Digital</label>
+                </value>
+                <value>
+                    <fullName>CH - Print</fullName>
+                    <default>false</default>
+                    <label>CH - Print</label>
+                </value>
+                <value>
+                    <fullName>DB - Digital</fullName>
+                    <default>false</default>
+                    <label>DB - Digital</label>
+                </value>
+                <value>
+                    <fullName>DB - Print</fullName>
+                    <default>false</default>
+                    <label>DB - Print</label>
+                </value>
+                <value>
+                    <fullName>EH - Digital</fullName>
+                    <default>false</default>
+                    <label>EH - Digital</label>
+                </value>
+                <value>
+                    <fullName>EH - Print</fullName>
+                    <default>false</default>
+                    <label>EH - Print</label>
+                </value>
+                <value>
+                    <fullName>ES - Digital</fullName>
+                    <default>false</default>
+                    <label>ES - Digital</label>
+                </value>
+                <value>
+                    <fullName>ES - Print</fullName>
+                    <default>false</default>
+                    <label>ES - Print</label>
+                </value>
+                <value>
+                    <fullName>JLC - Digital</fullName>
+                    <default>false</default>
+                    <label>JLC - Digital</label>
+                </value>
+                <value>
+                    <fullName>JLC - Print</fullName>
+                    <default>false</default>
+                    <label>JLC - Print</label>
+                </value>
+                <value>
+                    <fullName>MF - Digital</fullName>
+                    <default>false</default>
+                    <label>MF - Digital</label>
+                </value>
+                <value>
+                    <fullName>MFE - Digital</fullName>
+                    <default>false</default>
+                    <label>MFE - Digital</label>
+                </value>
+                <value>
+                    <fullName>MFE - Print</fullName>
+                    <default>false</default>
+                    <label>MFE - Print</label>
+                </value>
+                <value>
+                    <fullName>MF - Print</fullName>
+                    <default>false</default>
+                    <label>MF - Print</label>
+                </value>
+                <value>
+                    <fullName>PS - Digital</fullName>
+                    <default>false</default>
+                    <label>PS - Digital</label>
+                </value>
+                <value>
+                    <fullName>PSN - Digital</fullName>
+                    <default>false</default>
+                    <label>PSN - Digital</label>
+                </value>
+                <value>
+                    <fullName>PSN - Print</fullName>
+                    <default>false</default>
+                    <label>PSN - Print</label>
+                </value>
+                <value>
+                    <fullName>PS - Print</fullName>
+                    <default>false</default>
+                    <label>PS - Print</label>
+                </value>
+                <value>
+                    <fullName>PW - Digital</fullName>
+                    <default>false</default>
+                    <label>PW - Digital</label>
+                </value>
+                <value>
+                    <fullName>PW - Print</fullName>
+                    <default>false</default>
+                    <label>PW - Print</label>
+                </value>
+                <value>
+                    <fullName>RA - Digital</fullName>
+                    <default>false</default>
+                    <label>RA - Digital</label>
+                </value>
+                <value>
+                    <fullName>RA - Print</fullName>
+                    <default>false</default>
+                    <label>RA - Print</label>
+                </value>
+                <value>
+                    <fullName>RC - Digital</fullName>
+                    <default>false</default>
+                    <label>RC - Digital</label>
+                </value>
+                <value>
+                    <fullName>RC - Print</fullName>
+                    <default>false</default>
+                    <label>RC - Print</label>
+                </value>
+                <value>
+                    <fullName>RM - Digital</fullName>
+                    <default>false</default>
+                    <label>RM - Digital</label>
+                </value>
+                <value>
+                    <fullName>RM - Print</fullName>
+                    <default>false</default>
+                    <label>RM - Print</label>
+                </value>
+                <value>
+                    <fullName>TCP - Digital</fullName>
+                    <default>false</default>
+                    <label>TCP - Digital</label>
+                </value>
+                <value>
+                    <fullName>TCP - Print</fullName>
+                    <default>false</default>
+                    <label>TCP - Print</label>
+                </value>
+                <value>
+                    <fullName>TT - Digital</fullName>
+                    <default>false</default>
+                    <label>TT - Digital</label>
+                </value>
+                <value>
+                    <fullName>TT - Print</fullName>
+                    <default>false</default>
+                    <label>TT - Print</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Comp Lists</relationshipLabel>
+        <relationshipName>Comp_Lists</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Inactive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Inactive</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status_Changed_On__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Changed On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Comp List</label>
+    <nameField>
+        <displayFormat>CL-{00000}</displayFormat>
+        <label>Comp Lists ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Comp Lists</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

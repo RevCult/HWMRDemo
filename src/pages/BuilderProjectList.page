@@ -1,0 +1,334 @@
+<apex:page standardController="Builder__c" sidebar="false" showHeader="false" standardStylesheets="false" docType="html-5.0" extensions="BuilderProjectListExt" cache="false">
+	<head>
+		<title>Zonda iPad App, Real-time homebuilding data from Meyers, a Kennedy Wilson Company</title>
+		<apex:stylesheet value="{!$Resource.zonda_css}" />
+		
+		<apex:stylesheet value="{!URLFOR($Resource.jqueryui, 'jquery-ui/jquery-ui.min.css')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.jqueryui, 'jquery-ui/jquery-ui.structure.min.css')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.jqueryui, 'jquery-ui/jquery-ui.theme.min.css')}" />
+
+		<style type="text/css">
+			.projectDataLabel {font-weight: bold;}
+			
+			.hidden {visibility: hidden; width: 0px;}
+			.ui-button-text {
+			   font-size: .6em !important;
+			} 
+		</style>
+	</head>
+
+	<header>
+		<div class="container">
+            <a href="https://www.meyersresearchllc.com/zonda/"><img src="http://assets.zonda.co/images/logo.png" class="logo preload" style="border:0;" onload="imgLoad()"/></a>
+			<nav>
+				<ul>
+					<li class="active"><a data-target="top">iPad App</a></li><li><a data-target="benefits">Features</a></li><li><a data-target="download">Download</a></li><li><a data-target="demo">Get a Demo</a></li><li><a data-target="about">About Meyers Research</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<div id="top"></div>
+
+	<div id="body_container">
+		<apex:form >
+
+			<div id="masthead" style="height:200px;">
+				<div class="container">
+                    <img src="http://assets.zonda.co/images/mast-logo.png" id="mast-logo" class="preload"/>
+					<h2>Building knowledge on-the-go.</h2>
+				</div>
+			</div>
+
+			<div id="benefits">
+				<div class="container">
+					<h2 class="uppercase"><a href="{!$Page.BuilderProjectMgmt}?userId={!userId}">MANAGE PROJECTS</a></h2>
+					<hr class="shortHR"/><br/>
+					<apex:outputPanel rendered="{!userName!=null && userName!='' && userName!='unknown'}">
+						<apex:outputText value="Welcome, {!userName}"/>
+					</apex:outputPanel>
+				</div>
+			</div>
+			
+			<apex:outputPanel styleClass="benefits3" layout="block" rendered="{!userType==null || userType == '' || userType=='unknown'}" style="background: #fff;">
+				<div class="container">
+					<div id="portfolio-foresight" class="desc">
+						Sorry, no user information found. :(
+					</div>
+					<div style="height: 350px;"><!-- GIMME SPACE!!!!! --></div>
+				</div>
+			</apex:outputPanel>			
+
+			<apex:outputPanel id="benefits2" layout="block" rendered="{!userType!=null && userType != '' && userType!='unknown'}">
+				<div class="container">
+					<div id="portfolio-foresight" class="desc" style="margin-bottom: 0px;">
+						<h3><apex:outputText value="{!Builder__c.Name}" style="text-transform: uppercase;" rendered="{!Builder__c.Name != null}" /><apex:outputText value=" PROJECT LIST" style="text-transform: uppercase;" /></h3>
+					</div>
+
+					<apex:outputPanel id="builderSelection" layout="block" style="margin-top: -30px; margin-bottom: 10px;">
+                        <apex:inputText id="builderTextBox" value="{!searchTerm}" style="width: 250px; font-size: 1em; color: #777; margin-right: 0px;" html-placeholder="Start typing builder name..." />
+                        <apex:inputText id="selectedBuilder" value="{!selectedBuilder}" styleClass="hidden" />
+                        
+                        <apex:inputText id="projectTextBox" value="{!projectSearchTerm}" style="width: 250px; font-size: 1em; color: #777; margin-right: 0px;" html-placeholder="Start typing project name..." />
+                        <apex:inputText id="selectedProject" value="{!selectedProject}" styleClass="hidden" />
+
+                        <apex:inputText id="countyFilter" value="{!countyFilter}" style="width: 100px; font-size: 1em; color: #777; margin-right: 0px;" html-placeholder="County" />&nbsp;
+                        <apex:inputText id="stateFilter" value="{!stateFilter}" style="width: 50px; font-size: 1em; color: #777; margin-right: 0px;" html-placeholder="State" />&nbsp;
+                        
+                        <br/>
+
+                        <apex:selectList id="flagFilter" value="{!flagFilter}" size="1">
+                        	<apex:selectOption itemLabel="Flag" itemValue="" />
+                        	<apex:selectOption itemLabel="60+ Days" itemValue="60+ Days" />
+                        	<apex:selectOption itemLabel="90+ Days" itemValue="90+ Days" />
+                        	<apex:selectOption itemLabel="120+ Days" itemValue="120+ Days" />
+                        	<apex:selectOption itemLabel="150+ Days" itemValue="150+ Days" />
+                        	<apex:selectOption itemLabel="In Review" itemValue="In Review" />
+                        	<apex:selectOption itemLabel="In Progress" itemValue="In Progress" />
+                        </apex:selectList>&nbsp;
+
+                        <apex:selectList id="meyersDispFilter" value="{!meyersDispFilter}" size="1">
+                        	<apex:selectOption itemLabel="Disposition" itemValue="" />
+                        	<apex:selectOption itemLabel="Baselined" itemValue="Baselined" />
+                        	<apex:selectOption itemLabel="Follow Up" itemValue="Follow Up" />
+                        </apex:selectList>&nbsp;
+                        
+                        <apex:selectList id="projectStatusFilter" value="{!projectStatusFilter}" size="1">
+                        	<apex:selectOptions value="{!StatusOptions}"/>
+                        </apex:selectList>&nbsp;
+
+                        <apex:selectList id="updateCycleFilter" value="{!updateCycleFilter}" size="1">
+                            <apex:selectOptions value="{!UpdateCycleOptions}" />
+                        </apex:selectList>
+                        
+                        <apex:commandLink value="Filter Projects" action="{!filterProjects}" styleClass="button" />&nbsp;
+                        <apex:commandLink value="Clear Filters" action="{!clearFilter}" onclick="javascript:$j('[id$=builderTextBox]').val( '' );$j('[id$=projectTextBox]').val( '' );" styleClass="button" />
+                    </apex:outputPanel>
+
+					<div style="height: 35px;">
+						<div style="width: 49%; float: left;">
+							<apex:outputText rendered="{!projectSetController.resultsize > 0}">Displaying Projects {!currentSetStart}-{!currentSetEnd} of {!projectSetController.resultsize}</apex:outputText>
+						</div>
+						<div style="width: 49%; float: right; text-align: right;">
+							<apex:commandButton action="{!first}" disabled="{!!projectSetController.hasPrevious}" value="<<" />
+							<apex:commandButton action="{!previous}" disabled="{!!projectSetController.hasPrevious}" value="<" />
+							<apex:commandButton action="{!next}" disabled="{!!projectSetController.hasNext}" value=">" />
+							<apex:commandButton action="{!last}" disabled="{!!projectSetController.hasNext}" value=">>" />
+						</div>
+					</div>
+
+					<apex:repeat value="{!projectSet}" var="project" id="projectListStandard" rendered="{!NOT(pageMode='dataUser')}">
+						<a href="{!$Page.BuilderProjectEdit}?id={!project.Id}&userId={!userId}">
+							<div style="height: 100px; background: #f3f3f3; border: 1px solid #0D4676; margin-bottom: 10px; padding: 5px; box-shadow: 5px 5px 7px #999; clear:both;">
+								<div style="margin-bottom: 10px;"><strong><apex:outputText value="{!project.Name}" /></strong> (<apex:outputText value="{!project.Status__c}" />)</div>
+								<div style="width: 65%; float: left; font-size: .8em; margin-bottom: 5px;">
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Product_Type__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField value="{!project.Product_Type__c}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Typical_Lot_Size__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField value="{!project.Typical_Lot_Size__c}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Open_Date__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField value="{!project.Open_Date__c}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Sold_Out_Date__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField value="{!project.Sold_Out_Date__c}" />
+								</div>
+								<div style="width: 34%; float: left; font-size: .8em;">
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Total_Units_Planned__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField value="{!project.Total_Units_Planned__c}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Total_Units_Sold__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField value="{!project.Total_Units_Sold__c}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Total_Remaining_calc__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField value="{!project.Total_Remaining_calc__c}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Sales_Rate__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField value="{!project.Sales_Rate__c}" />
+								</div>
+							</div>
+						</a>
+					</apex:repeat>
+
+
+							<!-- DATA USER VERSION STARTS HERE!!!!!!!! -->
+
+
+					<apex:repeat value="{!projectsWithStatusSet}" var="project" id="projectWithStatusListDataUser" >
+						<apex:outputLink value="{!$Page.BuilderProjectEdit}?id={!project.theProject.Id}&userId={!userId}{!IF(project.isInProgress, '&purId='+project.theProjectUpdateRequest.Id, '')}" >
+							<div style="height: 105px; background: #f3f3f3; border: 1px solid #0D4676; margin-bottom: 10px; padding: 5px; box-shadow: 5px 5px 7px #999; clear:both; position: relative;">
+								<apex:outputPanel layout="block" style="width: 85px; height: 88px; overflow: hidden; position: absolute; top: -3px; right: -3px; z-index: 90;" rendered="{!project.noOfDays<60 && project.theProjectUpdateRequest.Update_Request_Status__c='Review'}">
+									<div class="ribbon-blue">&nbsp;&nbsp;review </div>
+								</apex:outputPanel>
+								<apex:outputPanel layout="block" style="width: 85px; height: 88px; overflow: hidden; position: absolute; top: -3px; right: -3px; z-index: 90;" rendered="{!project.noOfDays>=60  && project.theProjectUpdateRequest.Update_Request_Status__c='Review'}">
+									<div class="ribbon-blue-new">&nbsp;&nbsp;review </div>
+								</apex:outputPanel>
+								<apex:outputPanel layout="block" styleClass="ribbon-wrapper-green" rendered="{!project.noOfDays<60 && project.theProjectUpdateRequest.Update_Request_Status__c='In Progress'}">
+									<div class="ribbon-green">&nbsp;&nbsp;in progress </div>
+								</apex:outputPanel>
+								
+								<apex:outputPanel layout="block" styleClass="ribbon-wrapper-green" rendered="{!project.noOfDays>=60  && project.theProjectUpdateRequest.Update_Request_Status__c='In Progress'}">
+									<div class="ribbon-green-new">&nbsp;&nbsp;in progress </div>
+								</apex:outputPanel>
+								
+								<apex:outputPanel layout="block" styleClass="ribbon-wrapper-orange" rendered="{!project.noOfDays>150}">
+									<div class="ribbon-color-240">&nbsp;&nbsp;&gt; 150 days</div>
+								</apex:outputPanel>
+								<apex:outputPanel layout="block" styleClass="ribbon-wrapper-orange" rendered="{!project.noOfDays>120 && project.noOfDays<=150}">
+									<div class="ribbon-color-180">&nbsp;&nbsp;&gt; 120 days</div>
+								</apex:outputPanel>
+								
+								<apex:outputPanel layout="block" styleClass="ribbon-wrapper-orange" rendered="{!project.noOfDays>90 && project.noOfDays<=120}">
+									<div class="ribbon-orange">&nbsp;&nbsp;&gt; 90 days</div>
+								</apex:outputPanel>
+								<apex:outputPanel layout="block" styleClass="ribbon-wrapper-orange" rendered="{!project.noOfDays>=60 && project.noOfDays<=90}">
+									<div class="ribbon-yellow-60">&nbsp;&nbsp;&gt; 60 days</div>
+								</apex:outputPanel>
+								
+						
+								<div style="margin-bottom: 5px;"><strong><apex:outputText value="{!project.theProject.Name}" /></strong> (<apex:outputText value="{!IF(project.isInProgress, project.theProjectUpdateRequest.Status__c, project.theProject.Status__c)}" />)</div>
+								<div style="width: 65%; float: left; font-size: .8em; margin-bottom: 5px; ">
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Builder__c.Label}: " styleClass="projectDataLabel" /> <apex:outputText value="{!project.theProject.Builder__r.Name}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Phone_Number__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField rendered="{!project.isInProgress=FALSE}" value="{!project.theProject.Phone_Number__c}" /><apex:outputField rendered="{!project.isInProgress=TRUE}" value="{!project.theProjectUpdateRequest.Phone_Number__c}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Sales_Person_Name__c.Label}: " styleClass="projectDataLabel" /> <apex:outputText value="{!IF(project.isInProgress, project.theProjectUpdateRequest.Sales_Person_Name__c, project.theProject.Sales_Person_Name__c)}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Num_of_Days_Since_Last_Update__c.Label}: " styleClass="projectDataLabel" /> <apex:outputText value="{!project.theProject.Num_of_Days_Since_Last_Update__c}" />
+								</div>
+								<div style="width: 34%; float: left; font-size: .8em; ">
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Total_Units_Planned__c.Label}: " styleClass="projectDataLabel" /> <apex:outputText value="{!IF(project.isInProgress, project.theProjectUpdateRequest.Total_Units_Planned__c, project.theProject.Total_Units_Planned__c)}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Total_Units_Sold__c.Label}: " styleClass="projectDataLabel" /> <apex:outputText value="{!IF(project.isInProgress, project.theProjectUpdateRequest.Total_Units_Sold__c, project.theProject.Total_Units_Sold__c)}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Total_Remaining_calc__c.Label}: " styleClass="projectDataLabel" /> <apex:outputText value="{!IF(project.isInProgress, project.theProjectUpdateRequest.Total_Remaining_calc__c, project.theProject.Total_Remaining_calc__c)}" /><br/>
+									<apex:outputText value="{!$ObjectType.Project__c.Fields.Last_Updated_Date_Sales__c.Label}: " styleClass="projectDataLabel" /> <apex:outputField value="{!project.theProject.Last_Updated_Date_Sales__c}" />
+								</div>
+							</div>
+						</apex:outputLink>
+					</apex:repeat>
+
+					<div style="height: 50px;">
+						<div style="width: 49%; float: left;">
+							<apex:outputText rendered="{!projectSetController.resultsize > 0}">Displaying Projects {!currentSetStart}-{!currentSetEnd} of {!projectSetController.resultsize}</apex:outputText>
+						</div>
+						<div style="width: 49%; float: right; text-align: right;">
+							<apex:commandButton action="{!first}" disabled="{!!projectSetController.hasPrevious}" value="<<" />
+							<apex:commandButton action="{!previous}" disabled="{!!projectSetController.hasPrevious}" value="<" />
+							<apex:commandButton action="{!next}" disabled="{!!projectSetController.hasNext}" value=">" />
+							<apex:commandButton action="{!last}" disabled="{!!projectSetController.hasNext}" value=">>" />
+						</div>
+					</div>
+
+				</div>
+			</apex:outputPanel>
+		</apex:form>
+
+	</div> <!-- /body_container -->
+
+	<script type="text/javascript" src="{!URLFOR($Resource.jqueryui, 'jquery-ui/external/jquery/jquery.js')}"></script>
+	<script type="text/javascript" src="{!URLFOR($Resource.jqueryui, 'jquery-ui/jquery-ui.min.js')}"></script>
+	<script type="text/javascript">
+		var userIdFromPage = "{!userId}";
+	</script>
+	<script type="text/javascript">
+		$j = jQuery.noConflict();
+		$j( ".datepicker" ).removeAttr("onfocus");
+		$j(function() {
+			$j( ".datepicker" ).datepicker({
+			changeMonth: true,
+			changeYear: true,
+			showButtonPanel: true
+			});
+		});
+
+		$j(function() {
+		    $j( ".button" )
+		      .button()
+		      .click(function( event ) {
+		        event.preventDefault();
+		      });
+		  });
+
+		var builderObjects;
+		var queryTerm;
+		var activeName;
+		$j('[id$=builderTextBox]').autocomplete({
+		    minLength: 2,
+		    source: function(request, response) {
+		                queryTerm = request.term;
+		                BuilderProjectListExt.searchBuilders(request.term, userIdFromPage, function(result, event){
+		                    if(event.type == 'exception') {
+		                          alert(event.message);
+		                    } else {
+		                         builderObjects = result;
+		                         response(builderObjects);
+		                    }
+		                });
+		           },
+		    focus: function( event, ui ) {
+		            activeName = ui.item.Name;
+		            activeName = activeName.replace('amp;','');
+		            
+		            $j('[id$=builderTextBox]').val( activeName );
+		            return false;
+		            },
+		    select: function( event, ui ) {
+		                $j('[id$=builderTextBox]').val( activeName );
+		                $j('[id$=selectedBuilder]').val( ui.item.Id );
+		                return false;
+		            },
+		 })
+		 .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+		    var entry = "<a>" + item.Name;
+		   
+		    entry = entry + "</a>";
+		    entry = entry.replace(queryTerm, "<b>" + queryTerm + "</b>");
+		    return $j( "<li></li>" )
+		        .data( "item.ui-autocomplete", item )
+		        .append( entry )
+		        .appendTo( ul );
+		};
+
+		//Here begins project name searching
+		var projectObjects;
+		var projectQueryTerm;
+		var activeProjectName;
+		$j('[id$=projectTextBox]').autocomplete({
+		    minLength: 2,
+		    source: function(request, response) {
+		                queryTerm = request.term;
+		                BuilderProjectListExt.searchProjects(request.term, userIdFromPage, function(result, event){
+		                    if(event.type == 'exception') {
+		                          alert(event.message);
+		                    } else {
+		                         // console.log('result: '+result);
+		                         projectObjects = result;
+		                         response(projectObjects);
+		                    }
+		                });
+		           },
+		    focus: function( event, ui ) {
+		    		//console.log('UI: '+ui);
+		            activeProjectName = ui.item.value;
+		            activeProjectName = activeProjectName.replace('amp;','');
+		            
+		            $j('[id$=projectTextBox]').val( activeProjectName );
+		            return false;
+		            },
+		    select: function( event, ui ) {
+		                $j('[id$=projectTextBox]').val( activeProjectName );
+		                $j('[id$=selectedProject]').val( activeProjectName );
+		                return false;
+		            },
+		 })
+		 .data( "ui-autocomplete" )._renderItem = function( ul, item ) {
+		   //console.log('item: '+item);
+		    var entry = "<a>" + item.value;
+		   
+		    entry = entry + "</a>";
+		    entry = entry.replace(queryTerm, "<b>" + queryTerm + "</b>");
+		    return $j( "<li></li>" )
+		        .data( "item.ui-autocomplete", item )
+		        .append( entry )
+		        .appendTo( ul );
+		};		
+
+	</script>
+	<script type="text/javascript" src="{!$Resource.modernizr_js}"></script>
+	<script type="text/javascript" src="{!$Resource.typekit_js}"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-23210138-3', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+</apex:page>

@@ -1,0 +1,11 @@
+<apex:component controller="FC_RequiredDecoratorController">
+    <apex:attribute name="forId" type="String" description="Component ID to attach messsage"
+                    assignTo="{!forComponentId}"/>
+    <apex:outputPanel layout="block" styleClass="requiredInput">
+        <apex:outputPanel layout="block" styleClass="requiredBlock"/>
+        <apex:actionSupport >
+            <apex:componentBody />
+            <apex:dynamicComponent componentValue="{!messageForComponent}"/>
+        </apex:actionSupport>
+    </apex:outputPanel>
+</apex:component>

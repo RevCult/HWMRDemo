@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Metrostudy Account provisioning settings</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ApplyRemovalAmendmentsLastRun__c</fullName>
+        <externalId>false</externalId>
+        <label>Apply Removal Amendments Last Run</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>DeleteAmmendmentLastCheck__c</fullName>
+        <externalId>false</externalId>
+        <label>Delete Ammendment Last Check(not in use)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LogRemovalAmendmentsLastRun__c</fullName>
+        <description>Tracks the last time this apex class was ran: MetroclientLogRemovalAmendments</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tracks the last time this apex class was ran: MetroclientLogRemovalAmendments</inlineHelpText>
+        <label>Log Removal Amendments Last Run</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>LogRemovalAmendmentsMaxRun__c</fullName>
+        <description>When needed, enter a max date/time for the apex class to use as a max date (MetroclientLogRemovalAmendments).  This field will usually be left blank.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When needed, enter a max date/time for the apex class to use as a max date (MetroclientLogRemovalAmendments).  This field will usually be left blank.</inlineHelpText>
+        <label>Log Removal Amendments Max Run</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SendEmailCc__c</fullName>
+        <externalId>false</externalId>
+        <label>Send Email Cc</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SendEmailTo__c</fullName>
+        <externalId>false</externalId>
+        <label>Send Email To</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SubscriptionUpdateLastCheck__c</fullName>
+        <description>Last time the APEX class ran to batch update Account Provisioning</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Last time the APEX class ran to batch update Account Provisioning</inlineHelpText>
+        <label>Subscription Update Last Check</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>SubscriptionUpdateMaxCheck__c</fullName>
+        <description>The max date and time the APEX class with look at for changes.  If blank, the class will include up 25 hours in the date/time range.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The max date and time the APEX class with look at for changes.  If blank, the class will include up 25 hours in the date/time range.</inlineHelpText>
+        <label>Subscription Update Max Check</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>UpdateProvisioning__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>UpdateProvisioning</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Metrostudy Provisioning Settings</label>
+    <visibility>Protected</visibility>
+</CustomObject>

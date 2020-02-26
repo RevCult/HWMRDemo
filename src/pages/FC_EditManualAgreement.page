@@ -1,0 +1,24 @@
+<apex:page showHeader="true" sidebar="true" standardController="echosign_dev1__SIGN_Agreement__c" extensions="FC_EditManualAgreementController" action="{!selectPage}">
+    <apex:form >
+       <apex:sectionHeader title="Edit Manual Agreement" />
+        <apex:pageBlock mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection title="EchoSign Manual Agreement" columns="2">
+                <apex:outputField value="{!clientAgreement.echosign_dev1__Account__c}" label="Account"/>
+                <apex:inputField value="{!clientAgreement.Name}" />
+                <apex:inputField value="{!clientAgreement.echosign_dev1__Status__c}" />
+                <apex:outputField value="{!clientAgreement.echosign_dev1__Recipient2__c}" />
+                <apex:outputField value="{!clientAgreement.echosign_dev1__Opportunity__c}" />
+                <apex:inputField value="{!clientAgreement.Quote__c}" />
+                <apex:inputField value="{!clientAgreement.echosign_dev1__SignatureType__c}" />
+                <apex:inputField value="{!clientAgreement.echosign_dev1__DateSigned__c}" />
+                <apex:inputField value="{!clientAgreement.echosign_dev1__AgreementLocale__c}" />
+            </apex:pageBlockSection>
+
+        </apex:pageBlock>
+    </apex:form>
+    <apex:relatedList list="CombinedAttachments"  subject="{!$CurrentPage.parameters.id}" />
+</apex:page>

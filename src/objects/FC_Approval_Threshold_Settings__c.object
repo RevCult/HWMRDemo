@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Cancellation_Approval_Amount__c</fullName>
+        <description>The cancellation approval process will be invoked if the Quote Value is less than or equal to this amount.</description>
+        <externalId>false</externalId>
+        <label>Cancellation Approval Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Consulting_Quote_Total_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Consulting Quote Total Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Consulting_Charge_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Non-Consulting Charge Total</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Consulting_Quote_Total_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Non-Consulting Quote Total Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Discount_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Discount Percentage</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Retainer_Rate_Plan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Retainer Rate Plan Amount</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>(FC) Approval Threshold Settings</label>
+    <visibility>Protected</visibility>
+</CustomObject>

@@ -1,0 +1,41 @@
+<apex:component >
+    <apex:attribute name="uiThemeName" type="String"
+                    description="JQueryUI theme name to load"
+                    required="false" default="smoothness"/>
+    <apex:attribute name="loadJQuery" type="Boolean"
+                    required="false" default="true"
+                    description="If true, loads JQuery"/>
+    <apex:attribute name="loadJQueryUI" type="Boolean"
+                    required="false" default="false"
+                    description="If true, loads JQueryUI"/>
+    <apex:attribute name="jqueryVersion" type="String"
+                    description="Version of JQuery to load"
+                    required="false" default="3.2.1"/>
+    <apex:attribute name="renameJQuery" type="Boolean"
+                    description="Renames jQuery to $j to prevent conflicts"
+                    required="false" default="false"/>
+    <apex:attribute name="uiVersion" type="String"
+                    description="Version of JQuery UI to load"
+                    required="false" default="1.12.1"/>
+    <apex:outputPanel layout="none" rendered="{!loadJQuery}">
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/{!jqueryVersion}/jquery.min.js"/>
+    </apex:outputPanel>
+    <apex:outputPanel layout="none" rendered="{!loadJQueryUI}">
+        <apex:stylesheet value="https://ajax.googleapis.com/ajax/libs/jqueryui/{!uiVersion}/themes/{!uiThemeName}/jquery-ui.css"/>
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/{!uiVersion}/jquery-ui.min.js"/>
+    </apex:outputPanel>
+
+    <script type="text/javascript">
+        /* <![CDATA[ */
+
+        /* Rename jQuery to prevent conflicts. */
+        var $j = '{!renameJQuery}' === 'true' ? jQuery.noConflict(true) : null;
+
+        /* Return a jQuery friendly ID */
+        function jqid(myid) {
+            return '#' + myid.replace(/(:|\.)/g, '\\\\$1');
+        }
+
+        /* ]]> */
+    </script>
+</apex:component>

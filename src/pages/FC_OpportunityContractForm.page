@@ -1,0 +1,58 @@
+<apex:page standardController="Opportunity" extensions="FC_OpportunityContractFormController">
+    <apex:outputText rendered="false" value="{!Opportunity.MS_Segments__c}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.IsClosed}"/>
+    <apex:outputText rendered="false" value="{!Opportunity.IsWon}"/>
+    <c:FC_JQuery renameJQuery="true"/>
+    <script type="text/javascript">
+        // <![CDATA[
+        $j(function () {
+            $j('.selectedContract').change(function () {
+                $j(jqid("{!$Component.theForm.thePageBlock.opportunityContractId}")).val($j(".selectedContract:checked").val());
+            });
+
+            if ("{!Opportunity.ContractId}" != null && "{!Opportunity.ContractId}" !== "") {
+                $j('.selectedContract[value={!Opportunity.ContractId}]').attr('checked', true);
+                $j(jqid("{!$Component.theForm.thePageBlock.opportunityContractId}")).val($j(".selectedContract:checked").val());
+            }
+        });
+        // ]]>
+    </script>
+    <apex:sectionHeader title="Select Contract" subtitle="{!Opportunity.Name}"/>
+    <apex:pageMessages />
+    <apex:form id="theForm">
+        <apex:pageBlock id="thePageBlock">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!selectContract}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection columns="1" collapsible="false">
+                <apex:outputField value="{!Opportunity.Name}"/>
+                <apex:outputField value="{!Opportunity.Account.Name}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection title="Select Contract" columns="1" collapsible="false">
+                <apex:pageBlockTable value="{!wrappedAccountContracts}" var="c">
+                    <apex:column >
+                        <input type="radio" name="selectedContract" class="selectedContract" value="{!c.contractId}"/>
+                    </apex:column>
+                    <apex:column headerValue="Subscription Number">
+                        <apex:outputPanel layout="block">
+                            <apex:outputText value="{!c.subscriptionNumber}"/>
+                        </apex:outputPanel>
+                        <apex:outputPanel layout="block" rendered="{!!ISBLANK(c.opportunityId)}">
+                            <apex:outputLink value="/{!c.opportunityId}" target="_blank">Link to Opportunity
+                            </apex:outputLink>
+                        </apex:outputPanel>
+                    </apex:column>
+                    <apex:column headerValue="Billing Account" value="{!c.customerAccountName}"/>
+                    <apex:column headerValue="Account Number" value="{!c.customerAccountNumber}"/>
+                    <apex:column headerValue="Term Start Date" value="{!c.termStartDate}"/>
+                    <apex:column headerValue="Term End Date" value="{!c.termEndDate}"/>
+                    <apex:column headerValue="Products">
+                        <apex:outputText value="{!c.products}" escape="false"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+            <apex:inputHidden id="opportunityContractId" value="{!selectedContractId}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

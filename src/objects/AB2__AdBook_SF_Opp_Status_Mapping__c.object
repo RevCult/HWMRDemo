@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This setting contains the mapping for AdBook and Salesforce Opportunity Statuses</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AB2__AdBook_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>AdBook Status</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__Cancelled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Indicates any drops on the Order in this stage should be cancelled.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates any drops on the Order in this stage should be cancelled.</inlineHelpText>
+        <label>Cancelled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Color__c</fullName>
+        <defaultValue>&apos;#000000&apos;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Color to display for Newsletter Availability based on the OrderStatusId, E.g. #FF0000 for red</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Color to display for Newsletter Availability based on the OrderStatusId, E.g. #FF0000 for red</inlineHelpText>
+        <label>Color</label>
+        <length>7</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OrderStatusID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>OrderStatusID</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>AdBook_SF_Opp_Status_Mapping</label>
+    <visibility>Public</visibility>
+</CustomObject>

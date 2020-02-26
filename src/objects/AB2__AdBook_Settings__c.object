@@ -1,0 +1,1319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>General AdBook integration settings and Record Type mappings</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AB2__AccountClientName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The API name of an Account field that will be mapped to the AdBook Client Name instead of the Account.Name field.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The API name of an Account field that will be mapped to the AdBook Client Name instead of the Account.Name field.</inlineHelpText>
+        <label>Account Client Name</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__AccountWideOrbitMappingField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The API name of an Account field that will be synced to the Wide Orbit Advertiser Id in AdBook for the Client.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The API name of an Account field that will be synced to the Wide Orbit Advertiser Id in AdBook for the Client.</inlineHelpText>
+        <label>Account Wide Orbit Mapping Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__AdBookBillingContactProviderClassName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Class that implements the AB2.AdBookContactProvider.AdBookBillingContactProvider interface to provide Billing Contacts for an Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Class that implements the AB2.AdBookContactProvider.AdBookBillingContactProvider interface to provide Billing Contacts for an Opportunity</inlineHelpText>
+        <label>AdBook BillingContact Provider ClassName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__AgencyCommissionDefault__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The default Agency Commission to apply to an Opportunity with Bill To = &apos;Agency&apos;. Typically 15%</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The default Agency Commission to apply to an Opportunity with Bill To = &apos;Agency&apos;. Typically 15%</inlineHelpText>
+        <label>Agency Commission Default</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>AB2__AgencyContact_Record_Type_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>AgencyContact Record Type ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__Agency_Record_Type_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Agency Record Type ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__AllowHistoricDropReactivation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If &quot;Allow Drop Reactivation&quot; is active, can drops with an end date before today also be reactivated?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If &quot;Allow Drop Reactivation&quot; is active, can drops with an end date before today also be reactivated?</inlineHelpText>
+        <label>Allow Historic Drop Reactivation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Allow_Drop_Reactivation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Can a cancelled AdBook Drop be reactivated? The End Date cannot be in the past.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Can a cancelled AdBook Drop be reactivated? Reactivation will only be allowed if the End Date is in the future.</inlineHelpText>
+        <label>Allow Drop Reactivation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__AppendAttachmentId__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When syncing Salesforce attachments to AdBook attachments, should the Salesforce attachment Id be appended to the filename to make it unique in AdBook?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When syncing Salesforce attachments to AdBook attachments, should the Salesforce attachment Id be appended to the filename to make it unique in AdBook?</inlineHelpText>
+        <label>Append Attachment Id</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__AutoLimitedSyncStageProbabilityThreshold__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Deprecated)
+Once an Opportunities Stage based probability reaches this threshold the order will be auto limited synced to AdBook</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Once an Opportunities Stage based probability reaches this threshold the order will be auto limited synced to AdBook</inlineHelpText>
+        <label>(Deprecated)AutoLimitedSyncStageProbThre</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__AutoMapSalesRep__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Automatically map Sales Rep by opportunity owner Id</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to map Sales Rep by opportunity owner Id when clicking &quot;Create\Update Order&quot; button</inlineHelpText>
+        <label>Auto Map Sales Rep</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__AutoOpportunityEmailRepMapping__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook Email Rep Map be used to automatically map fields from the Opportunity to AdBook Rep (Configured Contact) records?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook Email Rep Map be used to automatically map fields from the Opportunity to AdBook Rep (Configured Contact) records?</inlineHelpText>
+        <label>Auto Opportunity Email Rep Mapping</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__AutoOpportunityUDFMapping__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the AdBook UDF Map be used to automatically map fields from the Opportunity/Account to AdBook Order UDFs?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the AdBook UDF Map be used to automatically map fields from the Opportunity/Account to AdBook Order UDFs?</inlineHelpText>
+        <label>Auto UDF Mapping</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__AutoRefreshOpportunityErrorEmail__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Email address to notify if there is an Error/Exception when auto refreshing flagged Opportunities from AdBook to Salesforce</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email address to notify if there is an Error/Exception when auto refreshing flagged Opportunities from AdBook to Salesforce</inlineHelpText>
+        <label>Auto Refresh Opportunity Error Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__AutoSyncStageProbability__c</fullName>
+        <deprecated>false</deprecated>
+        <description>(Deprecated)
+Once an Opportunities Stage based probability reaches this threshold the order will be auto synced to AdBook</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Once an Opportunities Stage based probability reaches this threshold the order will be auto synced to AdBook</inlineHelpText>
+        <label>(Deprecated)AutoSyncStageProbabilityThre</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__AutoUpdateMediaElements__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When using Media Elements, check if the records stored in Salesforce match the current data in AdBook. If not, update the records in Salesforce.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When using Media Elements, check if the records stored in Salesforce match the current data in AdBook. If not, update the records in Salesforce.</inlineHelpText>
+        <label>Auto Update Media Elements</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Auto_Sync_AccountsAndContactsErrorEmail__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Email address to notify if there is an Error/Exception when auto syncing Accounts / Contacts from Salesforce to AdBook.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Email address to notify if there is an Error/Exception when auto syncing Acconts / Contacts from Salesforce to AdBook.</inlineHelpText>
+        <label>Auto Sync A&amp;C Error Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__Auto_Sync_Accounts_and_Contacts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should any changes to Accounts and/or Contacts that are linked to AdBook be automatically synced? Only applicable to changes in AdBook fields.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should any changes to Accounts and/or Contacts that are linked to AdBook be automatically synced? Only applicable to changes in AdBook fields.</inlineHelpText>
+        <label>Auto Sync Accounts and Contacts</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BatchLimit__c</fullName>
+        <defaultValue>100</defaultValue>
+        <deprecated>false</deprecated>
+        <description>The maximum number of AsyncApexJobs (batch jobs) to create in the Processing, Preparing or Holding Status. The standard upper limit with the Apex Flex Queue enabled is 100. It is isn&apos;t enabled the limit is 5.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The maximum number of AsyncApexJobs (batch jobs) to create in the Processing, Preparing or Holding Status. The standard upper limit with the Apex Flex Queue enabled is 100. It is isn&apos;t enabled the limit is 5.</inlineHelpText>
+        <label>Batch Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__BypassAgencyAccountTypeCheck__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Allows for an AB Agency to be selected on the Opportunity that doesn&apos;t have the &apos;Agency&apos; ABAccountType__c.
+Expectation is that the AB Agency will be corrected before a sync is attempted to AdBook.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allows for an AB Agency to be selected on the Opportunity that doesn&apos;t have the &apos;Agency&apos; ABAccountType__c.</inlineHelpText>
+        <label>Bypass Agency Account Type Check</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BypassDropIDUniquenessCheck__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When saving an AdBook Drop the AB2__ABDropUnique__c field will mirror the AB2__ABDropId__c field to enforce uniqueness between OpportunityLineItem records. When checked, this step will be bypassed. This may be useful for orgs with existing records that need to be cleaned up.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked, don&apos;t enforce uniqueness on the Opportunity Line Item AB2__ABDropId__c</inlineHelpText>
+        <label>Bypass Drop ID Uniqueness check</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BypassSecurityModelChecks__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>By default the package code will enforce Object and Field Level Security when working with records. This setting bypasses the access level granted to the current user when performing CRUD operations. Rather than using this setting is is recommended that an Admin grant users a profile or permission set with sufficient access.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>By default the package code will enforce Object and Field Level Security when working with records. This setting bypasses the access level granted to the current user when performing CRUD operations. Recommend using profile or permission sets if possible</inlineHelpText>
+        <label>Bypass Security Model Checks</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BypassSsoFederationIDValidation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Before performing a SSO login to AdBook a check is performed to ensure the User.FederationId is populated. Checking this custom setting bypasses that check. This is required if the connected app is configured to use another field as the SAML Subject Type.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Before performing a SSO login to AdBook a check is performed to ensure the User.FederationId is populated. Checking this custom setting bypasses that check. This is required if the connected app is configured to use another field as the SAML Subject Type.</inlineHelpText>
+        <label>Bypass SSO Federation ID Validation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__BypassWebsiteAvailabilityChecking__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Completely bypass website availability checking</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Completely bypass website availability checking</inlineHelpText>
+        <label>Bypass Website Availability Checking</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__CanvasEnv__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The value to pass the in the Env query string parameter to the Canvas App</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The value to pass the in the Env query string parameter to the Canvas App</inlineHelpText>
+        <label>CanvasEnv</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__CanvasFullRefresh__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When using the Save and Go Back button in the canvas app, should just the drops be refreshed (unchecked) or should it be a full refresh (checked)?</description>
+        <externalId>false</externalId>
+        <label>Canvas Full Refresh</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__CanvasResyncOnSubsequentAccess__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When accessing the AdBook Canvas App, sync only if the AB Order ID is blank (unchecked) or always (checked)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When accessing the AdBook Canvas App, sync only if the AB Order ID is blank (unchecked) or always (checked)</inlineHelpText>
+        <label>Canvas Resync On Subsequent Access</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__CanvasSso__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The value to pass the in the SSO query string parameter to the Canvas App</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The value to pass the in the SSO query string parameter to the Canvas App</inlineHelpText>
+        <label>CanvasSso</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__CanvasSuppressDropSyncToAdBook__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, when using the &quot;Access AdBook&quot; canvas app the only the Opportunity details will be synced to AdBook. The Drops won&apos;t be sent on update.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, when using the &quot;Access AdBook&quot; canvas app the only the Opportunity details will be synced to AdBook. The Drops won&apos;t be sent on update.</inlineHelpText>
+        <label>Canvas Suppress Drop Sync to AdBook</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ClientContact_Record_Type_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>ClientContact Record Type ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ClientNamePrefixMappingField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>An API Account field name that is mapped to a FieldValueMap of type &apos;AccountPrefixMapping&apos; as a prefix when syncing to AdBook.
+
+NOTE: If &quot;Account Client Name&quot; is defined it will be used in preference.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>An API Account field name that is mapped to a FieldValueMap of type &apos;AccountPrefixMapping&apos; as a prefix when syncing to AdBook.
+
+NOTE: If &quot;Account Client Name&quot; is defined it will be used in preference.</inlineHelpText>
+        <label>Client Name Prefix Mapping Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__Client_Record_Type_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Client Record Type ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__DateTimeDynamicPropertyFormat__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Java SimpleDateFormat string for how to format DateTime values for sync with AdBook.
+http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+
+Undefined defaults to ISO 8601 in UTC.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Java SimpleDateFormat string for how to format DateTime values for sync with AdBook.
+http://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html</inlineHelpText>
+        <label>UDF DateTime Format</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__DefaultPriceBookId__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Price Book to use in preference of the &quot;IsStandard&quot; record if one isn&apos;t defined on an Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Price Book to use in preference of the &quot;IsStandard&quot; record if one isn&apos;t defined on an Opportunity.</inlineHelpText>
+        <label>Default Price Book Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__DefaultToMultilineDropEditing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should Multiline Drop Editing Default to checked on the Drop finishing page?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should Multiline Drop Editing Default to checked on the Drop finishing page?</inlineHelpText>
+        <label>Default to Multiline Drop Editing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Default_Country__c</fullName>
+        <defaultValue>&quot;United States&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Default country to apply if undefined by user on Contact and Account records.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default country to apply if undefined by user</inlineHelpText>
+        <label>Default Country</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__DelayABAgencyContactTypeCheck__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Don&apos;t check that the Opportunity.AB2__ABAgencyContact__c.AB2__AB_Contact_Type_new__c includes &apos;Agency&apos; until an attempt is made to sync the record to AdBook.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Don&apos;t check that the Opportunity.AB2__ABAgencyContact__c.AB2__AB_Contact_Type_new__c includes &apos;Agency&apos; until an attempt is made to sync the record to AdBook.</inlineHelpText>
+        <label>Delay ABAgencyContact Type Check</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableABSalesTeamClearing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Stop clearing the Sales Team field after creating\updating order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stop clearing the Sales Team field after creating\updating order</inlineHelpText>
+        <label>Disable AB Sales Team Clearing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableAdBookAccountTrigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When checked, prevents the AdBookAccountTrigger from doing any processing</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked, prevents the AdBookAccountTrigger from doing any processing</inlineHelpText>
+        <label>Disable AdBook Account Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableAdBookDropToRevenueSchedule__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disables the AdBookDropToRevenueSchedule trigger. 
+
+For users engaged in development and debugging of Apex 
+Triggers, users performing mass data loading or other resource-intensive tasks.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Disables the AdBookDropToRevenueSchedule trigger. 
+
+For users engaged in development and debugging of Apex 
+Triggers, users performing mass data loading or other resource-intensive tasks.</inlineHelpText>
+        <label>Disable AdBookDropToRevenueSchedule</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableAdBookOpportunityLineItemTrigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disables the AdBookOpportunityLineItemTrigger trigger. 
+
+For users engaged in development and debugging of Apex 
+Triggers, users performing mass data loading or other resource-intensive tasks.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Disables the AdBookOpportunityLineItemTrigger trigger. 
+
+For users engaged in development and debugging of Apex 
+Triggers, users performing mass data loading or other resource-intensive tasks.</inlineHelpText>
+        <label>Disable AdBookOpportunityLineItemTrigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableAdBookOpportunityTrigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Disables the AdBookOpportunityTrigger trigger. This trigger validates the AdBook fields on the Opportunity.
+
+For users engaged in development and debugging of Apex 
+Triggers, users performing mass data loading or other resource-intensive tasks.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Disables the AdBookOpportunityTrigger trigger. This trigger validates the AdBook fields on the Opportunity.
+
+For users engaged in development and debugging of Apex 
+Triggers, users performing mass data loading or other resource-intensive tasks.</inlineHelpText>
+        <label>Disable AdBook Opportunity Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableAgencyContactToAccountLinkage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Skip the validation requirement that the Agency Contact is related to the Account indicated by the AB Bill To setting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Skip the validation requirement that the Agency Contact is related to the Account indicated by the AB Bill To setting.</inlineHelpText>
+        <label>Disable Agency Con to Account Linkage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableBillingContactToAccountLinkage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Skip the validation requirement that the Billing Contact is related to the Account indicated by the AB Bill To setting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Skip the validation requirement that the Billing Contact is related to the Account indicated by the AB Bill To setting.</inlineHelpText>
+        <label>Disable Billing Con to Account Linkage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableContactToAccountLinkage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Check to removed the verification that the Contact is related to the Account. 
+Corresponds to the message:
+The AB Client Contact must be linked to the selected client (Account).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to removed the verification that the Contact is related to the Account</inlineHelpText>
+        <label>Disable Contact to Account Linkage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableDiscount__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Don&apos;t display the Drop level Discount even if the field is accessible to the user.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Don&apos;t display the Drop level Discount even if the field is accessible to the user.</inlineHelpText>
+        <label>Disable Discount</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableMaterialsContactToAccountLinkage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Skip the validation requirement that the Materials Contact is related to the Account indicated by the AB Bill To setting.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Skip the validation requirement that the Materials Contact is related to the Account indicated by the AB Bill To setting.</inlineHelpText>
+        <label>Disable Materials Con to Account Linkage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableRefreshDrop__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>(Deprecated) Check to disable &apos;Refresh Drop&apos; function for opportunity
+Replaced by AdBook Sync Settings SalesforceSyncFromAdBook__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to disable &apos;Refresh Drop&apos; function for opportunity</inlineHelpText>
+        <label>(Deprecated) Disable Refresh Drop</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableRefreshOrder__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>(Deprecated) Check to disable &apos;Refresh Order&apos; function for opportunity
+Replaced by AdBook Sync Settings SalesforceSyncFromAdBook__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to disable &apos;Refresh Order&apos; function for opportunity</inlineHelpText>
+        <label>(Deprecated) Disable Refresh Order</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DisableUpdateOrder__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>(Deprecated) Check to disable &apos;Update Order&apos; function for opportunity
+Replaced by AdBook Sync Settings SalesforceSyncToAdBook__c</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to disable &apos;Update Order&apos; function for opportunity</inlineHelpText>
+        <label>(Deprecated) Disable Update Order</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DropDynamicPropertiesExpanded__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Are the Drop UDF values expanded by default when a user arrives on the page?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Are the Drop UDF values expanded by default when a user arrives on the page?</inlineHelpText>
+        <label>Drop UDFs Expanded</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__EnableDropBillingModel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Allow users to define the Drop Billing Model. When disabled the value won&apos;t be updated by the refresh from AdBook process either.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allow users to define the Drop Billing Model</inlineHelpText>
+        <label>Enable Drop Billing Model</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__EnableMultilineDropEditing__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Can the user edit multiple drop records at once?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Can the user edit multiple drop records at once?</inlineHelpText>
+        <label>Enable Multiline Drop Editing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__EnableUserDefinedPackagePricing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Allow for a price to be set at the package container level and have the adjusted price change cascade to each of the selected components.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allow for a price to be set at the package container level and have the adjusted price change cascade to each of the selected components.</inlineHelpText>
+        <label>Enable User Defined Package Pricing</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__FreeFormLabel__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Label to display for AdBook Free Form Media Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Label to display for AdBook Free Form Media Type</inlineHelpText>
+        <label>FreeFormLabel</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__HideRateCardDetails__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Hide the Rate Card Name and Rate Card Rate columns</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Hide the Rate Card Name and Rate Card Rate columns</inlineHelpText>
+        <label>Hide Rate Card Details</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideSaveDropAdBookID__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the &quot;AdBook ID&quot; on the drop finishing page be hidden?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the &quot;AdBook ID&quot; on the drop finishing page be hidden?</inlineHelpText>
+        <label>Hide SaveDrop AdBookID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideSaveDropDropCost__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the &quot;Drop Cost&quot; on the drop finishing page be hidden?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the &quot;Drop Cost&quot; on the drop finishing page be hidden?</inlineHelpText>
+        <label>Hide SaveDrop DropCost</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideSaveDropEndDate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the &quot;End Date&quot; on the drop finishing page be hidden?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the &quot;End Date&quot; on the drop finishing page be hidden?</inlineHelpText>
+        <label>Hide SaveDrop EndDate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideSaveDropImpressions__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the &quot;Impressions&quot; on the drop finishing page be hidden?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the &quot;Impressions&quot; on the drop finishing page be hidden?</inlineHelpText>
+        <label>Hide SaveDrop Impressions</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideSaveDropPositionPath__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the &quot;Position Path&quot; on the drop finishing page be hidden?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the &quot;Position Path&quot; on the drop finishing page be hidden?</inlineHelpText>
+        <label>Hide SaveDrop PositionPath</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideSaveDropPriceEntered__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the &quot;Price Entered&quot; on the drop finishing page be hidden?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the &quot;Price Entered&quot; on the drop finishing page be hidden?</inlineHelpText>
+        <label>Hide SaveDrop PriceEntered</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideSaveDropPriceType__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the &quot;Price Type&quot; on the drop finishing page be hidden?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the &quot;Price Type&quot; on the drop finishing page be hidden?</inlineHelpText>
+        <label>Hide SaveDrop PriceType</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideSaveDropStartDate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the &quot;Start Date&quot; on the drop finishing page be hidden?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the &quot;Start Date&quot; on the drop finishing page be hidden?</inlineHelpText>
+        <label>Hide SaveDrop StartDate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideSaveDropUnits__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the &quot;Units&quot; on the drop finishing page be hidden?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the &quot;Units&quot; on the drop finishing page be hidden?</inlineHelpText>
+        <label>Hide SaveDrop Units</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__HideUnavailableNewsletterDrops__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Scheduled drops which are already on inventory-taking campaigns are displayed “FYI” only, they are not selectable.  Check to hide these records by default.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Scheduled drops which are already on inventory-taking campaigns are displayed “FYI” only, they are not selectable.  Check to hide these records by default.</inlineHelpText>
+        <label>Hide Unavailable Newsletter Drops</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ImpressionsPastOversellAvailability__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Allow Impressions to be booked past the Available Impressions. No upper limit is enforced. Only applies to Website Media</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allow Impressions to be booked past the Available Impressions. No upper limit is enforced. Only applies to Website Media</inlineHelpText>
+        <label>Impressions Past Oversell Availability</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ImpressionsUpToOversellAvailability__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Allow Impressions Up To the Oversell Availability
+Only applies to Website Media</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Allow Impressions Up To the Oversell Availability
+Only applies to Website Media</inlineHelpText>
+        <label>Impressions up to Oversell Availability</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__InitialConfigurationComplete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Once the initial configuration via the AdBook Administration tab is complete this option will disable functions that should not be invoked again.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Once the initial configuration via the AdBook Administration tab is complete this option will disable functions that should not be invoked again.</inlineHelpText>
+        <label>Initial Configuration Complete</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__InternalLoggingLevel__c</fullName>
+        <deprecated>false</deprecated>
+        <description>At what System.LoggingLevel will the managed package log at? Typically debug statements from the package are hidden, so this is only useful for LMA based debugging.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>At what System.LoggingLevel will the managed package log at? Typically debug statements from the package are hidden, so this is only useful for LMA based debugging.</inlineHelpText>
+        <label>Internal Logging Level</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__MonthlyDropsDefault__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The default selection for the Monthy Drops select on the Add Drops page.
+Possible values:
+* Even Monthly
+* Daily Weighted
+* Daily Wtd Even Months
+* Generate Monthly Drops</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The default selection for the Monthy Drops select on the Add Drops page.
+Possible values:
+* Even Monthly
+* Daily Weighted
+* Daily Wtd Even Months
+* Generate Monthly Drops</inlineHelpText>
+        <label>Monthly Drops Default</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__NewsletterLabel__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Label to display for AdBook Newsletter Media Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Label to display for AdBook Newsletter Media Type</inlineHelpText>
+        <label>NewsletterLabel</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OperationsRepTeamMemberRole__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Auto populate the Opportunity Operations Rep based on a Rep with the same Email as the OpportunityTeamMember User with this role name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Auto populate the Opportunity Operations Rep based on a Rep with the same Email as the OpportunityTeamMember User with this role name</inlineHelpText>
+        <label>Operations Rep Team Member Role</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OpportunityAccountSegmentFieldApiName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Salesforce API name of the Opportunity field that represents the Account segment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Salesforce API name of the Opportunity field that represents the Account segment</inlineHelpText>
+        <label>Opportunity Account Segment Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OpportunityClientAccountFieldLookup__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of Opportunity Field that holds the relationship to the Client Account if the standard field isn&apos;t being used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name of Opportunity Field that holds the relationship to the Client Account if the standard field isn&apos;t being used.</inlineHelpText>
+        <label>Opportunity Client Account Field Lookup</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OpportunityLineItemEventsClassName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Optional class that implements the AB2.AdBookEvents.OpportunityLineItemsUpdated interface. It will be invoked by AdBook when the events occur.
+The value can be set via the AdBook Administration tab. This will validate the class implements the correct interface.
+
+Length is 255 (Maximum Classname) + 15 (Maximum NamespacePrefix) + 1 (separating period)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional class that implements the AB2.AdBookEvents.OpportunityLineItemsUpdated interface. It will be invoked by AdBook when the events occur.
+The value can be set via the AdBook Administration tab to validate it implements the correct interface.</inlineHelpText>
+        <label>OpportunityLineItemEventsClassName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OpportunityOrderManagerGroupFieldLookup__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The API name of a field on Opportunity that contains the OrderManagerGroup RepType Name. Used to auto populate a single &quot;AdBook Opportunity Order Manager Group Detail&quot; on the Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The API name of a field on Opportunity that contains the OrderManagerGroup RepType Name. Used to auto populate a single &quot;AdBook Opportunity Order Manager Group Detail&quot; on the Opportunity</inlineHelpText>
+        <label>OpportunityOrderManagerGroupFieldLookup</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OpportunityOrderNameFieldName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>When defined, use the Opportunity field with the same API name as the AdBook campaigns Name.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When defined, use the Opportunity field with the same API name as the AdBook campaigns Name.</inlineHelpText>
+        <label>Opportunity Order Name Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OpportunityOrderStatusFieldName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The API name of a field on Opportunity that contains the Order Status Name. It will be populated from AdBook. Used when mapping the Opportunity to AdBook if the current Opportunity Stage isn&apos;t known.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The API name of a field on Opportunity that contains the Order Status Name. Used if the current Opportunity stage to AdBook Status mapping isn&apos;t known</inlineHelpText>
+        <label>Opportunity Order Status Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OpportunityOutOfSyncRestrictDropSync__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>(Deprecated)
+When unchecked, the Opportunity.AB2__OutOfSync__c field flags the Opportunity for automated refresh from AdBook.
+When checked, automated Opportunity syncs from Salesforce to Adbook will exclude drops.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When unchecked, the Opportunity.AB2__OutOfSync__c field flags the Opportunity for automated refresh from AdBook.
+When checked, automated Opportunity syncs from Salesforce to Adbook will exclude drops.</inlineHelpText>
+        <label>(Deprecated)Opp OutOfSync restrict DropS</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__OpportunityRefreshedEventClassName__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Optional class that implements the AB2.AdBookEvents.OpportunityRefreshedEvent interface. It will be invoked by AdBook after refreshing an Order.
+The value can be set via the AdBook Administration tab. This will validate the class implements the correct interface. 
+
+Length is 255 (Maximum Classname) + 15 (Maximum NamespacePrefix) + 1 (separating period)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Optional class that implements the AB2.AdBookEvents.OpportunityRefreshedEvent interface. It will be invoked by AdBook after refreshing an Order.
+The value can be set via the AdBook Administration tab to validate it implements the correct interface.</inlineHelpText>
+        <label>OpportunityRefreshedEventClassName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__OpportunitySalesTeamMappingField__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Map to Order Dynamic properties field &quot;Sales_Team&quot;</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Map to Order Dynamic properties field &quot;Sales_Team&quot;</inlineHelpText>
+        <label>Opportunity Sales Team Mapping Field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__Order_Record_Type_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Order Record Type ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__PackageLabel__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Label to display for AdBook Package Media Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Label to display for AdBook Package Media Type</inlineHelpText>
+        <label>PackageLabel</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__PackageStorageInversion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>DEV-14109 Store the package drops as OpportunityLineItem records and the Package as AdBookPackageDrop__c records. AdBookPackageComponentDrop__c records will not be used.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Store the package drops as OpportunityLineItem records and the Package as AdBookPackageDrop__c records. AdBookPackageComponentDrop__c records will not be used.</inlineHelpText>
+        <label>Package Storage Inversion</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Position_Record_Type_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Position Record Type ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__PreventPackagesWithZeroQuantity__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When checked, attempting to refresh a drop/package from AdBook to Salesforce will result in an error if it has a quantity of 0. When unchecked the OpportunityLineItem.AB2__ABQuantityZero__c flag will be set.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked, attempting to refresh a drop/package from AdBook to Salesforce will result in an error if it has a quantity of 0. When unchecked the OpportunityLineItem.AB2__ABQuantityZero__c flag will be set.</inlineHelpText>
+        <label>Prevent Drops with Zero Quantity</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__RateCardPositionPricingMediaElementLimit__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The maximum number of MediaElements to check position pricing for. Each will require an individual API callout. Beyond this limit the entire PositionPricing for the RateCard is checked.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The maximum number of MediaElements to check position pricing for. Each will require an individual API callout. Beyond this limit the entire PositionPricing for the RateCard is checked.</inlineHelpText>
+        <label>RateCardPositionPricingMediaElementLimit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__Rate_Card_Record_Type_ID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rate Card Record Type ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__ResetPositionFiltersAfterGetDetails__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>On the Add Drop page, after pressing &quot;Get Details&quot; should the Position Filters be reset?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>On the Add Drop page, after pressing &quot;Get Details&quot; should the Position Filters be reset?</inlineHelpText>
+        <label>Reset Position Filters after Get Details</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__RestrictOpportunityStageNameUpdate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When checked the Opportunity.StageName won&apos;t be updated as part of the Refresh from AdBook process.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When checked the Opportunity.StageName won&apos;t be updated as part of the Refresh from AdBook process.</inlineHelpText>
+        <label>Restrict Opportunity StageName Update</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ScheduledRefreshForOutOfSyncDropsOnly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>(Deprecated)
+Should the scheduled refresh for out of sync Opportunities only refresh the drops?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the scheduled refresh for out of sync Opportunities only refresh the drops?</inlineHelpText>
+        <label>(Deprecated)SchRefreshForOutOfSyncDropsO</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SendUnmatchedCountryAsBlank__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Send the Country field as blank if a match can’t be found in FieldValueMap</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Send the Country field as blank if a match can’t be found in FieldValueMap</inlineHelpText>
+        <label>SendUnmatchedCountryAsBlank</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SendUnmatchedStateAsBlank__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Send the State field as blank if a match can’t be found in FieldValueMap</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Send the State field as blank if a match can’t be found in FieldValueMap</inlineHelpText>
+        <label>SendUnmatchedStateAsBlank</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Send_Exception_Emails__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should emails be sent to helpdesk@fattail.com with Exception Details?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should emails be sent to helpdesk@fattail.com with Exception Details?</inlineHelpText>
+        <label>Send Exception Emails</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ShowAdUnit__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Is the Ad Unit control shown on the drop finishing page?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the Ad Unit control shown on the drop finishing page?</inlineHelpText>
+        <label>Show Ad Unit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ShowThirdPartyAdserver__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Show the 3rd Party AdServer controls?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Show the 3rd Party AdServer controls?</inlineHelpText>
+        <label>Show Third Party Adserver</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Show_Add_Saved_Drops_Button__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>This is a checkbox to show or hide the Add Saved Drops Button on the Add Drop Visualforce page.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is a checkbox to show or hide the Add Saved Drops Button on the Add Drop Visualforce page.</inlineHelpText>
+        <label>Show Add Saved Drops Button</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Show_Remove_Drops__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Should the Remove Drops button be displayed on the Save Drops page?</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Should the Remove Drops button be displayed on the Save Drops page?</inlineHelpText>
+        <label>Show Remove Drops</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SuppressAdBookDropDeletionLimitedSync__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>During a limited sync to AdBook, suppress the deletion of drops that exist in AdBook but not in Salesforce</description>
+        <externalId>false</externalId>
+        <inlineHelpText>During a limited sync to AdBook, suppress the deletion of drops that exist in AdBook but not in Salesforce</inlineHelpText>
+        <label>Suppress AdBook Drop DeletionLimitedSync</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SuppressAdBookDropDeletion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>During the sync to AdBook, suppress the deletion of drops that exist in AdBook but not in Salesforce</description>
+        <externalId>false</externalId>
+        <inlineHelpText>During the sync to AdBook, suppress the deletion of drops that exist in AdBook but not in Salesforce</inlineHelpText>
+        <label>Suppress AdBook Drop Deletion</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SuppressAdBookGeneratedAttachments__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>During the sync process from Salesforce to AdBook, ignore any attachments where the name starts with the current AB Order ID followed by an underscore.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>During the sync process from Salesforce to AdBook, ignore any attachments where the name starts with the current AB Order ID followed by an underscore.</inlineHelpText>
+        <label>Suppress AdBook Generated Attachments</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SuppressAttachmentSync__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Prevent syncing any Salesforce Attachments on an Opportunity to AdBook</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Prevent syncing any Salesforce Attachments on an Opportunity to AdBook</inlineHelpText>
+        <label>Suppress Attachment Sync</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SuppressAutoSyncAccountContactCreate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>When active, the &quot;Auto Sync Accounts and Contacts&quot; will still occur, but only for Accounts and Contacts where the AB ID is already set. I.e. records will only be auto updated in AdBook. They won&apos;t be created until used on an order.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When active, the &quot;Auto Sync Accounts and Contacts&quot; will still occur, but only for Accounts and Contacts where the AB ID is already set. I.e. records will only be auto updated in AdBook. They won&apos;t be created until used on an order.</inlineHelpText>
+        <label>Suppress AutoSync Account/Contact Create</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__SuppressOrderStatusIdChangesOnUpdate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Check to prevent the OrderStatusId being changed when updating AdBook from the Salesforce Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check to prevent the OrderStatusId being changed when updating AdBook from the Salesforce Opportunity</inlineHelpText>
+        <label>SuppressOrderStatusIdChangesOnUpdate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__UseIndependentDrops__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Use dedicated Independent Drop records rather than Opportunity Line Item records to track drops in Salesforce</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Use dedicated Independent Drop records rather than Opportunity Line Item records to track drops in Salesforce</inlineHelpText>
+        <label>Use Independent Drops</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__Use_Separate_Drop_Notes__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>On Opportunity Line Item, should the Drop Notes be stored in the Description field (Unchecked) or in the AB Drop Notes/ABDropNotes__c field (Checked)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>On Opportunity Line Item, should the Drop Notes be stored in the Description field (Unchecked) or in the AB Drop Notes/ABDropNotes__c field (Checked)</inlineHelpText>
+        <label>Use Separate Drop Notes</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__WebsiteLabel__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Label to display for AdBook Website Media Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Label to display for AdBook Website Media Type</inlineHelpText>
+        <label>WebsiteLabel</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>AdBook Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

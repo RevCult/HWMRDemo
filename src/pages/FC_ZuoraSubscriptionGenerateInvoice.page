@@ -1,0 +1,12 @@
+<apex:page standardController="Zuora__Subscription__c" extensions="FC_ZuoraSubscriptionGenerateInvoiceCtrl"
+           action="{!generateInvoice}">
+    <apex:outputText rendered="false" value="{!Zuora__Subscription__c.Zuora__NextChargeDate__c}"/>
+    <apex:outputText rendered="false" value="{!Zuora__Subscription__c.Zuora__SubscriptionNumber__c}"/>
+    <apex:sectionHeader title="Generate Invoice" subTitle="{!Zuora__Subscription__c.Name}"/>
+    <apex:pageMessages escape="false"/>
+    <apex:outputPanel layout="block">
+        <apex:outputLink value="/{!Zuora__Subscription__c.Id}">
+            <apex:outputText value="&lt;&lt; Back to Subscription: {!Zuora__Subscription__c.Name}" escape="false"/>
+        </apex:outputLink>
+    </apex:outputPanel>
+</apex:page>

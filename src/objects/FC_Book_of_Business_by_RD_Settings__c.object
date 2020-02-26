@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>All_RDs_Report_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>All RDs Report ID</label>
+        <length>18</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>By_RD_Report_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>By RD Report ID</label>
+        <length>18</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RD_Name_Parameter__c</fullName>
+        <externalId>false</externalId>
+        <label>RD Name Parameter</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>(FC) Book of Business by RD Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

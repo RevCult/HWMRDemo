@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Actual AdBook Dynamic Property Value for a specific Account.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AB2__Account__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Account this AdBook UDF applies to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Account this AdBook UDF applies to</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>AdBook Account UDF Values</relationshipLabel>
+        <relationshipName>AdBookAccountDynamicPropertyValues</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>AB2__AdBookDynamicProperty__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The AdBook Dynamic Property Type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The AdBook Dynamic Property Type</inlineHelpText>
+        <label>AdBook UDF</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>AdBook UDF should be for Accounts</errorMessage>
+            <filterItems>
+                <field>AB2__AdBookDynamicProperty__c.AB2__ObjectType__c</field>
+                <operation>equals</operation>
+                <value>Account</value>
+            </filterItems>
+            <infoMessage>AdBook UDF should be for Accounts</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>AB2__AdBookDynamicProperty__c</referenceTo>
+        <relationshipLabel>AdBook Account UDF Values</relationshipLabel>
+        <relationshipName>AdBookAccountDynamicPropertyValues</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AB2__DynamicPropertyIsVisible__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Is the associated AdBook UDF Visible to users?</description>
+        <externalId>false</externalId>
+        <formula>AB2__AdBookDynamicProperty__r.AB2__IsVisible__c</formula>
+        <inlineHelpText>Is the associated AdBook UDF Visible to users?</inlineHelpText>
+        <label>UDF Visible</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ListValue__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>List Value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>List Value</inlineHelpText>
+        <label>List Value</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>List Value should have the Account object type.</errorMessage>
+            <filterItems>
+                <field>AB2__AdBookDynamicPropertyListValues__c.AB2__AdBookDynamicPropertyObjectType__c</field>
+                <operation>equals</operation>
+                <value>Account</value>
+            </filterItems>
+            <filterItems>
+                <field>$Source.AB2__AdBookDynamicProperty__c</field>
+                <operation>equals</operation>
+                <valueField>AB2__AdBookDynamicPropertyListValues__c.AB2__AdBookDynamicProperty__c</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>AB2__AdBookDynamicPropertyListValues__c</referenceTo>
+        <relationshipLabel>AdBook Account UDF Values</relationshipLabel>
+        <relationshipName>AdBookAccountDynamicPropertyValues</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AB2__ObjectType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>TEXT(AB2__AdBookDynamicProperty__r.AB2__ObjectType__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Object Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AB2__Uniqueness__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <deprecated>false</deprecated>
+        <description>Concatenation of the Account ID and the Dynamic Property ID.
+Used to enforce uniqueness via a field workflow rule that will set the value.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Used internally to enforce uniqueness for Account Id and UDF Id.</inlineHelpText>
+        <label>Uniqueness</label>
+        <length>36</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>AdBook Account UDF Value</label>
+    <nameField>
+        <displayFormat>AUDF-{0000}</displayFormat>
+        <label>AdBook Account UDF Value Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>AdBook Account UDF Values</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

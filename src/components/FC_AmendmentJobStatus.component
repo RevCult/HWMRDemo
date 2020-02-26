@@ -1,0 +1,20 @@
+<apex:component id="FC_AmendmentJobStatus" controller="FC_AmendmentJobStatusController">
+    <apex:attribute name="jobId" required="true" description="Amendment Job ID" type="Id" assignTo="{!amendmentJobId}"/>
+    <apex:stylesheet value="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <apex:panelGrid id="jobInfo" columns="3" cellpadding="0" cellspacing="0">
+        <apex:outputText value="{!jobStatus}"/>
+        <apex:outputText value="&#160;" escape="false"/>
+        <apex:outputPanel rendered="{!isJobRunning}">
+            <i class="fa fa-refresh fa-spin"></i>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!job != null && (jobStatus = 'Error' || jobStatus = 'Failed') && !ISBLANK(jobExtendedStatus)}">
+            <a href="#" onclick="alert('{!JSINHTMLENCODE(jobExtendedStatus)}');"><i
+                    class="fa fa-exclamation-circle"></i></a>
+        </apex:outputPanel>
+    </apex:panelGrid>
+    <apex:outputPanel id="refreshAction">
+        <apex:form >
+            <apex:actionPoller action="{!refresh}" reRender="jobInfo" interval="10" rendered="{!isJobRunning}"/>
+        </apex:form>
+    </apex:outputPanel>
+</apex:component>
